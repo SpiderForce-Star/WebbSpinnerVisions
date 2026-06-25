@@ -3,62 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webb Spinner Visions • TN Small Business Video + Website Specialist</title>
+  <meta name="description" content="Webb Spinner Visions • Professional Video Production • Logo Animation • Websites • Nashville">
+  <title>Webb Spinner Visions • Masterclass Videos • Cinematic Animation • Websites Now</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
-    .spider-hero { animation: crawl 4s linear infinite, glow 2s ease-in-out infinite alternate; }
-    @keyframes crawl { 0%,100% { transform: rotate(-5deg) scale(1); } 50% { transform: rotate(5deg) scale(1.05); } }
-    @keyframes glow { from { filter: drop-shadow(0 0 15px #67e8f9); } to { filter: drop-shadow(0 0 40px #22d3ee); } }
-    .steel-blue { background: linear-gradient(90deg, #1e40af, #3b82f6); }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@700&display=swap');
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .animate-marquee { animation: marquee 25s linear infinite; }
+    .spider-pro {
+      animation: crawlVibe 9s linear infinite, metallicPulse 2.2s infinite;
+      filter: drop-shadow(0 0 25px #ef4444) drop-shadow(0 0 40px #10b981);
+    }
+    @keyframes crawlVibe {
+      0%   { transform: translate(0, 0) rotate(0deg); }
+      25%  { transform: translate(12px, -8px) rotate(4deg); }
+      50%  { transform: translate(0, -22px) rotate(-3deg); }
+      75%  { transform: translate(-10px, -7px) rotate(3deg); }
+      100% { transform: translate(0, 0) rotate(0deg); }
+    }
+    @keyframes metallicPulse {
+      0%, 100% { box-shadow: 0 0 20px #64748b, 0 0 40px #ef4444; filter: brightness(1); }
+      50%      { box-shadow: 0 0 55px #10b981, 0 0 75px #f97316; filter: brightness(1.25); }
+    }
+    .hero-video { aspect-ratio: 16/9; }
   </style>
 </head>
 <body class="bg-zinc-950 text-white">
 
-  <!-- Top Nav with Spider -->
-  <nav class="fixed top-0 z-50 w-full bg-zinc-900 border-b border-zinc-700">
-    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+  <!-- Navbar -->
+  <nav class="bg-black border-b border-zinc-700 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
-        <img src="Spider1.jpg" class="h-10 cursor-pointer spider-hero" onclick="this.style.transform='scale(1.4)'; setTimeout(()=>this.style.transform='scale(1)',300)">
-        <span class="font-bold text-3xl tracking-tighter">WEBB SPINNER VISIONS</span>
+        <img src="Shield.jpg" alt="Spider Shield Logo" class="h-10">
+        <span class="text-2xl font-bold tracking-widest font-orbitron">WEBB SPINNER VISIONS</span>
       </div>
-      <a href="website.html" class="bg-cyan-400 hover:bg-cyan-300 text-zinc-950 px-5 py-2 rounded-xl font-semibold">📄 View Website Services</a>
-      <a href="#contact" class="bg-red-600 px-6 py-2 rounded-xl font-semibold">Start Project</a>
+      <div class="hidden md:flex gap-8 text-lg font-medium">
+        <a href="#video-hero" class="hover:text-sky-400">Demo Video</a>
+        <a href="#urgency" class="hover:text-sky-400">Why Videos Win</a>
+        <a href="#process" class="hover:text-sky-400">How We Work</a>
+        <a href="website.html" class="hover:text-sky-400">Website Builds</a>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="https://www.facebook.com/profile.php?id=61572155061749" target="_blank" class="hover:text-sky-400"><i class="fab fa-facebook text-2xl"></i></a>
+        <a href="https://www.instagram.com/webbspinnervisions" target="_blank" class="hover:text-sky-400"><i class="fab fa-instagram text-2xl"></i></a>
+        <a href="mailto:webbspinnervisions@gmail.com" class="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-full font-bold">Email Now</a>
+      </div>
     </div>
   </nav>
 
-  <!-- Hero with Animated Spider + Your New Text -->
-  <section class="pt-20 pb-12 bg-black relative overflow-hidden text-center">
-    <img src="Spider1.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30 spider-hero">
-    <div class="max-w-5xl mx-auto px-6 relative z-10">
-      <p class="text-amber-400 text-xl font-bold">🚀 Your small-town marketing specialist for small business owners in Tennessee!</p>
-      <h1 class="text-6xl font-bold mt-3">WEBB SPINNER VISIONS</h1>
-      <p class="text-3xl mt-4">Masterclass video production from your still photos • Cinematic animation from your logo • Website construction NOW available!</p>
-      <a href="website.html" class="mt-6 inline-block bg-white text-zinc-950 px-8 py-3 rounded-3xl text-xl font-bold">See Full Website Services →</a>
+  <!-- HERO: WSV Top Entrance Video as the main hero + Option 2 Spider -->
+  <section id="video-hero" class="relative bg-black min-h-screen flex items-center justify-center overflow-hidden">
+    <img src="Metallic Header.jpg" class="absolute inset-0 w-full h-full object-cover opacity-40">
+    <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
+      <h1 class="text-5xl md:text-7xl font-bold tracking-widest mb-4">WEBB SPINNER VISIONS</h1>
+      <p class="text-sky-400 text-2xl md:text-3xl mb-8">Masterclass Video Production from your still photos • Cinematic animation from your logo & company name • Website construction NOW available!</p>
+      
+      <div class="hero-video w-full rounded-3xl overflow-hidden border-4 border-sky-400 shadow-2xl mx-auto max-w-5xl">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_mEvE69qwjY?autoplay=1&mute=1&loop=1&playlist=_mEvE69qwjY" 
+                title="WSV Top Entrance Video" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <!-- Animated Spider (Option 2) -->
+      <img src="Spider1.jpg" alt="Metallic Chrome Spider • Red Eyes • Venom Green Fangs" 
+           class="spider-pro absolute top-1/3 right-8 md:right-12 w-52 md:w-80 z-30 shadow-2xl">
+      
+      <div class="flex justify-center gap-4 mt-8">
+        <a href="mailto:webbspinnervisions@gmail.com?subject=Start%20My%20Project" 
+           class="bg-white text-black font-bold px-10 py-4 rounded-full text-xl hover:bg-emerald-400">Start My Project Today</a>
+        <a href="#urgency" class="border border-white px-8 py-4 rounded-full text-xl hover:bg-white/10">See Why Videos Win ↓</a>
+      </div>
+    </div>
+
+    <!-- Steel Blue Ribbon directly under hero -->
+    <div class="absolute bottom-0 w-full bg-sky-700 py-3 text-white text-lg font-medium overflow-hidden whitespace-nowrap">
+      <div class="inline-block animate-marquee">✅ Your still photos/videos turned into professional clips for promotion! Logo design/animation and website construction! Book your first video this week!</div>
     </div>
   </section>
 
-  <!-- Steel Blue Ribbon -->
-  <div class="steel-blue py-3 overflow-hidden text-white font-bold">
-    <div class="animate-marquee whitespace-nowrap">Creating professional videos and web sites are expensive for most small businesses—that’s the big hurdle I’m here to remove! From your still photos you will get the best short videos, lighting, timelapses, drone shots… Music, voiceovers, animations, and much more is available!</div>
-  </div>
+  <!-- Urgency / Why Videos Section -->
+  <section id="urgency" class="py-16 bg-zinc-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-10">Why Professional Videos Are Your Smartest (and Cheapest) Social Media Strategy</h2>
+      <div class="grid md:grid-cols-2 gap-10 text-lg leading-relaxed">
+        <ul class="space-y-4 list-disc pl-6">
+          <li>Social media lets you advertise <strong>for free</strong> — but only videos that hold attention get pushed by the algorithm.</li>
+          <li>Still photos get scrolled past. <strong>Videos with your logo in motion</strong> stop the scroll and earn significantly higher reach.</li>
+          <li>Pin one strong video to your page and it works like a <strong>24/7 salesperson</strong>.</li>
+          <li>Posting a new professional video <strong>weekly</strong> keeps your page active and drives traffic back to your website.</li>
+          <li>Having 4–6 videos ready gives you a professional rotation so you always look polished.</li>
+        </ul>
+        <div>
+          <h3 class="font-bold text-xl mb-3">Platform-Specific Strategy (2026)</h3>
+          <p class="mb-6">Facebook • Instagram Reels • LinkedIn • X • YouTube • TikTok — full details on retention & reach included in your package.</p>
+          <a href="mailto:webbspinnervisions@gmail.com?subject=Ready%20for%20My%20First%20Video" class="block bg-emerald-600 text-center py-5 text-xl font-bold rounded-2xl">Let’s Create Your First Professional Video This Week →</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Updated Pricing + WSV Video -->
-  <div class="bg-red-600 py-3 text-center font-bold text-lg">🔥 GRAND OPENING SPECIAL! Setup + Logo animation + 20-30s clip $250 • Each additional $75 • Full website package $1,000</div>
-  <div class="max-w-5xl mx-auto px-6 py-8">
-    <iframe width="100%" height="415" src="https://www.youtube.com/embed/_mEvE69qwjY" allowfullscreen class="rounded-xl"></iframe>
-  </div>
+  <!-- Pricing -->
+  <section class="py-8 bg-red-700 text-center font-bold text-xl">
+    🔥 Grand Opening Special! Set-up, Logo animation, and 20-30 second video clip <span class="text-3xl">$250.00</span>. Each additional $75.00<br>
+    <span class="text-3xl block mt-3">$1,000.00</span> website construction, logo design, logo animation, and 4–30 second videos (limited time!)
+  </section>
 
-  <!-- Urgency + Process + All other sections are included and updated exactly as before (full 6-step, correct email webbspinnervisions@gmail.com, etc.) -->
-  <!-- (The code is complete — all previous improvements are in this version) -->
+  <!-- How We Work -->
+  <section id="process" class="py-16 bg-zinc-950">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-10">How We Work Together</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-zinc-900 p-6 rounded-2xl">1. Email us your links, photos & ideas</div>
+        <div class="bg-zinc-900 p-6 rounded-2xl">2. I review & we discuss in 24-48 hrs</div>
+        <div class="bg-zinc-900 p-6 rounded-2xl">3. Your ideas come to life with pre-reviews</div>
+        <div class="bg-zinc-900 p-6 rounded-2xl">4. Deposit + sign off → I create</div>
+        <div class="bg-zinc-900 p-6 rounded-2xl">5. Final review + payment → you own everything</div>
+        <div class="bg-emerald-600 p-6 rounded-2xl text-black font-bold">Special rates for veterans, charitable & faith-based organizations</div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="mailto:webbspinnervisions@gmail.com" class="text-2xl underline">Email to begin → webbspinnervisions@gmail.com</a>
+      </div>
+    </div>
+  </section>
 
-  <footer class="py-8 text-center">
-    <a href="website.html" class="text-cyan-400 underline text-xl">→ Dedicated Website Services Page</a> • webbspinnervisions@gmail.com
-  </footer>
-
-  <script>
-    // Spider interaction
-    console.log("✅ Chrome spider animation active — click the spider images!");
-  </script>
-</body>
-</html>
+  <!-- Website Info Teaser -->
+  <section class="py-16 bg-zinc-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <img src="Shield.jpg" alt="Spider Shield" class="mx-auto h-24 mb-6">
+      <h2 class="text-4xl font-bold text-center">Get Your Professional Website – Fast, Affordable, and Yours to Own</h2>
+      <p class="text-center max-w-3xl mx-auto mt-6 text-lg">Purchase domain • Matching email • Show me a layout you like • I build it with your photos/videos from YouTube • Full ownership • Contact form • $1,000 package or basic $800 • Special rates for veterans & nonprofits</p>
+      <a href="website.html" class="block text-center
