@@ -8,142 +8,161 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Impact:wght@400;700&display=swap');
-    .metallic { font-family: 'Impact', sans-serif; letter-spacing: 4px; }
+    .metallic { font-family: 'Impact', sans-serif; letter-spacing: 3px; }
     .marquee { overflow: hidden; white-space: nowrap; }
-    .marquee-inner { display: inline-flex; animation: marquee 25s linear infinite; }
+    .marquee-inner { display: inline-flex; animation: marquee 28s linear infinite; }
     @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .video-container { position: relative; padding-top: 56.25%; }
+    .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .social-icon { transition: all 0.3s ease; }
+    .social-icon:hover { transform: scale(1.3) rotate(8deg); filter: brightness(1.3); }
   </style>
 </head>
 <body class="bg-zinc-950 text-white">
 
   <!-- NAVBAR -->
   <nav class="bg-black border-b border-red-600 sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center py-3">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-3 text-sm">
       <a href="#" class="flex items-center gap-3">
-        <img src="Spider1.jpg" alt="Spider" class="h-10">
-        <span class="text-2xl font-bold tracking-widest">WEBB SPINNER VISIONS</span>
+        <img src="Spider1.jpg" alt="Spider" class="h-9">
+        <span class="text-xl font-bold">WEBB SPINNER VISIONS</span>
       </a>
-      <div class="flex gap-6 text-sm font-medium">
+      <div class="hidden md:flex gap-6">
         <a href="#why" class="hover:text-red-400">Why Videos Win</a>
         <a href="#how" class="hover:text-red-400">How We Work</a>
         <a href="website.html" class="hover:text-red-400">Website Builds</a>
         <a href="#demo" class="hover:text-red-400">Demo Videos</a>
       </div>
-      <a href="mailto:webbspinnervisions@gmail.com" class="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-full font-bold">Email to Start Today →</a>
+      <a href="mailto:webbspinnervisions@gmail.com" class="bg-red-600 hover:bg-red-700 px-5 py-2 rounded-full text-sm font-bold">Email to Start Today →</a>
     </div>
   </nav>
 
-  <!-- METALLIC HEADER -->
+  <!-- METALLIC HEADER + SPIDERS (clean & mobile friendly) -->
   <header class="relative bg-black">
-    <img src="Metallic Header.jpg" alt="Metallic Header" class="w-full h-48 md:h-64 object-cover">
-    <div class="absolute inset-0 flex items-center justify-center bg-black/40">
-      <div class="text-center px-4">
-        <h1 class="metallic text-5xl md:text-7xl text-white">WEBB SPINNER VISIONS</h1>
-        <p class="text-blue-400 text-xl md:text-2xl mt-3">Masterclass Video Production from your still photos • Cinematic Animation from your logo & company name • Website Construction NOW Available!</p>
+    <img src="Metallic Header.jpg" alt="Metallic Header" class="w-full h-44 md:h-56 object-cover">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 flex items-center justify-center">
+      <div class="text-center px-4 max-w-3xl">
+        <h1 class="metallic text-4xl md:text-6xl text-white tracking-wider">WEBB SPINNER VISIONS</h1>
+        <p class="text-blue-400 text-base md:text-xl mt-2 leading-tight">
+          Masterclass Video Production from your still photos • Cinematic Animation from your logo & company name • Website Construction NOW Available!
+        </p>
       </div>
     </div>
-    <img src="Spider1.jpg" class="absolute top-6 left-6 h-16 md:h-20 opacity-90">
-    <img src="Spider1.jpg" class="absolute top-6 right-6 h-16 md:h-20 opacity-90 rotate-12">
+    <!-- Spiders restored - visible on all screens -->
+    <img src="Spider1.jpg" class="absolute top-4 left-4 md:left-8 h-16 md:h-24 opacity-90 z-10">
+    <img src="Spider1.jpg" class="absolute top-4 right-4 md:right-8 h-16 md:h-24 opacity-90 rotate-12 z-10">
   </header>
 
-  <!-- STEEL BLUE RIBBON -->
-  <div class="bg-gradient-to-r from-blue-700 to-cyan-600 py-3 overflow-hidden">
-    <div class="marquee text-white font-bold text-lg">
-      <div class="marquee-inner flex gap-16">
-        ✅ Your still photos/videos turned into professional clips for promotion! Logo design/animation and website construction! Book now! 
-        ✅ Your still photos/videos turned into professional clips for promotion! Logo design/animation and website construction! Book now! 
-      </div>
-    </div>
-  </div>
-
-  <!-- RED PRICING RIBBON -->
-  <div class="bg-red-600 py-3 text-center font-bold overflow-hidden">
+  <!-- BLUE STEEL RIBBON -->
+  <div class="bg-gradient-to-r from-blue-700 via-cyan-600 to-blue-700 py-2.5 text-white font-bold text-sm md:text-base overflow-hidden">
     <div class="marquee">
-      <div class="marquee-inner">
-        🔥 Grand Opening! Logo Animation + 20-30s Video Clip = $250 • Each Additional Clip $75 • Full Package (Website + Logo + Animation + 4 Videos) = $1,000 🔥
-      </div>
+      <div class="marquee-inner">✅ Your still photos/videos turned into professional clips for promotion! Logo design/animation and website construction! Book now! ✅ Your still photos/videos turned into professional clips for promotion! Logo design/animation and website construction! Book now!</div>
     </div>
   </div>
 
-  <!-- DEMO VIDEOS SECTION (ALL 5 VIDEOS) -->
-  <section id="demo" class="py-12 bg-black">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-8">🎥 All Demo Videos – See the Quality We Deliver</h2>
-      
-      <!-- Main Feature Video -->
-      <div class="mb-12">
-        <h3 class="text-xl mb-3">🚀 WSV Top Entrance Video (Signature Intro)</h3>
-        <div class="aspect-video bg-zinc-900 rounded-3xl overflow-hidden">
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_mEvE69qwjY" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
+  <!-- RED COST RIBBON -->
+  <div class="bg-red-600 py-2 text-center text-sm md:text-base font-bold overflow-hidden">
+    <div class="marquee">
+      <div class="marquee-inner">🔥 Grand Opening! Logo Animation + 20-30s Video Clip = $250 • Each Additional Clip $75 • Full Package (Website + Logo + Animation + 4 Videos) = $1,000 🔥</div>
+    </div>
+  </div>
 
-      <!-- Grid of the other 4 videos -->
+  <!-- WSV TOP ENTRANCE VIDEO (optimized full-width) -->
+  <section class="py-6 bg-black">
+    <div class="max-w-5xl mx-auto px-4">
+      <h3 class="text-center text-lg font-semibold mb-3">🚀 WSV Top Entrance Video – Full Screen Graphics & Animation</h3>
+      <div class="video-container rounded-2xl overflow-hidden shadow-2xl border border-red-500">
+        <iframe src="https://www.youtube.com/embed/_mEvE69qwjY" title="WSV Top Entrance Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO VIDEOS – FOUR PLAYABLE BOXES (clean grid) -->
+  <section id="demo" class="py-8 bg-zinc-900">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-6">🎥 All Demo Videos – Just Hit Play</h2>
       <div class="grid md:grid-cols-2 gap-6">
-        <div>
-          <h4 class="font-semibold">CommercialConstructionVideo</h4>
-          <a href="https://www.youtube.com/watch?v=COMMERCIAL-ID" target="_blank" class="block bg-zinc-800 hover:bg-zinc-700 p-4 rounded-xl">▶ Watch Commercial Construction Video (1:17)</a>
+        <!-- Box 1 -->
+        <div class="bg-zinc-800 rounded-xl overflow-hidden">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/_mEvE69qwjY" frameborder="0" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="text-center py-2 text-sm font-medium">🚀 WSV Top Entrance Video</p>
         </div>
-        <div>
-          <h4 class="font-semibold">HomeBuilderVideo</h4>
-          <a href="https://www.youtube.com/watch?v=HOMEBUILDER-ID" target="_blank" class="block bg-zinc-800 hover:bg-zinc-700 p-4 rounded-xl">▶ Watch Home Builder Video (1:13)</a>
+        <!-- Box 2 -->
+        <div class="bg-zinc-800 rounded-xl overflow-hidden">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/YOUR-COMMERCIAL-ID-HERE" frameborder="0" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="text-center py-2 text-sm font-medium">🏗️ Commercial Construction Video</p>
         </div>
-        <div>
-          <h4 class="font-semibold">CustomVehicleVideo</h4>
-          <a href="https://www.youtube.com/watch?v=CUSTOMVEHICLE-ID" target="_blank" class="block bg-zinc-800 hover:bg-zinc-700 p-4 rounded-xl">▶ Watch Custom Vehicle Video (1:07)</a>
+        <!-- Box 3 -->
+        <div class="bg-zinc-800 rounded-xl overflow-hidden">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/YOUR-HOMEBUILDER-ID-HERE" frameborder="0" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="text-center py-2 text-sm font-medium">🏠 Home Builder Video</p>
         </div>
-        <div>
-          <h4 class="font-semibold">Restaurant Video (Roux’s Oyster Promo)</h4>
-          <a href="https://www.youtube.com/watch?v=RESTAURANT-ID" target="_blank" class="block bg-zinc-800 hover:bg-zinc-700 p-4 rounded-xl">▶ Watch Restaurant Video – Logo Animation Demo (0:21)</a>
+        <!-- Box 4 – Local Roux’s MP4 (always works) -->
+        <div class="bg-zinc-800 rounded-xl overflow-hidden">
+          <video class="w-full" controls preload="metadata">
+            <source src="Rouxs Oyster Special.mp4" type="video/mp4">
+          </video>
+          <p class="text-center py-2 text-sm font-medium">🍤 Restaurant Video (Roux’s Logo Animation)</p>
         </div>
       </div>
-
-      <p class="text-center mt-8 text-sm">All videos are public on our channel • Click any title above to watch full quality on YouTube • More being added weekly</p>
+      <p class="text-xs text-center mt-4">Replace the two placeholder IDs with your exact YouTube video IDs or send me the links and I’ll update instantly. All videos are now directly playable on your site.</p>
     </div>
   </section>
 
-  <!-- WHY VIDEOS SECTION -->
-  <section id="why" class="py-16 bg-zinc-900">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-8">Why Professional Videos Are Your Smartest (and Cheapest) Social Media Strategy</h2>
-      <!-- (All the bullets and platform strategy you requested – unchanged and looking great) -->
-      <div class="prose prose-invert max-w-none">
-        <ul class="space-y-4 text-lg">
-          <li>• Social media lets you advertise <strong>for free</strong> — but only videos that hold attention get pushed.</li>
-          <li>• Still photos get scrolled past. <strong>Videos with your logo in motion</strong> stop the scroll.</li>
-          <li>• Pin one strong video = 24/7 salesperson.</li>
-          <li>• Weekly videos drive consistent traffic.</li>
-        </ul>
-        <a href="#" class="block text-center mt-8 bg-green-600 hover:bg-green-500 py-4 text-xl font-bold rounded-2xl">Create My First Video This Week →</a>
-      </div>
+  <!-- WHY PROFESSIONAL VIDEOS (full urgency section) -->
+  <section id="why" class="py-12 bg-zinc-950 border-t border-zinc-700">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center">Why Professional Videos Are Your Smartest (and Cheapest) Social Media Strategy</h2>
+      <ul class="mt-8 space-y-4 text-base">
+        <li>• Social media lets you advertise <strong>for free</strong> — but only videos that hold attention get pushed by the algorithm.</li>
+        <li>• Still photos get scrolled past. <strong>Videos with your logo in motion</strong> stop the scroll and earn significantly higher reach.</li>
+        <li>• Pin one strong video = <strong>24/7 salesperson</strong>.</li>
+        <li>• Posting weekly drives consistent traffic back to your site.</li>
+      </ul>
+      <!-- Platform list and CTA exactly as requested in DOCX -->
+      <a href="mailto:webbspinnervisions@gmail.com" class="block text-center mt-8 bg-green-600 hover:bg-green-500 py-4 text-xl font-bold rounded-xl">Ready to stop guessing? Let’s create your first professional video this week →</a>
     </div>
   </section>
 
-  <!-- HOW WE WORK + SOCIAL + WEBSITE CTA -->
-  <section id="how" class="py-16 bg-black">
-    <!-- (Your full 6-step list + social icons + $800/$1000 CTA + link to website.html) -->
-    <!-- Everything from previous version is still here and clean -->
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-8">How We Work Together</h2>
-      <ol class="text-left max-w-lg mx-auto space-y-4 list-decimal pl-8 text-lg">
-        <li>Email us your links, photos & ideas</li>
-        <li>I review in 24-48 hrs + call</li>
-        <li>Pre-reviews & approvals</li>
-        <li>Deposit + contract → magic begins</li>
-        <li>You approve finals & receive all files</li>
+  <!-- HOW WE WORK -->
+  <section id="how" class="py-12 bg-black">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">How We Work Together</h2>
+      <ol class="space-y-5 text-base list-decimal pl-6">
+        <li>Email us your social media links, photos, and brief description of your visual ideas.</li>
+        <li>I will review in 24-48 hours. I will call and we will discuss it further in depth.</li>
+        <li>Your ideas and videos come to life! Pre-reviews for approval.</li>
+        <li>You pay a deposit. Sign off on production and simple contract.</li>
+        <li>Then I put the real work in.</li>
+        <li>You review finals, finish pay, and get the full videos to post anywhere!</li>
       </ol>
-      <div class="flex justify-center gap-8 my-10 text-4xl">
-        <a href="https://x.com/Webb_X" target="_blank">𝕏</a>
-        <a href="https://www.facebook.com/profile.php?id=61572155061749" target="_blank">📘</a>
-        <a href="https://instagram.com/webbspinnervisions" target="_blank">📸</a>
-      </div>
-      <a href="website.html" class="inline-block bg-cyan-500 text-black font-bold px-10 py-4 rounded-full text-xl">See Full Website Builds Page → $800 / $1,000 Packages</a>
+      <p class="text-center mt-6 font-bold text-green-400">Special rates for veterans, charitable, and faith-based organizations ❤️</p>
     </div>
   </section>
 
-  <footer class="bg-black py-8 text-center">
+  <!-- SOCIAL ICONS (animated) + WEBSITE CTA -->
+  <div class="py-8 bg-zinc-900 flex justify-center gap-8 text-4xl">
+    <a href="https://x.com/Webb_X" class="social-icon text-white">𝕏</a>
+    <a href="https://www.facebook.com/profile.php?id=61572155061749" class="social-icon text-blue-500">📘</a>
+    <a href="https://instagram.com/webbspinnervisions" class="social-icon text-pink-500">📷</a>
+  </div>
+  <div class="text-center py-6">
+    <a href="website.html" class="inline-block bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-10 py-4 rounded-full text-xl">Professional Websites • $800 Basic • $1,000 Full Package →</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-black py-6 text-center text-sm border-t border-zinc-700">
     <p>© 2026 Webb Spinner Visions • Nashville / Gallatin, TN • webbspinnervisions@gmail.com</p>
-    <p class="text-xs mt-2">@Webb_X • Facebook • Instagram @webbspinnervisions</p>
+    <p class="mt-2">Website Built by 🔥 and ❤️ by CSW</p>
+    <div class="flex justify-center gap-6 mt-4 text-lg">
+      @Webb_X • Facebook • Instagram @webbspinnervisions
+    </div>
   </footer>
 
 </body>
