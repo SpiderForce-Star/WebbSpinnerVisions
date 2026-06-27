@@ -1,30 +1,3 @@
-<body class="bg-zinc-950 text-white">
-<nav class="bg-black py-3 border-b border-red-500 flex justify-between px-4 items-center">
-  <div class="flex items-center gap-3">
-    <img src="Shield.jpg" class="h-8"> <!-- Shield restored -->
-    <img src="Spider1.jpg" class="h-10">
-    <span class="text-2xl font-bold">WEBB SPINNER VISIONS</span>
-  </div>
-  <a href="mailto:webbspinnervisions@gmail.com" class="bg-red-600 px-6 py-2 rounded-full">Email to Start Today →</a>
-</nav>
-
-<header class="relative">
-  <img src="Metallic Header.jpg" class="w-full h-72 md:h-80 object-cover">
-  <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-  <img src="Spider1.jpg" class="absolute top-6 left-6 h-20">
-  <img src="Spider1.jpg" class="absolute top-6 right-6 h-20 rotate-12">
-</header>
-
-<!-- WSV Video -->
-<section class="py-6">
-  <iframe width="100%" height="450" src="https://www.youtube.com/embed/_mEvE69qwjY" frameborder="0" allowfullscreen></iframe>
-</section>
-
-<!-- Blue Ribbon -->
-<div class="bg-blue-700 py-3 text-white text-center font-bold">✅ Your still photos/videos turned into professional clips for promotion! Logo design/animation and website construction!</div>
-
-<!-- Red Ribbon -->
-<div class="bg-red-600 py-3 text-center font-bold text-white">🔥 Grand Opening! Logo Animation + 20-30s Clip = $250 • Addl $75 • Full Package $1,000</div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,37 +8,49 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Impact:wght@400;700&display=swap');
-    .metallic { font-family: 'Impact', sans-serif; letter-spacing: 4px; }
-    .shine { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); animation: shine 5s infinite; }
-    @keyframes shine { 0% { transform: translateX(-100%); } 100% { transform: translateX(400%); } }
-    .video-container { padding-top: 56.25%; position: relative; }
-    .video-container iframe, .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-    .social-icon:hover { transform: scale(1.3) rotate(10deg); }
+    
+    .metallic { 
+      font-family: 'Impact', sans-serif; 
+      letter-spacing: 4px; 
+    }
+    
+    .shine { 
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); 
+      animation: shine 5s infinite; 
+    }
+    
+    @keyframes shine { 
+      0% { transform: translateX(-100%); } 
+      100% { transform: translateX(400%); } 
+    }
+    
+    .video-container { 
+      padding-top: 56.25%; 
+      position: relative; 
+    }
+    
+    .video-container iframe, 
+    .video-container video { 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+    }
+    
+    .social-icon:hover { 
+      transform: scale(1.3) rotate(10deg); 
+    }
   </style>
 </head>
 <body class="bg-zinc-950 text-white">
 
-  <!-- NAVBAR - Shield restored -->
-  <nav class="bg-black border-b border-red-600">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="flex items-center gap-3">
-        <img src="Spider1.jpg" class="h-10">
-        <img src="Shield.jpg" class="h-8"> <!-- Shield restored -->
-        <span class="text-xl font-bold tracking-wider">WEBB SPINNER VISIONS</span>
-      </div>
-      <div class="flex gap-5 text-sm">
-        <a href="#why">Why Videos Win</a>
-        <a href="#how">How We Work</a>
-        <a href="website.html">Website Builds</a>
-        <a href="#demo">Demo Videos</a>
-      </div>
-      <a href="mailto:webbspinnervisions@gmail.com" class="bg-red-600 px-5 py-2 rounded-full font-bold">Email to Start Today →</a>
-    </div>
-  </nav>
+  <!-- SHARED NAVIGATION (loaded automatically) -->
+  <div id="nav-placeholder"></div>
 
   <!-- TALL METALLIC HEADER WITH SHINE -->
   <header class="relative">
-    <img src="Metallic Header.jpg" class="w-full h-64 md:h-80 object-cover" alt="Metallic Header">
+    <img src="Metallic Header.jpg" class="w-full h-64 md:h-80 object-cover" alt="Metallic Header Background">
     <div class="absolute inset-0 shine mix-blend-overlay pointer-events-none"></div>
     <div class="absolute inset-0 flex items-center justify-center bg-black/30">
       <div class="text-center px-4">
@@ -73,8 +58,8 @@
       </div>
     </div>
     <!-- Spiders -->
-    <img src="Spider1.jpg" class="absolute top-6 left-6 h-20 md:h-24">
-    <img src="Spider1.jpg" class="absolute top-6 right-6 h-20 md:h-24 rotate-12">
+    <img src="Spider1.jpg" class="absolute top-6 left-6 h-20 md:h-24" alt="Spider Logo Left">
+    <img src="Spider1.jpg" class="absolute top-6 right-6 h-20 md:h-24 rotate-12" alt="Spider Logo Right">
   </header>
 
   <!-- WSV ENTRANCE VIDEO -->
@@ -88,35 +73,57 @@
 
   <!-- BLUE RIBBON -->
   <div class="bg-gradient-to-r from-blue-700 to-cyan-600 py-3 text-white font-bold overflow-hidden">
-    <div class="marquee text-center">✅ Your still photos/videos turned into professional clips for promotion! Logo design/animation and website construction! Book now!</div>
+    <div class="marquee text-center">Your still photos/videos turned into professional clips for promotion! Logo design/animation and website construction! Book now!</div>
   </div>
 
   <!-- RED RIBBON -->
   <div class="bg-red-600 py-3 text-center font-bold overflow-hidden text-white">
-    🔥 Grand Opening! Logo Animation + 20-30s Video Clip = $250 • Each Additional Clip $75 • Full Package = $1,000
+    Grand Opening! Logo Animation + 20-30s Video Clip = $250 • Each Additional Clip $75 • Full Package = $1,000
   </div>
 
-  <!-- ALL OTHER CONTENT (kept exactly as previously approved) -->
-  <!-- Demo grid with 4 playable boxes, Why section, How We Work, Social icons, Website CTA, etc. -->
-
+  <!-- DEMO GRID -->
   <section id="demo" class="py-12 bg-zinc-900">
-    <h2 class="text-center text-3xl font-bold mb-6">🎥 Demo Videos – Just Hit Play</h2>
+    <h2 class="text-center text-3xl font-bold mb-6">Demo Videos – Just Hit Play</h2>
     <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto px-4">
-      <!-- Four playable boxes as before – all optimized -->
-      <div class="aspect-video bg-black rounded-xl overflow-hidden"><iframe src="https://www.youtube.com/embed/_mEvE69qwjY" frameborder="0" allowfullscreen></iframe></div>
-      <div class="aspect-video bg-black rounded-xl overflow-hidden"><video controls><source src="Rouxs Oyster Special.mp4" type="video/mp4"></video></div>
-      <!-- Two more placeholder boxes for your other videos – replace src as needed -->
-      <div class="aspect-video bg-black rounded-xl overflow-hidden"><iframe src="https://www.youtube.com/embed/YOUR-ID-3" frameborder="0" allowfullscreen></iframe></div>
-      <div class="aspect-video bg-black rounded-xl overflow-hidden"><iframe src="https://www.youtube.com/embed/YOUR-ID-4" frameborder="0" allowfullscreen></iframe></div>
+      <div class="aspect-video bg-black rounded-xl overflow-hidden border border-zinc-700">
+        <iframe src="https://www.youtube.com/embed/_mEvE69qwjY" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="aspect-video bg-black rounded-xl overflow-hidden border border-zinc-700">
+        <video controls class="w-full h-full">
+          <source src="Rouxs Oyster Special.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="aspect-video bg-black rounded-xl overflow-hidden border border-zinc-700">
+        <iframe src="https://www.youtube.com/embed/YOUR-ID-3" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="aspect-video bg-black rounded-xl overflow-hidden border border-zinc-700">
+        <iframe src="https://www.youtube.com/embed/YOUR-ID-4" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
+    <p class="text-center text-sm text-zinc-400 mt-4">Replace the placeholder video IDs above with your real YouTube links</p>
   </section>
 
-  <!-- Why Videos, How We Work, Footer with CSW credit, animated social icons – all present and unchanged from previous approved version -->
+  <!-- SHARED FOOTER + SCRIPT -->
+  <div id="footer-placeholder"></div>
 
-  <footer class="bg-black py-8 text-center">
-    <p>© 2026 Webb Spinner Visions • Nashville / Gallatin, TN</p>
-    <p class="mt-2 font-medium">Website Built by 🔥 and ❤️ by CSW</p>
-  </footer>
+  <script>
+    // Load shared navigation from nav.html
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      })
+      .catch(err => console.log('Nav load error:', err));
+
+    // Load shared footer from footer.html
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      })
+      .catch(err => console.log('Footer load error:', err));
+  </script>
 
 </body>
 </html>
