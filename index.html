@@ -3,94 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webb Spinner Visions • Masterclass Videos • Animation • Websites • Nashville</title>
+  <title>Webb Spinner Visions • Masterclass Videos • Cinematic Animation • Websites • Nashville</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-zinc-950 text-white">
 
+  <!-- Navbar -->
   <nav class="bg-black border-b border-zinc-700 sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
-        <img src="Shield.jpg" class="h-10">
-        <span class="text-2xl font-bold">WEBB SPINNER VISIONS</span>
+        <img src="Shield.jpg" alt="Spider Shield" class="h-10">
+        <span class="text-2xl font-bold tracking-widest">WEBB SPINNER VISIONS</span>
       </div>
-      <div class="hidden md:flex gap-8">
-        <a href="#video-hero">Demo Video</a>
-        <a href="#urgency">Why Videos Win</a>
-        <a href="#process">How We Work</a>
-        <a href="website.html">Website Builds</a>
+      <div class="hidden md:flex gap-8 text-lg">
+        <a href="#video-hero" class="hover:text-sky-400">Demo Video</a>
+        <a href="#urgency" class="hover:text-sky-400">Why Videos Win</a>
+        <a href="#process" class="hover:text-sky-400">How We Work</a>
+        <a href="website.html" class="hover:text-sky-400">Website Builds</a>
       </div>
       <a href="mailto:webbspinnervisions@gmail.com" class="bg-red-600 px-6 py-2 rounded-full font-bold">Email Now</a>
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <section id="video-hero" class="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
     <img src="Metallic Header.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60">
-    <div class="relative z-10 text-center">
-      <h1 class="text-6xl font-bold">WEBB SPINNER VISIONS</h1>
-      <p class="text-sky-400 text-3xl mt-4">Masterclass Videos • Cinematic Animation • Websites Now Available</p>
-      <iframe class="w-full max-w-5xl mx-auto mt-8 aspect-video rounded-3xl" src="https://www.youtube.com/embed/_mEvE69qwjY" frameborder="0" allowfullscreen></iframe>
-      <img src="Shield.jpg" class="spider-pro mx-auto mt-6 w-64 cursor-pointer">
-      <div class="flex justify-center gap-4 mt-8">
-        <a href="mailto:webbspinnervisions@gmail.com" class="bg-white text-black px-8 py-3 rounded-full font-bold">Email to Start Today</a>
-        <a href="#process" class="border border-white px-8 py-3 rounded-full font-bold">How This Works →</a>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
+      <h1 class="text-6xl md:text-7xl font-bold tracking-widest">WEBB SPINNER VISIONS</h1>
+      <p class="text-sky-400 text-2xl md:text-3xl mt-4">Masterclass Videos • Cinematic Animation • Websites Now Available</p>
+      
+      <div class="mt-8 mx-auto max-w-5xl">
+        <iframe class="w-full aspect-video rounded-3xl shadow-2xl" 
+                src="https://www.youtube.com/embed/_mEvE69qwjY?autoplay=1&mute=1&loop=1&playlist=_mEvE69qwjY" 
+                frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <img src="Shield.jpg" alt="Metallic Spider" class="spider-pro absolute top-1/4 right-8 md:right-16 w-48 md:w-72 z-20 cursor-pointer">
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+        <a href="mailto:webbspinnervisions@gmail.com?subject=Start%20My%20Project" class="bg-white text-black font-bold px-10 py-4 rounded-full text-xl">Email to Start Today →</a>
+        <a href="#urgency" class="border border-white px-8 py-4 rounded-full text-xl">Why Videos Win ↓</a>
       </div>
     </div>
-    <div class="marquee-ribbon absolute bottom-0 w-full py-3 text-center bg-sky-600">Your still photos turned into professional clips! Logo design/animation and website construction! Book now!</div>
+
+    <!-- Steel Blue Scrolling Ribbon -->
+    <div class="marquee-ribbon absolute bottom-0 w-full py-3 text-center overflow-hidden text-lg font-medium bg-sky-600 text-white">
+      <div class="inline-block animate-marquee">✅ Your still photos turned into professional clips! Logo design/animation and website construction! Book now! &nbsp;&nbsp;&nbsp;&nbsp; ✅ Your still photos turned into professional clips! Logo design/animation and website construction! Book now!</div>
+    </div>
   </section>
 
-  <!-- Urgency -->
-  <section id="urgency" class="py-12 bg-zinc-900">
-    <h2 class="text-4xl text-center font-bold mb-8">Why Professional Videos Are Your Smartest Social Media Strategy</h2>
-    <div class="max-w-4xl mx-auto px-6 space-y-6 text-lg">
-      <p>Still photos get scrolled past. Videos with your logo in motion stop the scroll and earn significantly higher reach.</p>
-      <p>Pin one strong video and it works like a 24/7 salesperson.</p>
-      <button class="bg-emerald-600 px-10 py-4 rounded-2xl">Create My First Video This Week →</button>
+  <!-- Urgency Section -->
+  <section id="urgency" class="py-16 bg-zinc-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-10">Why Professional Videos Are Your Smartest Social Media Strategy</h2>
+      <div class="grid md:grid-cols-2 gap-8 text-lg">
+        <ul class="space-y-3 list-disc pl-5">
+          <li>Social media lets you advertise for free — but only videos that hold attention get pushed.</li>
+          <li>Still photos get scrolled past. Videos with your logo in motion stop the scroll.</li>
+          <li>Pin one strong video = 24/7 salesperson. Weekly posting drives consistent traffic.</li>
+        </ul>
+        <div>
+          <p class="font-bold">Platform Strategy 2026 included in every package.</p>
+          <a href="mailto:webbspinnervisions@gmail.com" class="block bg-emerald-600 text-center py-5 text-xl font-bold rounded-2xl">Create My First Video This Week →</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Pricing -->
-  <section class="py-8 bg-red-700 text-center font-bold text-xl">
+  <section class="py-8 bg-red-700 text-center text-xl font-bold">
     🔥 Grand Opening! Logo animation + 20-30s video $250 • Additional clips $75<br>
-    Full package: $1,000 website + logo + animation + 4 videos
-    <button class="block mx-auto mt-4 bg-white text-red-700 px-12 py-4 rounded-full">Email Me Now - Let's Get Started</button>
+    Full package: $1,000 website + logo + animation + 4 videos (limited time!)
   </section>
 
   <!-- How We Work -->
-  <section id="process" class="py-12">
-    <h2 class="text-3xl font-bold text-center">How We Work Together</h2>
-    <div class="max-w-4xl mx-auto px-6 mt-8 space-y-6">
-      <button class="w-full bg-zinc-800 py-4 text-left px-6">1. Email your photos and ideas</button>
-      <button class="w-full bg-zinc-800 py-4 text-left px-6">2. Review + call within 24-48 hrs</button>
-      <button class="w-full bg-zinc-800 py-4 text-left px-6">3. Pre-reviews & approval</button>
-      <button class="w-full bg-zinc-800 py-4 text-left px-6">4. Deposit + start production</button>
-      <button class="w-full bg-zinc-800 py-4 text-left px-6">5. Final approval → you own everything</button>
+  <section id="process" class="py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-8">How We Work Together</h2>
+      <ol class="space-y-6 text-lg">
+        <li>1. Email us, including your social media links, photos you want to use, and brief description of your visual ideas.</li>
+        <li>2. I will review in 24-48 hours. I will call and we will discuss it further in depth.</li>
+        <li>3. Your ideas and videos come to life! You will get pre-reviews for approval.</li>
+        <li>4. You pay a deposit. Sign off on production and simple contract.</li>
+        <li>5. Then I put the real work in.</li>
+        <li>6. You review all final videos for approval, finish pay, and you get the full videos to post anywhere you want!</li>
+      </ol>
+      <p class="text-center mt-8 font-bold">Special rates for veterans, charitable, and faith-based organizations.</p>
     </div>
-    <p class="text-center mt-8">Special rates for veterans, charitable & faith-based organizations</p>
   </section>
 
-  <!-- Social -->
+  <!-- Social Media Descriptions -->
   <section class="py-12 bg-zinc-900">
-    <h2 class="text-center text-3xl font-bold mb-8">Connect With Us</h2>
-    <div class="flex justify-center gap-8 text-3xl">
-      <a href="https://x.com/Webb__X">X (@Webb__X)</a>
-      <a href="https://www.facebook.com/profile.php?id=61572155061749">Facebook</a>
-      <a href="https://www.instagram.com/webbspinnervisions">Instagram</a>
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-8">Find Us On Social Media</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-zinc-800 p-6 rounded-2xl">
+          <h3 class="text-xl font-bold">X (Twitter) @Webb__X</h3>
+          <p class="mt-2">Behind-the-scenes of video production, quick tips, client project reveals, and real talk about what actually works on social media.</p>
+          <a href="https://x.com/Webb__X" class="text-sky-400">Follow @Webb__X →</a>
+        </div>
+        <div class="bg-zinc-800 p-6 rounded-2xl">
+          <h3 class="text-xl font-bold">Facebook</h3>
+          <p class="mt-2">Full project showcases, client testimonials, longer videos, and updates on metal building clients and new website builds.</p>
+          <a href="https://www.facebook.com/profile.php?id=61572155061749" class="text-sky-400">Visit Facebook Page →</a>
+        </div>
+        <div class="bg-zinc-800 p-6 rounded-2xl">
+          <h3 class="text-xl font-bold">Instagram @webbspinnervisions</h3>
+          <p class="mt-2">Stunning before/after reels, logo animations, spider animations, and the creative process of turning still photos into professional video.</p>
+          <a href="https://www.instagram.com/webbspinnervisions" class="text-sky-400">Follow on Instagram →</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer class="text-center py-8">
-    © 2026 Webb Spinner Visions • webbspinnervisions@gmail.com
+  <!-- Footer -->
+  <footer class="bg-black py-12 text-center">
+    <p>© 2026 Webb Spinner Visions • Nashville / Gallatin, TN • webbspinnervisions@gmail.com</p>
   </footer>
 
   <script>
-    // Spider click effect
     document.querySelector('.spider-pro').addEventListener('click', function() {
-      this.style.transform = 'scale(1.5) rotate(25deg)';
-      setTimeout(() => this.style.transform = 'scale(1)', 500);
+      this.style.transition = 'all 0.3s';
+      this.style.transform = 'scale(1.4) rotate(20deg)';
+      setTimeout(() => this.style.transform = 'scale(1) rotate(0)', 400);
     });
   </script>
 </body>
