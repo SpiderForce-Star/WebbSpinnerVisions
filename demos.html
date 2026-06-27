@@ -3,22 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Demo Videos &amp; Logo Animations • Webb Spinner Visions</title>
+  <title>Demo Videos • Webb Spinner Visions</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
-    .metallic { 
-      font-family: 'Impact', sans-serif; 
-      letter-spacing: 3px; 
-    }
+    .metallic { font-family: 'Impact', sans-serif; letter-spacing: 3px; }
     
     .video-card {
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .video-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
-      border-color: #f59e0b;
     }
 
     .play-button {
@@ -32,16 +28,9 @@
     .modal {
       animation: modalPopIn 0.2s ease-out forwards;
     }
-
     @keyframes modalPopIn {
-      from {
-        opacity: 0;
-        transform: scale(0.95) translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-      }
+      from { opacity: 0; transform: scale(0.95) translateY(20px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
     }
 
     .video-container {
@@ -55,129 +44,91 @@
       width: 100%;
       height: 100%;
     }
+
+    /* Spinning X Logo */
+    .x-spin {
+      animation: spin-slow 4s linear infinite;
+    }
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body class="bg-zinc-950 text-white">
 
-  <!-- SHARED NAVIGATION -->
+  <!-- SHARED NAV -->
   <div id="nav-placeholder"></div>
 
   <!-- PAGE HEADER -->
-  <header class="bg-zinc-900 border-b border-zinc-700 py-14">
+  <header class="bg-zinc-900 border-b border-zinc-700 py-12">
     <div class="max-w-5xl mx-auto px-6 text-center">
-      <h1 class="metallic text-5xl md:text-6xl tracking-wider mb-4">Demo Videos &amp; Logo Animations</h1>
-      <p class="text-xl text-zinc-300 max-w-2xl mx-auto">
-        Watch real examples of our work. Click the play button on any video to open a full-screen player.
-      </p>
+      <h1 class="metallic text-5xl md:text-6xl tracking-wider mb-4">Demo Videos</h1>
+      <p class="text-xl text-zinc-300">Real examples of our work for construction, home building, vehicles, and restaurants.</p>
     </div>
   </header>
 
-  <div class="max-w-7xl mx-auto px-6 py-12">
+  <div class="max-w-6xl mx-auto px-6 py-12">
 
-    <!-- VIDEO PRODUCTION DEMOS -->
-    <div class="mb-16">
-      <div class="flex items-center gap-3 mb-8">
-        <i class="fas fa-play-circle text-red-500 text-3xl"></i>
-        <h2 class="text-3xl font-bold">Video Production Demos</h2>
+    <!-- VIDEO GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- Video 1: Commercial Construction -->
+      <div onclick="openVideoModal('TqUbd7HyNUo', 'Commercial Construction Video')" 
+           class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700 cursor-pointer">
+        <div class="relative bg-zinc-800 aspect-video flex items-center justify-center">
+          <div class="play-button w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl">
+            <i class="fas fa-play text-white text-2xl ml-1"></i>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Commercial Construction Video</h3>
+          <p class="text-sm text-zinc-400 mt-1">Professional construction project showcase</p>
+        </div>
       </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Video Card 1 -->
-        <div onclick="openVideoModal('_mEvE69qwjY', 'Project Example 1 - Metal Building Promo')" 
-             class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700 cursor-pointer">
-          <div class="relative bg-zinc-800 aspect-video flex items-center justify-center">
-            <div class="play-button w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl">
-              <i class="fas fa-play text-white text-2xl ml-1"></i>
-            </div>
-          </div>
-          <div class="p-5">
-            <h3 class="font-semibold text-lg mb-1">Project Example 1</h3>
-            <p class="text-sm text-zinc-400">Metal building promotional video with dynamic camera moves</p>
+
+      <!-- Video 2: Home Builder -->
+      <div onclick="openVideoModal('YuyJKJcaPGY', 'Home Builder Video')" 
+           class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700 cursor-pointer">
+        <div class="relative bg-zinc-800 aspect-video flex items-center justify-center">
+          <div class="play-button w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl">
+            <i class="fas fa-play text-white text-2xl ml-1"></i>
           </div>
         </div>
-
-        <!-- Video Card 2 -->
-        <div onclick="openVideoModal('YOUR_VIDEO_ID_2', 'Project Example 2 - Client Showcase')" 
-             class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700 cursor-pointer">
-          <div class="relative bg-zinc-800 aspect-video flex items-center justify-center">
-            <div class="play-button w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl">
-              <i class="fas fa-play text-white text-2xl ml-1"></i>
-            </div>
-          </div>
-          <div class="p-5">
-            <h3 class="font-semibold text-lg mb-1">Project Example 2</h3>
-            <p class="text-sm text-zinc-400">Replace with your second YouTube video</p>
-          </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Home Builder Video</h3>
+          <p class="text-sm text-zinc-400 mt-1">Custom home building project highlight</p>
         </div>
-
-        <!-- Video Card 3 -->
-        <div onclick="openVideoModal('YOUR_VIDEO_ID_3', 'Project Example 3')" 
-             class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700 cursor-pointer">
-          <div class="relative bg-zinc-800 aspect-video flex items-center justify-center">
-            <div class="play-button w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl">
-              <i class="fas fa-play text-white text-2xl ml-1"></i>
-            </div>
-          </div>
-          <div class="p-5">
-            <h3 class="font-semibold text-lg mb-1">Project Example 3</h3>
-            <p class="text-sm text-zinc-400">Add your third video here</p>
-          </div>
-        </div>
-
       </div>
-    </div>
 
-    <!-- LOGO DESIGN & ANIMATION DEMOS -->
-    <div>
-      <div class="flex items-center gap-3 mb-8">
-        <i class="fas fa-magic text-amber-400 text-3xl"></i>
-        <h2 class="text-3xl font-bold">Logo Design &amp; Animation Demos</h2>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Logo Animation 1 -->
-        <div onclick="openVideoModal('YOUR_LOGO_VIDEO_ID_1', 'Logo Animation - Explosive Entrance')" 
-             class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700 cursor-pointer">
-          <div class="relative bg-zinc-800 aspect-video flex items-center justify-center">
-            <div class="play-button w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center shadow-xl">
-              <i class="fas fa-play text-white text-2xl ml-1"></i>
-            </div>
-          </div>
-          <div class="p-5">
-            <h3 class="font-semibold text-lg mb-1">Logo Animation - Explosive Entrance</h3>
-            <p class="text-sm text-zinc-400">Metallic shine + dynamic logo reveal</p>
+      <!-- Video 3: Custom Vehicle -->
+      <div onclick="openVideoModal('7nM4UF3J6TQ', 'Custom Vehicle Video')" 
+           class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700 cursor-pointer">
+        <div class="relative bg-zinc-800 aspect-video flex items-center justify-center">
+          <div class="play-button w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl">
+            <i class="fas fa-play text-white text-2xl ml-1"></i>
           </div>
         </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Custom Vehicle Video</h3>
+          <p class="text-sm text-zinc-400 mt-1">Custom vehicle build and showcase</p>
+        </div>
+      </div>
 
-        <!-- Logo Animation 2 -->
-        <div onclick="openVideoModal('YOUR_LOGO_VIDEO_ID_2', 'Logo Reveal Animation')" 
-             class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700 cursor-pointer">
-          <div class="relative bg-zinc-800 aspect-video flex items-center justify-center">
-            <div class="play-button w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center shadow-xl">
-              <i class="fas fa-play text-white text-2xl ml-1"></i>
-            </div>
-          </div>
-          <div class="p-5">
-            <h3 class="font-semibold text-lg mb-1">Logo Reveal Animation</h3>
-            <p class="text-sm text-zinc-400">Clean professional logo animation example</p>
+      <!-- Video 4: Restaurant -->
+      <div onclick="openVideoModal('Ga7R0sbnzpc', 'Roux\'s Oyster Special - Restaurant Video')" 
+           class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700 cursor-pointer">
+        <div class="relative bg-zinc-800 aspect-video flex items-center justify-center">
+          <div class="play-button w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl">
+            <i class="fas fa-play text-white text-2xl ml-1"></i>
           </div>
         </div>
-
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Roux's Oyster Special - Restaurant Video</h3>
+          <p class="text-sm text-zinc-400 mt-1">Restaurant promotional video</p>
+        </div>
       </div>
-    </div>
 
-    <!-- HOW TO ADD MORE VIDEOS -->
-    <div class="mt-16 bg-zinc-900 border border-zinc-700 rounded-2xl p-8">
-      <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
-        <i class="fas fa-plus-circle text-green-400"></i> 
-        How to Add More Videos Later
-      </h3>
-      <p class="text-zinc-300">
-        Simply copy one of the video cards above, paste it in the grid, and change the YouTube ID in the <code>onclick</code> function. 
-        The modal will automatically work with the new video.
-      </p>
     </div>
 
   </div>
@@ -189,7 +140,6 @@
     <div onclick="event.stopImmediatePropagation()" 
          class="bg-zinc-900 rounded-2xl w-full max-w-5xl overflow-hidden border border-zinc-700 modal">
       
-      <!-- Modal Header -->
       <div class="flex justify-between items-center px-6 py-4 border-b border-zinc-700">
         <h3 id="modalTitle" class="text-xl font-semibold"></h3>
         <button onclick="closeVideoModal()" 
@@ -198,36 +148,30 @@
         </button>
       </div>
 
-      <!-- Video Player -->
       <div class="p-6">
         <div class="video-container bg-black rounded-xl overflow-hidden border border-zinc-700">
           <iframe id="modalVideo" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
-
-      <div class="px-6 pb-6 text-center text-sm text-zinc-400">
-        Press <span class="font-mono bg-zinc-800 px-1.5 py-0.5 rounded">ESC</span> or click outside the video to close
-      </div>
     </div>
+  </div>
+
+  <!-- X (TWITTER) LINK WITH SPIN -->
+  <div class="max-w-6xl mx-auto px-6 pb-12 text-center">
+    <a href="https://x.com/Webb__X" target="_blank" 
+       class="inline-flex items-center gap-3 text-xl hover:text-white transition-colors">
+      <i class="fab fa-x-twitter text-3xl x-spin"></i>
+      <span>Follow on X (Twitter)</span>
+    </a>
   </div>
 
   <!-- SHARED FOOTER -->
   <div id="footer-placeholder"></div>
 
   <script>
-    // Load shared navigation
-    fetch('nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('nav-placeholder').innerHTML = data;
-      });
-
-    // Load shared footer
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
-      });
+    // Load shared nav and footer
+    fetch('nav.html').then(r => r.text()).then(data => document.getElementById('nav-placeholder').innerHTML = data);
+    fetch('footer.html').then(r => r.text()).then(data => document.getElementById('footer-placeholder').innerHTML = data);
 
     // Open Lightbox Modal
     function openVideoModal(videoId, title) {
@@ -248,10 +192,10 @@
 
       modal.classList.remove('flex');
       modal.classList.add('hidden');
-      iframe.src = ''; // Stop video from playing in background
+      iframe.src = ''; // Stop video
     }
 
-    // Close modal with Escape key
+    // Close with Escape key
     document.addEventListener('keydown', function(e) {
       if (e.key === "Escape") {
         const modal = document.getElementById('videoModal');
@@ -261,6 +205,5 @@
       }
     });
   </script>
-
 </body>
 </html>
