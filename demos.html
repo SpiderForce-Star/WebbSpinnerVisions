@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Videos &amp; Logo Animations • Webb Spinner Visions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    .metallic { 
+      font-family: 'Impact', sans-serif; 
+      letter-spacing: 3px; 
+    }
+    .video-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .video-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+  </style>
+</head>
+<body class="bg-zinc-950 text-white">
+
+  <!-- SHARED NAVIGATION -->
+  <div id="nav-placeholder"></div>
+
+  <!-- PAGE HEADER -->
+  <header class="bg-zinc-900 border-b border-zinc-700 py-12">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h1 class="metallic text-5xl md:text-6xl tracking-wider mb-4">Demo Videos &amp; Logo Animations</h1>
+      <p class="text-xl text-zinc-300 max-w-2xl mx-auto">
+        Watch real examples of our work. Click any video to play, adjust volume, fast-forward, or go full screen.
+      </p>
+    </div>
+  </header>
+
+  <div class="max-w-6xl mx-auto px-6 py-12">
+
+    <!-- VIDEO PRODUCTION DEMOS -->
+    <div class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <i class="fas fa-play-circle text-red-500"></i> 
+        Video Production Demos
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <!-- Video 1 -->
+        <div class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700">
+          <div class="aspect-video">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/_mEvE69qwjY" 
+                    frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Example Project Title 1</h3>
+            <p class="text-sm text-zinc-400 mt-1">Short description of the video (metal building promo, etc.)</p>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700">
+          <div class="aspect-video">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" 
+                    frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Example Project Title 2</h3>
+            <p class="text-sm text-zinc-400 mt-1">Replace with your real YouTube video</p>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700">
+          <div class="aspect-video">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" 
+                    frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Example Project Title 3</h3>
+            <p class="text-sm text-zinc-400 mt-1">Add your fourth video here</p>
+          </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700">
+          <div class="aspect-video">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_4" 
+                    frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Example Project Title 4</h3>
+            <p class="text-sm text-zinc-400 mt-1">Add more videos as you create them</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- LOGO DESIGN & ANIMATION DEMOS -->
+    <div>
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <i class="fas fa-magic text-amber-400"></i> 
+        Logo Design &amp; Animation Demos
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <!-- Logo Animation Example -->
+        <div class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700">
+          <div class="aspect-video">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/YOUR_LOGO_ANIMATION_ID" 
+                    frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Logo Animation Example</h3>
+            <p class="text-sm text-zinc-400 mt-1">Explosive logo entrance with metallic shine effect</p>
+          </div>
+        </div>
+
+        <!-- Another Logo Example -->
+        <div class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700">
+          <div class="aspect-video">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/YOUR_LOGO_ANIMATION_ID_2" 
+                    frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Logo Reveal Animation</h3>
+            <p class="text-sm text-zinc-400 mt-1">Add more logo animation examples here</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="mt-12 text-center text-zinc-400 text-sm">
+      Want to add more videos? Just copy one of the video cards above and paste it below with your new YouTube embed link.
+    </div>
+
+  </div>
+
+  <!-- SHARED FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    // Load shared navigation
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+
+    // Load shared footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>
