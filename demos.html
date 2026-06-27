@@ -11,12 +11,49 @@
       font-family: 'Impact', sans-serif; 
       letter-spacing: 3px; 
     }
+    
     .video-card {
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
     .video-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+      transform: translateY(-6px);
+      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+      border-color: #f59e0b;
+    }
+
+    .play-button {
+      transition: all 0.2s ease;
+    }
+    .video-card:hover .play-button {
+      transform: scale(1.1);
+      background-color: #ef4444;
+    }
+
+    .modal {
+      animation: modalPopIn 0.2s ease-out forwards;
+    }
+
+    @keyframes modalPopIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    .video-container {
+      position: relative;
+      padding-top: 56.25%;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
@@ -26,71 +63,65 @@
   <div id="nav-placeholder"></div>
 
   <!-- PAGE HEADER -->
-  <header class="bg-zinc-900 border-b border-zinc-700 py-12">
+  <header class="bg-zinc-900 border-b border-zinc-700 py-14">
     <div class="max-w-5xl mx-auto px-6 text-center">
       <h1 class="metallic text-5xl md:text-6xl tracking-wider mb-4">Demo Videos &amp; Logo Animations</h1>
       <p class="text-xl text-zinc-300 max-w-2xl mx-auto">
-        Watch real examples of our work. Click any video to play, adjust volume, fast-forward, or go full screen.
+        Watch real examples of our work. Click the play button on any video to open a full-screen player.
       </p>
     </div>
   </header>
 
-  <div class="max-w-6xl mx-auto px-6 py-12">
+  <div class="max-w-7xl mx-auto px-6 py-12">
 
     <!-- VIDEO PRODUCTION DEMOS -->
     <div class="mb-16">
-      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
-        <i class="fas fa-play-circle text-red-500"></i> 
-        Video Production Demos
-      </h2>
+      <div class="flex items-center gap-3 mb-8">
+        <i class="fas fa-play-circle text-red-500 text-3xl"></i>
+        <h2 class="text-3xl font-bold">Video Production Demos</h2>
+      </div>
       
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <!-- Video 1 -->
-        <div class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700">
-          <div class="aspect-video">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/_mEvE69qwjY" 
-                    frameborder="0" allowfullscreen></iframe>
+        <!-- Video Card 1 -->
+        <div onclick="openVideoModal('_mEvE69qwjY', 'Project Example 1 - Metal Building Promo')" 
+             class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700 cursor-pointer">
+          <div class="relative bg-zinc-800 aspect-video flex items-center justify-center">
+            <div class="play-button w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl">
+              <i class="fas fa-play text-white text-2xl ml-1"></i>
+            </div>
           </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-lg">Example Project Title 1</h3>
-            <p class="text-sm text-zinc-400 mt-1">Short description of the video (metal building promo, etc.)</p>
-          </div>
-        </div>
-
-        <!-- Video 2 -->
-        <div class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700">
-          <div class="aspect-video">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" 
-                    frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-lg">Example Project Title 2</h3>
-            <p class="text-sm text-zinc-400 mt-1">Replace with your real YouTube video</p>
+          <div class="p-5">
+            <h3 class="font-semibold text-lg mb-1">Project Example 1</h3>
+            <p class="text-sm text-zinc-400">Metal building promotional video with dynamic camera moves</p>
           </div>
         </div>
 
-        <!-- Video 3 -->
-        <div class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700">
-          <div class="aspect-video">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" 
-                    frameborder="0" allowfullscreen></iframe>
+        <!-- Video Card 2 -->
+        <div onclick="openVideoModal('YOUR_VIDEO_ID_2', 'Project Example 2 - Client Showcase')" 
+             class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700 cursor-pointer">
+          <div class="relative bg-zinc-800 aspect-video flex items-center justify-center">
+            <div class="play-button w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl">
+              <i class="fas fa-play text-white text-2xl ml-1"></i>
+            </div>
           </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-lg">Example Project Title 3</h3>
-            <p class="text-sm text-zinc-400 mt-1">Add your fourth video here</p>
+          <div class="p-5">
+            <h3 class="font-semibold text-lg mb-1">Project Example 2</h3>
+            <p class="text-sm text-zinc-400">Replace with your second YouTube video</p>
           </div>
         </div>
 
-        <!-- Video 4 -->
-        <div class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700">
-          <div class="aspect-video">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_4" 
-                    frameborder="0" allowfullscreen></iframe>
+        <!-- Video Card 3 -->
+        <div onclick="openVideoModal('YOUR_VIDEO_ID_3', 'Project Example 3')" 
+             class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700 cursor-pointer">
+          <div class="relative bg-zinc-800 aspect-video flex items-center justify-center">
+            <div class="play-button w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl">
+              <i class="fas fa-play text-white text-2xl ml-1"></i>
+            </div>
           </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-lg">Example Project Title 4</h3>
-            <p class="text-sm text-zinc-400 mt-1">Add more videos as you create them</p>
+          <div class="p-5">
+            <h3 class="font-semibold text-lg mb-1">Project Example 3</h3>
+            <p class="text-sm text-zinc-400">Add your third video here</p>
           </div>
         </div>
 
@@ -99,44 +130,85 @@
 
     <!-- LOGO DESIGN & ANIMATION DEMOS -->
     <div>
-      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
-        <i class="fas fa-magic text-amber-400"></i> 
-        Logo Design &amp; Animation Demos
-      </h2>
+      <div class="flex items-center gap-3 mb-8">
+        <i class="fas fa-magic text-amber-400 text-3xl"></i>
+        <h2 class="text-3xl font-bold">Logo Design &amp; Animation Demos</h2>
+      </div>
       
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <!-- Logo Animation Example -->
-        <div class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700">
-          <div class="aspect-video">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/YOUR_LOGO_ANIMATION_ID" 
-                    frameborder="0" allowfullscreen></iframe>
+        <!-- Logo Animation 1 -->
+        <div onclick="openVideoModal('YOUR_LOGO_VIDEO_ID_1', 'Logo Animation - Explosive Entrance')" 
+             class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700 cursor-pointer">
+          <div class="relative bg-zinc-800 aspect-video flex items-center justify-center">
+            <div class="play-button w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center shadow-xl">
+              <i class="fas fa-play text-white text-2xl ml-1"></i>
+            </div>
           </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-lg">Logo Animation Example</h3>
-            <p class="text-sm text-zinc-400 mt-1">Explosive logo entrance with metallic shine effect</p>
+          <div class="p-5">
+            <h3 class="font-semibold text-lg mb-1">Logo Animation - Explosive Entrance</h3>
+            <p class="text-sm text-zinc-400">Metallic shine + dynamic logo reveal</p>
           </div>
         </div>
 
-        <!-- Another Logo Example -->
-        <div class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700">
-          <div class="aspect-video">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/YOUR_LOGO_ANIMATION_ID_2" 
-                    frameborder="0" allowfullscreen></iframe>
+        <!-- Logo Animation 2 -->
+        <div onclick="openVideoModal('YOUR_LOGO_VIDEO_ID_2', 'Logo Reveal Animation')" 
+             class="video-card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700 cursor-pointer">
+          <div class="relative bg-zinc-800 aspect-video flex items-center justify-center">
+            <div class="play-button w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center shadow-xl">
+              <i class="fas fa-play text-white text-2xl ml-1"></i>
+            </div>
           </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-lg">Logo Reveal Animation</h3>
-            <p class="text-sm text-zinc-400 mt-1">Add more logo animation examples here</p>
+          <div class="p-5">
+            <h3 class="font-semibold text-lg mb-1">Logo Reveal Animation</h3>
+            <p class="text-sm text-zinc-400">Clean professional logo animation example</p>
           </div>
         </div>
 
       </div>
     </div>
 
-    <div class="mt-12 text-center text-zinc-400 text-sm">
-      Want to add more videos? Just copy one of the video cards above and paste it below with your new YouTube embed link.
+    <!-- HOW TO ADD MORE VIDEOS -->
+    <div class="mt-16 bg-zinc-900 border border-zinc-700 rounded-2xl p-8">
+      <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+        <i class="fas fa-plus-circle text-green-400"></i> 
+        How to Add More Videos Later
+      </h3>
+      <p class="text-zinc-300">
+        Simply copy one of the video cards above, paste it in the grid, and change the YouTube ID in the <code>onclick</code> function. 
+        The modal will automatically work with the new video.
+      </p>
     </div>
 
+  </div>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="videoModal" onclick="closeVideoModal()" 
+       class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+    
+    <div onclick="event.stopImmediatePropagation()" 
+         class="bg-zinc-900 rounded-2xl w-full max-w-5xl overflow-hidden border border-zinc-700 modal">
+      
+      <!-- Modal Header -->
+      <div class="flex justify-between items-center px-6 py-4 border-b border-zinc-700">
+        <h3 id="modalTitle" class="text-xl font-semibold"></h3>
+        <button onclick="closeVideoModal()" 
+                class="text-zinc-400 hover:text-white text-3xl leading-none w-10 h-10 flex items-center justify-center">
+          &times;
+        </button>
+      </div>
+
+      <!-- Video Player -->
+      <div class="p-6">
+        <div class="video-container bg-black rounded-xl overflow-hidden border border-zinc-700">
+          <iframe id="modalVideo" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="px-6 pb-6 text-center text-sm text-zinc-400">
+        Press <span class="font-mono bg-zinc-800 px-1.5 py-0.5 rounded">ESC</span> or click outside the video to close
+      </div>
+    </div>
   </div>
 
   <!-- SHARED FOOTER -->
@@ -156,6 +228,38 @@
       .then(data => {
         document.getElementById('footer-placeholder').innerHTML = data;
       });
+
+    // Open Lightbox Modal
+    function openVideoModal(videoId, title) {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('modalVideo');
+      const modalTitle = document.getElementById('modalTitle');
+
+      modalTitle.textContent = title;
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    // Close Lightbox Modal
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('modalVideo');
+
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+      iframe.src = ''; // Stop video from playing in background
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === "Escape") {
+        const modal = document.getElementById('videoModal');
+        if (!modal.classList.contains('hidden')) {
+          closeVideoModal();
+        }
+      }
+    });
   </script>
 
 </body>
