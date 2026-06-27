@@ -3,68 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webb Spinner Visions • Masterclass Videos • Logo Animation • Websites</title>
+  <title>Webb Spinner Visions • Professional Videos • Websites • Logo Animation</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Impact:wght@400;700&display=swap');
     .metallic { font-family: 'Impact', sans-serif; letter-spacing: 4px; }
-    .shine { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); animation: shine 5s infinite; }
-    @keyframes shine { 0% { transform: translateX(-100%); } 100% { transform: translateX(400%); } }
-    .video-container { padding-top: 56.25%; position: relative; }
-    .video-container iframe, .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .hero-bg { background-image: url('Metallic Header.jpg'); background-size: cover; background-position: center; height: 420px; }
+    .scrolling-ribbon { overflow: hidden; white-space: nowrap; }
+    .scroll-content { display: inline-block; animation: scroll 30s linear infinite; }
+    @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .x-spin { animation: spin 5s linear infinite; }
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
   </style>
 </head>
 <body class="bg-zinc-950 text-white">
 
-  <!-- SHARED NAV -->
+  <!-- NAV -->
   <div id="nav-placeholder"></div>
 
-  <!-- TALL METALLIC HEADER -->
-  <header class="relative">
-    <img src="Metallic Header.jpg" class="w-full h-64 md:h-80 object-cover" alt="Metallic Header">
-    <div class="absolute inset-0 shine mix-blend-overlay pointer-events-none"></div>
-    <div class="absolute inset-0 flex items-center justify-center bg-black/30">
-      <div class="text-center px-4">
-        <h1 class="metallic text-5xl md:text-7xl text-white">WEBB SPINNER VISIONS</h1>
-      </div>
-    </div>
-    <img src="Spider1.jpg" class="absolute top-6 left-6 h-20 md:h-24" alt="Spider Logo">
-    <img src="Spider1.jpg" class="absolute top-6 right-6 h-20 md:h-24 rotate-12" alt="Spider Logo">
-  </header>
+  <!-- FULL-WIDTH METALLIC HERO (no text overlay, no duplicate spiders) -->
+  <header class="hero-bg"></header>
 
-  <!-- ENTRANCE VIDEO -->
-  <section class="py-6 bg-black">
+  <!-- HERO VIDEO -->
+  <section class="py-8 bg-black">
     <div class="max-w-5xl mx-auto px-4">
-      <div class="video-container rounded-2xl overflow-hidden border border-red-500 shadow-xl">
-        <iframe src="https://www.youtube.com/embed/_mEvE69qwjY" frameborder="0" allowfullscreen></iframe>
+      <div class="aspect-video bg-zinc-900 rounded-3xl overflow-hidden border-4 border-red-500 shadow-2xl">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_mEvE69qwjY" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <p class="text-center mt-3 text-zinc-400">WSV Top Entrance Video • Watch Full Screen</p>
+    </div>
+  </section>
+
+  <!-- SCROLLING BLUE RIBBON -->
+  <div class="bg-gradient-to-r from-blue-600 to-cyan-500 py-3 overflow-hidden">
+    <div class="scrolling-ribbon text-white font-bold">
+      <div class="scroll-content flex gap-12">
+        🔥 Your still photos/videos turned into professional clips for promotion! Logo design/animation and website construction! Book now! 🔥 
+        🔥 Your still photos/videos turned into professional clips for promotion! Logo design/animation and website construction! Book now! 🔥 
+      </div>
+    </div>
+  </div>
+
+  <!-- GENERAL INFORMATION SECTION -->
+  <section class="py-12 bg-zinc-900">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-8">We Help Small Businesses Stand Out Online</h2>
+      <p class="text-lg text-zinc-300 text-center leading-relaxed">
+        We turn your raw photos and videos into scroll-stopping content that drives customers to your business. 
+        Whether you build homes, restaurants, vehicles, or commercial buildings — we create videos and websites that actually work.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6 mt-10 text-center">
+        <div>🎥 High-Quality Video Production</div>
+        <div>✨ Eye-Catching Logo Animation</div>
+        <div>🌐 Professional Websites</div>
       </div>
     </div>
   </section>
 
-  <!-- BLUE RIBBON -->
-  <div class="bg-gradient-to-r from-blue-700 to-cyan-600 py-3 text-white font-bold overflow-hidden">
-    <div class="marquee text-center">Your still photos/videos turned into professional clips for promotion! Logo design/animation and website construction! Book now!</div>
-  </div>
-
-  <!-- RED RIBBON -->
-  <div class="bg-red-600 py-3 text-center font-bold overflow-hidden text-white">
-    Grand Opening! Logo Animation + 20-30s Video Clip = $250 • Each Additional Clip $75 • Full Package = $1,000
-  </div>
-
-  <!-- DEMO GRID -->
-  <section id="demo" class="py-12 bg-zinc-900">
-    <h2 class="text-center text-3xl font-bold mb-6">Demo Videos – Just Hit Play</h2>
-    <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto px-4">
-      <div class="aspect-video bg-black rounded-xl overflow-hidden border border-zinc-700">
-        <iframe src="https://www.youtube.com/embed/_mEvE69qwjY" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="aspect-video bg-black rounded-xl overflow-hidden border border-zinc-700">
-        <video controls><source src="Rouxs Oyster Special.mp4" type="video/mp4"></video>
+  <!-- SCROLLING RED RIBBON -->
+  <div class="bg-red-600 py-3 text-white font-bold overflow-hidden">
+    <div class="scrolling-ribbon">
+      <div class="scroll-content flex gap-12">
+        🔥 GRAND OPENING SPECIAL! Logo Animation + 20-30s Video Clip = $250 • Each Additional Clip $75 • Full Package = $1,000 🔥 
+        🔥 GRAND OPENING SPECIAL! Logo Animation + 20-30s Video Clip = $250 • Each Additional Clip $75 • Full Package = $1,000 🔥
       </div>
     </div>
-    <p class="text-center text-sm text-zinc-400 mt-4">More demos available on the <a href="demos.html" class="text-red-400 hover:underline">Demos page</a></p>
-  </section>
+  </div>
+
+  <!-- CTA -->
+  <div class="py-12 text-center">
+    <a href="mailto:webbspinnervisions@gmail.com" class="inline-block bg-red-600 hover:bg-red-700 px-10 py-5 rounded-3xl text-xl font-bold">
+      📧 Send Your Photos & Ideas Now — Let's Get Started!
+    </a>
+  </div>
 
   <!-- SHARED FOOTER -->
   <div id="footer-placeholder"></div>
