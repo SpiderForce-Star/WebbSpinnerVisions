@@ -3,78 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Professional Websites • Webb Spinner Visions • Nashville, TN • $800–$1,000</title>
+  <title>Professional Websites Built for You • Webb Spinner Visions</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
-    body { font-family: system-ui, sans-serif; }
-    .spider { animation: crawl 3.5s linear infinite, glow 1.8s ease-in-out infinite alternate; }
-    @keyframes crawl { 0%,100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
-    @keyframes glow { from { filter: drop-shadow(0 0 20px #67e8f9) brightness(1); } to { filter: drop-shadow(0 0 45px #22d3ee) brightness(1.3); } }
+    .metallic { font-family: 'Impact', sans-serif; letter-spacing: 3px; }
   </style>
 </head>
 <body class="bg-zinc-950 text-white">
 
-  <!-- NAV -->
-  <nav class="border-b border-zinc-700 py-4">
-    <div class="max-w-7xl mx-auto px-6 flex justify-between">
-      <a href="index.html" class="flex items-center gap-3 font-bold text-2xl">
-        <img src="Shield.jpg" class="h-9"> Webb Spinner Visions
+  <!-- NAVBAR (same as index for consistency) -->
+  <nav class="bg-black border-b border-red-600">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center py-3">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="Spider1.jpg" alt="Spider" class="h-10">
+        <span class="text-xl font-bold">WEBB SPINNER VISIONS</span>
       </a>
-      <a href="index.html" class="text-red-400 hover:underline">← Home • Videos &amp; Animation</a>
+      <a href="index.html" class="text-red-400 hover:text-white">← Back to Home</a>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <div class="text-center py-10 bg-gradient-to-b from-zinc-900 to-zinc-950">
-    <div class="mx-auto w-48 relative">
-      <img src="Shield.jpg" alt="Spider Shield" class="spider mx-auto">
-      <div class="absolute inset-0 flex items-center justify-center text-6xl opacity-60">🕷️</div>
-    </div>
-    <h1 class="text-5xl font-bold mt-4">Professional Websites Built for You</h1>
-    <p class="text-cyan-400 text-xl">Fast • Affordable • 100% Yours • Special Rates for Veterans &amp; Faith-Based</p>
-  </div>
+  <!-- SHIELD LOGO HEADER -->
+  <header class="pt-8 pb-6 text-center bg-gradient-to-b from-zinc-900 to-black">
+    <img src="Shield.jpg" alt="Spider Shield Logo" class="mx-auto h-28 mb-6 shadow-2xl">
+    <h1 class="metallic text-5xl md:text-6xl tracking-wider text-white">Professional Websites Built for You</h1>
+    <p class="text-cyan-400 text-xl mt-2">Fast • Affordable • 100% Yours • Special Rates for Veterans & Faith-Based Organizations</p>
+  </header>
 
-  <!-- CONTENT -->
-  <div class="max-w-4xl mx-auto px-6 py-12 prose prose-invert">
-    <h2>Get Your Professional Website – Fast, Affordable, and Yours to Own</h2>
-    <ol class="list-decimal space-y-4 text-lg">
-      <li><strong>1. Purchase your domain</strong> (yourcompany.com, .net, .store/.shop if selling merch). Grab bundles for 1 year with autopay.</li>
-      <li><strong>2. Set up matching email</strong> (@yourdomain or forward to Gmail).</li>
-      <li><strong>3. Show me a layout you like.</strong> I build it using your own photos/videos. Includes contact form that forwards to your inbox.</li>
+  <div class="max-w-4xl mx-auto px-6 py-12">
+
+    <h2 class="text-3xl font-bold mb-8">Get Your Professional Website – Fast, Affordable, and Yours to Own</h2>
+
+    <ol class="space-y-8 text-lg">
+      <li><strong>1. Purchase your domain</strong> (yourcompany.com, .net, .store or .shop if selling merch). Grab bundles for 1 year with autopay — keeps startup costs low and prevents copycats.</li>
+      <li><strong>2. Set up matching email</strong> (@yourdomain or forward to Gmail). Gmail makes large file sharing easy and customers trust replies from your own domain.</li>
+      <li><strong>3. Show me a layout you like.</strong> I build it using your own photos/videos pulled from your YouTube channel (easy rotation!). Includes contact form that forwards straight to your inbox.</li>
     </ol>
 
-    <div class="bg-zinc-900 border-2 border-cyan-400 p-8 rounded-3xl my-10 text-center">
-      <p class="text-3xl font-bold">Basic professional web page — <span class="text-green-400">$800</span><br>
-      Full package with logo + animation + 4 videos — <span class="text-green-400">$1,000</span></p>
-      <button onclick="window.location='mailto:webbspinnervisions@gmail.com'" 
-              class="mt-6 bg-white text-zinc-950 px-10 py-4 rounded-2xl text-xl font-bold">
-        📧 Send Your Photos &amp; Ideas Now
-      </button>
+    <div class="bg-zinc-800 border border-cyan-500 p-6 rounded-3xl my-10">
+      <p class="font-medium">💡 Pro Tip from experience:</p>
+      <ul class="list-disc pl-6 space-y-2 mt-3">
+        <li>Anticipate copycats — buy all similar domains at once and pull the trigger fast.</li>
+        <li>Use your YouTube channel so I can pull videos/photos — you can rotate them anytime without me.</li>
+        <li>Single professional page to start (with 4-video section), expandable to full multi-page with products, before/afters, merch, contracts, payment processing, etc.</li>
+      </ul>
     </div>
 
-    <p>I will walk you through connecting everything to your domain. You review before release. All emails go ONLY to <strong>webbspinnervisions@gmail.com</strong>.</p>
+    <!-- PRICING BOXES -->
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-zinc-900 border border-white/30 p-8 rounded-3xl text-center">
+        <h3 class="text-2xl font-bold">Basic Professional Web Page</h3>
+        <p class="text-5xl font-bold text-green-400 my-4">$800</p>
+        <a href="mailto:webbspinnervisions@gmail.com" class="block bg-white text-black py-4 rounded-xl font-bold hover:bg-cyan-300">Send Your Photos & Ideas Now</a>
+      </div>
+      <div class="bg-gradient-to-br from-cyan-600 to-emerald-600 p-8 rounded-3xl text-center relative">
+        <div class="absolute -top-3 right-6 bg-red-600 text-xs px-4 py-1 rounded-full">Most Popular</div>
+        <h3 class="text-2xl font-bold">Full Package</h3>
+        <p class="text-5xl font-bold my-4">Logo + Animation + 4 Videos + Website</p>
+        <p class="text-4xl font-bold">$1,000</p>
+        <a href="mailto:webbspinnervisions@gmail.com" class="block mt-6 bg-black text-white py-4 rounded-xl font-bold">Send Your Photos & Ideas Now →</a>
+      </div>
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="italic">"I will walk you through connecting everything to your domain. You review before release. All emails go ONLY to you."</p>
+      <div class="flex justify-center gap-8 mt-8">
+        <a href="https://www.facebook.com/profile.php?id=61572155061749" class="text-3xl hover:text-blue-400"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://instagram.com/webbspinnervisions" class="text-3xl hover:text-pink-400"><i class="fab fa-instagram"></i> Instagram @webbspinnervisions</a>
+      </div>
+      <p class="mt-8 font-bold text-green-400">Special rates for veterans, charitable, and faith-based organizations ❤️</p>
+    </div>
+
+    <button onclick="window.location.href='mailto:webbspinnervisions@gmail.com'" 
+            class="w-full mt-12 bg-red-600 hover:bg-red-700 py-6 text-2xl font-bold rounded-3xl">
+      📸 Send Your Photos & Ideas Now — Let’s Build It!
+    </button>
+
   </div>
 
-  <!-- CTA -->
-  <div class="bg-red-600 text-center py-12">
-    <a href="mailto:webbspinnervisions@gmail.com" 
-       class="inline-block bg-white text-red-600 px-12 py-5 rounded-3xl text-2xl font-bold">
-      Email Me Today &amp; Get Started
-    </a>
-  </div>
-
-  <footer class="text-center py-8 text-zinc-500">
-    © 2026 Webb Spinner Visions • Nashville/Gallatin, TN • 
-    <a href="index.html" class="underline">Back to Main Site</a>
+  <footer class="bg-black py-8 text-center border-t border-zinc-700">
+    <p>© 2026 Webb Spinner Visions • Nashville / Gallatin, TN • webbspinnervisions@gmail.com</p>
+    <p class="text-xs mt-3">100% ownership • Easy video rotation from your YouTube • Review before launch</p>
+    <a href="index.html" class="text-cyan-400 hover:underline block mt-6">← Return to Home</a>
   </footer>
 
-  <script>
-    document.querySelector('.spider').addEventListener('click', function() {
-      this.style.transition = 'all 0.3s';
-      this.style.transform = 'scale(1.4) rotate(20deg)';
-      setTimeout(() => this.style.transform = 'scale(1) rotate(0)', 400);
-    });
-  </script>
 </body>
 </html>
