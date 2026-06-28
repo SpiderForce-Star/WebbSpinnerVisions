@@ -7,54 +7,64 @@
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-/* Auto-fit responsive card/video grid (use on any page) */
+/* Auto-fit responsive card/video grid */
 .responsive-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
-/* For wider cards (e.g. services or marketing content) */
-.responsive-wide-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-}
-
-/* Hero image adjustments */
-.hero-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center bottom; /* Pulls image down so top content/spiders are visible */
-}
-
-/* Big header images for About, Marketing, Services */
+/* Big header images */
 .big-header-image {
   width: 100%;
-  max-height: 420px; /* ~5 inches tall on most screens */
+  max-height: 420px;
   object-fit: cover;
   object-position: center top;
   border-bottom: 1px solid #27272a;
 }
 
-/* Mobile-first improvements */
+/* Enhanced Marquee Ribbons with Pause on Hover */
+.scrolling-ribbon {
+  overflow: hidden;
+  white-space: nowrap;
+  background: linear-gradient(90deg, #1e40af, #22d3ee);
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 0;
+}
+.scroll-content {
+  display: inline-block;
+  animation: marquee 35s linear infinite;
+  padding-right: 4rem;
+}
+.scrolling-ribbon:hover .scroll-content {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Mobile padding fixes */
 @media (max-width: 640px) {
   .responsive-card-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
   .big-header-image {
     max-height: 280px;
   }
+  .p-mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
-/* Smooth transitions for cards */
+/* Card hover polish */
 .card-hover {
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
