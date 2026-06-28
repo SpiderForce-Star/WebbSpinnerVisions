@@ -1,0 +1,64 @@
+/* =============================================
+   Webb Spinner Visions - Shared Responsive Utilities
+   ============================================= */
+
+/* Base responsive container */
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Auto-fit responsive card/video grid (use on any page) */
+.responsive-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* For wider cards (e.g. services or marketing content) */
+.responsive-wide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Hero image adjustments */
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center bottom; /* Pulls image down so top content/spiders are visible */
+}
+
+/* Big header images for About, Marketing, Services */
+.big-header-image {
+  width: 100%;
+  max-height: 420px; /* ~5 inches tall on most screens */
+  object-fit: cover;
+  object-position: center top;
+  border-bottom: 1px solid #27272a;
+}
+
+/* Mobile-first improvements */
+@media (max-width: 640px) {
+  .responsive-card-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .big-header-image {
+    max-height: 280px;
+  }
+}
+
+/* Smooth transitions for cards */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
