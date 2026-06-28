@@ -1,22 +1,41 @@
-<!-- nav.html -->
-<nav class="bg-black border-b border-red-600">
+<!-- nav.html - Shared Navigation -->
+<nav class="bg-black border-b border-red-600 sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <!-- Logo -->
     <div class="flex items-center gap-3">
-      <img src="Shield.jpg" class="h-9" alt="Shield Logo">
+      <img src="Shield.jpg" class="h-9" alt="Webb Spinner Visions Shield Logo">
       <span class="text-2xl font-bold tracking-wider">WEBB SPINNER VISIONS</span>
     </div>
-    <div class="flex items-center gap-6 text-sm">
-      <a href="index.html" class="hover:text-red-400">Home</a>
-      <a href="services.html" class="hover:text-red-400">Services</a>
-      <a href="demos.html" class="hover:text-red-400">Demos</a>
-      <a href="marketing.html" class="hover:text-red-400">Marketing</a>
-      <a href="about.html" class="hover:text-red-400">About</a>
-      <a href="contact.html" class="hover:text-red-400">Contact</a>
-      <!-- Spinning X -->
-      <a href="https://x.com/Webb__X" target="_blank" class="flex items-center gap-2 text-xl hover:text-sky-400 transition-colors">
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="index.html" class="hover:text-red-400 transition-colors">Home</a>
+      <a href="services.html" class="hover:text-red-400 transition-colors">Services</a>
+      <a href="demos.html" class="hover:text-red-400 transition-colors">Demos</a>
+      <a href="marketing.html" class="hover:text-red-400 transition-colors">Marketing</a>
+      <a href="about.html" class="hover:text-red-400 transition-colors">About</a>
+    </div>
+
+    <!-- Right side: Spinning X + CTA -->
+    <div class="flex items-center gap-4">
+      <!-- Spinning X (Twitter) -->
+      <a href="https://x.com/Webb__X" target="_blank" 
+         class="flex items-center gap-2 text-xl hover:text-sky-400 transition-colors" title="Follow on X">
         <i class="fab fa-x-twitter x-spin"></i>
       </a>
+      
+      <a href="mailto:webbspinnervisions@gmail.com" 
+         class="bg-red-600 hover:bg-red-700 px-6 py-2.5 rounded-full font-bold text-sm transition-colors">
+        Email to Start Today →
+      </a>
     </div>
-    <a href="mailto:webbspinnervisions@gmail.com" class="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-full font-bold text-sm">Email to Start Today →</a>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="md:hidden border-t border-zinc-800 px-4 py-3 flex justify-center gap-6 text-sm">
+    <a href="index.html" class="hover:text-red-400">Home</a>
+    <a href="services.html" class="hover:text-red-400">Services</a>
+    <a href="demos.html" class="hover:text-red-400">Demos</a>
+    <a href="about.html" class="hover:text-red-400">About</a>
   </div>
 </nav>
