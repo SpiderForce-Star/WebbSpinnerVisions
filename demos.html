@@ -1,168 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Demo Videos • Webb Spinner Visions</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <style>
-    .video-card {
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    }
-    .video-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-      border-color: #ef4444;
-    }
-    .play-overlay {
-      transition: all 0.2s ease;
-    }
-    .video-card:hover .play-overlay {
-      transform: scale(1.1);
-      background-color: #ef4444;
-    }
-  </style>
-</head>
-<body class="bg-zinc-950 text-white">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demos • Webb Spinner Visions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .brand-font { font-family: 'Space Grotesk', 'Inter', sans-serif; letter-spacing: -0.025em; }
 
-  <!-- SHARED NAV -->
-  <div id="nav-placeholder"></div>
+        .top-nav { background: #000000; border-bottom: 3px solid #e11d48; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1.5rem; }
+        .logo-group { display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; }
+        .shield-logo { height: 52px; width: auto; transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+        .shield-logo:hover { transform: scale(1.08) rotate(-4deg); }
+        .brand-text { font-size: 1.35rem; font-weight: 700; color: white; letter-spacing: 0.5px; white-space: nowrap; }
+        .main-nav { display: flex; align-items: center; gap: 1.75rem; font-weight: 600; font-size: 0.95rem; }
+        .main-nav a { color: #e5e7eb; text-decoration: none; transition: color 0.2s ease; position: relative; }
+        .main-nav a:hover { color: #f43f5e; }
+        .main-nav a:after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background-color: #e11d48; transition: width 0.25s ease; }
+        .main-nav a:hover:after { width: 100%; }
+        .header-actions { display: flex; align-items: center; gap: 1rem; flex-shrink: 0; }
+        .x-link { font-size: 1.65rem; color: #e5e7eb; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 9999px; }
+        .x-link:hover { color: #f43f5e; background: rgba(225, 29, 72, 0.1); transform: translateY(-1px); }
+        .email-btn { background: #e11d48; color: white; padding: 0.55rem 1.35rem; border-radius: 9999px; font-weight: 700; font-size: 0.9rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 6px -1px rgb(225 29 72 / 0.25); transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1); white-space: nowrap; }
+        .email-btn:hover { background: #be123c; transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgb(225 29 72 / 0.3); }
 
-  <!-- HEADER -->
-  <header class="bg-zinc-900 py-12 text-center border-b border-zinc-700">
-    <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Demo Videos</h1>
-    <p class="text-zinc-400 mt-3 max-w-md mx-auto">Real client projects. Click any card to watch in full-screen modal with complete player controls.</p>
-  </header>
+        .metallic-banner { width: 100%; overflow: hidden; background: #111827; border-bottom: 1px solid #374151; }
+        .metallic-banner img { width: 100%; height: auto; display: block; max-height: 120px; object-fit: cover; object-position: center top; }
 
-  <!-- CSS GRID with auto-fit -->
-  <div class="max-w-7xl mx-auto px-6 py-12">
-    <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">
-      
-      <!-- Video 1 -->
-      <div onclick="openVideoModal('TqUbd7HyNUo', 'Commercial Construction Video')" 
-           class="video-card group cursor-pointer bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700">
-        <div class="relative aspect-video bg-zinc-800 flex items-center justify-center">
-          <div class="play-overlay w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl">
-            <i class="fas fa-play text-white text-2xl ml-1"></i>
-          </div>
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg">Commercial Construction Video</h3>
-          <p class="text-sm text-zinc-400 mt-1">Professional build showcase for metal building client</p>
-        </div>
-      </div>
-
-      <!-- Video 2 -->
-      <div onclick="openVideoModal('YuyJKJcaPGY', 'Home Builder Video')" 
-           class="video-card group cursor-pointer bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700">
-        <div class="relative aspect-video bg-zinc-800 flex items-center justify-center">
-          <div class="play-overlay w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl">
-            <i class="fas fa-play text-white text-2xl ml-1"></i>
-          </div>
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg">Home Builder Video</h3>
-          <p class="text-sm text-zinc-400 mt-1">Custom home project highlight video</p>
-        </div>
-      </div>
-
-      <!-- Video 3 -->
-      <div onclick="openVideoModal('7nM4UF3J6TQ', 'Custom Vehicle Video')" 
-           class="video-card group cursor-pointer bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700">
-        <div class="relative aspect-video bg-zinc-800 flex items-center justify-center">
-          <div class="play-overlay w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl">
-            <i class="fas fa-play text-white text-2xl ml-1"></i>
-          </div>
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg">Custom Vehicle Video</h3>
-          <p class="text-sm text-zinc-400 mt-1">Vehicle customization build showcase</p>
-        </div>
-      </div>
-
-      <!-- Video 4 -->
-      <div onclick="openVideoModal('Ga7R0sbnzpc', 'Roux\'s Oyster Special - Restaurant Video')" 
-           class="video-card group cursor-pointer bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-700">
-        <div class="relative aspect-video bg-zinc-800 flex items-center justify-center">
-          <div class="play-overlay w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl">
-            <i class="fas fa-play text-white text-2xl ml-1"></i>
-          </div>
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg">Roux's Restaurant Demo</h3>
-          <p class="text-sm text-zinc-400 mt-1">Restaurant promotional video for local client</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- LIGHTBOX MODAL -->
-  <div id="videoModal" onclick="closeVideoModal()" 
-       class="hidden fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center p-4">
-    <div onclick="event.stopImmediatePropagation()" 
-         class="bg-zinc-900 rounded-2xl w-full max-w-5xl overflow-hidden border border-zinc-700">
-      
-      <div class="flex justify-between items-center px-6 py-4 border-b border-zinc-700">
-        <h3 id="modalTitle" class="text-xl font-semibold"></h3>
-        <button onclick="closeVideoModal()" 
-                class="text-zinc-400 hover:text-white text-4xl leading-none w-10 h-10 flex items-center justify-center">×</button>
-      </div>
-
-      <div class="p-6">
-        <div class="aspect-video bg-black rounded-xl overflow-hidden border border-zinc-700">
-          <iframe id="modalVideo" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Spinning X -->
-  <div class="max-w-7xl mx-auto px-6 pb-10 text-center">
-    <a href="https://x.com/Webb__X" target="_blank" 
-       class="inline-flex items-center gap-3 text-xl hover:text-sky-400 transition-colors">
-      <i class="fab fa-x-twitter text-4xl x-spin"></i>
-      <span>Follow on X (our primary platform)</span>
-    </a>
-  </div>
-
-  <!-- SHARED FOOTER -->
-  <div id="footer-placeholder"></div>
-
-  <script>
-    fetch('nav.html').then(r => r.text()).then(data => document.getElementById('nav-placeholder').innerHTML = data);
-    fetch('footer.html').then(r => r.text()).then(data => document.getElementById('footer-placeholder').innerHTML = data);
-
-    function openVideoModal(videoId, title) {
-      const modal = document.getElementById('videoModal');
-      const iframe = document.getElementById('modalVideo');
-      const modalTitle = document.getElementById('modalTitle');
-
-      modalTitle.textContent = title;
-      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-    }
-
-    function closeVideoModal() {
-      const modal = document.getElementById('videoModal');
-      const iframe = document.getElementById('modalVideo');
-
-      modal.classList.remove('flex');
-      modal.classList.add('hidden');
-      iframe.src = '';
-    }
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === "Escape") {
-        const modal = document.getElementById('videoModal');
-        if (!modal.classList.contains('hidden')) {
-          closeVideoModal();
+        .video-card {
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease;
+            background: #1e2937;
         }
-      }
-    });
-  </script>
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .video-thumbnail { position: relative; overflow: hidden; }
+        .video-thumbnail img { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .video-card:hover .video-thumbnail img { transform: scale(1.08); }
+        .play-overlay {
+            position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+            display: flex; align-items: center; justify-content: center; opacity: 0.9; transition: opacity 0.2s ease;
+        }
+        .video-card:hover .play-overlay { opacity: 1; }
+
+        .modal { animation: modalPopIn 0.2s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        @keyframes modalPopIn {
+            from { transform: scale(0.8) translateY(40px); opacity: 0; }
+            to { transform: scale(1) translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200">
+
+    <!-- TOP NAV HEADER -->
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="logo-group">
+                <img src="Shield.jpg" alt="Spider Shield Logo" class="shield-logo" 
+                     onerror="this.src='https://via.placeholder.com/52x52/111827/fff?text=🕷'">
+                <span class="brand-text brand-font">WEBB SPINNER VISIONS</span>
+            </div>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="demos.html" class="text-white">Demos</a>
+                <a href="marketing.html">Marketing</a>
+                <a href="services.html">Services</a>
+                <a href="website.html">Websites</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://x.com/Webb__X" target="_blank" rel="noopener" class="x-link">𝕏</a>
+                <a href="mailto:webbspinnervisions@gmail.com" class="email-btn">
+                    <span>📧</span><span>Email Now!</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- METALLIC BANNER -->
+    <div class="metallic-banner">
+        <img src="Metallic Header.jpg" alt="Metallic Banner" onerror="this.style.display='none'">
+    </div>
+
+    <!-- PAGE HEADER -->
+    <div class="max-w-5xl mx-auto px-6 pt-10 pb-8">
+        <div class="flex items-center gap-3 mb-3">
+            <span class="text-4xl">🕷</span>
+            <h1 class="text-4xl font-bold tracking-tight">Video Demos &amp; Showcases</h1>
+        </div>
+        <p class="text-xl text-zinc-400 max-w-2xl">
+            A selection of our recent work. Click any card to watch in full screen.
+        </p>
+    </div>
+
+    <!-- VIDEO GRID -->
+    <div class="max-w-6xl mx-auto px-6 pb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Video 1 -->
+            <div class="video-card rounded-2xl overflow-hidden border border-zinc-800 cursor-pointer" 
+                 onclick="openVideoModal('mEvE69qwjY', 'WSV Top Entrance Video • Logo Design & Animation Showcase')">
+                <div class="video-thumbnail relative">
+                    <img src="https://img.youtube.com/vi/mEvE69qwjY/hqdefault.jpg" alt="WSV Top Entrance Video" class="w-full aspect-video object-cover">
+                    <div class="play-overlay">
+                        <div class="w-14 h-14 bg-white/90 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-zinc-900 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg leading-tight mb-1">WSV Top Entrance Video</h3>
+                    <p class="text-zinc-400 text-sm">Signature logo animation and entrance sequence</p>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="video-card rounded-2xl overflow-hidden border border-zinc-800 cursor-pointer" 
+                 onclick="openVideoModal('mEvE69qwjY', 'Randy Jones Construction - Full Branding Package')">
+                <div class="video-thumbnail relative">
+                    <img src="https://img.youtube.com/vi/mEvE69qwjY/hqdefault.jpg" alt="Randy Jones Construction" class="w-full aspect-video object-cover">
+                    <div class="play-overlay">
+                        <div class="w-14 h-14 bg-white/90 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-zinc-900 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg leading-tight mb-1">Randy Jones Construction</h3>
+                    <p class="text-zinc-400 text-sm">Full branding package with logo animation and masterclass video</p>
+                </div>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="video-card rounded-2xl overflow-hidden border border-zinc-800 cursor-pointer" 
+                 onclick="openVideoModal('mEvE69qwjY', 'Metal Building Project Showcase')">
+                <div class="video-thumbnail relative">
+                    <img src="https://img.youtube.com/vi/mEvE69qwjY/hqdefault.jpg" alt="Metal Building Showcase" class="w-full aspect-video object-cover">
+                    <div class="play-overlay">
+                        <div class="w-14 h-14 bg-white/90 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-zinc-900 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg leading-tight mb-1">Metal Building Project</h3>
+                    <p class="text-zinc-400 text-sm">Before/after transformation and construction progress video</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- VIDEO MODAL (with title inside) -->
+    <div id="videoModal" onclick="if (event.target.id === 'videoModal') closeVideoModal()" 
+         class="hidden fixed inset-0 bg-black/90 z-[200] flex items-center justify-center p-4">
+        <div class="modal w-full max-w-5xl" onclick="event.stopImmediatePropagation()">
+            
+            <!-- Modal Header with Title -->
+            <div class="flex justify-between items-start mb-3 px-1">
+                <div>
+                    <h3 id="modalTitle" class="text-2xl font-semibold text-white leading-tight"></h3>
+                    <p class="text-zinc-400 text-sm mt-1">Webb Spinner Visions</p>
+                </div>
+                <button onclick="closeVideoModal()" 
+                        class="text-zinc-400 hover:text-white transition text-4xl leading-none w-12 h-12 flex items-center justify-center -mt-2 -mr-2">
+                    &times;
+                </button>
+            </div>
+
+            <!-- Video Player -->
+            <div class="relative bg-black rounded-2xl overflow-hidden shadow-2xl" style="aspect-ratio: 16 / 9;">
+                <iframe id="modalIframe" class="w-full h-full" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <p class="text-center text-zinc-500 text-xs mt-3">Press ESC or click outside to close</p>
+        </div>
+    </div>
+
+    <footer class="bg-black border-t border-zinc-800 py-8 text-center text-sm text-zinc-500">
+        <div class="max-w-4xl mx-auto px-6">
+            <p>© 2026 Webb Spinner Visions • Gallatin / Nashville, TN</p>
+        </div>
+    </footer>
+
+    <script>
+        function openVideoModal(videoId, title) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('modalIframe');
+            const titleEl = document.getElementById('modalTitle');
+
+            titleEl.textContent = title;
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&rel=0&modestbranding=1`;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+
+            // Close with ESC
+            document.onkeydown = function(evt) {
+                if (evt.key === "Escape") closeVideoModal();
+            };
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('modalIframe');
+
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            iframe.src = '';           // Stop the video
+            document.onkeydown = null;
+        }
+    </script>
 </body>
 </html>
