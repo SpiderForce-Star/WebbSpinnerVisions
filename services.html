@@ -1,75 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Professional Websites • Webb Spinner Visions</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <link rel="stylesheet" href="css/responsive.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services • Webb Spinner Visions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-zinc-950 text-white">
-
-  <!-- SHARED NAV -->
-  <div id="nav-placeholder"></div>
-
-  <!-- BIG HEADER IMAGE - Shield.jpg -->
-  <header>
-    <img src="Shield.jpg" alt="Webb Spinner Visions Shield Logo" class="big-header-image mx-auto">
-  </header>
-
-  <!-- HERO TEXT -->
-  <section class="bg-zinc-900 py-12 text-center border-b border-zinc-700">
-    <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Get Your Professional Website</h1>
-    <p class="text-cyan-400 text-xl mt-2">Fast • Affordable • 100% Yours</p>
-  </section>
-
-  <div class="max-w-4xl mx-auto px-6 py-14">
-
-    <!-- HOW IT WORKS (Full restored content) -->
-    <h2 class="text-3xl font-bold mb-8">How It Works</h2>
-
-    <div class="space-y-8 text-lg">
-      <div>
-        <h3 class="font-semibold text-xl">1. Purchase your domain</h3>
-        <p class="text-zinc-300 mt-2">Choose yourcompany.com, .net, .store or .shop (great if selling merchandise). Grab 1-year bundles with autopay — this keeps startup costs low and prevents copycats from taking your name.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold text-xl">2. Set up matching email</h3>
-        <p class="text-zinc-300 mt-2">Use @yourdomain.com (or forward to Gmail). Customers trust emails from your own domain, and Gmail makes large file sharing easy.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold text-xl">3. Show me a layout you like</h3>
-        <p class="text-zinc-300 mt-2">I build your site using <strong>your own photos and videos</strong> pulled directly from your YouTube channel (easy to rotate anytime). Includes a contact form that sends straight to your inbox.</p>
-      </div>
+<body class="bg-zinc-950 text-zinc-200">
+    <div id="header-placeholder"></div>
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <h1 class="text-4xl font-bold text-center">Our Services</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+            <div class="bg-zinc-900 p-8 rounded-xl">Logo Animation & Intros</div>
+            <div class="bg-zinc-900 p-8 rounded-xl">Promotional & Masterclass Videos</div>
+            <div class="bg-zinc-900 p-8 rounded-xl">Website Construction</div>
+        </div>
+        <div class="text-center mt-10">
+            <a href="mailto:webbspinnervisions@gmail.com" class="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-full text-xl font-bold">Get Your Custom Quote</a>
+        </div>
     </div>
-
-    <!-- PRICING -->
-    <div class="mt-14 grid md:grid-cols-2 gap-6">
-      <div class="bg-zinc-900 border border-white/30 p-8 rounded-3xl">
-        <h3 class="text-2xl font-bold">Basic Professional Web Page</h3>
-        <p class="text-5xl font-bold text-green-400 my-4">$800</p>
-        <a href="mailto:webbspinnervisions@gmail.com" class="block bg-white text-black text-center py-4 rounded-xl font-bold hover:bg-cyan-300 transition">Send Your Photos &amp; Ideas Now</a>
-      </div>
-      
-      <div class="bg-gradient-to-br from-cyan-600 to-emerald-600 p-8 rounded-3xl relative">
-        <div class="absolute -top-3 right-6 bg-red-600 text-xs px-4 py-1 rounded-full font-bold">Most Popular</div>
-        <h3 class="text-2xl font-bold">Full Package</h3>
-        <p class="text-xl font-semibold mt-1">Logo + Animation + 4 Videos + Website</p>
-        <p class="text-5xl font-bold my-4">$1,000</p>
-        <a href="mailto:webbspinnervisions@gmail.com" class="block bg-black text-white text-center py-4 rounded-xl font-bold hover:bg-zinc-800 transition">Send Your Photos &amp; Ideas Now</a>
-      </div>
-    </div>
-
-    <p class="mt-8 text-center font-bold text-green-400">Special rates for veterans, charitable, and faith-based organizations</p>
-  </div>
-
-  <!-- SHARED FOOTER -->
-  <div id="footer-placeholder"></div>
-
-  <script>
-    fetch('nav.html').then(r => r.text()).then(data => document.getElementById('nav-placeholder').innerHTML = data);
-    fetch('footer.html').then(r => r.text()).then(data => document.getElementById('footer-placeholder').innerHTML = data);
-  </script>
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('header.html').then(r => r.text()).then(d => document.getElementById('header-placeholder').innerHTML = d);
+        fetch('footer.html').then(r => r.text()).then(d => document.getElementById('footer-placeholder').innerHTML = d);
+    </script>
 </body>
 </html>
