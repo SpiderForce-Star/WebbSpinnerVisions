@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://cdn.tailwindcss.com"></script>
-<style>
-    .top-nav {background:#000;border-bottom:3px solid #e11d48;position:sticky;top:0;z-index:100;}
-    .nav-container {max-width:1400px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:72px;}
-    .shield-logo {height:52px;transition:transform .2s;}
-    .shield-logo:hover {transform:scale(1.08) rotate(-4deg);}
-    .brand-text {font-size:1.4rem;font-weight:700;color:white;letter-spacing:0.5px;}
-    .main-nav a {color:#e5e7eb;transition:color .2s;position:relative;}
-    .main-nav a:hover {color:#f43f5e;}
-    .main-nav a:after {content:'';position:absolute;width:0;height:2px;bottom:-2px;left:0;background:#e11d48;transition:width .25s;}
-    .main-nav a:hover:after {width:100%;}
-    .x-link {font-size:1.8rem;transition:all .3s;display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:9999px;}
-    .x-link:hover {color:#f43f5e;background:rgba(225,29,72,0.15);transform:rotate(360deg) scale(1.15);}
-    @media (max-width:768px){.nav-container{flex-wrap:wrap;height:auto;padding:1rem 1.5rem;gap:1rem;}.main-nav{order:3;width:100%;justify-content:center;}}
-</style></head><body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .top-nav { background:#000; border-bottom:3px solid #e11d48; position:sticky; top:0; z-index:100; }
+        .nav-container { max-width:1400px; margin:0 auto; padding:0 1.5rem; display:flex; align-items:center; justify-content:space-between; height:72px; }
+        .shield-logo { height:52px; transition:transform .2s; }
+        .shield-logo:hover { transform:scale(1.08) rotate(-4deg); }
+        .brand-text { font-size:1.4rem; font-weight:700; color:white; letter-spacing:0.5px; }
+        .x-link { font-size:1.8rem; transition:all .3s; display:flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:9999px; }
+        .x-link:hover { color:#f43f5e; background:rgba(225,29,72,0.15); transform:rotate(360deg) scale(1.15); }
+        .toggle-btn { width:42px; height:42px; display:flex; align-items:center; justify-content:center; font-size:1.6rem; transition:all .3s; }
+        @media (max-width:768px) { .nav-container { flex-wrap:wrap; height:auto; padding:1rem; } .main-nav { order:3; width:100%; justify-content:center; } }
+    </style>
+</head>
+<body>
 <header class="top-nav">
   <div class="nav-container">
     <div class="flex items-center gap-3">
@@ -21,7 +24,7 @@
       <span class="brand-text">WEBB SPINNER VISIONS</span>
     </div>
 
-    <nav class="main-nav hidden md:flex gap-6 text-base font-semibold">
+    <nav class="main-nav hidden md:flex gap-6 font-semibold">
       <a href="index.html">Home</a>
       <a href="demos.html">Demos</a>
       <a href="marketing.html">Marketing</a>
@@ -29,9 +32,16 @@
       <a href="website.html">Websites</a>
     </nav>
 
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-3">
+      <!-- Spinning X -->
       <a href="https://x.com/Webb__X" target="_blank" class="x-link">𝕏</a>
+      
+      <!-- DARK MODE TOGGLE -->
+      <button id="theme-toggle" class="toggle-btn hover:bg-zinc-800 rounded-full">🌙</button>
+      
       <a href="mailto:webbspinnervisions@gmail.com" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-full font-bold">📧 Email Now</a>
+      
+      <!-- Hamburger -->
       <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-3xl">☰</button>
     </div>
   </div>
@@ -45,4 +55,46 @@
     <a href="website.html" class="py-2">Websites</a>
   </div>
 </header>
-<script>/* Mobile menu auto-close already handled by full page code */</script>
+
+<script>
+  // Dark/Light Mode Toggle (full functionality)
+  const toggleBtn = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+
+  function setTheme(theme) {
+    if (theme === 'light') {
+      html.classList.remove('dark');
+      toggleBtn.innerHTML = '☀️';
+      localStorage.theme = 'light';
+    } else {
+      html.classList.add('dark');
+      toggleBtn.innerHTML = '🌙';
+      localStorage.theme = 'dark';
+    }
+  }
+
+  // Load saved preference or system preference
+  if (localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+    setTheme('light');
+  } else {
+    setTheme('dark');
+  }
+
+  // Toggle on click
+  toggleBtn.addEventListener('click', () => {
+    if (html.classList.contains('dark')) {
+      setTheme('light');
+    } else {
+      setTheme('dark');
+    }
+  });
+
+  // Mobile menu close on link click
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.add('hidden');
+    });
+  });
+</script>
+</body>
+</html>
