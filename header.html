@@ -1,74 +1,36 @@
-<!-- HEADER.HTML - EXACTLY MATCHES YOUR SCREENSHOT + YOUR PREFERENCES -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header • Webb Spinner Visions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>.spin{animation:spin 6s linear infinite;}@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}</style>
+</head>
+<body>
 <header class="bg-black border-b border-red-600">
-  <div class="max-w-7xl mx-auto">
-    <!-- Top Navbar -->
-    <div class="flex items-center justify-between px-6 py-3">
-      <!-- Logo - Exact match -->
-      <div class="flex items-center gap-3">
-        <img src="Shield-logo.png" alt="Logo" class="h-8 w-auto">
-        <div>
-          <span class="text-white text-2xl font-bold tracking-wider">WEBB SPINNER</span>
-          <span class="block text-red-400 text-xs tracking-[2px] -mt-1 font-semibold">VISIONS</span>
-        </div>
-      </div>
-
-      <!-- Desktop Nav - Exact icons & text from screenshot -->
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="index.html" class="flex items-center gap-1 hover:text-red-400 transition">🏠 Home</a>
-        <a href="demos.html" class="flex items-center gap-1 hover:text-red-400 transition">🎥 Demos</a>
-        <a href="marketing.html" class="flex items-center gap-1 hover:text-red-400 transition">📊 Marketing & Strategy</a>
-        <a href="services.html" class="flex items-center gap-1 hover:text-red-400 transition">🔧 Services</a>
-        <a href="website.html" class="flex items-center gap-1 hover:text-red-400 transition">🌐 Websites</a>
-      </nav>
-
-      <!-- Right side - X + Email Button -->
-      <div class="flex items-center gap-4">
-        <!-- Spinning X (your main social) -->
-        <a href="https://x.com/Webb__X" target="_blank" class="text-3xl text-white hover:text-sky-400 transition">
-          <i class="fa-brands fa-x-twitter" style="animation: spin 6s linear infinite;"></i>
-        </a>
-        <!-- Red Email Now button - exact match -->
-        <button onclick="window.location.href='mailto:webbspinnervisions@gmail.com'" 
-                class="bg-red-600 hover:bg-red-700 px-5 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-          ✉️ Email Now
-        </button>
-        <!-- Hamburger for mobile -->
-        <button id="mobileBtn" class="md:hidden text-3xl text-white">☰</button>
-      </div>
+  <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <img src="Spider1.jpg" alt="Spider1" class="h-10">
+      <span class="text-2xl font-bold tracking-wider text-white">WEBB SPINNER VISIONS</span>
     </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobileNav" class="hidden md:hidden bg-zinc-900 border-t px-6 py-4 flex flex-col gap-3 text-base">
-      <a href="index.html" class="py-2">🏠 Home</a>
-      <a href="demos.html" class="py-2">🎥 Demos</a>
-      <a href="marketing.html" class="py-2">📊 Marketing & Strategy</a>
-      <a href="services.html" class="py-2">🔧 Services</a>
-      <a href="website.html" class="py-2">🌐 Websites</a>
-      <button onclick="window.location.href='mailto:webbspinnervisions@gmail.com'" class="bg-red-600 py-3 rounded-xl mt-3">✉️ Email Now</button>
-    </div>
-
-    <!-- RED MARQUEE BANNER - Exact text & fire emoji from screenshot -->
-    <div class="bg-red-600 py-2.5 overflow-hidden whitespace-nowrap">
-      <div class="inline-block animate-marquee text-white font-medium">
-        🔥 Logo Animations • Full Websites • All Starting at $500 • Limited Spots • Book Your Slot Today! 🔥&nbsp;&nbsp;&nbsp;&nbsp;
-        🔥 Logo Animations • Full Websites • All Starting at $500 • Limited Spots • Book Your Slot Today! 🔥
-      </div>
+    <nav class="hidden md:flex gap-6 text-sm font-medium">
+      <a href="index.html">🏠 Home</a>
+      <a href="demos.html">🎥 Demos</a>
+      <a href="marketing.html">📊 Marketing</a>
+      <a href="services.html">🛠 Services</a>
+      <a href="website.html">🌐 Websites</a>
+    </nav>
+    <div class="flex items-center gap-5">
+      <a href="https://x.com/Webb__X" target="_blank" class="text-3xl"><i class="fa-brands fa-x-twitter spin"></i></a>
+      <button onclick="window.location.href='mailto:webbspinnervisions@gmail.com'" class="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-full font-semibold">✉️ Email Now</button>
+      <button class="md:hidden text-3xl">☰</button>
     </div>
   </div>
-
-  <style>
-    @keyframes spin { from {transform:rotate(0deg);} to {transform:rotate(360deg);} }
-    .animate-marquee { animation: marquee 25s linear infinite; }
-    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  </style>
-
-  <script>
-    // Mobile hamburger
-    const btn = document.getElementById('mobileBtn');
-    const nav = document.getElementById('mobileNav');
-    btn.addEventListener('click', () => {
-      nav.classList.toggle('hidden');
-      btn.textContent = btn.textContent === '☰' ? '✕' : '☰';
-    });
-  </script>
+  <div class="bg-red-600 py-3 text-center text-sm font-medium overflow-hidden">
+    🔥 All Starting at $500 • Limited Spots • Book Your Slot Today! 🔥 Logo Animations • Full Websites • All Starting at $500 • Book Today!
+  </div>
 </header>
+</body>
+</html>
