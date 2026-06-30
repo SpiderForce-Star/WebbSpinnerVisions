@@ -1,32 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Demos • Webb Spinner Visions</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Video Demos • Webb Spinner Visions</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    .spin { animation: spin 6s linear infinite; }
+    @keyframes spin { from {transform:rotate(0deg);} to {transform:rotate(360deg);} }
+    .animate-marquee { animation: marquee 25s linear infinite; }
+    @keyframes marquee { from {transform:translateX(0);} to {transform:translateX(-50%);} }
+  </style>
 </head>
-<body class="bg-zinc-950 text-zinc-200">
-  <div id="header-placeholder"></div>
-  <div class="max-w-7xl mx-auto px-6 py-12">
-    <h1 class="text-4xl font-bold text-center">Real Video Demos</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-10"> <!-- xl for large monitors -->
-      <!-- Hero -->
-      <div onclick="openVideoModal('mEvE69qwjY','WSV Top Entrance Video (Hero)')" class="cursor-pointer bg-zinc-900 rounded-xl overflow-hidden">
-        <img src="https://img.youtube.com/vi/mEvE69qwjY/hqdefault.jpg" class="w-full">
-        <div class="p-4">WSV Top Entrance Video (Hero)</div>
+<body class="bg-zinc-950 text-white">
+
+  <!-- LOCKED HEADER (exact as approved) -->
+  <header class="bg-black border-b border-red-600">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-3">
+        <div class="flex items-center gap-3">
+          <img src="Shield-logo.png" alt="Logo" class="h-8">
+          <div>
+            <span class="text-white text-2xl font-bold tracking-wider">WEBB SPINNER</span>
+            <span class="block text-red-400 text-xs tracking-[2px] -mt-1">VISIONS</span>
+          </div>
+        </div>
+        <nav class="hidden md:flex gap-6 text-sm">
+          <a href="index.html" class="hover:text-red-400">🏠 Home</a>
+          <a href="demos.html" class="text-red-400 font-bold">🎥 Demos</a>
+          <a href="marketing.html" class="hover:text-red-400">📊 Marketing & Strategy</a>
+          <a href="services.html" class="hover:text-red-400">🔧 Services</a>
+          <a href="website.html" class="hover:text-red-400">🌐 Websites</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <a href="https://x.com/Webb__X" target="_blank" class="text-3xl"><i class="fa-brands fa-x-twitter spin"></i></a>
+          <button onclick="window.location.href='mailto:webbspinnervisions@gmail.com'" class="bg-red-600 hover:bg-red-700 px-5 py-2 rounded-full flex items-center gap-2">✉️ Email Now</button>
+          <button id="mobileBtn" class="md:hidden text-3xl">☰</button>
+        </div>
       </div>
-      <!-- New one -->
-      <div onclick="openVideoModal('lxCcSFwQG7E','Painting & Home Remodel')" class="cursor-pointer bg-zinc-900 rounded-xl overflow-hidden">
-        <img src="https://img.youtube.com/vi/lxCcSFwQG7E/hqdefault.jpg" class="w-full">
-        <div class="p-4">Painting / Home Remodel</div>
-      </div>
-      <!-- More real cards from your channel (replace IDs as needed) -->
-      <div onclick="openVideoModal('mEvE69qwjY','Restaurant Sample (Roux’s)')" class="cursor-pointer bg-zinc-900 rounded-xl overflow-hidden">
-        <div class="p-4">Restaurant Promotion Example</div>
+      <!-- Red banner -->
+      <div class="bg-red-600 py-2 overflow-hidden">
+        <div class="animate-marquee inline-block text-white">🔥 Logo Animations • Full Websites • All Starting at $500 • Limited Spots • Book Your Slot Today! 🔥&nbsp;&nbsp;&nbsp;🔥 Logo Animations • Full Websites • All Starting at $500 • Limited Spots • Book Your Slot Today! 🔥</div>
       </div>
     </div>
+    <script>
+      document.getElementById('mobileBtn').onclick = () => {
+        const nav = document.querySelector('nav');
+        nav.classList.toggle('hidden');
+        nav.classList.toggle('flex-col');
+      };
+    </script>
+  </header>
+
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold text-center">Real Video Demos</h1>
+    <p class="text-center text-zinc-400 mt-2">Click any video • Watch instantly • See what we create for small businesses</p>
+
+    <!-- Video Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+
+      <!-- Roux's Oyster – Star Card -->
+      <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-amber-400">
+        <div class="p-3">
+          <video controls class="w-full rounded-2xl">
+            <source src="rouxs-oyster-special.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="p-4">
+          <h3 class="font-bold">🍤 Roux’s Creole Cafe • Gulf Coast Oysters Special Promo</h3>
+          <p class="text-sm text-zinc-400">20-second animated logo + product reveal • Perfect for restaurants</p>
+          <div class="flex flex-wrap gap-3 mt-4">
+            <button onclick="this.parentElement.parentElement.querySelector('video').play()" class="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-xl flex-1">▶️ Play Fullscreen</button>
+            <button onclick="window.location.href='mailto:webbspinnervisions@gmail.com?subject=I%20want%20a%20restaurant%20promo%20like%20Roux%27s'" class="border border-white px-6 py-2 rounded-xl flex-1">Get One For My Business</button>
+            <a href="#" class="text-sky-400 underline text-sm self-center">📺 View on YouTube (uploading now)</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Demo Cards (YouTube-style – easy to swap real links) -->
+      <div class="bg-zinc-900 rounded-3xl p-4">
+        <div class="aspect-video bg-zinc-800 rounded-2xl flex items-center justify-center text-6xl">🏠</div>
+        <h3 class="font-bold mt-3">WSV Top Entrance Video (Hero)</h3>
+        <p class="text-sm text-zinc-400">Cinematic business intro – 15 seconds</p>
+        <button onclick="alert('In real YouTube version this opens full video')" class="w-full bg-white text-black py-3 rounded-xl mt-3 font-bold">▶️ Play on YouTube</button>
+      </div>
+
+      <div class="bg-zinc-900 rounded-3xl p-4">
+        <img src="https://picsum.photos/id/201/400/225" class="w-full rounded-2xl">
+        <h3 class="font-bold mt-3">Painting / Home Remodel Showcase</h3>
+        <p class="text-sm text-zinc-400">Before → After transformation video</p>
+        <button onclick="alert('YouTube demo would play here')" class="w-full bg-white text-black py-3 rounded-xl mt-3 font-bold">▶️ Watch Full Video</button>
+      </div>
+
+      <div class="bg-zinc-900 rounded-3xl p-4">
+        <div class="aspect-video bg-zinc-800 rounded-2xl flex items-center justify-center text-4xl">🎥</div>
+        <h3 class="font-bold mt-3">Logo Animation Reel</h3>
+        <p class="text-sm text-zinc-400">3 different logo reveals in 45 seconds</p>
+        <button onclick="alert('YouTube link ready')" class="w-full bg-white text-black py-3 rounded-xl mt-3 font-bold">🎞️ Play Animation Reel</button>
+      </div>
+
+      <!-- Add more cards easily by copying the pattern -->
+    </div>
+
+    <div class="text-center mt-12">
+      <button onclick="window.location.href='mailto:webbspinnervisions@gmail.com?subject=Send%20me%20my%20demo%20video%20package'" 
+              class="bg-red-600 hover:bg-red-700 text-xl px-12 py-4 rounded-3xl">
+        📸 Send Your Photos/Videos • I’ll Make Your Demo Next!
+      </button>
+      <p class="text-xs text-zinc-400 mt-6">All videos optimized for social media, websites, and ads • You keep full rights</p>
+    </div>
   </div>
-  <div id="footer-placeholder"></div>
-  <!-- Same header/footer load script + modal JS as before -->
+
+  <!-- Footer (same as other pages) -->
+  <footer class="bg-black py-10 border-t">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div>© Webb Spinner Visions • Professional Video • Animation • Websites</div>
+      <div class="flex gap-8 text-3xl">
+        <a href="https://x.com/Webb__X" target="_blank"><i class="fa-brands fa-x-twitter spin"></i></a>
+        <span>📘</span>
+        <span>📸</span>
+      </div>
+      <a href="mailto:webbspinnervisions@gmail.com" class="underline">webbspinnervisions@gmail.com</a>
+    </div>
+  </footer>
+
 </body>
 </html>
