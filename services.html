@@ -1,28 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services • Webb Spinner Visions</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services • Video • Animation • Websites • Webb Spinner Visions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    .spin { animation: spin 6s linear infinite; }
+    @keyframes spin { from {transform:rotate(0deg);} to {transform:rotate(360deg);} }
+  </style>
 </head>
-<body class="bg-zinc-950 text-zinc-200">
-    <div id="header-placeholder"></div>
-    <div class="max-w-7xl mx-auto px-6 py-12">
-        <h1 class="text-4xl font-bold text-center">Our Services</h1>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-            <div class="bg-zinc-900 p-8 rounded-xl">Logo Animation & Intros</div>
-            <div class="bg-zinc-900 p-8 rounded-xl">Promotional & Masterclass Videos</div>
-            <div class="bg-zinc-900 p-8 rounded-xl">Website Construction</div>
-        </div>
-        <div class="text-center mt-10">
-            <a href="mailto:webbspinnervisions@gmail.com" class="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-full text-xl font-bold">Get Your Custom Quote</a>
-        </div>
+<body class="bg-zinc-950 text-white">
+
+  <!-- LOCKED HEADER -->
+  <header class="bg-black border-b border-red-600">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-3">
+      <div class="flex items-center gap-3">
+        <img src="Spider1.jpg" alt="Spider1" class="h-10">
+        <span class="text-2xl font-bold tracking-wider">WEBB SPINNER VISIONS</span>
+      </div>
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="index.html">🏠 Home</a>
+        <a href="demos.html">🎥 Demos</a>
+        <a href="marketing.html">📊 Marketing</a>
+        <a href="services.html" class="text-red-400 font-bold">🛠 Services</a>
+        <a href="website.html">🌐 Websites</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <a href="https://x.com/Webb__X" class="text-3xl"><i class="fa-brands fa-x-twitter spin"></i></a>
+        <button onclick="window.location.href='mailto:webbspinnervisions@gmail.com'" class="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-full">✉️ Email Now</button>
+      </div>
     </div>
-    <div id="footer-placeholder"></div>
-    <script>
-        fetch('header.html').then(r => r.text()).then(d => document.getElementById('header-placeholder').innerHTML = d);
-        fetch('footer.html').then(r => r.text()).then(d => document.getElementById('footer-placeholder').innerHTML = d);
-    </script>
+    <div class="bg-red-600 py-3 text-center font-bold">🔥 All Starting at $500 • Limited Spots • Book Your Slot Today! • Logo Animations • Full Websites • All Starting at $500 • Limited Spots • Book Your Slot Today! 🔥</div>
+  </header>
+
+  <div class="max-w-6xl mx-auto px-6 py-12">
+    <h1 class="text-5xl font-bold text-center">Our Services</h1>
+    <p class="text-center text-xl mt-2 text-amber-300">Masterclass video production from your still photos • Cinematic animation from your logo & company name • Website construction NOW available!</p>
+
+    <!-- Service Cards -->
+    <div class="grid md:grid-cols-3 gap-8 mt-12">
+      <div class="bg-zinc-900 p-6 rounded-3xl">
+        <h3 class="font-bold text-xl">🎬 Logo Animation & Intros</h3>
+        <p class="mt-3">Cinematic logo reveal with light rays, product integration, and brand flair. Perfect for intros, social pins, and ads.</p>
+        <button onclick="window.location.href='mailto:webbspinnervisions@gmail.com?subject=Logo%20Animation%20Quote'" class="mt-6 w-full bg-red-600 py-3 rounded-2xl">Get Logo Animation Quote →</button>
+      </div>
+      <div class="bg-zinc-900 p-6 rounded-3xl">
+        <h3 class="font-bold text-xl">📹 Promotional & Masterclass Videos</h3>
+        <p class="mt-3">Grand opening promos, social media clips, lead-generation videos. Turn your photos into scroll-stopping content that sells.</p>
+        <button onclick="window.location.href='mailto:webbspinnervisions@gmail.com?subject=Promo%20Video%20Quote'" class="mt-6 w-full bg-red-600 py-3 rounded-2xl">Book Promotional Video →</button>
+      </div>
+      <div class="bg-zinc-900 p-6 rounded-3xl">
+        <h3 class="font-bold text-xl">🌐 Website Construction</h3>
+        <p class="mt-3">$800 basic professional single-page site • $1,000 full package (logo + animation + videos + website). You own it completely.</p>
+        <button onclick="window.location.href='mailto:webbspinnervisions@gmail.com?subject=Website%20Quote%20-%20$800%20or%20$1000%20package'" class="mt-6 w-full bg-red-600 py-3 rounded-2xl">Start Your Website Today →</button>
+      </div>
+    </div>
+
+    <!-- How We Work -->
+    <h2 class="text-3xl font-bold mt-16 text-center">How We Work Together</h2>
+    <ol class="mt-8 space-y-6 text-lg max-w-2xl mx-auto">
+      <li>1. Email us your social links, photos, and ideas</li>
+      <li>2. I review in 24-48 hrs and we hop on a call</li>
+      <li>3. Your ideas come to life with pre-reviews & approvals</li>
+      <li>4. Deposit + simple contract → I create magic</li>
+      <li>5. You approve finals → final payment → you own everything</li>
+    </ol>
+
+    <p class="text-center mt-8 font-bold">Special rates for veterans, charitable, and faith-based organizations.</p>
+
+    <div class="text-center mt-12">
+      <button onclick="window.location.href='mailto:webbspinnervisions@gmail.com'" class="bg-red-600 px-12 py-5 text-xl rounded-3xl">Get Your Custom Quote – Let’s Start Today</button>
+    </div>
+
+    <div class="text-center mt-16">
+      <img src="SpiderVenom.jpg" class="mx-auto rounded-xl shadow-2xl" alt="Spider Venom">
+      <p class="mt-4 text-sm">Video Techniques • Social Strategy • Full support included</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black py-8 text-center border-t">
+    <div>© Webb Spinner Visions • Professional Video • Animation • Websites</div>
+    <div class="flex justify-center gap-8 mt-4 text-3xl">
+      <a href="https://x.com/Webb__X">𝕏</a> <span>📘</span> <span>📸</span>
+    </div>
+    <a href="mailto:webbspinnervisions@gmail.com" class="block mt-4 underline">webbspinnervisions@gmail.com</a>
+  </footer>
+
 </body>
 </html>
