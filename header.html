@@ -1,68 +1,140 @@
-<!-- === FULL HEADER.HTML CONTENT — PASTE THIS ENTIRE BLOCK === -->
-<header class="sticky top-0 z-50 bg-black border-b border-zinc-700">
-  <nav class="max-w-7xl mx-auto px-6">
-    <div class="flex justify-between items-center h-16">
-      <!-- Logo -->
-      <div class="flex items-center gap-3">
-        <i class="fa-solid fa-spider text-4xl text-red-600"></i>
-        <div class="font-bold text-2xl tracking-wider">WEBB <span class="text-red-600">SPINNER</span> VISIONS</div>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Essential for mobile, tablet, desktop responsiveness -->
+    <title>Webb Spinner Visions • Videos • Animation • Websites</title> <!-- Change per page -->
+    <style>
+        /* Reset and base styles for all devices */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; }
 
-      <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
-        <a href="#home" class="hover:text-red-500 transition-colors">HOME</a>
-        <a href="#demos" class="hover:text-red-500 transition-colors">DEMOS</a>
-        <a href="#marketing" class="hover:text-red-500 transition-colors">MARKETING &amp; STRATEGY</a>
-        <a href="#services" class="hover:text-red-500 transition-colors">SERVICES</a>
-        <a href="#websites" class="hover:text-red-500 transition-colors">WEBSITES</a>
-      </div>
+        /* Sticky Header with new red banner */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .promo-bar {
+            background: #dc143c; /* Bold red */
+            color: white;
+            text-align: center;
+            padding: 12px 15px;
+            font-weight: bold;
+            font-size: 1rem;
+            overflow: hidden;
+        }
+        .promo-bar span {
+            display: inline-block;
+            animation: pulse 2.5s infinite ease-in-out;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+        /* Responsive text sizing */
+        @media (max-width: 640px) { /* Mobile phones */
+            .promo-bar { font-size: 0.85rem; padding: 10px 10px; line-height: 1.3; }
+        }
+        @media (min-width: 768px) and (max-width: 1024px) { /* Tablets */
+            .promo-bar { font-size: 1.05rem; padding: 12px 20px; }
+        }
+        @media (min-width: 1025px) { /* Full desktop */
+            .promo-bar { font-size: 1.1rem; }
+        }
 
-      <!-- Right side -->
-      <div class="flex items-center gap-x-5">
-        <!-- Spinning X icon -->
-        <a href="https://x.com/Webb__X" target="_blank" class="text-3xl hover:text-red-500 transition-all hover:rotate-12">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
-        <a href="mailto:webbspinnervisions@gmail.com" 
-           class="hidden md:block bg-red-600 hover:bg-red-700 px-6 py-2.5 rounded-full text-sm font-semibold transition-colors">
-          EMAIL NOW
-        </a>
-        <!-- Mobile Hamburger -->
-        <button onclick="toggleMobileMenu()" class="md:hidden text-3xl">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
+        /* Navigation */
+        nav {
+            padding: 15px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            background: #f8f8f8;
+        }
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+        }
+        .email-btn {
+            background: #dc143c;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+        .x-icon {
+            display: inline-block;
+            font-size: 1.5rem;
+            margin: 0 8px;
+            animation: spin 6s linear infinite paused;
+            cursor: pointer;
+        }
+        .x-icon:hover { animation-play-state: running; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        .hamburger { display: none; font-size: 1.8rem; cursor: pointer; }
+        @media (max-width: 640px) {
+            nav { flex-direction: column; }
+            .hamburger { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- NEW RED BANNER - UPDATE TEXT HERE ONLY WHEN PRICING CHANGES -->
+    <div class="promo-bar">
+        🔥 <span>Turn your still photos to professional videos. Setup with logo animation and sound is $200.00 for 2-30 second videos, additional 30 second videos are $75.00 each!</span> 🔥
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-zinc-950 border-t py-6 px-6 flex flex-col gap-5 text-lg">
-      <a href="#home" class="hover:text-red-500">🏠 HOME</a>
-      <a href="#demos" class="hover:text-red-500">🎥 DEMOS</a>
-      <a href="#marketing" class="hover:text-red-500">📈 MARKETING &amp; STRATEGY</a>
-      <a href="#services" class="hover:text-red-500">🛠️ SERVICES</a>
-      <a href="#websites" class="hover:text-red-500">🌐 WEBSITES</a>
-      <a href="mailto:webbspinnervisions@gmail.com" class="bg-red-600 text-center py-4 rounded-2xl font-bold">📧 EMAIL NOW</a>
-    </div>
-
-    <!-- ROLLING RED ADVERTISEMENT — YOUR EXACT TEXT -->
-    <div class="bg-red-600 py-3 overflow-hidden whitespace-nowrap border-t border-red-700">
-      <div class="inline-flex marquee items-center gap-12 text-white font-semibold text-[15px] md:text-base">
-        🔥Logo Animations &amp; 30s Videos $250 setup! 🔥Additional 30s videos for $75.00! 🔥 Professional Videos from your still photos to advertise your products/services. 🔥&nbsp;&nbsp;&nbsp;&nbsp;
-        🔥Logo Animations &amp; 30s Videos $250 setup! 🔥Additional 30s videos for $75.00! 🔥 Professional Videos from your still photos to advertise your products/services. 🔥
-      </div>
-    </div>
-  </nav>
+    <!-- Main Navigation (visible on every page) -->
+    <nav>
+        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap; justify-content: center;">
+            <a href="index.html">🏠 Home</a>
+            <a href="demos.html">🎥 Demos</a>
+            <a href="marketing.html">📊 Marketing & Strategy</a>
+            <a href="services.html">🔧 Services</a>
+            <a href="website.html">🌐 Websites</a>
+            
+            <!-- Email CTA -->
+            <a href="mailto:chriswoodmore@gmail.com" class="email-btn">✉️ Email Now</a>
+            
+            <!-- Spinning X - main social in header -->
+            <a href="https://x.com/Webb__X" target="_blank" style="color:#000;">
+                <span class="x-icon">𝕏</span>
+            </a>
+            
+            <span class="hamburger">☰</span>
+        </div>
+    </nav>
 </header>
 
-<style>
-  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  .marquee { animation: marquee 26s linear infinite; }
-  .marquee:hover { animation-play-state: paused; }
-</style>
+<!-- YOUR PAGE-SPECIFIC CONTENT GOES HERE (hero, demos, etc.) -->
+<!-- Example placeholder - replace with your existing content -->
+<main style="padding: 20px; max-width: 1200px; margin: 0 auto;">
+    <h1>Your Page Content Starts Here</h1>
+    <p>The sticky red banner and nav will stay visible while scrolling on desktop, tablet, and mobile.</p>
+</main>
 
+<!-- Footer (FB & IG only here + spinning X again) -->
+<footer style="background:#222; color:#ddd; padding: 30px 20px; text-align:center; margin-top: 60px;">
+    <p>
+        <a href="https://x.com/Webb__X" target="_blank"><span class="x-icon" style="color:white; font-size:1.6rem;">𝕏</span></a>
+        <a href="https://facebook.com/yourpage" target="_blank" style="margin:0 20px; color:#ddd; text-decoration:none;">Facebook</a>
+        <a href="https://instagram.com/yourpage" target="_blank" style="color:#ddd; text-decoration:none;">Instagram</a>
+    </p>
+    <p style="margin-top:15px; font-size:0.9rem;">&copy; 2026 Webb Spinner Visions • All Rights Reserved</p>
+</footer>
+
+<!-- Basic JS for future mobile menu expansion -->
 <script>
-  function toggleMobileMenu() {
-    document.getElementById('mobileMenu').classList.toggle('hidden');
-  }
+    // Hamburger menu can be expanded later with a click handler for full dropdown on mobile
+    console.log("Header with new $200 banner loaded - fully responsive across devices");
 </script>
-<!-- === END OF HEADER.HTML — YOU CAN NOW INCLUDE THIS IN index.html === -->
+</body>
+</html>
