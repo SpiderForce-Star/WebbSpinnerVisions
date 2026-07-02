@@ -5,32 +5,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenuClose = document.getElementById('mobile-menu-close');
   const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-  const contactForm = document.getElementById('contact-form');
-  const formSuccess = document.getElementById('form-success');
   const yearEl = document.getElementById('year');
 
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Navbar scroll effect
   const handleScroll = () => {
-    if (window.scrollY > 40) {
-      nav.classList.add('nav-scrolled');
-    } else {
-      nav.classList.remove('nav-scrolled');
-    }
+    if (!nav) return;
+    nav.classList.toggle('nav-scrolled', window.scrollY > 40);
   };
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 
-  // Mobile menu
   const openMenu = () => {
-    mobileMenu.classList.add('open');
+    mobileMenu?.classList.add('open');
+    mobileMenuBackdrop?.classList.add('open');
     document.body.style.overflow = 'hidden';
+    mobileMenuBtn?.setAttribute('aria-expanded', 'true');
   };
 
   const closeMenu = () => {
-    mobileMenu.classList.remove('open');
+    mobileMenu?.classList.remove('open');
+    mobileMenuBackdrop?.classList.remove('open');
     document.body.style.overflow = '';
+    mobileMenuBtn?.setAttribute('aria-expanded', 'false');
   };
 
   mobileMenuBtn?.addEventListener('click', openMenu);
@@ -38,7 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
   mobileMenuBackdrop?.addEventListener('click', closeMenu);
   mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
 
-  // Scroll reveal
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeMenu();
+  });
+
   const revealEls = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver(
     entries => {
@@ -53,35 +53,51 @@ document.addEventListener('DOMContentLoaded', () => {
   );
   revealEls.forEach(el => revealObserver.observe(el));
 
-  // Contact form
-  contactForm?.addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = contactForm.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
+  const lazyVideos = document.querySelectorAll('video.lazy-video');
+  if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const video = entry.target;
+          const src = video.dataset.src;
+          const source = video.querySelector('source');
+          if (src && source && !source.getAttribute('src')) {
+            source.setAttribute('src', src);
+            video.load();
+          }
+          videoObserver.unobserve(video);
+        });
+      },
+      { rootMargin: '200px 0px', threshold: 0.1 }
+    );
+    lazyVideos.forEach(v => videoObserver.observe(v));
+  }
 
-    setTimeout(() => {
-      contactForm.classList.add('hidden');
-      formSuccess.classList.remove('hidden');
-      btn.textContent = originalText;
-      btn.disabled = false;
-    }, 1200);
+  document.querySelectorAll('.portfolio-item').forEach(item => {
+    const video = item.querySelector('video');
+    const playBtn = item.querySelector('.play-btn');
+
+    if (video && playBtn) {
+      playBtn.style.pointerEvents = 'auto';
+      playBtn.addEventListener('click', e => {
+        e.stopPropagation();
+        if (video.paused) video.play();
+        else video.pause();
+      });
+      video.addEventListener('play', () => { playBtn.style.opacity = '0.15'; });
+      video.addEventListener('pause', () => { playBtn.style.opacity = ''; });
+    }
   });
 
-  // Portfolio filter (visual only)
   const filterBtns = document.querySelectorAll('.filter-btn');
   const portfolioItems = document.querySelectorAll('.portfolio-item');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const filter = btn.dataset.filter;
-      filterBtns.forEach(b => {
-        b.classList.remove('active', 'bg-amber-500', 'text-charcoal');
-        b.classList.add('text-steel', 'border-border');
-      });
-      btn.classList.add('active', 'bg-amber-500', 'text-charcoal');
-      btn.classList.remove('text-steel', 'border-border');
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
 
       portfolioItems.forEach(item => {
         const category = item.dataset.category;
@@ -91,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Smooth anchor offset for fixed nav
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
       const href = anchor.getAttribute('href');
@@ -99,8 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(href);
       if (!target) return;
       e.preventDefault();
-      const offset = 80;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      const top = target.getBoundingClientRect().top + window.scrollY - 80;
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
