@@ -1,140 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Essential for mobile, tablet, desktop responsiveness -->
-    <title>Webb Spinner Visions • Videos • Animation • Websites</title> <!-- Change per page -->
-    <style>
-        /* Reset and base styles for all devices */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webb Spinner Visions | Video Production, AI Services &amp; Construction Marketing</title>
+  <meta name="description" content="Professional video production, logo animation, AI-enhanced editing, and websites for metal buildings, construction companies, and small businesses. Nashville, TN.">
+  <meta name="keywords" content="video production, AI video services, metal building marketing, construction video, logo animation, commercial video, Nashville video production">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://webbspinnervisions.net/">
 
-        /* Sticky Header with new red banner */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .promo-bar {
-            background: #dc143c; /* Bold red */
-            color: white;
-            text-align: center;
-            padding: 12px 15px;
-            font-weight: bold;
-            font-size: 1rem;
-            overflow: hidden;
-        }
-        .promo-bar span {
-            display: inline-block;
-            animation: pulse 2.5s infinite ease-in-out;
-        }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-        }
-        /* Responsive text sizing */
-        @media (max-width: 640px) { /* Mobile phones */
-            .promo-bar { font-size: 0.85rem; padding: 10px 10px; line-height: 1.3; }
-        }
-        @media (min-width: 768px) and (max-width: 1024px) { /* Tablets */
-            .promo-bar { font-size: 1.05rem; padding: 12px 20px; }
-        }
-        @media (min-width: 1025px) { /* Full desktop */
-            .promo-bar { font-size: 1.1rem; }
-        }
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Webb Spinner Visions">
+  <meta property="og:description" content="Cinematic video production and AI services for construction and small businesses.">
+  <meta property="og:image" content="https://webbspinnervisions.net/Shield-logo.png">
 
-        /* Navigation */
-        nav {
-            padding: 15px 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            background: #f8f8f8;
-        }
-        nav a {
-            text-decoration: none;
-            color: #000;
-            font-weight: 500;
-        }
-        .email-btn {
-            background: #dc143c;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 6px;
-            text-decoration: none;
-        }
-        .x-icon {
-            display: inline-block;
-            font-size: 1.5rem;
-            margin: 0 8px;
-            animation: spin 6s linear infinite paused;
-            cursor: pointer;
-        }
-        .x-icon:hover { animation-play-state: running; }
-        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-
-        .hamburger { display: none; font-size: 1.8rem; cursor: pointer; }
-        @media (max-width: 640px) {
-            nav { flex-direction: column; }
-            .hamburger { display: block; }
-        }
-    </style>
+  <link rel="icon" href="Shield-logo.png" type="image/png">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
 
-<header>
-    <!-- NEW RED BANNER - UPDATE TEXT HERE ONLY WHEN PRICING CHANGES -->
-    <div class="promo-bar">
-        🔥 <span>Turn your still photos to professional videos. Setup with logo animation and sound is $200.00 for 2-30 second videos, additional 30 second videos are $75.00 each!</span> 🔥
+  <!--
+    HEADER TEMPLATE
+    This page demonstrates the shared sticky header + promo bar pattern.
+    Copy the nav-placeholder pattern into any new page, or use index.html as the primary landing page.
+  -->
+
+  <div id="nav-placeholder"></div>
+
+  <main class="container py-12">
+    <div class="text-center mb-10">
+      <img src="Metallic Header.jpg" alt="Webb Spinner Visions metallic brand header" width="1200" height="400" loading="lazy" decoding="async" class="big-header-image rounded-2xl">
     </div>
 
-    <!-- Main Navigation (visible on every page) -->
-    <nav>
-        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap; justify-content: center;">
-            <a href="index.html">🏠 Home</a>
-            <a href="demos.html">🎥 Demos</a>
-            <a href="marketing.html">📊 Marketing & Strategy</a>
-            <a href="services.html">🔧 Services</a>
-            <a href="website.html">🌐 Websites</a>
-            
-            <!-- Email CTA -->
-            <a href="mailto:chriswoodmore@gmail.com" class="email-btn">✉️ Email Now</a>
-            
-            <!-- Spinning X - main social in header -->
-            <a href="https://x.com/Webb__X" target="_blank" style="color:#000;">
-                <span class="x-icon">𝕏</span>
-            </a>
-            
-            <span class="hamburger">☰</span>
-        </div>
-    </nav>
-</header>
-
-<!-- YOUR PAGE-SPECIFIC CONTENT GOES HERE (hero, demos, etc.) -->
-<!-- Example placeholder - replace with your existing content -->
-<main style="padding: 20px; max-width: 1200px; margin: 0 auto;">
-    <h1>Your Page Content Starts Here</h1>
-    <p>The sticky red banner and nav will stay visible while scrolling on desktop, tablet, and mobile.</p>
-</main>
-
-<!-- Footer (FB & IG only here + spinning X again) -->
-<footer style="background:#222; color:#ddd; padding: 30px 20px; text-align:center; margin-top: 60px;">
-    <p>
-        <a href="https://x.com/Webb__X" target="_blank"><span class="x-icon" style="color:white; font-size:1.6rem;">𝕏</span></a>
-        <a href="https://facebook.com/yourpage" target="_blank" style="margin:0 20px; color:#ddd; text-decoration:none;">Facebook</a>
-        <a href="https://instagram.com/yourpage" target="_blank" style="color:#ddd; text-decoration:none;">Instagram</a>
+    <h1 class="heading-font text-3xl md:text-4xl font-semibold text-center mb-4">Page Content Starts Here</h1>
+    <p class="text-center text-[#94a3b8] max-w-2xl mx-auto leading-relaxed">
+      This template uses the shared navigation from <code class="text-amber-500">nav.html</code> and footer from <code class="text-amber-500">footer.html</code>.
+      The sticky promo bar and responsive mobile menu work across desktop, tablet, and phone.
     </p>
-    <p style="margin-top:15px; font-size:0.9rem;">&copy; 2026 Webb Spinner Visions • All Rights Reserved</p>
-</footer>
 
-<!-- Basic JS for future mobile menu expansion -->
-<script>
-    // Hamburger menu can be expanded later with a click handler for full dropdown on mobile
-    console.log("Header with new $200 banner loaded - fully responsive across devices");
-</script>
+    <div class="responsive-card-grid mt-12">
+      <a href="index.html" class="service-card rounded-2xl p-6 card-hover no-underline text-inherit block">
+        <i class="fa-solid fa-house text-amber-500 text-2xl mb-3"></i>
+        <h2 class="font-semibold">Home</h2>
+        <p class="text-sm text-[#94a3b8] mt-2">Main landing page with services, work, and contact form.</p>
+      </a>
+      <a href="about.html" class="service-card rounded-2xl p-6 card-hover no-underline text-inherit block">
+        <i class="fa-solid fa-user text-amber-500 text-2xl mb-3"></i>
+        <h2 class="font-semibold">About</h2>
+        <p class="text-sm text-[#94a3b8] mt-2">Company story, expertise, and booking form.</p>
+      </a>
+      <a href="demos.html" class="service-card rounded-2xl p-6 card-hover no-underline text-inherit block">
+        <i class="fa-solid fa-film text-amber-500 text-2xl mb-3"></i>
+        <h2 class="font-semibold">Demos</h2>
+        <p class="text-sm text-[#94a3b8] mt-2">Real video examples with lazy-loaded embeds.</p>
+      </a>
+      <a href="index.html#contact" class="service-card rounded-2xl p-6 card-hover no-underline text-inherit block">
+        <i class="fa-solid fa-envelope text-amber-500 text-2xl mb-3"></i>
+        <h2 class="font-semibold">Contact</h2>
+        <p class="text-sm text-[#94a3b8] mt-2">Project inquiry and booking form.</p>
+      </a>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/shared.js"></script>
 </body>
 </html>
