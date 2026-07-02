@@ -4,54 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webb Spinner Visions • Videos • Animation • Websites</title>
-    <style>
-        body { background:#0a0a0a; color:#ddd; font-family:system-ui, sans-serif; margin:0; }
-        .promo { background:#dc143c; color:white; padding:12px; text-align:center; font-weight:bold; }
-        .metallic { background:#111; padding:20px; text-align:center; }
-        .hero { height:100vh; min-height:520px; position:relative; overflow:hidden; }
-        .hero video { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; }
-        .overlay { position:relative; z-index:2; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:20px; background:rgba(0,0,0,0.6); }
-        .glow { font-size:4.5rem; font-weight:900; text-shadow:0 0 40px #fff, 0 0 60px #ffd700; }
-        @media (max-width:768px) { .glow { font-size:2.8rem; } }
-        button { background:#dc143c; color:white; padding:18px 50px; font-size:1.4rem; border:none; border-radius:50px; margin:15px; }
-    </style>
 </head>
-<body>
+<body style="margin:0; background:#0a0a0a; color:white;">
 
-<div class="promo">🔥 Turn your still photos to professional videos. Setup with logo animation and sound is $200.00 for 2-30 second videos, additional 30 second videos are $75.00 each! 🔥</div>
+<!-- Red Promo -->
+<div style="background:#e00; padding:12px; text-align:center; font-weight:bold;">
+    🔥 Turn your still photos to professional videos. Setup with logo animation and sound is $200.00 for 2-30 second videos, additional 30 second videos are $75.00 each! 🔥
+</div>
 
-<nav style="background:#111; padding:12px; display:flex; flex-wrap:wrap; justify-content:center; gap:15px; color:white;">
+<!-- Nav -->
+<nav style="background:#111; padding:10px; text-align:center;">
     🏠 Home &nbsp; 🎥 Demos &nbsp; 📊 Marketing & Strategy &nbsp; 🔧 Services &nbsp; 🌐 Websites &nbsp; 
-    <button>✉️ Email Now</button> &nbsp; <a href="https://x.com/Webb__X" style="font-size:2rem;">𝕏</a>
+    <button>✉️ Email Now</button> &nbsp; 𝕏
 </nav>
 
 <!-- Metallic Header -->
-<div class="metallic">
+<div style="background:#222; padding:20px; text-align:center;">
     <img src="metallic-logo.png" alt="Webb Spinner Visions" style="max-width:100%;">
-    <p style="color:#ffd700; font-size:1.2rem;">webbspinnervisions.net</p>
+    <p style="color:#ffd700;">webbspinnervisions.net</p>
 </div>
 
-<!-- Full Hero Video -->
-<section class="hero">
-    <video autoplay loop muted playsinline>
-        <source src="your-hero-video-compressed.mp4" type="video/mp4">
+<!-- Hero Video -->
+<div style="height:70vh; background:#000;">
+    <video autoplay loop muted style="width:100%; height:100%;">
+        <source src="your-hero-video.mp4" type="video/mp4">
     </video>
-    <div class="overlay">
-        <h1 class="glow">STOP THE SCROLL!</h1>
-        <p style="font-size:1.9rem; max-width:900px;">Your business deserves attention, and they will get it with awesome logo animation attention getter. Followed by your best products and services.</p>
-        <a href="marketing.html"><button>See our Marketing & Strategy page for a better understanding! →</button></a>
+    <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; width:90%;">
+        <h1 style="font-size:4.5rem; text-shadow:0 0 40px yellow;">STOP THE SCROLL!</h1>
+        <p style="font-size:1.7rem;">Your business deserves attention, and they will get it with awesome logo animation attention getter. Followed by your best products and services.</p>
+        <button style="background:#e00; padding:15px 40px;">See our Marketing & Strategy page for a better understanding! →</button>
     </div>
-</section>
+</div>
 
-<!-- Simple What We Offer -->
-<section style="padding:40px; text-align:center; background:#1a1a1a;">
-    <h2 style="color:#ffd700;">What We Offer</h2>
-    <p>Logo Animation • Promotional Videos • Timelapses • Drone Shots • Full Websites</p>
-</section>
-
-<footer style="background:#000; padding:30px; text-align:center;">
-    <p>𝕏 <a href="https://facebook.com">Facebook</a> <a href="https://instagram.com">Instagram</a></p>
-    <p>© 2026 Webb Spinner Visions • All pages ready</p>
+<footer style="background:#000; padding:20px; text-align:center;">
+    𝕏 &nbsp; Facebook &nbsp; Instagram
 </footer>
 
 </body>
