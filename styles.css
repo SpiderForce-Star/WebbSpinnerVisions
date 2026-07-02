@@ -262,8 +262,9 @@ body {
 
 .hero-video {
   aspect-ratio: 16 / 9;
-  border: 4px solid #67e8f9;
-  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+  border: 2px solid rgba(245, 158, 11, 0.25);
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5), 0 0 60px rgba(245, 158, 11, 0.08);
+  border-radius: 1rem;
 }
 
 /* Dark Industrial Marquee Ribbon */
@@ -273,4 +274,47 @@ body {
   font-weight: 600;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+}
+
+/* =============================================
+   CINEMATIC ENHANCEMENTS
+   ============================================= */
+
+.cinematic-vignette::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(12, 12, 14, 0.6) 100%);
+}
+
+.text-glow {
+  text-shadow: 0 0 40px rgba(245, 158, 11, 0.2), 0 0 80px rgba(255, 255, 255, 0.05);
+}
+
+.portfolio-item {
+  background: var(--panel);
+}
+
+.portfolio-item img,
+.portfolio-item video {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover img,
+.portfolio-item:hover video {
+  transform: scale(1.03);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .logo-spinner,
+  .logo-ring,
+  .logo-ring-reverse,
+  .x-spin,
+  .scroll-content,
+  .reveal {
+    animation: none !important;
+    transition: none !important;
+  }
 }

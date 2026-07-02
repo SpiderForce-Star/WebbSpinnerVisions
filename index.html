@@ -1,121 +1,267 @@
 <!DOCTYPE html>
-<!-- ======================================================== -->
-<!-- Webb Spinner Visions - Complete Home Page v5 -->
-<!-- Massive detailed code for Christopher - over 950 lines -->
-<!-- All rules followed: full revised code, step-by-step learning, responsive, dark theme, X spinning, no personal history -->
-<!-- ======================================================== -->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webb Spinner Visions • Professional Videos • Animation • Affordable Websites for Small Businesses</title>
-    <meta name="description" content="Turn photos into scroll-stopping videos and pro websites starting at $200. Perfect for small businesses.">
-    <style>
-        /* 150+ lines of detailed CSS for all devices */
-        :root { --red: #dc143c; --gold: #ffd700; }
-        * { margin:0; padding:0; box-sizing:border-box; }
-        html { scroll-behavior: smooth; }
-        body { background:#0a0a0a; color:#eee; font-family:system-ui, sans-serif; line-height:1.6; }
-        
-        /* Promo Bar */
-        .promo { background:var(--red); color:white; padding:15px; text-align:center; font-weight:bold; font-size:1.1rem; }
-        @media (max-width:640px) { .promo { font-size:0.9rem; } }
-        
-        /* Nav - detailed */
-        nav { background:#111; padding:15px; display:flex; flex-wrap:wrap; justify-content:center; gap:15px; align-items:center; }
-        
-        /* Metallic Header - big and prominent */
-        .metallic { background:#1a1a1a; padding:30px; text-align:center; box-shadow:0 10px 30px #000; }
-        .metallic img { max-width:95%; border:4px solid var(--gold); border-radius:12px; box-shadow:0 0 40px #ffd700; }
-        
-        /* Hero Video Section - full screen, optimized */
-        .hero { height:100vh; position:relative; overflow:hidden; background:#000; }
-        .hero video { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; }
-        .overlay { position:absolute; top:0; left:0; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:20px; background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8)); z-index:2; }
-        
-        .glow { font-size:5rem; font-weight:900; text-shadow:0 0 50px #fff, 0 0 80px var(--gold); }
-        @media (max-width:768px) { .glow { font-size:3rem; } }
-        
-        button { background:var(--red); color:white; padding:18px 50px; font-size:1.5rem; border:none; border-radius:60px; cursor:pointer; margin:10px; }
-        button:hover { transform:scale(1.1); box-shadow:0 0 30px white; transition:0.3s; }
-        
-        /* Offer Section */
-        .offer { padding:60px 20px; background:#111; text-align:center; }
-        .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:25px; max-width:1200px; margin:40px auto; }
-        
-        /* Instructions Section */
-        .instructions { background:#1a1a1a; padding:40px; margin:40px auto; max-width:1100px; border-left:8px solid var(--red); }
-        
-        /* Footer */
-        footer { background:#000; padding:40px; text-align:center; border-top:6px solid var(--red); }
-        
-        /* Extra functions - many media queries, animations */
-        @media (max-width:640px) { body { font-size:0.95rem; } }
-        @media (min-width:1025px) { .glow { font-size:5.5rem; } }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webb Spinner Visions | Nashville Video Production, AI Services &amp; Metal Building Marketing</title>
+  <meta name="description" content="Cinematic video production, AI-enhanced editing, logo animation, and construction marketing for metal buildings, home builders, and small businesses. 30+ years experience. Nashville, TN.">
+  <meta name="keywords" content="video production Nashville, AI video services, metal building marketing, construction video, commercial video production, logo animation, steel building videos, home builder showcase, AI post production, small business video">
+  <meta name="author" content="Webb Spinner Visions">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://webbspinnervisions.net/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Webb Spinner Visions — Cinematic Video &amp; AI Production">
+  <meta property="og:description" content="Sales-driven video production for metal buildings, construction, restaurants, and small businesses. AI-powered storytelling from Nashville, TN.">
+  <meta property="og:image" content="https://webbspinnervisions.net/Shield-logo.png">
+  <meta property="og:url" content="https://webbspinnervisions.net/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Webb__X">
+
+  <link rel="icon" href="Shield-logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Webb Spinner Visions",
+    "description": "Cinematic video production, AI services, and marketing for metal buildings and construction companies.",
+    "url": "https://webbspinnervisions.net",
+    "email": "webbspinnervisions@gmail.com",
+    "areaServed": "Nashville, Tennessee",
+    "serviceType": ["Video Production", "AI Video Editing", "Logo Animation", "Construction Marketing"],
+    "sameAs": ["https://x.com/Webb__X", "https://www.instagram.com/webbspinnervisions"]
+  }
+  </script>
 </head>
-<body>
+<body class="bg-[#0c0c0e] text-[#e2e8f0]">
 
-<!-- 1. Red Promo Bar -->
-<div class="promo">🔥 Turn your still photos to professional videos. Setup with logo animation and sound is $200.00 for 2-30 second videos, additional 30 second videos are $75.00 each! 🔥</div>
+  <div id="nav-placeholder"></div>
 
-<!-- 2. Navigation -->
-<nav>
-    🏠 Home &nbsp; 🎥 Demos &nbsp; 📊 Marketing & Strategy &nbsp; 🔧 Services &nbsp; 🌐 Websites &nbsp; 
-    <a href="mailto:chriswoodmore@gmail.com"><button>✉️ Email Now</button></a> &nbsp; 
-    <a href="https://x.com/Webb__X" target="_blank">𝕏</a>
-</nav>
+  <!-- HERO -->
+  <section class="relative min-h-[92vh] pt-4 flex items-center justify-center overflow-hidden film-grain">
+    <img src="Metallic Header.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40" loading="eager" decoding="async" aria-hidden="true">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(245,158,11,0.08)_0%,transparent_60%)]"></div>
 
-<!-- 3. Metallic Header -->
-<div class="metallic">
-    <img src="metallic-logo.png" alt="Webb Spinner Visions" style="max-width:100%;">
-    <p style="color:#ffd700; font-size:1.3rem;">webbspinnervisions.net - Professional Videos and Websites for Small Businesses</p>
-</div>
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center py-16">
+      <img src="Shield-logo.png" alt="Webb Spinner Visions logo" width="160" height="160" class="mx-auto w-32 md:w-40 rounded-2xl ring-1 ring-white/10 logo-spinner mb-8" loading="eager" decoding="async">
 
-<!-- 4. Full Screen Hero Video -->
-<section class="hero">
-    <video autoplay loop muted playsinline>
-        <source src="your-hero-video-compressed.mp4" type="video/mp4">
-    </video>
-    <div class="overlay">
-        <h1 class="glow">STOP THE SCROLL!</h1>
-        <p style="font-size:2rem; max-width:900px;">Your business deserves attention, and they will get it with awesome logo animation attention getter. Followed by your best products and services.</p>
-        <a href="marketing.html"><button>See our Marketing & Strategy page for a better understanding! →</button></a>
-        <button onclick="document.getElementById('offer').scrollIntoView({behavior:'smooth'})">What We Offer ↓</button>
+      <h1 class="heading-font text-4xl sm:text-5xl md:text-7xl leading-tight tracking-tight font-semibold mb-4">
+        CRAFTING VISIONS.<br>
+        <span class="text-white/90">DRIVING RESULTS.</span>
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-lg md:text-xl text-[#94a3b8] mb-8">
+        30 years in metal buildings &amp; construction sales. Cinematic video production.
+        Precision AI tools. Stories that sell steel, homes, and brands.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="demos.html" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-white text-[#0c0c0e] font-semibold hover:bg-amber-500 hover:text-white transition-all w-full sm:w-auto">
+          Watch the Work <i class="fa-solid fa-play"></i>
+        </a>
+        <a href="#contact" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl border border-white/20 hover:bg-white/5 font-semibold transition-all w-full sm:w-auto">
+          Start a Project
+        </a>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-10 text-xs uppercase tracking-widest text-[#64748b]">
+        <span>Nashville, TN</span>
+        <span class="hidden sm:inline">&bull;</span>
+        <span>Metal Buildings &amp; Construction</span>
+        <span class="hidden sm:inline">&bull;</span>
+        <span>AI-Enhanced Production</span>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- 5. What We Offer -->
-<section class="offer" id="offer">
-    <h2 style="color:#ffd700; font-size:3rem;">What We Offer - Professional Services for Small Businesses</h2>
-    <div class="grid">
-        <div style="background:#222; padding:25px;">🎥 Logo Animation & Intros (2D + 3D)</div>
-        <div style="background:#222; padding:25px;">📹 Masterclass & Promo Videos from your photos</div>
-        <div style="background:#222; padding:25px;">⏱️ Timelapses • Drone Shots • Before/After</div>
-        <div style="background:#222; padding:25px;">🌐 Full Professional Websites from $500</div>
-        <div style="background:#222; padding:25px;">🔊 Sound design + social optimization</div>
-        <div style="background:#222; padding:25px;">✨ Fast turnaround • You own everything</div>
+  <!-- MARQUEE -->
+  <div class="scrolling-ribbon">
+    <div class="scroll-content">
+      &#9733; 3&times; 60-second commercials for $1,500 &bull; Logo animations from $275 &bull; AI-enhanced video packages &bull; Metal building &amp; construction specialists &bull;
+      &#9733; 3&times; 60-second commercials for $1,500 &bull; Logo animations from $275 &bull; AI-enhanced video packages &bull; Metal building &amp; construction specialists &bull;
     </div>
-</section>
+  </div>
 
-<!-- 6. Instructions Section -->
-<div class="instructions">
-    <h3>📋 Project Instructions (for learning and teaching small businesses)</h3>
-    <p>• Step-by-step for every change • Full code only • Responsive on all devices • Dark theme • X spinning main social • FB/IG footer only • No personal history • Make it fantastic and easy to maintain</p>
-</div>
+  <!-- SERVICES -->
+  <section id="services" class="max-w-7xl mx-auto px-6 py-20">
+    <div class="text-center mb-12">
+      <div class="uppercase text-amber-500 text-xs tracking-widest font-semibold mb-2">What We Deliver</div>
+      <h2 class="heading-font text-4xl md:text-5xl tracking-tight">Services built for impact</h2>
+    </div>
 
-<!-- 7. Extra JS Functions -->
-<script>
-    // Smooth scroll, touch support, performance logs, etc. (many lines of helpful code)
-    console.log("Home page loaded successfully - all devices supported");
-    // Additional functions can be expanded here
-</script>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="service-card reveal rounded-3xl p-8 card-hover">
+        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-6 text-2xl"><i class="fa-solid fa-video"></i></div>
+        <h3 class="text-xl font-semibold mb-3">Cinematic Video Production</h3>
+        <p class="text-[#94a3b8] text-sm leading-relaxed">Commercials, construction films, and brand stories for metal buildings, home builders, restaurants, and custom builds.</p>
+      </div>
+      <div class="service-card reveal rounded-3xl p-8 card-hover">
+        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-6 text-2xl"><i class="fa-solid fa-magic"></i></div>
+        <h3 class="text-xl font-semibold mb-3">Animation &amp; Motion Design</h3>
+        <p class="text-[#94a3b8] text-sm leading-relaxed">Bold logo animations, explainer videos, and motion graphics that command attention on every platform.</p>
+      </div>
+      <div class="service-card reveal rounded-3xl p-8 card-hover">
+        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-6 text-2xl"><i class="fa-solid fa-robot"></i></div>
+        <h3 class="text-xl font-semibold mb-3">AI Solutions &amp; Post</h3>
+        <p class="text-[#94a3b8] text-sm leading-relaxed">AI-accelerated editing, generative visuals, and intelligent workflows that deliver more in less time.</p>
+      </div>
+    </div>
 
-<!-- 8. Footer -->
-<footer>
-    <p>𝕏 (spinning) &nbsp; Facebook &nbsp; Instagram</p>
-    <p>© 2026 Webb Spinner Visions • Helping small businesses look professional affordably</p>
-</footer>
+    <div class="text-center mt-10">
+      <a href="services.html" class="text-amber-500 hover:text-amber-400 font-medium text-sm">View all services &rarr;</a>
+    </div>
+  </section>
 
+  <!-- WORK -->
+  <section id="work" class="max-w-7xl mx-auto px-6 py-16 border-t border-[#2a2a32]">
+    <div class="text-center mb-10">
+      <div class="uppercase text-amber-500 text-xs tracking-widest font-semibold mb-2">Featured Projects</div>
+      <h2 class="heading-font text-4xl md:text-5xl tracking-tight">Recent Work</h2>
+      <p class="text-[#94a3b8] mt-3 max-w-lg mx-auto">Real results for construction companies, builders, restaurants, and custom brands.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <a href="demos.html" class="portfolio-item rounded-3xl overflow-hidden card-hover block no-underline text-inherit">
+        <img src="SpiderVenom.jpg" alt="Commercial construction video showcase" width="400" height="225" loading="lazy" decoding="async" class="w-full aspect-video object-cover">
+        <div class="p-5">
+          <span class="text-[10px] font-mono px-2 py-1 rounded bg-amber-500/10 text-amber-400">COMMERCIAL</span>
+          <h4 class="font-semibold mt-2">Metal Building &amp; Construction Films</h4>
+          <p class="text-xs text-[#64748b] mt-1">High-impact brand films for steel and commercial builders</p>
+        </div>
+      </a>
+      <a href="demos.html" class="portfolio-item rounded-3xl overflow-hidden card-hover block no-underline text-inherit">
+        <img src="Metallic Header.jpg" alt="Home builder video showcase" width="400" height="225" loading="lazy" decoding="async" class="w-full aspect-video object-cover">
+        <div class="p-5">
+          <span class="text-[10px] font-mono px-2 py-1 rounded bg-amber-500/10 text-amber-400">RESIDENTIAL</span>
+          <h4 class="font-semibold mt-2">Premium Home Builder Showcase</h4>
+          <p class="text-xs text-[#64748b] mt-1">Craftsmanship and lifestyle storytelling</p>
+        </div>
+      </a>
+      <a href="demos.html" class="portfolio-item rounded-3xl overflow-hidden card-hover block no-underline text-inherit">
+        <div class="aspect-video bg-[#1a1a1f] flex items-center justify-center text-4xl text-amber-500/50"><i class="fa-solid fa-car"></i></div>
+        <div class="p-5">
+          <span class="text-[10px] font-mono px-2 py-1 rounded bg-amber-500/10 text-amber-400">CUSTOM</span>
+          <h4 class="font-semibold mt-2">Custom Vehicle Reveal Films</h4>
+          <p class="text-xs text-[#64748b] mt-1">Dramatic cinematic reveals</p>
+        </div>
+      </a>
+      <a href="demos.html" class="portfolio-item rounded-3xl overflow-hidden card-hover block no-underline text-inherit">
+        <div class="aspect-video bg-[#1a1a1f] flex items-center justify-center text-4xl text-amber-500/50"><i class="fa-solid fa-utensils"></i></div>
+        <div class="p-5">
+          <span class="text-[10px] font-mono px-2 py-1 rounded bg-amber-500/10 text-amber-400">HOSPITALITY</span>
+          <h4 class="font-semibold mt-2">Restaurant Brand Experience</h4>
+          <p class="text-xs text-[#64748b] mt-1">Food, ambiance, and atmosphere films</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="text-center mt-10">
+      <a href="demos.html" class="inline-flex items-center gap-2 px-8 py-3 rounded-2xl bg-amber-500 text-[#0c0c0e] font-semibold hover:bg-amber-400 transition-colors">
+        View All Demos <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="bg-[#111113] border-y border-[#2a2a32] py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <div class="uppercase tracking-widest text-xs text-amber-500 font-medium">How We Work</div>
+        <h2 class="heading-font text-4xl md:text-5xl tracking-tight mt-2">Simple. Fast. Effective.</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="reveal"><div class="text-5xl font-bold text-white/10 mb-2">01</div><h3 class="font-semibold mb-2">Discovery Call</h3><p class="text-sm text-[#94a3b8]">Goals, audience, and selling points — no fluff.</p></div>
+        <div class="reveal"><div class="text-5xl font-bold text-white/10 mb-2">02</div><h3 class="font-semibold mb-2">Creative Direction</h3><p class="text-sm text-[#94a3b8]">Storyboards, script, and shot list before filming.</p></div>
+        <div class="reveal"><div class="text-5xl font-bold text-white/10 mb-2">03</div><h3 class="font-semibold mb-2">Production + AI</h3><p class="text-sm text-[#94a3b8]">On-site filming with AI-enhanced post in parallel.</p></div>
+        <div class="reveal"><div class="text-5xl font-bold text-white/10 mb-2">04</div><h3 class="font-semibold mb-2">Delivery</h3><p class="text-sm text-[#94a3b8]">Fast first cut with refinements until it sells.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="max-w-3xl mx-auto px-6 py-20">
+    <div class="text-center mb-10">
+      <div class="text-xs uppercase tracking-widest text-amber-500 font-medium mb-3">Let's Build Something Great</div>
+      <h2 class="heading-font text-4xl md:text-5xl tracking-tight">Ready to launch your vision?</h2>
+      <p class="mt-4 text-[#94a3b8]">Tell us about your project. We reply within 24 hours with next steps and a clear quote.</p>
+    </div>
+
+    <div class="bg-[#1a1a1f] border border-[#2a2a32] rounded-3xl p-8 md:p-10">
+      <form id="contact-form"
+            action="https://formsubmit.co/webbspinnervisions@gmail.com"
+            method="POST"
+            class="space-y-5">
+        <input type="hidden" name="_subject" value="New WSV Project Inquiry">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-medium tracking-wider text-[#94a3b8] mb-1.5">FULL NAME</label>
+            <input type="text" name="name" required class="form-input" placeholder="Your name">
+          </div>
+          <div>
+            <label class="block text-xs font-medium tracking-wider text-[#94a3b8] mb-1.5">EMAIL</label>
+            <input type="email" name="email" required class="form-input" placeholder="you@company.com">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-medium tracking-wider text-[#94a3b8] mb-1.5">PHONE (OPTIONAL)</label>
+            <input type="tel" name="phone" class="form-input" placeholder="(555) 000-0000">
+          </div>
+          <div>
+            <label class="block text-xs font-medium tracking-wider text-[#94a3b8] mb-1.5">PROJECT TYPE</label>
+            <select name="project_type" class="form-input">
+              <option value="">Select project type...</option>
+              <option>Video Production / Commercial</option>
+              <option>Metal Building / Construction Marketing</option>
+              <option>Logo Animation &amp; Motion</option>
+              <option>AI Video / Post Production</option>
+              <option>Website Package</option>
+              <option>Custom / Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium tracking-wider text-[#94a3b8] mb-1.5">PROJECT DETAILS</label>
+          <textarea name="message" rows="5" required class="form-input resize-y" placeholder="Goals, timeline, target audience..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary w-full py-4 rounded-2xl text-lg flex items-center justify-center gap-3">
+          SEND INQUIRY <i class="fa-solid fa-paper-plane"></i>
+        </button>
+        <p class="text-center text-[11px] text-[#64748b]">We respect your time. No spam, ever.</p>
+      </form>
+
+      <div id="form-success" class="hidden text-center py-6">
+        <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-500/10 text-emerald-400 mb-4">
+          <i class="fa-solid fa-check text-3xl"></i>
+        </div>
+        <h3 class="text-2xl font-semibold">Thank you — message received.</h3>
+        <p class="text-[#94a3b8] mt-2">We'll reply within one business day.</p>
+        <button onclick="resetContactForm()" class="mt-6 text-sm text-amber-500 hover:text-amber-400 underline">Send another message</button>
+      </div>
+    </div>
+
+    <p class="text-center mt-6 text-xs text-[#64748b]">
+      Prefer email? <a href="mailto:webbspinnervisions@gmail.com" class="text-amber-500 hover:underline">webbspinnervisions@gmail.com</a>
+    </p>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/shared.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
