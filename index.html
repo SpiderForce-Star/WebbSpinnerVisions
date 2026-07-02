@@ -3,114 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webb Spinner Visions • Videos • Animation • Websites for Small Businesses</title>
+    <title>Webb Spinner Visions • Videos • Animation • Websites</title>
     <style>
-        :root { --red: #dc143c; }
-        * { margin:0; padding:0; box-sizing:border-box; }
-        html { scroll-behavior: smooth; } /* Smooth scrolling on all platforms */
-        body { background:#0a0a0a; color:#ddd; font-family:system-ui, sans-serif; }
-
-        /* Sticky Header */
-        .sticky { position:sticky; top:0; z-index:1000; background:#111; }
-        .promo { background:var(--red); color:white; padding:10px; text-align:center; font-weight:bold; font-size:1rem; }
-        @media (max-width:640px) { .promo { font-size:0.85rem; } }
-
-        /* Metallic Logo */
+        body { background:#0a0a0a; color:#ddd; font-family:system-ui, sans-serif; margin:0; }
+        .promo { background:#dc143c; color:white; padding:12px; text-align:center; font-weight:bold; }
         .metallic { background:#111; padding:20px; text-align:center; }
-        .metallic img { max-width:100%; border-radius:8px; box-shadow:0 10px 40px rgba(255,215,0,0.5); }
-
-        /* Hero Video - Fully Upgraded */
-        .hero { position:relative; height:100vh; min-height:520px; overflow:hidden; background:#000; }
+        .hero { height:100vh; min-height:520px; position:relative; overflow:hidden; }
         .hero video { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; }
-        .hero-content { position:relative; z-index:2; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:20px; background:rgba(10,10,10,0.7); }
-
-        .headline { font-size:3.8rem; font-weight:900; color:white; text-shadow:0 0 30px #ffd700; margin:15px 0; }
-        @media (max-width:768px) { .headline { font-size:2.4rem; } }
-
-        button { background:var(--red); color:white; padding:18px 45px; font-size:1.4rem; border:none; border-radius:50px; cursor:pointer; margin:15px; }
-        button:hover { transform:scale(1.08); box-shadow:0 0 25px white; }
-
-        /* Offer Box */
-        .offer { background:#1a1a1a; border:4px solid #ffd700; margin:40px auto; max-width:1100px; padding:30px; border-radius:12px; }
-        .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:20px; }
-
-        /* Instructions Section */
-        .instructions { background:#111; padding:25px; margin:40px auto; max-width:1100px; border-left:6px solid var(--red); }
-
-        footer { background:#000; padding:40px; text-align:center; border-top:5px solid var(--red); }
+        .overlay { position:relative; z-index:2; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:20px; background:rgba(0,0,0,0.6); }
+        .glow { font-size:4.5rem; font-weight:900; text-shadow:0 0 40px #fff, 0 0 60px #ffd700; }
+        @media (max-width:768px) { .glow { font-size:2.8rem; } }
+        button { background:#dc143c; color:white; padding:18px 50px; font-size:1.4rem; border:none; border-radius:50px; margin:15px; }
     </style>
 </head>
 <body>
 
-<!-- Sticky Nav + Promo -->
-<header class="sticky">
-    <div class="promo">🔥 Turn your still photos to professional videos. Setup with logo animation and sound is $200.00 for 2-30 second videos, additional 30 second videos are $75.00 each! 🔥</div>
-    <nav style="padding:15px; display:flex; flex-wrap:wrap; justify-content:center; gap:20px; align-items:center; background:#1a1a1a;">
-        <a href="index.html">🏠 Home</a>
-        <a href="demos.html">🎥 Demos</a>
-        <a href="marketing.html">📊 Marketing & Strategy</a>
-        <a href="services.html">🔧 Services</a>
-        <a href="website.html">🌐 Websites</a>
-        <a href="mailto:chriswoodmore@gmail.com" style="background:var(--red); color:white; padding:10px 20px; border-radius:8px;">✉️ Email Now</a>
-        <a href="https://x.com/Webb__X" target="_blank" style="font-size:32px;">𝕏</a>
-        <span style="font-size:28px; cursor:pointer;">☰</span>
-    </nav>
-</header>
+<div class="promo">🔥 Turn your still photos to professional videos. Setup with logo animation and sound is $200.00 for 2-30 second videos, additional 30 second videos are $75.00 each! 🔥</div>
+
+<nav style="background:#111; padding:12px; display:flex; flex-wrap:wrap; justify-content:center; gap:15px; color:white;">
+    🏠 Home &nbsp; 🎥 Demos &nbsp; 📊 Marketing & Strategy &nbsp; 🔧 Services &nbsp; 🌐 Websites &nbsp; 
+    <button>✉️ Email Now</button> &nbsp; <a href="https://x.com/Webb__X" style="font-size:2rem;">𝕏</a>
+</nav>
 
 <!-- Metallic Header -->
 <div class="metallic">
     <img src="metallic-logo.png" alt="Webb Spinner Visions" style="max-width:100%;">
-    <p style="margin-top:8px; color:#aaa;">webbspinnervisions.net</p>
+    <p style="color:#ffd700; font-size:1.2rem;">webbspinnervisions.net</p>
 </div>
 
-<!-- Upgraded Full-Screen Hero Video -->
+<!-- Full Hero Video -->
 <section class="hero">
-    <video autoplay loop muted playsinline loading="lazy" poster="hero-poster.jpg">
-        <source src="your-hero-video.mp4" type="video/mp4">
+    <video autoplay loop muted playsinline>
+        <source src="your-hero-video-compressed.mp4" type="video/mp4">
     </video>
-    <div class="hero-content">
-        <h1 class="headline">STOP THE SCROLL!</h1>
-        <p style="font-size:1.9rem; max-width:920px;">Your business deserves attention, and they will get it with awesome logo animation attention getter. Followed by your best products and services.</p>
+    <div class="overlay">
+        <h1 class="glow">STOP THE SCROLL!</h1>
+        <p style="font-size:1.9rem; max-width:900px;">Your business deserves attention, and they will get it with awesome logo animation attention getter. Followed by your best products and services.</p>
         <a href="marketing.html"><button>See our Marketing & Strategy page for a better understanding! →</button></a>
-        <button onclick="document.getElementById('offer').scrollIntoView({behavior:'smooth'})">What We Offer ↓</button>
     </div>
 </section>
 
-<!-- What We Offer -->
-<div class="offer" id="offer">
-    <h2 style="text-align:center; font-size:2.6rem; color:#ffd700;">What We Offer</h2>
-    <div class="grid">
-        <div>🎥 Logo Animation & Intros (2D/3D metallic)</div>
-        <div>📹 Promotional & Masterclass Videos from photos</div>
-        <div>⏱️ Timelapses • Drone Shots • Transformations</div>
-        <div>🌐 Full Websites starting at $500 – you own it</div>
-        <div>🔊 Sound + social-ready clips</div>
-        <div>✨ Fast, custom, 100% ownership</div>
-    </div>
-</div>
+<!-- Simple What We Offer -->
+<section style="padding:40px; text-align:center; background:#1a1a1a;">
+    <h2 style="color:#ffd700;">What We Offer</h2>
+    <p>Logo Animation • Promotional Videos • Timelapses • Drone Shots • Full Websites</p>
+</section>
 
-<!-- Instructions Section -->
-<div class="instructions">
-    <strong>📋 Instructions for All Website Work</strong><br>
-    • Step-by-step instructions always – I am learning and will teach other small businesses.<br>
-    • Full revised code only – copy/paste ready for GitHub.<br>
-    • Fully responsive on desktop, tablet, mobile + all helpful functions.<br>
-    • Dark theme, X spinning (header+footer), FB/IG footer only, no personal history.
-</div>
-
-<!-- Footer -->
-<footer>
-    <p style="font-size:1.5rem;">
-        <a href="https://x.com/Webb__X" target="_blank">𝕏</a> 
-        <a href="https://facebook.com" style="margin:0 20px; color:#aaa;">Facebook</a> 
-        <a href="https://instagram.com" style="color:#aaa;">Instagram</a>
-    </p>
-    <p>© 2026 Webb Spinner Visions • Affordable pro video & websites • <button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="background:#333;color:white;border:none;padding:8px 16px;">↑ Top</button></p>
+<footer style="background:#000; padding:30px; text-align:center;">
+    <p>𝕏 <a href="https://facebook.com">Facebook</a> <a href="https://instagram.com">Instagram</a></p>
+    <p>© 2026 Webb Spinner Visions • All pages ready</p>
 </footer>
 
-<script>
-    // Extra smooth functions
-    console.log("✅ Index v2 loaded with smooth scroll, optimized video, all devices ready");
-</script>
 </body>
 </html>
