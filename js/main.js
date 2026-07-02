@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('sent') === 'true') {
+    const form = document.getElementById('contact-form');
+    const success = document.getElementById('form-success');
+    if (form && success) {
+      form.classList.add('hidden');
+      success.classList.remove('hidden');
+      history.replaceState({}, '', `${window.location.pathname}#contact`);
+    }
+  }
+
   const nav = document.getElementById('navbar');
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
