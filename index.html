@@ -99,7 +99,7 @@
               <span>Book Free Discovery Call</span>
               <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
-            <a href="#packages" class="btn btn-ghost btn-mega-secondary">View Packages</a>
+            <p class="hero-landing-skip"><a href="#packages">View packages &amp; pricing</a></p>
           </div>
         </div>
       </div>
@@ -115,36 +115,14 @@
         </header>
 
         <!-- Trust & Social Proof — stats bar right before the offer -->
-        <div id="trust" class="trust-layer" aria-label="Trust and social proof">
-          <p class="trust-layer-eyebrow">Trusted by growth-minded small businesses</p>
-          <div class="trust-layer-stats">
-            <div class="trust-stat-card">
-              <i class="fa-solid fa-film trust-stat-icon" aria-hidden="true"></i>
-              <div class="trust-stat">500+</div>
-              <div class="trust-label">Videos Delivered</div>
-            </div>
-            <div class="trust-stat-card">
-              <i class="fa-solid fa-briefcase trust-stat-icon" aria-hidden="true"></i>
-              <div class="trust-stat">Exec</div>
-              <div class="trust-label">Sales &amp; Marketing</div>
-            </div>
-            <div class="trust-stat-card">
-              <i class="fa-solid fa-building trust-stat-icon" aria-hidden="true"></i>
-              <div class="trust-stat">12</div>
-              <div class="trust-label">Industries Served</div>
-            </div>
-            <div class="trust-stat-card">
-              <i class="fa-solid fa-clock trust-stat-icon" aria-hidden="true"></i>
-              <div class="trust-stat">24hr</div>
-              <div class="trust-label">Quote Response</div>
-            </div>
-          </div>
-          <div class="trust-pills trust-pills--layer">
-            <span class="trust-pill"><i class="fa-solid fa-bolt" aria-hidden="true"></i> 24hr quote guarantee</span>
-            <span class="trust-pill"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> You own 100% of assets</span>
-            <span class="trust-pill"><i class="fa-solid fa-check-double" aria-hidden="true"></i> Revisions until you're thrilled</span>
-            <span class="trust-pill"><i class="fa-solid fa-lock" aria-hidden="true"></i> No spam — ever</span>
-          </div>
+        <div id="trust" class="trust-stats-bar trust-stats-bar--pre-offer" aria-label="Trust and social proof">
+          <span><strong>500+</strong> Videos Delivered</span>
+          <span aria-hidden="true" class="trust-stats-divider">&bull;</span>
+          <span><strong>Exec</strong> Sales &amp; Marketing</span>
+          <span aria-hidden="true" class="trust-stats-divider">&bull;</span>
+          <span><strong>12</strong> Industries Served</span>
+          <span aria-hidden="true" class="trust-stats-divider">&bull;</span>
+          <span><strong>24hr</strong> Quote Response</span>
         </div>
 
         <div class="packages-grid">
@@ -200,17 +178,6 @@
           </article>
         </div>
 
-        <!-- Stats reinforcement — right after packages -->
-        <div class="trust-stats-bar" aria-label="Quick credentials">
-          <span><strong>500+</strong> Videos Delivered</span>
-          <span aria-hidden="true" class="trust-stats-divider">&bull;</span>
-          <span><strong>24hr</strong> Quote Response</span>
-          <span aria-hidden="true" class="trust-stats-divider">&bull;</span>
-          <span><strong>12</strong> Industries Served</span>
-          <span aria-hidden="true" class="trust-stats-divider">&bull;</span>
-          <span>You Own <strong>100%</strong></span>
-        </div>
-
         <div class="packages-cta-band reveal">
           <p>Not sure which package fits? We&rsquo;ll recommend the right fit on a free 15-minute call — no pressure, no spam.</p>
           <a href="#contact" class="btn btn-primary btn-mega">
@@ -221,99 +188,31 @@
       </div>
     </section>
 
-    <!-- WHY VIDEO WORKS — supporting proof (condensed) -->
-    <section id="why-video" class="section section-panel section-panel--subdued section-support why-video-works" aria-labelledby="why-video-heading">
-      <div class="section-inner">
-        <header class="section-header section-header--compact">
-          <span class="section-eyebrow">The Science of Scroll-Stopping</span>
-          <h2 id="why-video-heading" class="section-title section-title--compact">Why video belongs on your website</h2>
-          <p class="section-lead">Short professional video earns trust, beats the algorithm, and turns scrollers into paying customers — exactly why it&rsquo;s built into our Cinematic Package.</p>
-        </header>
-
-        <div class="why-value-banner reveal">
-          <div class="why-value-stat">
-            <span class="why-value-number">3×</span>
-            <span class="why-value-label">More reach than photos</span>
-          </div>
-          <p class="why-value-copy">A single 30-second clip with your logo in cinematic motion can outperform months of static posts — delivering <strong>more impressions, more engagement, and more customers</strong> for less than the cost of one print ad.</p>
-        </div>
-
-        <div class="why-insight-grid why-insight-grid--teaser">
-          <article class="why-insight-card reveal">
-            <div class="why-tip-icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
-            <h3>Logo animation signals authority</h3>
-            <p>The first three seconds decide everything. A cinematic logo opener triggers instant credibility — customers feel safe choosing you.</p>
-          </article>
-          <article class="why-insight-card reveal">
-            <div class="why-tip-icon" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></div>
-            <h3>Platforms reward video heavily</h3>
-            <p>One 30-second asset works across Reels, Stories, ads, and your website — earning more reach than static images every time.</p>
-          </article>
-        </div>
-
-        <div class="why-roi-callout reveal">
-          <img src="Shield-logo.png" alt="" width="44" height="44" class="logo-spinner" decoding="async">
-          <p><strong>The bottom line:</strong> You send your photos — we deliver cinematic polish, custom logo animation, and scroll-stopping clips ready to post everywhere.</p>
-        </div>
-
-        <p class="section-cta-row reveal">
-          <a href="why-video.html" class="btn btn-ghost">Read the full video marketing guide <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    <!-- Supporting context only — no competing CTAs -->
+    <section id="why-video" class="landing-bridge section-support" aria-label="How we work and why video matters">
+      <div class="section-inner landing-bridge-inner">
+        <p class="landing-bridge-copy">
+          <strong>3&times; more reach than photos.</strong> Video builds trust and stops the scroll — built into our Cinematic Package.
+          <a href="why-video.html" class="landing-bridge-link">Why video works <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </p>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section id="process" class="section section-panel section-panel--subdued section-support" aria-labelledby="process-heading">
-      <div class="section-inner">
-        <header class="section-header">
-          <span class="section-eyebrow">How We Work</span>
-          <h2 id="process-heading" class="section-title">Simple. Fast. Effective.</h2>
-        </header>
-        <div class="grid-4">
-          <div class="process-step reveal">
-            <div class="process-num">01</div>
-            <h3 style="font-weight:600;margin-bottom:0.35rem;">Discovery Call</h3>
-            <p class="text-muted" style="font-size:0.875rem;">Goals, audience, and selling points — no fluff.</p>
-          </div>
-          <div class="process-step reveal">
-            <div class="process-num">02</div>
-            <h3 style="font-weight:600;margin-bottom:0.35rem;">Creative Direction</h3>
-            <p class="text-muted" style="font-size:0.875rem;">Storyboards, script, and shot list before filming.</p>
-          </div>
-          <div class="process-step reveal">
-            <div class="process-num">03</div>
-            <h3 style="font-weight:600;margin-bottom:0.35rem;">Production + AI</h3>
-            <p class="text-muted" style="font-size:0.875rem;">On-site filming with AI-enhanced post in parallel.</p>
-          </div>
-          <div class="process-step reveal">
-            <div class="process-num">04</div>
-            <h3 style="font-weight:600;margin-bottom:0.35rem;">Delivery</h3>
-            <p class="text-muted" style="font-size:0.875rem;">Fast first cut with refinements until it sells.</p>
-          </div>
-        </div>
-
-        <p class="section-cta-row reveal" style="margin-top:2.5rem;">
-          <a href="#contact" class="btn btn-primary btn-mega-compact">Book Free Discovery Call</a>
-        </p>
+        <ol class="landing-process-strip" id="process" aria-label="How we work">
+          <li><span class="landing-process-num">01</span> Discovery Call</li>
+          <li><span class="landing-process-num">02</span> Creative Direction</li>
+          <li><span class="landing-process-num">03</span> Production + AI</li>
+          <li><span class="landing-process-num">04</span> Delivery</li>
+        </ol>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section" aria-labelledby="contact-heading">
       <div class="section-inner" style="max-width:42rem;">
-        <header class="section-header">
-          <span class="section-eyebrow">Let's Build Something Great</span>
+        <header class="section-header section-header--contact">
           <h2 id="contact-heading" class="section-title">Book your free discovery call</h2>
-          <p class="section-lead">Tell us about your business and goals. We reply within 24 hours with package recommendations and a clear quote.</p>
+          <p class="section-lead">We reply within 24 hours with a clear quote. You own 100% of everything we build.</p>
         </header>
 
         <div class="cta-band contact-form-panel">
-          <div class="contact-trust-row" aria-label="Our guarantees">
-            <div class="contact-trust-item"><i class="fa-solid fa-bolt" aria-hidden="true"></i> 24hr response</div>
-            <div class="contact-trust-item"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Full ownership</div>
-            <div class="contact-trust-item"><i class="fa-solid fa-star" aria-hidden="true"></i> Pro quality</div>
-            <div class="contact-trust-item"><i class="fa-solid fa-handshake" aria-hidden="true"></i> Personal service</div>
-          </div>
           <form id="contact-form" action="https://formsubmit.co/webbspinnervisions@gmail.com" method="POST" style="text-align:left;">
             <input type="hidden" name="_subject" value="New WSV Project Inquiry">
             <input type="hidden" name="_captcha" value="false">
@@ -340,14 +239,10 @@
               <div>
                 <label for="project_type" class="sr-only">Project type</label>
                 <select id="project_type" name="project_type" class="form-input">
-                  <option value="">Select project type...</option>
+                  <option value="">Select your package...</option>
                   <option value="Starter Website Package ($800)">Starter Website Package ($800)</option>
                   <option value="Cinematic Website Package ($1,000)">Cinematic Website Package ($1,000)</option>
-                  <option>Video Production / Commercial</option>
-                  <option>Social Media Video Package</option>
-                  <option>Logo Animation &amp; Motion</option>
-                  <option>AI Video / Post Production</option>
-                  <option>Custom / Other</option>
+                  <option value="Not sure yet">Not sure yet — help me choose</option>
                 </select>
               </div>
             </div>
