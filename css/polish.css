@@ -770,7 +770,8 @@ body {
 /* Nav theme overrides */
 .site-nav { background: var(--nav-bg); }
 .promo-bar {
-  background: linear-gradient(90deg, #7f1d1d, #dc2626, #7f1d1d);
+  background: linear-gradient(90deg, #7f1d1d, #dc2626, #ef4444, #dc2626, #7f1d1d);
+  background-size: 200% 100%;
 }
 
 .form-input {
