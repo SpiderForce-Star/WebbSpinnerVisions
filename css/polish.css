@@ -506,6 +506,27 @@ body {
   margin: 0 auto 1.5rem;
 }
 
+.starter-package-cta {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, var(--bg-panel)), var(--bg-elevated));
+}
+
+.starter-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  font-weight: 700;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 24px color-mix(in srgb, var(--accent) 40%, transparent);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.starter-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px color-mix(in srgb, var(--accent) 50%, transparent);
+}
+
 /* Video gallery (demos) */
 .video-gallery {
   display: grid;
