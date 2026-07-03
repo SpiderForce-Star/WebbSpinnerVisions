@@ -1,5 +1,5 @@
 /**
- * Hero video — full-bleed landing background, muted autoplay + unmute
+ * Hero video — immersive top-stage player, muted autoplay + unmute
  */
 (function () {
   'use strict';

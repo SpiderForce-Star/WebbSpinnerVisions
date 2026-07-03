@@ -53,9 +53,9 @@
   <div id="nav-placeholder"></div>
 
   <main id="main">
-    <!-- HERO — full-bleed cinematic video background -->
-    <section class="hero-landing film-grain" aria-labelledby="hero-heading">
-      <div class="hero-landing-media" id="hero-video-fullscreen-target">
+    <!-- HERO — immersive video first, copy stacked below -->
+    <section class="hero-landing" aria-labelledby="hero-heading">
+      <div class="hero-landing-stage film-grain" id="hero-video-fullscreen-target">
         <video
           id="hero-video"
           class="hero-landing-video"
@@ -71,15 +71,18 @@
           <source src="videos/wsv-top-entrance.mp4" type="video/mp4">
         </video>
         <div id="hero-video-fallback" class="hero-video-fallback" hidden></div>
-        <div class="hero-landing-scrim" aria-hidden="true"></div>
-        <button type="button" id="hero-mute-btn" class="hero-landing-unmute" aria-label="Unmute video" aria-pressed="true">
+        <div class="hero-landing-stage-fade" aria-hidden="true"></div>
+        <button type="button" id="hero-mute-btn" class="hero-landing-unmute" aria-label="Unmute video" aria-pressed="true" title="Toggle sound">
           <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
-          <span class="hero-landing-unmute-label">Sound</span>
         </button>
+        <p class="hero-landing-caption">
+          <img src="Shield-logo.png" alt="" width="22" height="22" decoding="async">
+          <span>WSV Top Entrance Video — cinematic graphics &amp; animation</span>
+        </p>
       </div>
 
-      <div class="hero-landing-inner">
-        <div class="hero-landing-content">
+      <div class="hero-landing-copy">
+        <div class="hero-landing-inner">
           <div class="logo-hero-wrap hero-logo-compact">
             <img src="Shield-logo.png" alt="Webb Spinner Visions shield and spider logo" width="72" height="72" class="logo-spinner" decoding="async">
           </div>
@@ -104,11 +107,6 @@
             <a href="#packages" class="btn btn-ghost btn-mega-secondary">View Packages</a>
           </div>
         </div>
-
-        <p class="hero-landing-caption">
-          <img src="Shield-logo.png" alt="" width="24" height="24" decoding="async">
-          <span>WSV Top Entrance Video — cinematic graphics &amp; animation</span>
-        </p>
       </div>
     </section>
 

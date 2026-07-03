@@ -2321,92 +2321,126 @@ body {
 }
 
 /* =============================================
-   LANDING PAGE — Full-bleed hero + package cards
+   LANDING PAGE — Video-first hero + package cards
    ============================================= */
 
 .hero-landing {
-  position: relative;
-  min-height: min(100svh, 920px);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Immersive video block — first element after nav */
+.hero-landing-stage {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  max-height: 960px;
+  min-height: 440px;
+  background: #000;
   overflow: hidden;
   isolation: isolate;
 }
 
-.hero-landing-media {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: #000;
-}
-
 .hero-landing-video,
-.hero-landing-media .hero-video-fallback,
-.hero-landing-media .hero-video-iframe-fallback {
+.hero-landing-stage .hero-video-fallback,
+.hero-landing-stage .hero-video-iframe-fallback {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border: 0;
+  display: block;
 }
 
-.hero-landing-scrim {
+.hero-landing-stage-fade {
   position: absolute;
-  inset: 0;
+  inset: auto 0 0;
+  height: 28%;
   z-index: 1;
-  background:
-    linear-gradient(180deg, rgba(2, 2, 4, 0.55) 0%, rgba(2, 2, 4, 0.72) 45%, rgba(2, 2, 4, 0.88) 100%),
-    radial-gradient(ellipse 80% 60% at 50% 40%, transparent 0%, rgba(2, 2, 4, 0.5) 100%);
+  background: linear-gradient(to top, rgba(2, 2, 4, 0.92) 0%, rgba(2, 2, 4, 0.35) 55%, transparent 100%);
   pointer-events: none;
 }
 
 .hero-landing-unmute {
   position: absolute;
-  bottom: 1.25rem;
-  right: 1.25rem;
+  top: 1rem;
+  right: 1rem;
   z-index: 3;
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  padding: 0.55rem 0.9rem;
-  border-radius: 2rem;
-  border: 1px solid color-mix(in srgb, var(--text) 25%, transparent);
-  background: rgba(4, 5, 8, 0.72);
-  backdrop-filter: blur(10px);
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--text) 18%, transparent);
+  background: rgba(4, 5, 8, 0.55);
+  backdrop-filter: blur(8px);
   color: var(--text);
-  font-size: 0.75rem;
-  font-weight: 600;
   cursor: pointer;
-  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  opacity: 0.75;
+  transition: opacity 0.2s, border-color 0.2s, background 0.2s;
 }
 
-.hero-landing-unmute:hover {
-  border-color: var(--accent);
-  background: rgba(4, 5, 8, 0.9);
-  transform: translateY(-1px);
+.hero-landing-unmute:hover,
+.hero-landing-unmute:focus-visible {
+  opacity: 1;
+  border-color: color-mix(in srgb, var(--accent) 50%, transparent);
+  background: rgba(4, 5, 8, 0.82);
 }
 
 .hero-landing-unmute i {
-  color: var(--accent);
-  font-size: 0.95rem;
+  color: var(--text);
+  font-size: 0.9rem;
 }
 
-.hero-landing-inner {
+.hero-landing-caption {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.4rem 0.85rem;
+  border-radius: 2rem;
+  background: rgba(4, 5, 8, 0.45);
+  backdrop-filter: blur(6px);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  white-space: nowrap;
+}
+
+.hero-landing-caption img {
+  border-radius: 0.25rem;
+  border: 1px solid var(--border);
+  opacity: 0.9;
+}
+
+/* Copy block — sits cleanly below the video */
+.hero-landing-copy {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 56rem;
-  margin-inline: auto;
-  padding: clamp(6rem, 14vw, 8rem) clamp(1.25rem, 4vw, 2rem) clamp(3rem, 6vw, 4rem);
-  text-align: center;
+  background:
+    linear-gradient(180deg, #020204 0%, color-mix(in srgb, var(--bg) 92%, #020204) 100%);
+  border-bottom: 1px solid var(--border);
 }
 
-.hero-landing-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.hero-landing-inner {
+  width: 100%;
+  max-width: 56rem;
+  margin-inline: auto;
+  padding: clamp(2.75rem, 6vw, 4rem) clamp(1.25rem, 4vw, 2rem) clamp(2.5rem, 5vw, 3.5rem);
+  text-align: center;
 }
 
 .hero-landing-eyebrow {
@@ -2425,16 +2459,15 @@ body {
   letter-spacing: -0.04em;
   line-height: 1.02;
   margin-bottom: 1.25rem;
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.6);
 }
 
 .hero-landing-sub {
   font-size: clamp(1rem, 2.4vw, 1.2rem);
   color: var(--text-muted);
   max-width: 38rem;
+  margin-inline: auto;
   line-height: 1.65;
   margin-bottom: 2rem;
-  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
 }
 
 .hero-landing-action {
@@ -2444,25 +2477,6 @@ body {
   gap: 0.85rem;
   width: 100%;
   max-width: 28rem;
-}
-
-.hero-landing-caption {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.55rem;
-  margin-top: clamp(2rem, 5vw, 3rem);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-subtle);
-}
-
-.hero-landing-caption img {
-  border-radius: 0.3rem;
-  border: 1px solid var(--border);
-  opacity: 0.85;
 }
 
 .btn-mega {
@@ -2721,28 +2735,28 @@ body {
 }
 
 @media (max-width: 767px) {
-  .hero-landing {
-    min-height: min(100svh, 780px);
+  .hero-landing-stage {
+    height: min(72svh, 620px);
+    min-height: 360px;
+  }
+
+  .hero-landing-caption {
+    max-width: calc(100% - 2rem);
+    white-space: normal;
+    text-align: center;
+    font-size: 0.58rem;
+    bottom: 1rem;
   }
 
   .hero-landing-inner {
-    padding-top: clamp(5.5rem, 18vw, 7rem);
+    padding-top: clamp(2.25rem, 6vw, 3rem);
   }
 
   .hero-landing-unmute {
-    bottom: 1rem;
-    right: 1rem;
-    padding: 0.65rem 0.85rem;
-    min-height: 2.75rem;
-    min-width: 2.75rem;
-  }
-
-  .hero-landing-unmute-label {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    top: 0.85rem;
+    right: 0.85rem;
+    width: 2.75rem;
+    height: 2.75rem;
   }
 
   .btn-mega {
