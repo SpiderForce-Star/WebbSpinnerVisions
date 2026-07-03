@@ -23,7 +23,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://www.youtube-nocookie.com">
-  <link rel="preconnect" href="https://www.youtube.com">
+  <link rel="preconnect" href="https://i.ytimg.com" crossorigin>
+  <link rel="preload" as="image" href="https://i.ytimg.com/vi/8nsN5ESSrY0/maxresdefault.jpg">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="css/polish.css">
@@ -66,19 +67,28 @@
 
     <!-- HERO — immersive video first, copy stacked below -->
     <section class="hero-landing" aria-labelledby="hero-heading">
-      <div class="hero-landing-stage hero-landing-stage--youtube film-grain is-playing" id="hero-video-fullscreen-target">
-        <div id="hero-video-fallback" class="hero-video-fallback">
-          <iframe
-            id="hero-video"
-            class="hero-landing-iframe"
-            src="https://www.youtube-nocookie.com/embed/8nsN5ESSrY0?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=8nsN5ESSrY0&amp;controls=1&amp;rel=0&amp;playsinline=1&amp;modestbranding=1&amp;enablejsapi=1"
-            title="Webb Spinner Visions — cinematic video showcase"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+      <div class="hero-landing-stage hero-landing-stage--youtube film-grain" id="hero-video-fullscreen-target">
+        <div class="hero-youtube-facade" id="hero-youtube-facade">
+          <picture>
+            <source srcset="https://i.ytimg.com/vi/8nsN5ESSrY0/maxresdefault.jpg" type="image/jpeg">
+            <img
+              class="hero-youtube-poster"
+              src="https://i.ytimg.com/vi/8nsN5ESSrY0/hqdefault.jpg"
+              alt=""
+              width="1280"
+              height="720"
+              decoding="async"
+              fetchpriority="high"
+            >
+          </picture>
+          <button type="button" id="hero-play-btn" class="hero-youtube-play" aria-label="Play hero video">
+            <span class="hero-youtube-play__ring" aria-hidden="true"></span>
+            <span class="hero-youtube-play__icon" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+          </button>
         </div>
+        <div id="hero-video-fallback" class="hero-video-fallback" hidden></div>
         <div class="hero-landing-stage-fade" aria-hidden="true"></div>
-        <button type="button" id="hero-mute-btn" class="hero-landing-unmute" aria-label="Unmute video" aria-pressed="true" title="Toggle sound">
+        <button type="button" id="hero-mute-btn" class="hero-landing-unmute" aria-label="Unmute video" aria-pressed="true" title="Toggle sound" hidden>
           <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
         </button>
       </div>
