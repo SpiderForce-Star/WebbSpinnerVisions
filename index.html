@@ -47,7 +47,7 @@
   }
   </script>
 </head>
-<body>
+<body class="landing-page">
   <a href="#main" class="skip-link">Skip to main content</a>
 
   <div id="nav-placeholder"></div>
@@ -108,8 +108,14 @@
     <!-- WEBSITE + VIDEO PACKAGES — star section immediately after hero -->
     <section id="packages" class="section packages-section" aria-labelledby="packages-heading">
       <div class="section-inner">
-        <!-- Trust & Social Proof — immediately before the offer -->
-        <div class="trust-layer" aria-label="Trust and social proof">
+        <header class="section-header section-header--packages">
+          <span class="section-eyebrow">Website + Video Packages</span>
+          <h2 id="packages-heading" class="section-title">Choose the package that fits your business</h2>
+          <p class="section-lead">Professional websites you own outright — with optional cinematic video that stops the scroll and drives real results.</p>
+        </header>
+
+        <!-- Trust & Social Proof — stats bar right before the offer -->
+        <div id="trust" class="trust-layer" aria-label="Trust and social proof">
           <p class="trust-layer-eyebrow">Trusted by growth-minded small businesses</p>
           <div class="trust-layer-stats">
             <div class="trust-stat-card">
@@ -140,12 +146,6 @@
             <span class="trust-pill"><i class="fa-solid fa-lock" aria-hidden="true"></i> No spam — ever</span>
           </div>
         </div>
-
-        <header class="section-header">
-          <span class="section-eyebrow">Website + Video Packages</span>
-          <h2 id="packages-heading" class="section-title">Choose the package that fits your business</h2>
-          <p class="section-lead">Professional websites you own outright — with optional cinematic video that stops the scroll and drives real results.</p>
-        </header>
 
         <div class="packages-grid">
           <article class="package-card reveal">
@@ -200,6 +200,17 @@
           </article>
         </div>
 
+        <!-- Stats reinforcement — right after packages -->
+        <div class="trust-stats-bar" aria-label="Quick credentials">
+          <span><strong>500+</strong> Videos Delivered</span>
+          <span aria-hidden="true" class="trust-stats-divider">&bull;</span>
+          <span><strong>24hr</strong> Quote Response</span>
+          <span aria-hidden="true" class="trust-stats-divider">&bull;</span>
+          <span><strong>12</strong> Industries Served</span>
+          <span aria-hidden="true" class="trust-stats-divider">&bull;</span>
+          <span>You Own <strong>100%</strong></span>
+        </div>
+
         <div class="packages-cta-band reveal">
           <p>Not sure which package fits? We&rsquo;ll recommend the right fit on a free 15-minute call — no pressure, no spam.</p>
           <a href="#contact" class="btn btn-primary btn-mega">
@@ -211,7 +222,7 @@
     </section>
 
     <!-- WHY VIDEO WORKS — supporting proof (condensed) -->
-    <section id="why-video" class="section section-panel section-panel--subdued why-video-works" aria-labelledby="why-video-heading">
+    <section id="why-video" class="section section-panel section-panel--subdued section-support why-video-works" aria-labelledby="why-video-heading">
       <div class="section-inner">
         <header class="section-header section-header--compact">
           <span class="section-eyebrow">The Science of Scroll-Stopping</span>
@@ -252,7 +263,7 @@
     </section>
 
     <!-- PROCESS -->
-    <section id="process" class="section section-panel section-panel--subdued" aria-labelledby="process-heading">
+    <section id="process" class="section section-panel section-panel--subdued section-support" aria-labelledby="process-heading">
       <div class="section-inner">
         <header class="section-header">
           <span class="section-eyebrow">How We Work</span>
@@ -347,7 +358,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary btn-mega" style="width:100%;">
-              Book My Discovery Call <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              Book Free Discovery Call <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
             </button>
             <p class="text-subtle" style="text-align:center;font-size:0.7rem;margin-top:0.75rem;">We respect your time. No spam, ever.</p>
           </form>
