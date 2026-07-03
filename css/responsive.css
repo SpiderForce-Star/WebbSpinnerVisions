@@ -235,8 +235,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 3rem;
+  height: 3rem;
+  min-width: 48px;
+  min-height: 48px;
   background: transparent;
   border: 1px solid var(--border);
   border-radius: 0.75rem;
@@ -297,6 +299,13 @@ body {
 
 .mobile-menu-close {
   margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  min-width: 48px;
+  min-height: 48px;
   background: none;
   border: none;
   color: var(--steel);
@@ -311,7 +320,10 @@ body {
 }
 
 .mobile-nav-link {
-  padding: 1rem 0.25rem;
+  display: flex;
+  align-items: center;
+  min-height: 3rem;
+  padding: 0.85rem 0.5rem;
   border-bottom: 1px solid var(--border);
   color: #e2e8f0;
   text-decoration: none;
@@ -324,16 +336,20 @@ body {
 
 .mobile-menu-cta {
   margin-top: auto;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.5rem;
   text-align: center;
-  padding: 0.875rem;
+  padding: 1rem 1.25rem;
   background: var(--amber);
   color: var(--charcoal);
-  font-weight: 600;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
   border-radius: 1rem;
   text-decoration: none;
+  touch-action: manipulation;
 }
 
 /* Spinning X */
