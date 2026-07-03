@@ -3035,6 +3035,206 @@ body:has(.hero-landing) .site-nav {
 }
 
 /* =============================================
+   CINEMATIC LANDING TONE — premium dark + amber
+   ============================================= */
+
+.landing-page main {
+  background: var(--bg-gradient);
+  background-attachment: scroll;
+}
+
+.landing-page .section-eyebrow {
+  letter-spacing: 0.24em;
+  text-shadow: 0 0 28px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.landing-page .section-title {
+  letter-spacing: -0.035em;
+}
+
+/* Hero video — vignette + amber edge */
+.hero-landing-stage {
+  border-bottom-color: color-mix(in srgb, var(--accent) 22%, var(--border));
+  box-shadow: 0 12px 56px rgba(0, 0, 0, 0.55);
+}
+
+.hero-landing-stage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(ellipse 85% 75% at 50% 45%, transparent 30%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.hero-landing-stage-fade {
+  height: 32%;
+  background: linear-gradient(to top, rgba(2, 2, 4, 0.95) 0%, rgba(2, 2, 4, 0.4) 50%, transparent 100%);
+}
+
+.hero-landing-caption {
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--border));
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Hero copy panel */
+.cinematic-panel {
+  position: relative;
+  background:
+    radial-gradient(ellipse 70% 45% at 50% 0%, color-mix(in srgb, var(--accent) 7%, transparent), transparent 68%),
+    linear-gradient(180deg, #05070c 0%, var(--bg-elevated) 55%, #080b12 100%);
+}
+
+.cinematic-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--accent) 70%, transparent), transparent);
+  opacity: 0.65;
+}
+
+.hero-landing-eyebrow {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.65rem;
+}
+
+.hero-landing-eyebrow::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.5rem;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.hero-landing-title {
+  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  text-wrap: balance;
+}
+
+.hero-landing-title .text-glow {
+  display: inline-block;
+  margin-top: 0.15em;
+}
+
+/* Packages — cinematic stage */
+.packages-section--cinematic {
+  position: relative;
+  background:
+    radial-gradient(ellipse 65% 45% at 50% 0%, color-mix(in srgb, var(--accent) 9%, transparent), transparent 62%),
+    radial-gradient(ellipse 40% 30% at 100% 80%, rgba(30, 58, 95, 0.12), transparent),
+    transparent;
+}
+
+.packages-section--cinematic::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(rgba(42, 42, 50, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42, 42, 50, 0.12) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 15%, transparent 75%);
+}
+
+.trust-stats-bar {
+  background: linear-gradient(145deg, rgba(12, 15, 24, 0.95), rgba(8, 10, 18, 0.98));
+  border-color: color-mix(in srgb, var(--accent) 16%, var(--border));
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+}
+
+.package-card {
+  background: linear-gradient(165deg, rgba(16, 20, 31, 0.98) 0%, rgba(11, 14, 22, 0.99) 100%);
+  border-color: color-mix(in srgb, var(--border) 90%, #1e3a5f);
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+}
+
+.package-card::before {
+  opacity: 0.85;
+}
+
+.package-card--featured {
+  background: linear-gradient(165deg, color-mix(in srgb, var(--accent) 11%, rgba(16, 20, 31, 0.98)), rgba(11, 14, 22, 0.99));
+  box-shadow:
+    var(--shadow),
+    0 0 80px color-mix(in srgb, var(--accent) 20%, transparent),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  animation: cinematic-card-glow 5s ease-in-out infinite;
+}
+
+@keyframes cinematic-card-glow {
+  0%, 100% { box-shadow: var(--shadow), 0 0 56px color-mix(in srgb, var(--accent) 16%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.06); }
+  50% { box-shadow: var(--shadow), 0 0 88px color-mix(in srgb, var(--accent) 28%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.06); }
+}
+
+.package-badge {
+  letter-spacing: 0.1em;
+  box-shadow: 0 4px 24px var(--accent-glow), 0 0 40px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+.package-card-price-inline {
+  text-shadow: 0 0 32px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.packages-cta-band {
+  border-color: color-mix(in srgb, var(--accent) 32%, var(--border));
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, var(--bg-panel)), rgba(11, 14, 22, 0.98));
+  box-shadow: 0 0 64px color-mix(in srgb, var(--accent) 10%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.landing-bridge {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--bg-panel) 40%, transparent), color-mix(in srgb, var(--bg) 80%, #040508));
+  border-color: color-mix(in srgb, var(--accent) 10%, var(--border));
+}
+
+.landing-process-num {
+  text-shadow: 0 0 16px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.landing-page .contact-form-panel {
+  border-color: color-mix(in srgb, var(--accent) 22%, var(--border));
+  background: linear-gradient(160deg, var(--bg-panel), var(--bg-elevated));
+  box-shadow: var(--shadow), 0 0 48px color-mix(in srgb, var(--accent) 6%, transparent);
+}
+
+.landing-page .btn-primary {
+  background: linear-gradient(135deg, #fbbf24 0%, var(--accent) 38%, #d97706 100%);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.02em;
+}
+
+.landing-page .btn-primary:hover {
+  box-shadow: 0 14px 40px var(--accent-glow), 0 0 0 1px color-mix(in srgb, var(--accent) 50%, transparent);
+}
+
+.landing-page .sticky-cta {
+  border-top-color: color-mix(in srgb, var(--accent) 18%, var(--border));
+  box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.5), 0 0 32px color-mix(in srgb, var(--accent) 6%, transparent);
+}
+
+body:has(.hero-landing) .site-nav {
+  border-bottom-color: color-mix(in srgb, var(--accent) 12%, var(--border));
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .package-card--featured {
+    animation: none !important;
+  }
+}
+
+/* =============================================
    LANDING PAGE — Mobile spacing & tap targets
    ============================================= */
 @media (max-width: 767px) {
