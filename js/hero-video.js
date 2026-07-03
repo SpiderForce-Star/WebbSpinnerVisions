@@ -1,5 +1,5 @@
 /**
- * Hero video — HTML5 autoplay with clean minimal controls
+ * Hero video — full-bleed landing background, muted autoplay + unmute
  */
 (function () {
   'use strict';
@@ -8,12 +8,10 @@
   const video = document.getElementById('hero-video');
   const fallback = document.getElementById('hero-video-fallback');
   const muteBtn = document.getElementById('hero-mute-btn');
-  const fsBtn = document.getElementById('hero-fullscreen-btn');
-  const fsTarget = document.getElementById('hero-video-fullscreen-target');
-  const frame = fsTarget;
+  const media = document.getElementById('hero-video-fullscreen-target');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  if (!video || !frame) return;
+  if (!video || !media) return;
 
   let usingIframe = false;
 
@@ -23,13 +21,6 @@
     muteBtn.setAttribute('aria-pressed', muted ? 'true' : 'false');
     const icon = muteBtn.querySelector('i');
     if (icon) icon.className = muted ? 'fa-solid fa-volume-xmark' : 'fa-solid fa-volume-high';
-  };
-
-  const setFsIcon = expanded => {
-    if (!fsBtn) return;
-    fsBtn.setAttribute('aria-label', expanded ? 'Exit fullscreen' : 'Enter fullscreen');
-    const icon = fsBtn.querySelector('i');
-    if (icon) icon.className = expanded ? 'fa-solid fa-compress' : 'fa-solid fa-expand';
   };
 
   const loadYouTubeFallback = () => {
@@ -57,7 +48,7 @@
   video.addEventListener('error', loadYouTubeFallback);
 
   video.addEventListener('loadeddata', () => {
-    frame.classList.add('is-playing');
+    media.classList.add('is-playing');
     tryPlay();
   });
 
@@ -82,19 +73,6 @@
     }
     video.muted = !video.muted;
     setMuteIcon(video.muted);
-  });
-
-  fsBtn?.addEventListener('click', () => {
-    if (!document.fullscreenElement) {
-      (fsTarget.requestFullscreen || fsTarget.webkitRequestFullscreen)?.call(fsTarget);
-    } else {
-      (document.exitFullscreen || document.webkitExitFullscreen)?.call(document);
-    }
-  });
-
-  document.addEventListener('fullscreenchange', () => {
-    setFsIcon(!!document.fullscreenElement);
-    fsTarget?.classList.toggle('is-fullscreen', !!document.fullscreenElement);
   });
 
   setMuteIcon(true);

@@ -118,6 +118,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const projectTypeSelect = document.getElementById('project_type');
+  document.querySelectorAll('[data-package]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (!projectTypeSelect) return;
+      const pkg = link.dataset.package;
+      const map = {
+        starter: 'Starter Website Package ($800)',
+        cinematic: 'Cinematic Website Package ($1,000)'
+      };
+      if (map[pkg]) projectTypeSelect.value = map[pkg];
+    });
+  });
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
       const href = anchor.getAttribute('href');
