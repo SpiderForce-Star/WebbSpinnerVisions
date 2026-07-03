@@ -2361,6 +2361,28 @@ body {
   transform-origin: center center;
 }
 
+.hero-landing-stage.is-playing .hero-landing-video {
+  opacity: 1;
+}
+
+.hero-landing-stage .hero-video-fallback {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-landing-stage .hero-video-iframe-fallback {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  max-width: none;
+  inset: auto;
+  transform: translate(-50%, -50%) scale(1.04);
+  transform-origin: center center;
+  pointer-events: none;
+}
+
 .hero-landing-stage-fade {
   position: absolute;
   inset: auto 0 0;
