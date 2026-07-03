@@ -1,9 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const heroPlayer = document.getElementById('hero-yt-player');
-  if (heroPlayer && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    heroPlayer.removeAttribute('src');
-  }
-
   const params = new URLSearchParams(window.location.search);
   if (params.get('sent') === 'true') {
     const form = document.getElementById('contact-form');

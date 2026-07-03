@@ -23,6 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link rel="preconnect" href="https://www.youtube.com">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="css/polish.css">
@@ -56,21 +57,48 @@
     <section class="hero-video-section hero-video-section--premium film-grain" aria-labelledby="hero-heading">
       <div class="hero-video-inner hero-video-inner--featured">
         <div class="hero-video-stage hero-video-stage--featured">
-          <div class="hero-video-frame">
-            <span class="hero-video-offer-badge">$200 Starter Package</span>
-            <iframe
-              id="hero-yt-player"
-              class="hero-yt-embed"
-              src="https://www.youtube-nocookie.com/embed/_mEvE69qwjY?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=_mEvE69qwjY&amp;controls=1&amp;rel=0&amp;playsinline=1&amp;modestbranding=1"
-              title="WSV Top Entrance Video — Webb Spinner Visions hero showcase"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-              loading="eager"
-            ></iframe>
-            <a href="https://www.youtube.com/watch?v=_mEvE69qwjY" class="hero-video-poster-fallback" target="_blank" rel="noopener noreferrer" aria-label="Play WSV Top Entrance Video on YouTube">
-              <img src="https://img.youtube.com/vi/_mEvE69qwjY/maxresdefault.jpg" alt="" width="1280" height="720" loading="eager" decoding="async">
-              <span class="video-embed-play"><i class="fa-solid fa-play" aria-hidden="true"></i></span>
-            </a>
+          <div class="hero-video-cinema hero-video-cinema--enter" id="hero-video-cinema">
+            <div class="hero-video-frame hero-video-frame--epic" id="hero-video-fullscreen-target">
+              <div class="hero-video-glow-ring" aria-hidden="true"></div>
+              <div class="hero-video-glow-ring hero-video-glow-ring--delay" aria-hidden="true"></div>
+              <div class="hero-video-scanlines" aria-hidden="true"></div>
+              <div class="hero-video-vignette" aria-hidden="true"></div>
+              <div class="hero-video-brand-sweep" aria-hidden="true"></div>
+
+              <div class="hero-yt-player-mount">
+                <div id="hero-yt-player" data-video-id="_mEvE69qwjY" title="WSV Top Entrance Video — Webb Spinner Visions hero showcase"></div>
+              </div>
+
+              <a href="https://www.youtube.com/watch?v=_mEvE69qwjY" class="hero-video-poster-fallback" target="_blank" rel="noopener noreferrer" aria-label="Play WSV Top Entrance Video on YouTube">
+                <img src="https://img.youtube.com/vi/_mEvE69qwjY/maxresdefault.jpg" alt="" width="1280" height="720" loading="eager" decoding="async">
+                <span class="video-embed-play"><i class="fa-solid fa-play" aria-hidden="true"></i></span>
+              </a>
+
+              <div class="hero-video-overlays">
+                <p class="hero-overlay-tagline hero-overlay-animate hero-overlay-animate--1">
+                  <img src="Shield-logo.png" alt="" width="24" height="24" decoding="async">
+                  Turn photos into <strong>scroll-stopping videos</strong>
+                </p>
+                <p class="hero-overlay-offer hero-overlay-animate hero-overlay-animate--2">
+                  <span class="hero-overlay-price">$200</span>
+                  <span class="hero-overlay-detail">Setup + custom logo animation + 30-second video</span>
+                </p>
+              </div>
+
+              <div class="hero-video-controls" role="group" aria-label="Video playback controls">
+                <button type="button" id="hero-play-btn" class="hero-ctrl-btn" aria-label="Pause video" aria-pressed="true">
+                  <i class="fa-solid fa-pause" aria-hidden="true"></i>
+                </button>
+                <button type="button" id="hero-mute-btn" class="hero-ctrl-btn" aria-label="Unmute video" aria-pressed="false">
+                  <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
+                </button>
+                <button type="button" id="hero-fullscreen-btn" class="hero-ctrl-btn" aria-label="Enter fullscreen">
+                  <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <span class="hero-video-offer-badge hero-video-offer-badge--pulse">Limited Time — $200 Starter</span>
+            </div>
           </div>
           <div class="hero-video-caption">
             <img src="Shield-logo.png" alt="" width="28" height="28" decoding="async">
@@ -477,5 +505,6 @@
 
   <script src="js/shared.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/hero-video.js"></script>
 </body>
 </html>
