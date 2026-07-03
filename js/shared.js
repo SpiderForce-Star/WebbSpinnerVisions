@@ -135,16 +135,25 @@
 
   const initStickyCta = () => {
     const bar = document.getElementById('sticky-cta');
-    const contact = document.getElementById('contact');
-    if (!bar || !contact) return;
+    if (!bar) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        bar.classList.toggle('visible', !entry.isIntersecting && window.scrollY > 400);
-      },
-      { threshold: 0.1 }
-    );
-    observer.observe(contact);
+    const contact = document.getElementById('contact');
+    if (contact) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          bar.classList.toggle('visible', !entry.isIntersecting && window.scrollY > 400);
+        },
+        { threshold: 0.1 }
+      );
+      observer.observe(contact);
+      return;
+    }
+
+    const onScroll = () => {
+      bar.classList.toggle('visible', window.scrollY > 400);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   };
 
   const initAfterPartials = () => {

@@ -33,16 +33,16 @@ body {
 
 /* Promo bar */
 .promo-bar {
-  background: linear-gradient(90deg, #7f1d1d, #dc2626, #b91c1c, #dc2626, #7f1d1d);
+  background: linear-gradient(90deg, #7f1d1d, #dc2626, #ef4444, #dc2626, #7f1d1d);
   background-size: 200% 100%;
   animation: promo-shine 8s ease infinite;
   color: #fff;
-  padding: 0.65rem 1rem;
-  font-size: 0.8rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 24px rgba(220, 38, 38, 0.45);
 }
 
 .promo-bar-inner {
@@ -88,18 +88,18 @@ body {
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1.15rem;
   background: #fff;
   color: #991b1b;
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-size: 0.7rem;
+  font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 2rem;
   white-space: nowrap;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
 }
 
 .promo-bar-cta:hover {
@@ -228,7 +228,7 @@ body {
 
 .nav-cta:hover { background: var(--amber); color: #fff; }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nav-cta { display: inline-flex; }
 }
 

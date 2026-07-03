@@ -52,10 +52,11 @@
 
   <main id="main">
     <!-- HERO — cinematic video + AIDA copy -->
-    <section class="hero-video-section film-grain" aria-labelledby="hero-heading">
-      <div class="hero-video-inner">
-        <div class="hero-video-stage">
+    <section class="hero-video-section hero-video-section--premium film-grain" aria-labelledby="hero-heading">
+      <div class="hero-video-inner hero-video-inner--featured">
+        <div class="hero-video-stage hero-video-stage--featured">
           <div class="hero-video-frame">
+            <span class="hero-video-offer-badge">$200 Starter Package</span>
             <iframe
               id="hero-yt-player"
               class="hero-yt-embed"
@@ -95,17 +96,17 @@
             masterclasses, and websites that turn ordinary brands into ones customers trust, remember, and buy from.
           </p>
 
-          <div class="hero-action btn-row btn-row-cta">
-            <a href="#contact" class="btn btn-primary">
-              <span>Get Free Quote in 24hrs</span>
+          <div class="hero-action conversion-cta-row">
+            <a href="#contact" class="btn btn-primary starter-cta-btn">
+              <span>Get My $200 Starter Package</span>
               <i class="fa-solid fa-bolt" aria-hidden="true"></i>
             </a>
-            <a href="demos.html" class="btn btn-secondary">
-              <span>See Our Work</span>
-              <i class="fa-solid fa-play" aria-hidden="true"></i>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Get Free Quote</span>
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
             </a>
             <a href="#contact" class="btn btn-ghost">
-              <span>Start Your Project</span>
+              <span>Start Your Project Today</span>
               <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
@@ -121,13 +122,17 @@
       </div>
     </section>
 
-    <!-- PROMO RIBBON -->
-    <div class="scrolling-ribbon" role="region" aria-label="Current promotions">
-      <div class="scroll-content">
-        &#9733; $200 set up + logo animation + 30 sec video &bull; Additional 30 sec clips $50 &bull; Limited time only &bull; Turn still photos into pro videos &bull;
-        &#9733; $200 set up + logo animation + 30 sec video &bull; Additional 30 sec clips $50 &bull; Limited time only &bull; Turn still photos into pro videos &bull;
+    <!-- OFFER STRIP -->
+    <section class="offer-strip" aria-label="Starter video package offer">
+      <div class="offer-strip-inner">
+        <div class="offer-strip-price-block">
+          <span class="offer-strip-price">$200</span>
+          <span class="offer-strip-includes">Setup + custom logo animation + 30-second video</span>
+        </div>
+        <p class="offer-strip-copy">Turn your still photos into scroll-stopping professional videos. Each additional 30-second clip only <strong>$50</strong>. Limited time offer.</p>
+        <a href="#contact" class="btn btn-primary starter-cta-btn offer-strip-btn">Get My $200 Starter Package</a>
       </div>
-    </div>
+    </section>
 
     <!-- TRUST BAR -->
     <section class="trust-bar" aria-label="Company credentials">
@@ -186,9 +191,10 @@
           </article>
         </div>
 
-        <p style="text-align:center;margin-top:2rem;">
-          <a href="services.html" class="btn btn-secondary" style="display:inline-flex;">View all services <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-        </p>
+        <div class="section-cta-row reveal">
+          <a href="services.html" class="btn btn-secondary">View All Services <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a href="#contact" class="btn btn-primary starter-cta-btn">Get My $200 Starter Package</a>
+        </div>
       </div>
     </section>
 
@@ -197,9 +203,17 @@
       <div class="section-inner">
         <header class="section-header">
           <span class="section-eyebrow">The Science of Scroll-Stopping</span>
-          <h2 id="why-video-heading" class="section-title">Why These Short Videos Are a Game-Changer for Small Business Social Media</h2>
-          <p class="section-lead">Your customers decide with their gut before they ever read your caption. Short, professional video is the fastest way to earn trust, beat the algorithm, and turn scrollers into buyers.</p>
+          <h2 id="why-video-heading" class="section-title">Why Video Works for Social Media</h2>
+          <p class="section-lead">Your customers decide with their gut before they ever read your caption. While competitors post photos that get ignored, short professional video earns trust, beats the algorithm, and turns scrollers into paying customers.</p>
         </header>
+
+        <div class="why-value-banner reveal">
+          <div class="why-value-stat">
+            <span class="why-value-number">3×</span>
+            <span class="why-value-label">More reach than photos</span>
+          </div>
+          <p class="why-value-copy">A single 30-second clip with your logo in cinematic motion can outperform months of static posts — delivering <strong>more impressions, more engagement, and more customers</strong> for less than the cost of one print ad.</p>
+        </div>
 
         <div class="why-platform-bar" aria-label="Social platforms where video wins">
           <span><i class="fa-brands fa-facebook" aria-hidden="true"></i> Facebook</span>
@@ -273,6 +287,11 @@
           </ul>
         </div>
 
+        <div class="why-roi-callout reveal">
+          <img src="Shield-logo.png" alt="" width="44" height="44" class="logo-spinner" decoding="async">
+          <p><strong>The bottom line:</strong> You send your photos — we deliver cinematic polish, custom logo animation, and a scroll-stopping clip ready to post on every platform. One strong video works like a 24/7 salesperson for your business.</p>
+        </div>
+
         <h3 class="why-tips-heading">How to Get Maximum Results from Your Videos</h3>
         <ol class="why-tip-grid">
           <li class="why-tip-card reveal">
@@ -304,10 +323,12 @@
 
         <div class="cta-band why-video-cta starter-package-cta reveal">
           <p class="why-video-cta-lead">Ready to stand out and grow? Get your $200 Starter Video Package today — setup + custom logo animation + 30-second video. Limited Time Offer.</p>
-          <a href="#contact" class="btn btn-primary starter-cta-btn">
-            Get Your $200 Starter Video Package <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </a>
-          <p style="margin-top:1rem;">
+          <div class="conversion-cta-row">
+            <a href="#contact" class="btn btn-primary starter-cta-btn">Get My $200 Starter Package <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a href="#contact" class="btn btn-secondary">Get Free Quote</a>
+            <a href="#contact" class="btn btn-ghost">Start Your Project Today</a>
+          </div>
+          <p style="margin-top:1.25rem;">
             <a href="why-video.html" class="text-muted" style="font-size:0.875rem;color:var(--text-muted);">Read the full video marketing guide <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </p>
         </div>
@@ -343,6 +364,11 @@
             <p class="text-muted" style="font-size:0.875rem;">Fast first cut with refinements until it sells.</p>
           </div>
         </div>
+
+        <div class="section-cta-row reveal" style="margin-top:2.5rem;">
+          <a href="#contact" class="btn btn-primary starter-cta-btn">Get My $200 Starter Package</a>
+          <a href="#contact" class="btn btn-secondary">Get Free Quote</a>
+        </div>
       </div>
     </section>
 
@@ -351,8 +377,8 @@
       <div class="section-inner" style="max-width:42rem;">
         <header class="section-header">
           <span class="section-eyebrow">Let's Build Something Great</span>
-          <h2 id="contact-heading" class="section-title">Ready to launch your vision?</h2>
-          <p class="section-lead">Tell us about your project. We reply within 24 hours with next steps and a clear quote.</p>
+          <h2 id="contact-heading" class="section-title">Ready to stand out and grow?</h2>
+          <p class="section-lead">Get your $200 Starter Video Package or tell us about a custom project. We reply within 24 hours with next steps and a clear quote.</p>
         </header>
 
         <div class="cta-band">
@@ -383,6 +409,7 @@
                 <label for="project_type" class="sr-only">Project type</label>
                 <select id="project_type" name="project_type" class="form-input">
                   <option value="">Select project type...</option>
+                  <option>$200 Starter Video Package</option>
                   <option>Video Production / Commercial</option>
                   <option>Social Media Video Package</option>
                   <option>Logo Animation &amp; Motion</option>
@@ -398,8 +425,8 @@
               <textarea id="message" name="message" rows="5" required class="form-input" placeholder="Goals, timeline, target audience..." style="resize:vertical;"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width:100%;">
-              SEND INQUIRY <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            <button type="submit" class="btn btn-primary starter-cta-btn" style="width:100%;">
+              Start Your Project Today <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
             </button>
             <p class="text-subtle" style="text-align:center;font-size:0.7rem;margin-top:0.75rem;">We respect your time. No spam, ever.</p>
           </form>
@@ -424,7 +451,7 @@
   <div id="footer-placeholder"></div>
 
   <div id="sticky-cta" class="sticky-cta" role="region" aria-label="Quick contact">
-    <a href="#contact" class="btn btn-primary">Get Free Quote in 24hrs</a>
+    <a href="#contact" class="btn btn-primary starter-cta-btn">Get My $200 Starter Package</a>
   </div>
 
   <script src="js/shared.js"></script>
