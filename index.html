@@ -21,6 +21,7 @@
   <link rel="icon" href="Shield-logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="css/polish.css">
@@ -50,53 +51,73 @@
   <div id="nav-placeholder"></div>
 
   <main id="main">
-    <!-- HERO — AIDA: Attention → Interest → Desire → Action -->
-    <section class="hero-section film-grain" aria-labelledby="hero-heading">
-      <div class="hero-content">
-        <div class="logo-hero-wrap hero-logo-dominant">
-          <img src="Shield-logo.png" alt="Webb Spinner Visions shield and spider logo" width="200" height="200" class="logo-spinner" fetchpriority="high" decoding="async">
+    <!-- HERO — cinematic video + AIDA copy -->
+    <section class="hero-video-section film-grain" aria-labelledby="hero-heading">
+      <div class="hero-video-inner">
+        <div class="hero-video-stage">
+          <div class="hero-video-frame">
+            <iframe
+              id="hero-yt-player"
+              class="hero-yt-embed"
+              src="https://www.youtube-nocookie.com/embed/_mEvE69qwjY?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=_mEvE69qwjY&amp;controls=1&amp;rel=0&amp;playsinline=1&amp;modestbranding=1"
+              title="WSV Top Entrance Video — Webb Spinner Visions hero showcase"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="eager"
+            ></iframe>
+            <a href="https://www.youtube.com/watch?v=_mEvE69qwjY" class="hero-video-poster-fallback" target="_blank" rel="noopener noreferrer" aria-label="Play WSV Top Entrance Video on YouTube">
+              <img src="https://img.youtube.com/vi/_mEvE69qwjY/maxresdefault.jpg" alt="" width="1280" height="720" loading="eager" decoding="async">
+              <span class="video-embed-play"><i class="fa-solid fa-play" aria-hidden="true"></i></span>
+            </a>
+          </div>
+          <div class="hero-video-caption">
+            <img src="Shield-logo.png" alt="" width="28" height="28" decoding="async">
+            <span>WSV Top Entrance Video — cinematic graphics &amp; animation</span>
+          </div>
         </div>
 
-        <!-- Attention -->
-        <h1 id="hero-heading" class="hero-title">
-          YOUR BUSINESS DESERVES<br>
-          <span class="text-glow">TO LOOK AS GOOD AS IT IS.</span>
-        </h1>
+        <div class="hero-video-copy">
+          <div class="logo-hero-wrap hero-logo-compact">
+            <img src="Shield-logo.png" alt="Webb Spinner Visions shield and spider logo" width="72" height="72" class="logo-spinner" decoding="async">
+          </div>
 
-        <!-- Interest -->
-        <p class="hero-interest">
-          30+ years of battle-tested storytelling from construction, metal buildings, and the
-          toughest sales floors — now helping <strong>any small business</strong> stand out and sell more.
-        </p>
+          <h1 id="hero-heading" class="hero-title hero-title-compact">
+            YOUR BUSINESS DESERVES<br>
+            <span class="text-glow">TO LOOK AS GOOD AS IT IS.</span>
+          </h1>
 
-        <!-- Desire -->
-        <p class="hero-desire">
-          Send your photos. Get cinematic videos, logo animations, AI-enhanced production,
-          masterclasses, and websites that turn ordinary brands into ones customers trust, remember, and buy from.
-        </p>
+          <p class="hero-interest">
+            30+ years of battle-tested storytelling from construction, metal buildings, and the
+            toughest sales floors — now helping <strong>any small business</strong> stand out and sell more.
+          </p>
 
-        <!-- Action -->
-        <div class="hero-action btn-row btn-row-cta">
-          <a href="#contact" class="btn btn-primary">
-            <span>Get Free Quote in 24hrs</span>
-            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
-          </a>
-          <a href="demos.html" class="btn btn-secondary">
-            <span>See Our Work</span>
-            <i class="fa-solid fa-play" aria-hidden="true"></i>
-          </a>
-          <a href="#contact" class="btn btn-ghost">
-            <span>Start Your Project</span>
-            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </a>
-        </div>
+          <p class="hero-desire">
+            Send your photos. Get cinematic videos, logo animations, AI-enhanced production,
+            masterclasses, and websites that turn ordinary brands into ones customers trust, remember, and buy from.
+          </p>
 
-        <div class="hero-meta">
-          <span>Retail &amp; restaurants</span>
-          <span aria-hidden="true">&bull;</span>
-          <span>Trades &amp; home services</span>
-          <span aria-hidden="true">&bull;</span>
-          <span>Coaches &amp; consultants</span>
+          <div class="hero-action btn-row btn-row-cta">
+            <a href="#contact" class="btn btn-primary">
+              <span>Get Free Quote in 24hrs</span>
+              <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+            </a>
+            <a href="demos.html" class="btn btn-secondary">
+              <span>See Our Work</span>
+              <i class="fa-solid fa-play" aria-hidden="true"></i>
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              <span>Start Your Project</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <span>Retail &amp; restaurants</span>
+            <span aria-hidden="true">&bull;</span>
+            <span>Trades &amp; home services</span>
+            <span aria-hidden="true">&bull;</span>
+            <span>Coaches &amp; consultants</span>
+          </div>
         </div>
       </div>
     </section>
