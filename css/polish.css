@@ -2977,6 +2977,31 @@ body {
   font-family: 'Space Grotesk', system-ui, sans-serif;
 }
 
+.landing-bridge-cta {
+  margin: 1.5rem 0 0;
+}
+
+.landing-bridge-cta .btn {
+  min-width: min(100%, 18rem);
+}
+
+.package-card-cta-note {
+  margin: 0.75rem 0 0;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--text-subtle);
+}
+
+.package-card-cta-note a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.package-card-cta-note a:hover {
+  text-decoration: underline;
+}
+
 .section-header--contact {
   margin-bottom: clamp(1.5rem, 3vw, 2rem);
 }
