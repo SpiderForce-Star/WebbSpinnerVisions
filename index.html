@@ -53,32 +53,34 @@
   <div id="nav-placeholder"></div>
 
   <main id="main">
+    <div class="promo-ribbon" role="region" aria-label="Limited time video offer">
+      <div class="promo-ribbon__shine" aria-hidden="true"></div>
+      <div class="promo-ribbon__inner">
+        <p class="promo-ribbon__text">
+          <strong class="promo-ribbon__highlight">$200.00</strong> gets you full setup + custom logo animation + 30-second video!
+          <span class="promo-ribbon__sub">Each additional 30-second video only $75.00 &bull; Limited Time Offer</span>
+        </p>
+        <a href="#contact" class="promo-ribbon__cta">Get Started</a>
+      </div>
+    </div>
+
     <!-- HERO — immersive video first, copy stacked below -->
     <section class="hero-landing" aria-labelledby="hero-heading">
-      <div class="hero-landing-stage film-grain" id="hero-video-fullscreen-target">
-        <video
-          id="hero-video"
-          class="hero-landing-video"
-          autoplay
-          muted
-          loop
-          playsinline
-          webkit-playsinline
-          preload="metadata"
-          poster="https://img.youtube.com/vi/_mEvE69qwjY/maxresdefault.jpg"
-          aria-label="WSV Top Entrance Video — Webb Spinner Visions cinematic showcase"
-        >
-          <source src="videos/wsv-top-entrance.mp4" type="video/mp4">
-        </video>
-        <div id="hero-video-fallback" class="hero-video-fallback" hidden></div>
+      <div class="hero-landing-stage hero-landing-stage--youtube film-grain is-playing" id="hero-video-fullscreen-target">
+        <div id="hero-video-fallback" class="hero-video-fallback">
+          <iframe
+            id="hero-video"
+            class="hero-landing-iframe"
+            src="https://www.youtube-nocookie.com/embed/8nsN5ESSrY0?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=8nsN5ESSrY0&amp;controls=1&amp;rel=0&amp;playsinline=1&amp;modestbranding=1&amp;enablejsapi=1"
+            title="Webb Spinner Visions — cinematic video showcase"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
         <div class="hero-landing-stage-fade" aria-hidden="true"></div>
         <button type="button" id="hero-mute-btn" class="hero-landing-unmute" aria-label="Unmute video" aria-pressed="true" title="Toggle sound">
           <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
         </button>
-        <p class="hero-landing-caption">
-          <img src="Shield-logo.png" alt="" width="22" height="22" decoding="async">
-          <span>WSV Top Entrance Video — cinematic graphics &amp; animation</span>
-        </p>
       </div>
 
       <div class="hero-landing-copy cinematic-panel">
