@@ -58,8 +58,30 @@ body {
 .promo-bar-text {
   margin: 0;
   text-align: center;
-  line-height: 1.45;
+  line-height: 1.5;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  max-width: 52rem;
+}
+
+.promo-line {
+  display: block;
+}
+
+.promo-line + .promo-line {
+  margin-top: 0.15rem;
+}
+
+@media (min-width: 960px) {
+  .promo-bar-inner {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 1rem 1.5rem;
+  }
+
+  .promo-bar-text {
+    text-align: left;
+    flex: 1;
+  }
 }
 
 .promo-bar-cta {
@@ -92,9 +114,9 @@ body {
 }
 
 @media (max-width: 640px) {
-  .promo-bar { font-size: 0.72rem; padding: 0.55rem 0.75rem; }
-  .promo-bar-text { font-size: 0.68rem; }
-  .promo-bar-cta { font-size: 0.65rem; padding: 0.35rem 0.85rem; }
+  .promo-bar { font-size: 0.7rem; padding: 0.55rem 0.65rem; }
+  .promo-bar-text { font-size: 0.64rem; line-height: 1.55; }
+  .promo-bar-cta { font-size: 0.65rem; padding: 0.4rem 0.9rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
