@@ -176,7 +176,7 @@ body {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 48rem;
+  max-width: 54rem;
   padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 1.5rem);
 }
 
@@ -223,62 +223,56 @@ body {
   animation-duration: 10s;
 }
 
-.hero-eyebrow {
-  display: inline-block;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1rem;
-  padding: 0.35rem 0.85rem;
-  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
-  border-radius: 2rem;
-  background: var(--accent-soft);
-}
-
 .hero-title {
   font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
   font-size: clamp(2.25rem, 7vw, 4.5rem);
   font-weight: 600;
   letter-spacing: -0.04em;
   line-height: 0.95;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
-.hero-subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  color: var(--text-muted);
-  max-width: 40rem;
-  margin: 0 auto 1.5rem;
-  line-height: 1.65;
-}
-
-.hero-benefits {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem 1.5rem;
-  list-style: none;
-  margin: 0 auto 2rem;
-  padding: 0;
-  max-width: 36rem;
-}
-
-.hero-benefits li {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+.hero-interest {
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+  font-weight: 500;
   color: var(--text);
+  max-width: 38rem;
+  margin: 0 auto 1rem;
+  line-height: 1.55;
 }
 
-.hero-benefits i {
+.hero-desire {
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
   color: var(--accent);
-  font-size: 0.7rem;
+  font-weight: 600;
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+  line-height: 1.5;
+}
+
+.hero-action { margin-bottom: 0.5rem; }
+
+.btn-row-cta {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 36rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+  .btn-row-cta {
+    grid-template-columns: 1fr 1fr;
+    max-width: 42rem;
+  }
+  .btn-row-cta .btn-primary { grid-column: 1 / -1; }
+}
+
+@media (min-width: 900px) {
+  .btn-row-cta {
+    grid-template-columns: 1.2fr 1fr 1fr;
+    max-width: none;
+  }
+  .btn-row-cta .btn-primary { grid-column: auto; }
 }
 
 .hero-meta {
