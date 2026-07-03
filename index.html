@@ -19,6 +19,7 @@
   <meta name="twitter:site" content="@Webb__X">
 
   <link rel="icon" href="Shield-logo.png" type="image/png">
+  <link rel="preload" href="Shield-logo.png" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://www.youtube-nocookie.com">
@@ -155,6 +156,12 @@
             <div class="trust-label">Quote Response</div>
           </div>
         </div>
+        <div class="trust-pills">
+          <span class="trust-pill"><i class="fa-solid fa-bolt" aria-hidden="true"></i> 24hr quote guarantee</span>
+          <span class="trust-pill"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> You own 100% of assets</span>
+          <span class="trust-pill"><i class="fa-solid fa-check-double" aria-hidden="true"></i> Revisions until you're thrilled</span>
+          <span class="trust-pill"><i class="fa-solid fa-lock" aria-hidden="true"></i> No spam — ever</span>
+        </div>
       </div>
     </section>
 
@@ -169,22 +176,22 @@
 
         <div class="grid-3">
           <article class="service-card reveal rounded-3xl card-hover" style="padding:2rem;border-radius:1.5rem;">
-            <div style="width:3rem;height:3rem;border-radius:1rem;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.25rem;">
-              <i class="fa-solid fa-video" aria-hidden="true"></i>
+            <div class="service-icon" aria-hidden="true">
+              <i class="fa-solid fa-video"></i>
             </div>
             <h3 style="font-size:1.15rem;font-weight:600;margin-bottom:0.5rem;">Cinematic Video Production</h3>
             <p class="text-muted" style="font-size:0.9rem;line-height:1.6;">Scroll-stopping commercials, brand stories, and social-ready promos for restaurants, retailers, coaches, and local businesses of every kind.</p>
           </article>
           <article class="service-card reveal rounded-3xl card-hover" style="padding:2rem;border-radius:1.5rem;">
-            <div style="width:3rem;height:3rem;border-radius:1rem;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.25rem;">
-              <i class="fa-solid fa-magic" aria-hidden="true"></i>
+            <div class="service-icon" aria-hidden="true">
+              <i class="fa-solid fa-magic"></i>
             </div>
             <h3 style="font-size:1.15rem;font-weight:600;margin-bottom:0.5rem;">Animation &amp; Motion Design</h3>
             <p class="text-muted" style="font-size:0.9rem;line-height:1.6;">Bold logo animations, explainer videos, and motion graphics that command attention on every platform.</p>
           </article>
           <article class="service-card reveal rounded-3xl card-hover" style="padding:2rem;border-radius:1.5rem;">
-            <div style="width:3rem;height:3rem;border-radius:1rem;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.25rem;">
-              <i class="fa-solid fa-robot" aria-hidden="true"></i>
+            <div class="service-icon" aria-hidden="true">
+              <i class="fa-solid fa-robot"></i>
             </div>
             <h3 style="font-size:1.15rem;font-weight:600;margin-bottom:0.5rem;">AI Solutions &amp; Post</h3>
             <p class="text-muted" style="font-size:0.9rem;line-height:1.6;">AI-accelerated editing, generative visuals, and intelligent workflows that deliver more in less time.</p>
@@ -199,7 +206,7 @@
     </section>
 
     <!-- WHY VIDEO WORKS -->
-    <section id="why-video" class="section why-video-works" style="background:var(--bg-elevated);border-block:1px solid var(--border);" aria-labelledby="why-video-heading">
+    <section id="why-video" class="section section-panel why-video-works" aria-labelledby="why-video-heading">
       <div class="section-inner">
         <header class="section-header">
           <span class="section-eyebrow">The Science of Scroll-Stopping</span>
@@ -336,7 +343,7 @@
     </section>
 
     <!-- PROCESS -->
-    <section id="process" class="section" style="background:var(--bg-elevated);border-block:1px solid var(--border);" aria-labelledby="process-heading">
+    <section id="process" class="section section-panel" aria-labelledby="process-heading">
       <div class="section-inner">
         <header class="section-header">
           <span class="section-eyebrow">How We Work</span>
@@ -372,6 +379,11 @@
       </div>
     </section>
 
+    <div class="conversion-bridge">
+      <p>Your competitors are still posting photos. You could have a scroll-stopping video this week.</p>
+      <a href="#contact" class="btn btn-primary starter-cta-btn">Get My $200 Starter Package</a>
+    </div>
+
     <!-- CONTACT -->
     <section id="contact" class="section" aria-labelledby="contact-heading">
       <div class="section-inner" style="max-width:42rem;">
@@ -381,7 +393,13 @@
           <p class="section-lead">Get your $200 Starter Video Package or tell us about a custom project. We reply within 24 hours with next steps and a clear quote.</p>
         </header>
 
-        <div class="cta-band">
+        <div class="cta-band contact-form-panel starter-package-cta">
+          <div class="contact-trust-row" aria-label="Our guarantees">
+            <div class="contact-trust-item"><i class="fa-solid fa-bolt" aria-hidden="true"></i> 24hr response</div>
+            <div class="contact-trust-item"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Full ownership</div>
+            <div class="contact-trust-item"><i class="fa-solid fa-star" aria-hidden="true"></i> Pro quality</div>
+            <div class="contact-trust-item"><i class="fa-solid fa-handshake" aria-hidden="true"></i> Personal service</div>
+          </div>
           <form id="contact-form" action="https://formsubmit.co/webbspinnervisions@gmail.com" method="POST" style="text-align:left;">
             <input type="hidden" name="_subject" value="New WSV Project Inquiry">
             <input type="hidden" name="_captcha" value="false">
@@ -426,8 +444,11 @@
             </div>
 
             <button type="submit" class="btn btn-primary starter-cta-btn" style="width:100%;">
-              Start Your Project Today <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              Get My $200 Starter Package <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
             </button>
+            <p style="text-align:center;margin-top:0.75rem;">
+              <a href="#contact" class="btn btn-ghost" style="font-size:0.85rem;padding:0.65rem 1.25rem;">Or request a free custom quote</a>
+            </p>
             <p class="text-subtle" style="text-align:center;font-size:0.7rem;margin-top:0.75rem;">We respect your time. No spam, ever.</p>
           </form>
 

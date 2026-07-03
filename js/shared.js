@@ -9,7 +9,7 @@
   const getPreferredTheme = () => {
     const stored = localStorage.getItem(THEME_KEY);
     if (stored === 'light' || stored === 'dark') return stored;
-    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    return 'dark';
   };
 
   const applyTheme = theme => {
