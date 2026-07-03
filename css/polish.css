@@ -2106,6 +2106,179 @@ body {
   text-shadow: 0 0 40px color-mix(in srgb, var(--accent) 45%, transparent);
 }
 
+/* =============================================
+   CLEAN HERO VIDEO + MOBILE SPACING
+   ============================================= */
+
+.hero-video-section--clean {
+  padding: clamp(1.5rem, 4vw, 2.5rem) 0 clamp(2.5rem, 6vw, 4rem);
+}
+
+.hero-video-frame--clean {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border));
+  box-shadow: var(--shadow), 0 0 48px color-mix(in srgb, var(--accent) 18%, transparent);
+  background: #000;
+  aspect-ratio: 16 / 9;
+}
+
+.hero-video-frame--clean.is-fullscreen {
+  max-height: none;
+  height: 100vh;
+  border-radius: 0;
+  aspect-ratio: auto;
+}
+
+.hero-video-el {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+}
+
+.hero-video-fallback,
+.hero-video-iframe-fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.hero-video-controls--minimal {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.hero-video-frame--clean:hover .hero-video-controls--minimal,
+.hero-video-frame--clean:focus-within .hero-video-controls--minimal,
+.hero-video-frame--clean.is-playing .hero-video-controls--minimal {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero-primary-cta {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  padding: 1rem 2rem;
+  font-weight: 700;
+}
+
+.hero-video-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+}
+
+.hero-video-caption img {
+  border-radius: 0.3rem;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --section-py: clamp(4rem, 10vw, 5rem);
+  }
+
+  .hero-video-section--clean {
+    padding: 1.25rem 0 2.75rem;
+  }
+
+  .hero-video-inner--featured {
+    gap: 2.25rem;
+  }
+
+  .hero-video-stage--featured .hero-video-frame--clean {
+    max-height: none;
+    border-radius: 1rem;
+  }
+
+  .hero-video-copy {
+    padding-inline: 0.25rem;
+  }
+
+  .hero-title-compact {
+    font-size: clamp(1.65rem, 7vw, 2.25rem);
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-interest {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.65;
+  }
+
+  .hero-desire {
+    font-size: 0.95rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-meta {
+    margin-top: 2rem;
+    gap: 0.4rem 1rem;
+    font-size: 0.62rem;
+  }
+
+  .hero-action {
+    margin-top: 0.5rem;
+  }
+
+  .hero-primary-cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .trust-pills {
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+  }
+
+  .trust-pill {
+    font-size: 0.65rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.25rem;
+  }
+
+  .section-lead {
+    font-size: 1rem;
+    padding-inline: 0.5rem;
+  }
+
+  .why-value-banner,
+  .why-roi-callout {
+    margin-bottom: 2rem;
+  }
+
+  .why-insight-grid {
+    gap: 1.5rem;
+  }
+
+  .conversion-cta-row,
+  .section-cta-row {
+    margin-top: 2.25rem;
+    gap: 1rem;
+  }
+
+  .hero-video-controls--minimal {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .logo-hero-wrap::before,
   .logo-hero-wrap::after,

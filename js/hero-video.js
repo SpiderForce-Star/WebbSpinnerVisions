@@ -1,32 +1,21 @@
 /**
- * Hero video — YouTube IFrame API + custom cinematic controls
+ * Hero video — HTML5 autoplay with clean minimal controls
  */
 (function () {
   'use strict';
 
   const VIDEO_ID = '_mEvE69qwjY';
-  const playerEl = document.getElementById('hero-yt-player');
-  const mount = playerEl?.closest('.hero-yt-player-mount');
-  if (!playerEl) return;
-
-  const playBtn = document.getElementById('hero-play-btn');
+  const video = document.getElementById('hero-video');
+  const fallback = document.getElementById('hero-video-fallback');
   const muteBtn = document.getElementById('hero-mute-btn');
   const fsBtn = document.getElementById('hero-fullscreen-btn');
   const fsTarget = document.getElementById('hero-video-fullscreen-target');
-  const cinema = document.getElementById('hero-video-cinema');
+  const frame = fsTarget;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  let player = null;
-  let isPlaying = true;
-  let isMuted = true;
+  if (!video || !frame) return;
 
-  const setPlayIcon = playing => {
-    if (!playBtn) return;
-    playBtn.setAttribute('aria-label', playing ? 'Pause video' : 'Play video');
-    playBtn.setAttribute('aria-pressed', playing ? 'true' : 'false');
-    const icon = playBtn.querySelector('i');
-    if (icon) icon.className = playing ? 'fa-solid fa-pause' : 'fa-solid fa-play';
-  };
+  let usingIframe = false;
 
   const setMuteIcon = muted => {
     if (!muteBtn) return;
@@ -43,122 +32,70 @@
     if (icon) icon.className = expanded ? 'fa-solid fa-compress' : 'fa-solid fa-expand';
   };
 
-  const onPlayerReady = event => {
-    event.target.playVideo();
-    mount?.classList.add('is-ready');
-    cinema?.classList.add('is-live');
-    setPlayIcon(true);
-    setMuteIcon(true);
+  const loadYouTubeFallback = () => {
+    if (!fallback || usingIframe) return;
+    usingIframe = true;
+    video.style.display = 'none';
+    fallback.hidden = false;
+    fallback.innerHTML = '';
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${VIDEO_ID}&controls=0&rel=0&playsinline=1&modestbranding=1`;
+    iframe.title = video.getAttribute('aria-label') || 'WSV Top Entrance Video';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    iframe.allowFullscreen = true;
+    iframe.className = 'hero-video-iframe-fallback';
+    fallback.appendChild(iframe);
   };
 
-  const onPlayerStateChange = event => {
-    if (event.data === YT.PlayerState.PLAYING) {
-      isPlaying = true;
-      setPlayIcon(true);
-    } else if (event.data === YT.PlayerState.PAUSED) {
-      isPlaying = false;
-      setPlayIcon(false);
-    } else if (event.data === YT.PlayerState.ENDED) {
-      event.target.playVideo();
+  const tryPlay = () => {
+    const p = video.play();
+    if (p && typeof p.catch === 'function') {
+      p.catch(() => loadYouTubeFallback());
     }
   };
 
-  const initPlayer = () => {
-    player = new YT.Player('hero-yt-player', {
-      videoId: VIDEO_ID,
-      playerVars: {
-        autoplay: 1,
-        mute: 1,
-        loop: 1,
-        playlist: VIDEO_ID,
-        controls: 0,
-        rel: 0,
-        playsinline: 1,
-        modestbranding: 1,
-        iv_load_policy: 3,
-        disablekb: 1,
-        fs: 0,
-        origin: window.location.origin
-      },
-      events: {
-        onReady: onPlayerReady,
-        onStateChange: onPlayerStateChange
-      }
-    });
-  };
+  video.addEventListener('error', loadYouTubeFallback);
 
-  const loadYouTubeApi = () => {
-    if (window.YT && window.YT.Player) {
-      initPlayer();
-      return;
-    }
-
-    const prev = window.onYouTubeIframeAPIReady;
-    window.onYouTubeIframeAPIReady = () => {
-      if (typeof prev === 'function') prev();
-      initPlayer();
-    };
-
-    if (!document.querySelector('script[src*="youtube.com/iframe_api"]')) {
-      const tag = document.createElement('script');
-      tag.src = 'https://www.youtube.com/iframe_api';
-      tag.async = true;
-      document.head.appendChild(tag);
-    }
-  };
-
-  playBtn?.addEventListener('click', () => {
-    if (!player?.getPlayerState) return;
-    const state = player.getPlayerState();
-    if (state === YT.PlayerState.PLAYING) {
-      player.pauseVideo();
-      isPlaying = false;
-      setPlayIcon(false);
-    } else {
-      player.playVideo();
-      isPlaying = true;
-      setPlayIcon(true);
-    }
+  video.addEventListener('loadeddata', () => {
+    frame.classList.add('is-playing');
+    tryPlay();
   });
+
+  if (reducedMotion) {
+    video.removeAttribute('autoplay');
+    video.pause();
+    return;
+  }
+
+  tryPlay();
 
   muteBtn?.addEventListener('click', () => {
-    if (!player?.isMuted) return;
-    if (player.isMuted()) {
-      player.unMute();
-      player.setVolume(80);
-      isMuted = false;
-      setMuteIcon(false);
-    } else {
-      player.mute();
-      isMuted = true;
-      setMuteIcon(true);
+    if (usingIframe) {
+      const iframe = fallback?.querySelector('iframe');
+      if (!iframe) return;
+      const muted = iframe.src.includes('mute=1');
+      iframe.src = muted
+        ? iframe.src.replace('mute=1', 'mute=0')
+        : iframe.src.replace('mute=0', 'mute=1');
+      setMuteIcon(!muted);
+      return;
     }
+    video.muted = !video.muted;
+    setMuteIcon(video.muted);
   });
 
-  const toggleFullscreen = () => {
-    const el = fsTarget;
-    if (!el) return;
+  fsBtn?.addEventListener('click', () => {
     if (!document.fullscreenElement) {
-      (el.requestFullscreen || el.webkitRequestFullscreen)?.call(el);
+      (fsTarget.requestFullscreen || fsTarget.webkitRequestFullscreen)?.call(fsTarget);
     } else {
       (document.exitFullscreen || document.webkitExitFullscreen)?.call(document);
     }
-  };
-
-  fsBtn?.addEventListener('click', toggleFullscreen);
+  });
 
   document.addEventListener('fullscreenchange', () => {
     setFsIcon(!!document.fullscreenElement);
     fsTarget?.classList.toggle('is-fullscreen', !!document.fullscreenElement);
   });
 
-  if (reducedMotion) {
-    if (mount) mount.style.display = 'none';
-    cinema?.classList.remove('hero-video-cinema--enter');
-    return;
-  }
-
-  setTimeout(() => cinema?.classList.add('is-live'), 1300);
-
-  loadYouTubeApi();
+  setMuteIcon(true);
 })();

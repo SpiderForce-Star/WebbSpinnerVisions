@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Webb Spinner Visions | Cinematic Video, Animation &amp; Websites for Small Business</title>
-  <meta name="description" content="Scroll-stopping cinematic videos, custom logo animations, and strategic content for small businesses. High-level executive sales &amp; marketing expertise. Nashville, TN. $200 Starter Video Package.">
+  <meta name="description" content="Scroll-stopping cinematic videos, custom logo animations, and strategic content for small businesses. High-level executive sales &amp; marketing expertise. Nashville, TN. Free quote in 24 hours.">
   <meta name="keywords" content="video production Nashville, AI video services, small business video marketing, logo animation, social media video, commercial video production, AI post production">
   <meta name="author" content="Webb Spinner Visions">
   <meta name="robots" content="index, follow">
@@ -54,56 +54,40 @@
 
   <main id="main">
     <!-- HERO — cinematic video + AIDA copy -->
-    <section class="hero-video-section hero-video-section--premium film-grain" aria-labelledby="hero-heading">
+    <section class="hero-video-section hero-video-section--clean film-grain" aria-labelledby="hero-heading">
       <div class="hero-video-inner hero-video-inner--featured">
         <div class="hero-video-stage hero-video-stage--featured">
-          <div class="hero-video-cinema hero-video-cinema--enter" id="hero-video-cinema">
-            <div class="hero-video-frame hero-video-frame--epic" id="hero-video-fullscreen-target">
-              <div class="hero-video-glow-ring" aria-hidden="true"></div>
-              <div class="hero-video-glow-ring hero-video-glow-ring--delay" aria-hidden="true"></div>
-              <div class="hero-video-scanlines" aria-hidden="true"></div>
-              <div class="hero-video-vignette" aria-hidden="true"></div>
-              <div class="hero-video-brand-sweep" aria-hidden="true"></div>
-
-              <div class="hero-yt-player-mount">
-                <div id="hero-yt-player" data-video-id="_mEvE69qwjY" title="WSV Top Entrance Video — Webb Spinner Visions hero showcase"></div>
-              </div>
-
-              <a href="https://www.youtube.com/watch?v=_mEvE69qwjY" class="hero-video-poster-fallback" target="_blank" rel="noopener noreferrer" aria-label="Play WSV Top Entrance Video on YouTube">
-                <img src="https://img.youtube.com/vi/_mEvE69qwjY/maxresdefault.jpg" alt="" width="1280" height="720" loading="eager" decoding="async">
-                <span class="video-embed-play"><i class="fa-solid fa-play" aria-hidden="true"></i></span>
-              </a>
-
-              <div class="hero-video-overlays">
-                <p class="hero-overlay-tagline hero-overlay-animate hero-overlay-animate--1">
-                  <img src="Shield-logo.png" alt="" width="24" height="24" decoding="async">
-                  Turn photos into <strong>scroll-stopping videos</strong>
-                </p>
-                <p class="hero-overlay-offer hero-overlay-animate hero-overlay-animate--2">
-                  <span class="hero-overlay-price">$200</span>
-                  <span class="hero-overlay-detail">Setup + custom logo animation + 30-second video</span>
-                </p>
-              </div>
-
-              <div class="hero-video-controls" role="group" aria-label="Video playback controls">
-                <button type="button" id="hero-play-btn" class="hero-ctrl-btn" aria-label="Pause video" aria-pressed="true">
-                  <i class="fa-solid fa-pause" aria-hidden="true"></i>
-                </button>
-                <button type="button" id="hero-mute-btn" class="hero-ctrl-btn" aria-label="Unmute video" aria-pressed="false">
+          <div class="hero-video-cinema" id="hero-video-cinema">
+            <div class="hero-video-frame hero-video-frame--clean" id="hero-video-fullscreen-target">
+              <video
+                id="hero-video"
+                class="hero-video-el"
+                autoplay
+                muted
+                loop
+                playsinline
+                webkit-playsinline
+                preload="auto"
+                poster="https://img.youtube.com/vi/_mEvE69qwjY/maxresdefault.jpg"
+                aria-label="WSV Top Entrance Video — Webb Spinner Visions cinematic showcase"
+              >
+                <source src="videos/wsv-top-entrance.mp4" type="video/mp4">
+              </video>
+              <div id="hero-video-fallback" class="hero-video-fallback" hidden></div>
+              <div class="hero-video-controls hero-video-controls--minimal" role="group" aria-label="Video playback controls">
+                <button type="button" id="hero-mute-btn" class="hero-ctrl-btn" aria-label="Unmute video" aria-pressed="true">
                   <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
                 </button>
                 <button type="button" id="hero-fullscreen-btn" class="hero-ctrl-btn" aria-label="Enter fullscreen">
                   <i class="fa-solid fa-expand" aria-hidden="true"></i>
                 </button>
               </div>
-
-              <span class="hero-video-offer-badge hero-video-offer-badge--pulse">Limited Time — $200 Starter</span>
             </div>
           </div>
-          <div class="hero-video-caption">
-            <img src="Shield-logo.png" alt="" width="28" height="28" decoding="async">
+          <p class="hero-video-caption">
+            <img src="Shield-logo.png" alt="" width="24" height="24" decoding="async">
             <span>WSV Top Entrance Video — cinematic graphics &amp; animation</span>
-          </div>
+          </p>
         </div>
 
         <div class="hero-video-copy">
@@ -125,17 +109,9 @@
             masterclasses, and websites that turn ordinary brands into ones customers trust, remember, and buy from.
           </p>
 
-          <div class="hero-action conversion-cta-row">
-            <a href="#contact" class="btn btn-primary starter-cta-btn">
-              <span>Get My $200 Starter Package</span>
-              <i class="fa-solid fa-bolt" aria-hidden="true"></i>
-            </a>
-            <a href="#contact" class="btn btn-secondary">
-              <span>Get Free Quote</span>
-              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-            </a>
-            <a href="#contact" class="btn btn-ghost">
-              <span>Start Your Project Today</span>
+          <div class="hero-action">
+            <a href="#contact" class="btn btn-primary hero-primary-cta">
+              <span>Get a Quote in 24hrs</span>
               <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
@@ -148,18 +124,6 @@
             <span>Coaches &amp; consultants</span>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- OFFER STRIP -->
-    <section class="offer-strip" aria-label="Starter video package offer">
-      <div class="offer-strip-inner">
-        <div class="offer-strip-price-block">
-          <span class="offer-strip-price">$200</span>
-          <span class="offer-strip-includes">Setup + custom logo animation + 30-second video</span>
-        </div>
-        <p class="offer-strip-copy">Turn your still photos into scroll-stopping professional videos. Each additional 30-second clip only <strong>$50</strong>. Limited time offer.</p>
-        <a href="#contact" class="btn btn-primary starter-cta-btn offer-strip-btn">Get My $200 Starter Package</a>
       </div>
     </section>
 
@@ -226,10 +190,9 @@
           </article>
         </div>
 
-        <div class="section-cta-row reveal">
+        <p class="section-cta-row reveal">
           <a href="services.html" class="btn btn-secondary">View All Services <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          <a href="#contact" class="btn btn-primary starter-cta-btn">Get My $200 Starter Package</a>
-        </div>
+        </p>
       </div>
     </section>
 
@@ -356,13 +319,9 @@
           </li>
         </ol>
 
-        <div class="cta-band why-video-cta starter-package-cta reveal">
-          <p class="why-video-cta-lead">Ready to stand out and grow? Get your $200 Starter Video Package today — setup + custom logo animation + 30-second video. Limited Time Offer.</p>
-          <div class="conversion-cta-row">
-            <a href="#contact" class="btn btn-primary starter-cta-btn">Get My $200 Starter Package <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            <a href="#contact" class="btn btn-secondary">Get Free Quote</a>
-            <a href="#contact" class="btn btn-ghost">Start Your Project Today</a>
-          </div>
+        <div class="cta-band why-video-cta reveal">
+          <p class="why-video-cta-lead">Ready to stand out on social media? Let's turn your story into scroll-stopping video.</p>
+          <a href="#contact" class="btn btn-primary hero-primary-cta">Get a Quote in 24hrs <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           <p style="margin-top:1.25rem;">
             <a href="why-video.html" class="text-muted" style="font-size:0.875rem;color:var(--text-muted);">Read the full video marketing guide <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </p>
@@ -400,17 +359,11 @@
           </div>
         </div>
 
-        <div class="section-cta-row reveal" style="margin-top:2.5rem;">
-          <a href="#contact" class="btn btn-primary starter-cta-btn">Get My $200 Starter Package</a>
-          <a href="#contact" class="btn btn-secondary">Get Free Quote</a>
-        </div>
+        <p class="section-cta-row reveal" style="margin-top:2.5rem;">
+          <a href="#contact" class="btn btn-primary hero-primary-cta">Get a Quote in 24hrs</a>
+        </p>
       </div>
     </section>
-
-    <div class="conversion-bridge">
-      <p>Your competitors are still posting photos. You could have a scroll-stopping video this week.</p>
-      <a href="#contact" class="btn btn-primary starter-cta-btn">Get My $200 Starter Package</a>
-    </div>
 
     <!-- CONTACT -->
     <section id="contact" class="section" aria-labelledby="contact-heading">
@@ -418,10 +371,10 @@
         <header class="section-header">
           <span class="section-eyebrow">Let's Build Something Great</span>
           <h2 id="contact-heading" class="section-title">Ready to stand out and grow?</h2>
-          <p class="section-lead">Get your $200 Starter Video Package or tell us about a custom project. We reply within 24 hours with next steps and a clear quote.</p>
+          <p class="section-lead">Tell us about your project. We reply within 24 hours with next steps and a clear quote.</p>
         </header>
 
-        <div class="cta-band contact-form-panel starter-package-cta">
+        <div class="cta-band contact-form-panel">
           <div class="contact-trust-row" aria-label="Our guarantees">
             <div class="contact-trust-item"><i class="fa-solid fa-bolt" aria-hidden="true"></i> 24hr response</div>
             <div class="contact-trust-item"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Full ownership</div>
@@ -455,7 +408,6 @@
                 <label for="project_type" class="sr-only">Project type</label>
                 <select id="project_type" name="project_type" class="form-input">
                   <option value="">Select project type...</option>
-                  <option>$200 Starter Video Package</option>
                   <option>Video Production / Commercial</option>
                   <option>Social Media Video Package</option>
                   <option>Logo Animation &amp; Motion</option>
@@ -471,12 +423,9 @@
               <textarea id="message" name="message" rows="5" required class="form-input" placeholder="Goals, timeline, target audience..." style="resize:vertical;"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary starter-cta-btn" style="width:100%;">
-              Get My $200 Starter Package <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            <button type="submit" class="btn btn-primary hero-primary-cta" style="width:100%;">
+              Start Your Project <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
             </button>
-            <p style="text-align:center;margin-top:0.75rem;">
-              <a href="#contact" class="btn btn-ghost" style="font-size:0.85rem;padding:0.65rem 1.25rem;">Or request a free custom quote</a>
-            </p>
             <p class="text-subtle" style="text-align:center;font-size:0.7rem;margin-top:0.75rem;">We respect your time. No spam, ever.</p>
           </form>
 
@@ -500,7 +449,7 @@
   <div id="footer-placeholder"></div>
 
   <div id="sticky-cta" class="sticky-cta" role="region" aria-label="Quick contact">
-    <a href="#contact" class="btn btn-primary starter-cta-btn">Get My $200 Starter Package</a>
+    <a href="#contact" class="btn btn-primary hero-primary-cta">Get a Quote in 24hrs</a>
   </div>
 
   <script src="js/shared.js"></script>
