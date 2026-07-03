@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
+  const packageMap = {
+    'starter-video': 'Starter Video Package ($200)',
+    starter: 'Starter Website Package ($800)',
+    cinematic: 'Cinematic Website Package ($1,000)'
+  };
+
   if (params.get('sent') === 'true') {
     const form = document.getElementById('contact-form');
     const success = document.getElementById('form-success');
@@ -119,15 +125,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const projectTypeSelect = document.getElementById('project_type');
+  const packageFromUrl = params.get('package');
+  if (packageFromUrl && projectTypeSelect && packageMap[packageFromUrl]) {
+    projectTypeSelect.value = packageMap[packageFromUrl];
+  }
+
   document.querySelectorAll('[data-package]').forEach(link => {
     link.addEventListener('click', () => {
       if (!projectTypeSelect) return;
       const pkg = link.dataset.package;
-      const map = {
-        starter: 'Starter Website Package ($800)',
-        cinematic: 'Cinematic Website Package ($1,000)'
-      };
-      if (map[pkg]) projectTypeSelect.value = map[pkg];
+      if (packageMap[pkg]) projectTypeSelect.value = packageMap[pkg];
     });
   });
 

@@ -3786,3 +3786,229 @@ body:has(.hero-landing) .site-nav {
     touch-action: manipulation;
   }
 }
+
+/* =============================================
+   TESTIMONIALS + TRUST BADGES
+   ============================================= */
+
+.testimonials-strip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .testimonials-strip {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.15rem;
+  }
+}
+
+.testimonial-card {
+  padding: 1.15rem 1.25rem;
+  border-radius: var(--radius-lg, 1rem);
+  border: 1px solid color-mix(in srgb, var(--accent) 15%, var(--border));
+  background: color-mix(in srgb, var(--bg-elevated) 90%, transparent);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 0.15rem;
+  margin-bottom: 0.55rem;
+  font-size: 0.7rem;
+  color: #f5c542;
+}
+
+.testimonial-quote {
+  margin: 0 0 0.65rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text);
+  font-style: normal;
+}
+
+.testimonial-cite {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--text-subtle);
+  letter-spacing: 0.02em;
+}
+
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 2rem;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.trust-badge i {
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+/* =============================================
+   FOOTER — professional polish
+   ============================================= */
+
+.site-footer {
+  border-top: 1px solid color-mix(in srgb, var(--accent) 12%, var(--border));
+  background: linear-gradient(180deg, color-mix(in srgb, #000 50%, var(--bg-elevated)) 0%, #04060a 100%);
+  padding: 2.75rem 1.5rem 1.75rem;
+}
+
+.footer-inner {
+  max-width: 80rem;
+  margin-inline: auto;
+  display: grid;
+  gap: 1.75rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1.2fr 1.4fr 1fr;
+    align-items: center;
+  }
+}
+
+.footer-brand-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.04em;
+}
+
+.footer-brand-loc {
+  margin-top: 0.2rem;
+  font-size: 0.68rem;
+  color: var(--text-subtle);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.1rem;
+}
+
+@media (min-width: 768px) {
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--accent);
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+@media (min-width: 768px) {
+  .footer-contact {
+    align-items: flex-end;
+  }
+}
+
+.footer-email {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-email:hover {
+  color: var(--accent-hover, var(--accent));
+}
+
+.footer-social {
+  display: flex;
+  gap: 0.85rem;
+  font-size: 1.05rem;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.footer-social a:hover,
+.footer-social a:focus-visible {
+  color: #fff;
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.footer-bottom {
+  max-width: 80rem;
+  margin: 1.75rem auto 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.footer-tagline {
+  margin: 0 0 0.5rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  color: var(--text-subtle);
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 0.62rem;
+  color: color-mix(in srgb, var(--text-subtle) 80%, transparent);
+}
+
+/* Sticky mobile CTA — $200 promo */
+.sticky-cta--promo {
+  background: linear-gradient(180deg, rgba(0, 45, 120, 0.97) 0%, rgba(0, 30, 80, 0.98) 100%);
+  border-top: 2px solid #4da3ff;
+  box-shadow: 0 -8px 32px rgba(0, 60, 160, 0.45);
+}
+
+.sticky-cta--promo .sticky-cta__btn {
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
