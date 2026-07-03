@@ -235,10 +235,15 @@ body {
 .hero-interest {
   font-size: clamp(0.95rem, 2.2vw, 1.1rem);
   font-weight: 500;
-  color: var(--text);
-  max-width: 38rem;
+  color: var(--text-muted);
+  max-width: 40rem;
   margin: 0 auto 1rem;
   line-height: 1.55;
+}
+
+.hero-interest strong {
+  color: var(--text);
+  font-weight: 600;
 }
 
 .hero-desire {
