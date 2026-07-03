@@ -2543,6 +2543,69 @@ body {
   border-top: 1px solid var(--border);
 }
 
+/* Trust & Social Proof layer — premium stat cards before packages */
+.trust-layer {
+  margin-bottom: clamp(2.5rem, 5vw, 3.75rem);
+  padding: clamp(1.5rem, 3.5vw, 2rem);
+  border-radius: var(--radius-xl);
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--border));
+  background:
+    linear-gradient(145deg, var(--bg-panel) 0%, var(--bg-elevated) 100%);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+
+.trust-layer-eyebrow {
+  text-align: center;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1.5rem;
+}
+
+.trust-layer-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .trust-layer-stats {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+.trust-stat-card {
+  text-align: center;
+  padding: 1.15rem 0.75rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 40%, transparent);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.trust-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+}
+
+.trust-stat-icon {
+  display: block;
+  margin: 0 auto 0.5rem;
+  font-size: 1.1rem;
+  color: var(--accent);
+  opacity: 0.9;
+}
+
+.trust-pills--layer {
+  margin-top: 1.35rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--border);
+  justify-content: center;
+}
+
 .packages-section {
   padding-block: clamp(3rem, 7vw, 5rem);
   background:
@@ -2587,6 +2650,19 @@ body {
   background: linear-gradient(160deg, var(--bg-panel) 0%, var(--bg-elevated) 100%);
   box-shadow: var(--shadow);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  overflow: visible;
+}
+
+.package-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--accent) 40%, transparent), transparent);
+  opacity: 0.6;
 }
 
 .package-card:hover {
@@ -2597,8 +2673,14 @@ body {
 
 .package-card--featured {
   border-color: var(--accent);
-  background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 10%, var(--bg-panel)), var(--bg-elevated));
-  box-shadow: var(--shadow), 0 0 60px color-mix(in srgb, var(--accent) 18%, transparent);
+  border-width: 2px;
+  background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 12%, var(--bg-panel)), var(--bg-elevated));
+  box-shadow: var(--shadow), 0 0 72px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.package-card--featured::before {
+  opacity: 1;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
 }
 
 .package-badge {
@@ -2629,9 +2711,23 @@ body {
 
 .package-card-title {
   font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+  font-size: clamp(1.1rem, 2.4vw, 1.3rem);
   font-weight: 600;
-  margin-bottom: 0.35rem;
+  line-height: 1.25;
+  margin-bottom: 0;
+}
+
+.package-card-dash {
+  color: var(--text-subtle);
+  font-weight: 400;
+}
+
+.package-card-price-inline {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: clamp(1.35rem, 3vw, 1.65rem);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .package-card-price {
@@ -2706,8 +2802,28 @@ body {
 .package-cta {
   width: 100%;
   margin-top: auto;
-  min-height: 3.25rem;
+  min-height: 3.35rem;
   font-weight: 700;
+  font-size: 1rem;
+  border-radius: 0.85rem;
+}
+
+.package-cta--strong {
+  border: 2px solid color-mix(in srgb, var(--accent) 55%, var(--border));
+  color: var(--text);
+  background: var(--bg-elevated);
+}
+
+.package-cta--strong:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.package-cta--featured {
+  box-shadow: 0 8px 28px var(--accent-glow);
+  min-height: 3.5rem;
+  font-size: 1.05rem;
 }
 
 .packages-cta-band {
@@ -2792,8 +2908,16 @@ body:has(.hero-landing) .site-nav {
   }
 
   .package-cta {
-    min-height: 3.5rem;
-    font-size: 1rem;
+    min-height: 3.6rem;
+    font-size: 1.05rem;
+  }
+
+  .trust-stat-card {
+    padding: 1rem 0.5rem;
+  }
+
+  .trust-layer-stats {
+    gap: 0.75rem;
   }
 
   .packages-cta-band .btn-mega {
