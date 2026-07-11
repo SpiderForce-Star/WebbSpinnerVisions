@@ -1,19 +1,454 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webb Spinner Visions • Videos • Animation • Websites</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Webb Spinner Visions | Custom Websites &amp; Video for Small Business</title>
+  <meta name="description" content="Professional one-page websites and cinematic video for small businesses. Nashville-based, nationwide. You own everything. Contact us for a clear quote.">
+  <meta name="keywords" content="video production Nashville, small business website, logo animation, social media video, commercial video production, marketing">
+  <meta name="author" content="Webb Spinner Visions">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://webbspinnervisions.net/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Webb Spinner Visions — Custom Websites &amp; Video">
+  <meta property="og:description" content="Professional websites you own outright, plus cinematic videos that stop the scroll. Nashville-based, nationwide.">
+  <meta property="og:image" content="https://webbspinnervisions.net/Shield-logo.png">
+  <meta property="og:url" content="https://webbspinnervisions.net/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Webb__X">
+
+  <link rel="icon" href="Shield-logo.png" type="image/png">
+  <link rel="preload" href="Shield-logo.png" as="image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link rel="preconnect" href="https://i.ytimg.com" crossorigin>
+  <link rel="preload" as="image" href="https://i.ytimg.com/vi/8nsN5ESSrY0/maxresdefault.jpg">
+  <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/polish.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"></noscript>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Webb Spinner Visions",
+        "url": "https://webbspinnervisions.net",
+        "description": "Professional video production, logo animation, websites, and marketing for small businesses."
+      },
+      {
+        "@type": "ProfessionalService",
+        "name": "Webb Spinner Visions",
+        "image": "https://webbspinnervisions.net/Shield-logo.png",
+        "description": "Cinematic video, logo animation, custom websites, and marketing support for small businesses nationwide.",
+        "url": "https://webbspinnervisions.net",
+        "email": "webbspinnervisions@gmail.com",
+        "priceRange": "$$",
+        "areaServed": { "@type": "Place", "name": "Nashville, Tennessee" },
+        "serviceType": ["Video Production", "Logo Animation", "Website Design", "Marketing"],
+        "sameAs": [
+          "https://x.com/Webb__X",
+          "https://www.instagram.com/webbspinnervisions",
+          "https://www.facebook.com/profile.php?id=61572155061749"
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
-<body class="bg-zinc-950 text-white">
-  <!-- Unified Header -->
-  <!-- (full header with Shield-logo.png, spinning X, Contact Us button) -->
-  <header class="bg-black border-b border-red-600 sticky top-0 z-50">
-    <!-- Full header code as previously designed -->
-  </header>
-  <!-- Clean hero, sample websites section, marketing value, footer -->
+<body class="landing-page">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <div id="nav-placeholder"></div>
+
+  <main id="main">
+    <!-- HERO — immersive video first, copy stacked below -->
+    <section class="hero-landing" aria-labelledby="hero-heading">
+      <div class="hero-landing-stage hero-landing-stage--youtube film-grain" id="hero-video-fullscreen-target">
+        <div class="hero-youtube-facade" id="hero-youtube-facade">
+          <picture>
+            <source srcset="https://i.ytimg.com/vi/8nsN5ESSrY0/maxresdefault.jpg" type="image/jpeg">
+            <img
+              class="hero-youtube-poster"
+              src="https://i.ytimg.com/vi/8nsN5ESSrY0/hqdefault.jpg"
+              alt=""
+              width="1280"
+              height="720"
+              decoding="async"
+              fetchpriority="high"
+            >
+          </picture>
+          <button type="button" id="hero-play-btn" class="hero-youtube-play" aria-label="Play hero video">
+            <span class="hero-youtube-play__ring" aria-hidden="true"></span>
+            <span class="hero-youtube-play__icon" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+          </button>
+        </div>
+        <div id="hero-video-fallback" class="hero-video-fallback" hidden></div>
+        <div class="hero-landing-stage-fade" aria-hidden="true"></div>
+        <button type="button" id="hero-mute-btn" class="hero-landing-unmute" aria-label="Unmute video" aria-pressed="true" title="Toggle sound" hidden>
+          <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="hero-landing-copy cinematic-panel">
+        <div class="hero-landing-inner">
+          <p class="hero-landing-eyebrow">WEBSITES + VIDEO + MARKETING</p>
+
+          <h1 id="hero-heading" class="hero-landing-title">
+            CUSTOM WEBSITES &amp; VIDEOS<br>
+            <span class="text-glow">THAT CONVERT VISITORS INTO CUSTOMERS.</span>
+          </h1>
+
+          <p class="hero-landing-sub">
+            A professional site you own outright — plus cinematic video and marketing support that builds trust and drives real inquiries.
+            Executive sales &amp; marketing expertise. Launch-ready in days, not months.
+          </p>
+
+          <div class="hero-landing-action">
+            <a href="#contact" class="btn btn-contact">
+              <span>Contact Us</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <p class="hero-landing-skip"><a href="#packages">View packages &amp; pricing</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WEBSITE + VIDEO PACKAGES -->
+    <section id="packages" class="section packages-section packages-section--cinematic" aria-labelledby="packages-heading">
+      <div class="section-inner">
+        <header class="section-header section-header--packages">
+          <span class="section-eyebrow">Website + Video Packages</span>
+          <h2 id="packages-heading" class="section-title">Choose the package that fits your business</h2>
+          <p class="section-lead">Professional websites you own outright — with optional cinematic video that stops the scroll and drives real results.</p>
+        </header>
+
+        <div class="trust-badges reveal" aria-label="What you can count on">
+          <span class="trust-badge"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> You Own 100% of Assets</span>
+          <span class="trust-badge"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Clear Quotes, Fast Response</span>
+          <span class="trust-badge"><i class="fa-solid fa-check-double" aria-hidden="true"></i> Revisions Until You&rsquo;re Thrilled</span>
+        </div>
+
+        <div class="packages-grid">
+          <article class="package-card reveal">
+            <div class="package-card-header">
+              <h3 class="package-card-title">Starter Website Package <span class="package-card-dash">&mdash;</span> <span class="package-card-price-inline">$800</span></h3>
+            </div>
+            <p class="package-card-lead">A clean, professional single-page website designed to make your business look established and convert visitors into customers.</p>
+
+            <div class="package-card-block">
+              <h4 class="package-card-label">What&rsquo;s included</h4>
+              <ul class="package-list">
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Professional single-page website design &amp; build</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Contact form routed to your Gmail inbox</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Featured video section (pulls from your YouTube or media)</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Fully mobile-responsive layout</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Domain &amp; matching email setup guidance</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Social media links integration</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> You own 100% of all code &amp; assets</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Launch support — we connect your domain &amp; go live with you</li>
+              </ul>
+            </div>
+
+            <p class="package-best-for"><strong>Best for:</strong> New, solo, and local businesses that need a credible online presence fast — without enterprise budgets or ongoing developer fees.</p>
+
+            <a href="#contact" class="btn btn-secondary package-cta package-cta--strong" data-package="starter">Get Started &mdash; $800</a>
+            <p class="package-card-cta-note">or <a href="#contact">contact us</a> with questions</p>
+          </article>
+
+          <article class="package-card package-card--featured reveal">
+            <span class="package-badge">Best Value / Most Popular</span>
+            <div class="package-card-header">
+              <h3 class="package-card-title">Cinematic Website Package <span class="package-card-dash">&mdash;</span> <span class="package-card-price-inline">$1,000</span></h3>
+            </div>
+            <p class="package-card-lead">Everything in the Starter + custom logo animation + three polished 30-second videos — so your site doesn&rsquo;t just look good, it stops the scroll and drives real results.</p>
+
+            <div class="package-card-block">
+              <h4 class="package-card-label">What&rsquo;s included</h4>
+              <ul class="package-list">
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> <strong>Everything in the Starter Website Package</strong></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Custom logo design + cinematic logo animation</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Three polished 30-second videos (hero, social clips, brand story)</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Scroll-stopping hero video on your homepage</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Social-ready clips for Reels, Stories &amp; ads</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Priority turnaround</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> You own 100% of all code, videos &amp; assets</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Launch support + content rotation guidance</li>
+              </ul>
+            </div>
+
+            <p class="package-best-for"><strong>Best for:</strong> Growth-minded owners who want a scroll-stopping website <em>and</em> video content that drives real results — not just a pretty page.</p>
+
+            <a href="#contact" class="btn btn-contact package-cta package-cta--featured" data-package="cinematic">Contact Us</a>
+          </article>
+        </div>
+
+        <div class="packages-cta-band reveal">
+          <p>Not sure which package fits? Tell us about your business — we&rsquo;ll recommend a clear path with no pressure.</p>
+          <a href="#contact" class="btn btn-contact">
+            <span>Contact Us</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SAMPLE ONE-PAGE WEBSITE DESIGNS -->
+    <section id="sample-designs" class="section sample-designs-section" aria-labelledby="sample-designs-heading">
+      <div class="section-inner">
+        <header class="section-header">
+          <span class="section-eyebrow">Design Inspiration</span>
+          <h2 id="sample-designs-heading" class="section-title">Sample One-Page Website Designs</h2>
+          <p class="section-lead">Every business gets a custom layout. These examples show how a focused one-page site can look across common industries.</p>
+        </header>
+
+        <div class="sample-designs-grid">
+          <article class="sample-card card-hover reveal">
+            <div class="sample-card-preview sample-card-preview--restaurant" aria-hidden="true">
+              <div class="sample-mock-browser">
+                <span class="sample-mock-dots"></span>
+                <div class="sample-mock-hero"></div>
+                <div class="sample-mock-lines">
+                  <span></span><span></span><span class="short"></span>
+                </div>
+              </div>
+            </div>
+            <div class="sample-card-body">
+              <span class="badge">RESTAURANT</span>
+              <h3>Restaurant &amp; Hospitality</h3>
+              <p>Menu highlights, atmosphere photos, reservation CTA, and a hero video that makes tables feel full before guests arrive.</p>
+              <ul class="sample-card-features">
+                <li>Featured dishes &amp; hours</li>
+                <li>Map &amp; contact form</li>
+                <li>Social + video embeds</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sample-card card-hover reveal">
+            <div class="sample-card-preview sample-card-preview--home" aria-hidden="true">
+              <div class="sample-mock-browser">
+                <span class="sample-mock-dots"></span>
+                <div class="sample-mock-hero"></div>
+                <div class="sample-mock-lines">
+                  <span></span><span></span><span class="short"></span>
+                </div>
+              </div>
+            </div>
+            <div class="sample-card-body">
+              <span class="badge">HOME SERVICES</span>
+              <h3>Home Services</h3>
+              <p>Trust-first layout for contractors, cleaners, and trades — clear services, service area, before/after proof, and a bold call button.</p>
+              <ul class="sample-card-features">
+                <li>Service list &amp; pricing cues</li>
+                <li>Before/after gallery</li>
+                <li>Click-to-call CTA</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sample-card card-hover reveal">
+            <div class="sample-card-preview sample-card-preview--wellness" aria-hidden="true">
+              <div class="sample-mock-browser">
+                <span class="sample-mock-dots"></span>
+                <div class="sample-mock-hero"></div>
+                <div class="sample-mock-lines">
+                  <span></span><span></span><span class="short"></span>
+                </div>
+              </div>
+            </div>
+            <div class="sample-card-body">
+              <span class="badge">WELLNESS</span>
+              <h3>Wellness &amp; Studio</h3>
+              <p>Calm, polished branding for coaches, salons, and studios — class schedules, session types, and a soft path to book.</p>
+              <ul class="sample-card-features">
+                <li>Services &amp; packages</li>
+                <li>About the practitioner</li>
+                <li>Booking inquiry form</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sample-card card-hover reveal">
+            <div class="sample-card-preview sample-card-preview--retail" aria-hidden="true">
+              <div class="sample-mock-browser">
+                <span class="sample-mock-dots"></span>
+                <div class="sample-mock-hero"></div>
+                <div class="sample-mock-lines">
+                  <span></span><span></span><span class="short"></span>
+                </div>
+              </div>
+            </div>
+            <div class="sample-card-body">
+              <span class="badge">RETAIL</span>
+              <h3>Retail &amp; Local Shop</h3>
+              <p>Product spotlight grid, store hours, and brand story — ideal for boutiques, specialty shops, and makers who sell in person or online.</p>
+              <ul class="sample-card-features">
+                <li>Featured products</li>
+                <li>Store info &amp; map</li>
+                <li>Social shop links</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-cta-center reveal">
+          <a href="#contact" class="btn btn-contact">Contact Us About a Custom Design</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKETING CAPABILITIES -->
+    <section id="marketing-capabilities" class="section marketing-capabilities-section section-panel" aria-labelledby="marketing-heading">
+      <div class="section-inner">
+        <header class="section-header">
+          <span class="section-eyebrow">Beyond the Build</span>
+          <h2 id="marketing-heading" class="section-title">Marketing Capabilities</h2>
+          <p class="section-lead">A great website and video are only half the story. We help you put them to work across the channels your customers already use.</p>
+        </header>
+
+        <div class="marketing-grid">
+          <article class="marketing-card card-hover reveal">
+            <div class="marketing-card-icon" aria-hidden="true"><i class="fa-solid fa-share-nodes"></i></div>
+            <h3>Social Media Strategy</h3>
+            <p>Platform-specific guidance for Facebook, Instagram, TikTok, LinkedIn, X, and YouTube — what to post, pin, and promote.</p>
+          </article>
+          <article class="marketing-card card-hover reveal">
+            <div class="marketing-card-icon" aria-hidden="true"><i class="fa-solid fa-clapperboard"></i></div>
+            <h3>Content Production</h3>
+            <p>Logo animations, 15–30 second promos, brand stories, and social-ready crops so one shoot fuels every channel.</p>
+          </article>
+          <article class="marketing-card card-hover reveal">
+            <div class="marketing-card-icon" aria-hidden="true"><i class="fa-solid fa-bullseye"></i></div>
+            <h3>Lead Generation Focus</h3>
+            <p>Clear CTAs, contact forms, and message paths that turn views into calls, emails, and booked appointments.</p>
+          </article>
+          <article class="marketing-card card-hover reveal">
+            <div class="marketing-card-icon" aria-hidden="true"><i class="fa-solid fa-map-location-dot"></i></div>
+            <h3>Local Presence</h3>
+            <p>Service-area messaging, map embeds, and local SEO basics so nearby customers can find and trust you online.</p>
+          </article>
+          <article class="marketing-card card-hover reveal">
+            <div class="marketing-card-icon" aria-hidden="true"><i class="fa-solid fa-calendar-days"></i></div>
+            <h3>Content Rotation</h3>
+            <p>Guidance on rotating videos and photos on your site and socials so your brand stays active without a full rebuild.</p>
+          </article>
+          <article class="marketing-card card-hover reveal">
+            <div class="marketing-card-icon" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Performance Mindset</h3>
+            <p>Executive sales &amp; marketing perspective: every asset is built to sell, not just look polished.</p>
+          </article>
+        </div>
+
+        <div class="section-cta-center reveal">
+          <a href="marketing.html" class="btn btn-secondary">Explore Marketing Strategy</a>
+          <a href="#contact" class="btn btn-contact">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supporting bridge -->
+    <section id="why-video" class="landing-bridge section-support" aria-label="How we work and why video matters">
+      <div class="section-inner landing-bridge-inner">
+        <p class="landing-bridge-copy">
+          <strong>Video builds trust and stops the scroll</strong> — built into our Cinematic Package and available as standalone projects.
+          <a href="why-video.html" class="landing-bridge-link">Why video works <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </p>
+        <ol class="landing-process-strip" id="process" aria-label="How we work">
+          <li><span class="landing-process-num">01</span> Contact Us</li>
+          <li><span class="landing-process-num">02</span> Creative Direction</li>
+          <li><span class="landing-process-num">03</span> Production + AI</li>
+          <li><span class="landing-process-num">04</span> Delivery</li>
+        </ol>
+        <p class="landing-bridge-cta">
+          <a href="#contact" class="btn btn-contact">Contact Us</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="section-inner" style="max-width:42rem;">
+        <header class="section-header section-header--contact">
+          <h2 id="contact-heading" class="section-title">Contact Us</h2>
+          <p class="section-lead">Tell us about your business. We reply with a clear quote. You own 100% of everything we build.</p>
+        </header>
+
+        <div class="cta-band contact-form-panel">
+          <form id="contact-form" action="https://formsubmit.co/webbspinnervisions@gmail.com" method="POST" style="text-align:left;">
+            <input type="hidden" name="_subject" value="New WSV Project Inquiry">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://webbspinnervisions.net/?sent=true#contact">
+            <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="grid-2" style="margin-bottom:1rem;">
+              <div>
+                <label for="name" class="sr-only">Full name</label>
+                <input type="text" id="name" name="name" required class="form-input" placeholder="Full name" autocomplete="name">
+              </div>
+              <div>
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" id="email" name="email" required class="form-input" placeholder="Email address" autocomplete="email">
+              </div>
+            </div>
+
+            <div class="grid-2" style="margin-bottom:1rem;">
+              <div>
+                <label for="phone" class="sr-only">Phone</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="Phone (optional)" autocomplete="tel">
+              </div>
+              <div>
+                <label for="project_type" class="sr-only">Project type</label>
+                <select id="project_type" name="project_type" class="form-input">
+                  <option value="">Select your package...</option>
+                  <option value="Starter Website Package ($800)">Starter Website Package ($800)</option>
+                  <option value="Cinematic Website Package ($1,000)">Cinematic Website Package ($1,000)</option>
+                  <option value="Video / Logo Animation only">Video / Logo Animation only</option>
+                  <option value="Marketing support">Marketing support</option>
+                  <option value="Not sure yet">Not sure yet — help me choose</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="margin-bottom:1rem;">
+              <label for="message" class="sr-only">Project details</label>
+              <textarea id="message" name="message" rows="5" required class="form-input" placeholder="Goals, timeline, target audience..." style="resize:vertical;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-contact" style="width:100%;">
+              Send Message <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            </button>
+            <p class="text-subtle" style="text-align:center;font-size:0.7rem;margin-top:0.75rem;">We respect your time. No spam, ever.</p>
+          </form>
+
+          <div id="form-success" class="hidden" style="text-align:center;padding:1.5rem 0;">
+            <div style="display:inline-flex;align-items:center;justify-content:center;width:3.5rem;height:3.5rem;border-radius:50%;background:rgba(16,185,129,0.1);color:#34d399;margin-bottom:1rem;">
+              <i class="fa-solid fa-check" style="font-size:1.5rem;" aria-hidden="true"></i>
+            </div>
+            <h3 style="font-size:1.35rem;font-weight:600;">Thank you — message received.</h3>
+            <p class="text-muted" style="margin-top:0.5rem;">We'll reply within one business day.</p>
+            <button type="button" onclick="resetContactForm()" class="btn btn-ghost" style="margin-top:1rem;font-size:0.875rem;">Send another message</button>
+          </div>
+        </div>
+
+        <p class="text-subtle" style="text-align:center;margin-top:1.5rem;font-size:0.8rem;">
+          Prefer email? <a href="mailto:webbspinnervisions@gmail.com" style="color:var(--accent);">webbspinnervisions@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/shared.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/hero-video.js"></script>
 </body>
 </html>

@@ -7,10 +7,16 @@
   const THEME_KEY = 'wsv-theme';
 
   const getPreferredTheme = () => {
+    // Site refresh: full dark theme by default
     const stored = localStorage.getItem(THEME_KEY);
     if (stored === 'light' || stored === 'dark') return stored;
     return 'dark';
   };
+
+  // Prefer dark unless user previously chose light
+  if (!document.documentElement.getAttribute('data-theme')) {
+    document.documentElement.setAttribute('data-theme', getPreferredTheme());
+  }
 
   const applyTheme = theme => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -156,6 +162,39 @@
     onScroll();
   };
 
+  const initBackToTop = () => {
+    const btn = document.getElementById('back-to-top');
+    if (!btn) return;
+
+    const toggle = () => {
+      const show = window.scrollY > 480;
+      btn.classList.toggle('is-visible', show);
+      if (show) btn.removeAttribute('hidden');
+      else btn.setAttribute('hidden', '');
+    };
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('scroll', toggle, { passive: true });
+    toggle();
+  };
+
+  const initSmoothAnchors = () => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        const href = anchor.getAttribute('href');
+        if (!href || href === '#') return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+  };
+
   const initAfterPartials = () => {
     initTheme();
     initMobileMenu();
@@ -164,6 +203,8 @@
     initLazyImages();
     initLazyEmbeds();
     initStickyCta();
+    initBackToTop();
+    initSmoothAnchors();
   };
 
   const loadPartials = async () => {

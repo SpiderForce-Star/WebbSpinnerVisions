@@ -4012,3 +4012,392 @@ body:has(.hero-landing) .site-nav {
   font-size: 0.82rem;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
 }
+
+/* =============================================
+   CLEAN CONTACT CTA + SAMPLE DESIGNS + MARKETING
+   + BACK TO TOP (site refresh 2026)
+   ============================================= */
+
+.btn-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.65rem;
+  min-height: 3rem;
+  background: #fff;
+  color: #0c0c0e;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.btn-contact:hover,
+.btn-contact:focus-visible {
+  background: color-mix(in srgb, var(--accent, #f59e0b) 92%, #fff);
+  color: #0c0c0e;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(245, 158, 11, 0.28);
+  outline: none;
+}
+
+.btn-contact:active {
+  transform: translateY(0);
+}
+
+/* Nav CTA: clean Contact Us (not yellow megabutton) */
+.nav-cta {
+  background: #fff !important;
+  color: #0c0c0e !important;
+  font-weight: 700;
+}
+
+.nav-cta:hover {
+  background: var(--accent, #f59e0b) !important;
+  color: #0c0c0e !important;
+}
+
+.mobile-menu-cta {
+  background: #fff !important;
+  color: #0c0c0e !important;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.mobile-menu-cta:hover {
+  background: var(--accent, #f59e0b) !important;
+}
+
+.mobile-menu-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-brand {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-x-spin {
+  font-size: 1.2rem;
+}
+
+.section-cta-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Sample one-page website designs */
+.sample-designs-section {
+  background: linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--bg-elevated, #141418) 55%, transparent) 50%, transparent 100%);
+}
+
+.sample-designs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .sample-designs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sample-designs-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.35rem;
+  }
+}
+
+.sample-card {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(160deg, var(--bg-panel, #1a1a1f) 0%, var(--bg-elevated, #141418) 100%);
+  border: 1px solid var(--border, #2a2a32);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.sample-card-preview {
+  padding: 1rem 1rem 0.25rem;
+  background: radial-gradient(ellipse at 50% 0%, rgba(245, 158, 11, 0.08), transparent 70%);
+}
+
+.sample-mock-browser {
+  border-radius: 0.75rem 0.75rem 0 0;
+  border: 1px solid var(--border, #2a2a32);
+  background: #0a0a0c;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.sample-mock-dots {
+  display: block;
+  height: 1.35rem;
+  background: #121218;
+  border-bottom: 1px solid var(--border, #2a2a32);
+  position: relative;
+}
+
+.sample-mock-dots::before {
+  content: '';
+  position: absolute;
+  left: 0.55rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0.65rem 0 0 #eab308, 1.3rem 0 0 #22c55e;
+}
+
+.sample-mock-hero {
+  height: 4.5rem;
+  background: linear-gradient(135deg, #1f2937, #0f172a);
+}
+
+.sample-mock-lines {
+  padding: 0.65rem 0.75rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.sample-mock-lines span {
+  display: block;
+  height: 0.35rem;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.25);
+  width: 100%;
+}
+
+.sample-mock-lines span.short {
+  width: 55%;
+}
+
+.sample-card-preview--restaurant .sample-mock-hero {
+  background: linear-gradient(135deg, #7c2d12 0%, #b45309 45%, #1c1917 100%);
+}
+
+.sample-card-preview--home .sample-mock-hero {
+  background: linear-gradient(135deg, #1e3a5f 0%, #0369a1 50%, #0c1220 100%);
+}
+
+.sample-card-preview--wellness .sample-mock-hero {
+  background: linear-gradient(135deg, #14532d 0%, #0f766e 50%, #0c1220 100%);
+}
+
+.sample-card-preview--retail .sample-mock-hero {
+  background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 45%, #1e1b4b 100%);
+}
+
+.sample-card-body {
+  padding: 1rem 1.15rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  flex: 1;
+}
+
+.sample-card-body h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text, #e2e8f0);
+}
+
+.sample-card-body p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--text-muted, #94a3b8);
+}
+
+.sample-card-features {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.sample-card-features li {
+  font-size: 0.75rem;
+  color: var(--text-subtle, #64748b);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.sample-card-features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--accent, #f59e0b);
+  opacity: 0.85;
+}
+
+/* Marketing capabilities */
+.marketing-capabilities-section .section-header {
+  margin-bottom: 1.75rem;
+}
+
+.marketing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .marketing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .marketing-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .marketing-grid--compact {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.marketing-card {
+  padding: 1.35rem 1.25rem;
+  border-radius: 1.15rem;
+  border: 1px solid var(--border, #2a2a32);
+  background: linear-gradient(155deg, var(--bg-panel, #1a1a1f) 0%, var(--bg-elevated, #141418) 100%);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.marketing-card:hover {
+  border-color: color-mix(in srgb, var(--accent, #f59e0b) 40%, var(--border, #2a2a32));
+}
+
+.marketing-card-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, var(--accent, #f59e0b) 12%, transparent);
+  color: var(--accent, #f59e0b);
+  font-size: 1.05rem;
+  margin-bottom: 0.85rem;
+}
+
+.marketing-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+  color: var(--text, #e2e8f0);
+}
+
+.marketing-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--text-muted, #94a3b8);
+}
+
+/* Back to top */
+.back-to-top {
+  position: fixed;
+  right: 1.15rem;
+  bottom: 1.15rem;
+  z-index: 80;
+  width: 2.85rem;
+  height: 2.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--border, #2a2a32);
+  background: color-mix(in srgb, #0c0c0e 88%, #fff);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+  transition: opacity 0.25s ease, transform 0.25s ease, border-color 0.2s ease, background 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  border-color: var(--accent, #f59e0b);
+  color: var(--accent, #f59e0b);
+  outline: none;
+}
+
+@media (max-width: 480px) {
+  .back-to-top {
+    right: 0.85rem;
+    bottom: 0.85rem;
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  .btn-contact {
+    width: 100%;
+    max-width: 22rem;
+  }
+
+  .page-hero-ctas .btn-contact,
+  .hero-landing-action .btn-contact {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-contact,
+  .back-to-top,
+  .sample-card,
+  .marketing-card {
+    transition: none;
+  }
+
+  .x-spin {
+    animation: none !important;
+  }
+}
+
+/* Force dark base for refreshed pages */
+html[data-theme="dark"] body,
+body.landing-page {
+  background-color: var(--charcoal, #0c0c0e);
+  color: #e2e8f0;
+}
