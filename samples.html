@@ -6,81 +6,90 @@
     <title>Sample One-Page Website Designs | Webb Spinner Visions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/polish.css"> <!-- your existing CSS if any -->
     <style>
-        /* Your existing custom styles + glassmorphism */
-        .glass { background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.2); }
+        .glass { 
+            background: rgba(255,255,255,0.08); 
+            backdrop-filter: blur(16px); 
+            border: 1px solid rgba(255,255,255,0.15); 
+        }
+        .mock-browser { 
+            border: 8px solid #111827; 
+            border-radius: 12px 12px 0 0; 
+            overflow: hidden; 
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5); 
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
-    <!-- Header (same as other pages) -->
-    <nav class="..."> <!-- your unified header with spinning X --> </nav>
+    <!-- Your unified header with spinning X -->
+    <nav class="..."> <!-- paste your existing header here --> </nav>
 
-    <div class="max-w-7xl mx-auto px-6 py-12">
+    <div class="max-w-7xl mx-auto px-6 py-16">
         <h1 class="text-5xl font-bold text-center mb-4">Sample one-page website designs</h1>
-        <p class="text-xl text-center text-gray-300 mb-12">Four detailed mock front pages — structure, energy, and conversion paths we customize for your brand. Not templates: inspiration you can make yours.</p>
+        <p class="text-xl text-center text-gray-300 mb-2">Four detailed mock front pages — structure, energy, and conversion paths we customize for your brand.</p>
+        <p class="text-center text-gray-400 mb-12">Not templates: inspiration you can make yours.</p>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <!-- Restaurant Mock -->
-            <div class="glass rounded-3xl overflow-hidden border border-white/10">
-                <div class="mock-browser"> <!-- your existing browser frame -->
-                    <img src="https://picsum.photos/id/1015/1200/600" alt="Restaurant hero - Forge & Flame" class="w-full h-64 object-cover">
-                    <!-- full mock content from your screenshot -->
-                    <div class="p-6">
-                        <h2 class="text-2xl font-semibold">Forge & Flame</h2>
-                        <!-- all your existing mock content -->
-                    </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <!-- Restaurant -->
+            <div class="glass rounded-3xl overflow-hidden">
+                <div class="mock-browser">
+                    <img src="https://picsum.photos/id/1015/1200/500" alt="Restaurant atmosphere" class="w-full h-64 object-cover">
+                    <!-- Your existing mock content for Forge & Flame goes here -->
                 </div>
-                <div class="px-6 pb-6">
-                    <p class="text-sm text-gray-400">Restaurant &amp; Hospitality</p>
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Restaurant &amp; Hospitality</h3>
+                    <p class="text-gray-400">Atmosphere-led hero, menu cues, and reservation-ready conversion for dining and events.</p>
                 </div>
             </div>
 
-            <!-- Home Services Mock -->
-            <div class="glass rounded-3xl overflow-hidden border border-white/10">
+            <!-- Home Services -->
+            <div class="glass rounded-3xl overflow-hidden">
                 <div class="mock-browser">
-                    <img src="https://picsum.photos/id/201/1200/600" alt="Home Services tools" class="w-full h-64 object-cover">
-                    <!-- full mock content -->
+                    <img src="https://picsum.photos/id/201/1200/500" alt="Home services tools" class="w-full h-64 object-cover">
+                    <!-- Your existing mock content for Apex Pros -->
                 </div>
-                <div class="px-6 pb-6">
-                    <p class="text-sm text-gray-400">Home Services</p>
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Home Services</h3>
+                    <p class="text-gray-400">Trust-first layout for contractors and trades with phone-ready conversion.</p>
                 </div>
             </div>
 
-            <!-- Wellness Mock -->
-            <div class="glass rounded-3xl overflow-hidden border border-white/10">
+            <!-- Wellness -->
+            <div class="glass rounded-3xl overflow-hidden">
                 <div class="mock-browser">
-                    <img src="https://picsum.photos/id/1005/1200/600" alt="Wellness studio" class="w-full h-64 object-cover">
-                    <!-- full mock content -->
+                    <img src="https://picsum.photos/id/1005/1200/500" alt="Wellness studio" class="w-full h-64 object-cover">
+                    <!-- Your existing mock content for Lumen Studio -->
                 </div>
-                <div class="px-6 pb-6">
-                    <p class="text-sm text-gray-400">Wellness &amp; Studio</p>
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Wellness &amp; Studio</h3>
+                    <p class="text-gray-400">Soft, polished branding for coaches, salons, and studios.</p>
                 </div>
             </div>
 
-            <!-- Retail Mock -->
-            <div class="glass rounded-3xl overflow-hidden border border-white/10">
+            <!-- Retail -->
+            <div class="glass rounded-3xl overflow-hidden">
                 <div class="mock-browser">
-                    <img src="https://picsum.photos/id/870/1200/600" alt="Retail shop" class="w-full h-64 object-cover">
-                    <!-- full mock content -->
+                    <img src="https://picsum.photos/id/870/1200/500" alt="Retail shop interior" class="w-full h-64 object-cover">
+                    <!-- Your existing mock content for North & Main -->
                 </div>
-                <div class="px-6 pb-6">
-                    <p class="text-sm text-gray-400">Retail &amp; Local Shop</p>
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Retail &amp; Local Shop</h3>
+                    <p class="text-gray-400">Product grids, store hours, and brand story that convert followers into customers.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Single Contact Us button at the bottom -->
-        <div class="flex justify-center mt-16">
-            <a href="mailto:webbspinnervisions@gmail.com?subject=I'd%20like%20a%20custom%20one-page%20website%20like%20one%20of%20these%20samples" 
-               class="btn btn-primary glass text-white px-10 py-4 text-xl rounded-2xl flex items-center gap-3 hover:scale-105 transition-all">
+        <!-- Single Contact Us Button at Bottom -->
+        <div class="flex justify-center mt-20">
+            <a href="mailto:webbspinnervisions@gmail.com?subject=Custom%20Website%20Like%20One%20of%20These%20Samples" 
+               class="glass px-12 py-5 rounded-2xl text-xl font-semibold flex items-center gap-3 hover:scale-105 transition-all border border-white/20">
                 Contact Us for more information
-                <span class="text-2xl">→</span>
+                <span class="text-3xl">→</span>
             </a>
         </div>
     </div>
 
-    <!-- Footer (same as other pages) -->
-    <footer class="..."> <!-- your unified footer with spinning X --> </footer>
+    <!-- Your unified footer -->
+    <footer class="..."> <!-- paste your existing footer here --> </footer>
 </body>
 </html>
