@@ -7,13 +7,11 @@
   const THEME_KEY = 'wsv-theme';
 
   const getPreferredTheme = () => {
-    // Site refresh: full dark theme by default
     const stored = localStorage.getItem(THEME_KEY);
     if (stored === 'light' || stored === 'dark') return stored;
     return 'dark';
   };
 
-  // Prefer dark unless user previously chose light
   if (!document.documentElement.getAttribute('data-theme')) {
     document.documentElement.setAttribute('data-theme', getPreferredTheme());
   }
@@ -72,16 +70,23 @@
   };
 
   const initLazyVideos = () => {
-    const videos = document.querySelectorAll('video.lazy-video');
+    const videos = document.querySelectorAll('video.lazy-video, video[data-src]');
+
+    const loadVideo = video => {
+      const src = video.dataset.src;
+      const source = video.querySelector('source');
+      if (src && source && !source.getAttribute('src')) {
+        source.setAttribute('src', src);
+        video.load();
+      } else if (src && !video.getAttribute('src') && !source) {
+        video.src = src;
+        video.load();
+      }
+      video.classList.add('is-loaded');
+    };
 
     if (!('IntersectionObserver' in window)) {
-      videos.forEach(video => {
-        const src = video.dataset.src;
-        if (src) {
-          video.querySelector('source')?.setAttribute('src', src);
-          video.load();
-        }
-      });
+      videos.forEach(loadVideo);
       return;
     }
 
@@ -89,26 +94,56 @@
       entries => {
         entries.forEach(entry => {
           if (!entry.isIntersecting) return;
-          const video = entry.target;
-          const src = video.dataset.src;
-          const source = video.querySelector('source');
-          if (src && source && !source.getAttribute('src')) {
-            source.setAttribute('src', src);
-            video.load();
-          }
-          observer.unobserve(video);
+          loadVideo(entry.target);
+          observer.unobserve(entry.target);
         });
       },
-      { rootMargin: '200px 0px', threshold: 0.1 }
+      { rootMargin: '200px 0px', threshold: 0.05 }
     );
 
     videos.forEach(video => observer.observe(video));
   };
 
   const initLazyImages = () => {
-    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-      img.decoding = 'async';
+    document.querySelectorAll('img').forEach(img => {
+      if (!img.hasAttribute('loading') && !img.hasAttribute('fetchpriority')) {
+        img.setAttribute('loading', 'lazy');
+      }
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
+      }
     });
+
+    // Native lazy is preferred; enhance with IO for data-src images
+    const deferred = document.querySelectorAll('img[data-src]');
+    if (!deferred.length) return;
+
+    const loadImg = img => {
+      const src = img.dataset.src;
+      if (src) {
+        img.src = src;
+        img.removeAttribute('data-src');
+        img.classList.add('is-loaded');
+      }
+    };
+
+    if (!('IntersectionObserver' in window)) {
+      deferred.forEach(loadImg);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          loadImg(entry.target);
+          observer.unobserve(entry.target);
+        });
+      },
+      { rootMargin: '180px 0px', threshold: 0.01 }
+    );
+
+    deferred.forEach(img => observer.observe(img));
   };
 
   const highlightActiveNav = () => {
@@ -133,6 +168,7 @@
         iframe.title = btn.getAttribute('aria-label') || 'Embedded video';
         iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
         iframe.allowFullscreen = true;
+        iframe.loading = 'lazy';
         embed.appendChild(iframe);
         btn.remove();
       });
@@ -181,6 +217,48 @@
     toggle();
   };
 
+  /** Floating Contact Us — appears after scrolling past hero */
+  const initFloatingContact = () => {
+    const btn = document.getElementById('floating-contact');
+    if (!btn) return;
+
+    // Point relative contact on homepage
+    if (window.location.pathname.endsWith('/') || window.location.pathname.endsWith('index.html') || window.location.pathname === '') {
+      btn.setAttribute('href', '#contact');
+    }
+
+    const hero =
+      document.querySelector('.hero-landing') ||
+      document.querySelector('.page-hero') ||
+      document.querySelector('.cinematic-hero') ||
+      document.getElementById('main');
+
+    const contact = document.getElementById('contact');
+
+    const update = () => {
+      let pastHero = window.scrollY > 320;
+      if (hero) {
+        const rect = hero.getBoundingClientRect();
+        pastHero = rect.bottom < 80;
+      }
+
+      let nearContact = false;
+      if (contact) {
+        const c = contact.getBoundingClientRect();
+        nearContact = c.top < window.innerHeight * 0.85 && c.bottom > 0;
+      }
+
+      const show = pastHero && !nearContact;
+      btn.classList.toggle('is-visible', show);
+      if (show) btn.removeAttribute('hidden');
+      else btn.setAttribute('hidden', '');
+    };
+
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+    update();
+  };
+
   const initSmoothAnchors = () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', e => {
@@ -195,6 +273,50 @@
     });
   };
 
+  const initReveal = () => {
+    const revealEls = document.querySelectorAll('.reveal');
+    if (!revealEls.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+      revealEls.forEach(el => el.classList.add('visible'));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    revealEls.forEach(el => observer.observe(el));
+  };
+
+  const initPackageCheckmarks = () => {
+    const cards = document.querySelectorAll('.package-card');
+    if (!cards.length || !('IntersectionObserver' in window)) {
+      cards.forEach(c => c.classList.add('checks-animate'));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('checks-animate');
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cards.forEach(card => observer.observe(card));
+  };
+
   const initAfterPartials = () => {
     initTheme();
     initMobileMenu();
@@ -204,7 +326,10 @@
     initLazyEmbeds();
     initStickyCta();
     initBackToTop();
+    initFloatingContact();
     initSmoothAnchors();
+    initReveal();
+    initPackageCheckmarks();
   };
 
   const loadPartials = async () => {
@@ -213,14 +338,24 @@
     const tasks = [];
 
     if (navSlot) {
-      tasks.push(fetch('nav.html').then(r => r.text()).then(html => { navSlot.innerHTML = html; }));
+      tasks.push(
+        fetch('nav.html')
+          .then(r => r.text())
+          .then(html => {
+            navSlot.innerHTML = html;
+          })
+      );
     }
     if (footerSlot) {
-      tasks.push(fetch('footer.html').then(r => r.text()).then(html => {
-        footerSlot.innerHTML = html;
-        const yearEl = document.getElementById('year');
-        if (yearEl) yearEl.textContent = new Date().getFullYear();
-      }));
+      tasks.push(
+        fetch('footer.html')
+          .then(r => r.text())
+          .then(html => {
+            footerSlot.innerHTML = html;
+            const yearEl = document.getElementById('year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+          })
+      );
     }
 
     await Promise.all(tasks);
@@ -228,7 +363,8 @@
   };
 
   document.addEventListener('DOMContentLoaded', () => {
-    const hasPartials = document.getElementById('nav-placeholder') || document.getElementById('footer-placeholder');
+    const hasPartials =
+      document.getElementById('nav-placeholder') || document.getElementById('footer-placeholder');
     if (hasPartials) {
       loadPartials();
     } else {

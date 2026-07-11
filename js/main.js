@@ -1,10 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
   const packageMap = {
+    'starter-video': 'Starter Video Package ($200)',
     starter: 'Starter Website Package ($800)',
     cinematic: 'Cinematic Website Package ($1,000)',
     video: 'Video / Logo Animation only',
-    marketing: 'Marketing support'
+    marketing: 'Marketing support',
+    restaurant: 'Custom one-page site (Restaurant)',
+    home: 'Custom one-page site (Home Services)',
+    wellness: 'Custom one-page site (Wellness)',
+    retail: 'Custom one-page site (Retail)'
   };
 
   if (params.get('sent') === 'true') {
