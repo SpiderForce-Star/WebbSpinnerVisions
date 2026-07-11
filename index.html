@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Webb Spinner Visions | Custom Websites &amp; Video for Small Business</title>
-  <meta name="description" content="Professional one-page websites and cinematic video for small businesses. Packages from $200 video, $800 website, and $1,000 cinematic. Nashville-based, nationwide. You own everything.">
+  <meta name="description" content="Professional one-page websites and cinematic video for small businesses. Packages: $200 Starter Video, $800 Starter Website, $1,000 Cinematic. Nashville-based, nationwide. You own everything.">
   <meta name="keywords" content="video production Nashville, small business website, logo animation, social media video, commercial video production, marketing">
   <meta name="author" content="Webb Spinner Visions">
   <meta name="robots" content="index, follow">
@@ -57,10 +57,6 @@
           "addressRegion": "TN",
           "addressCountry": "US"
         },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "addressCountry": "US"
-        },
         "areaServed": [
           { "@type": "City", "name": "Nashville" },
           { "@type": "State", "name": "Tennessee" },
@@ -87,49 +83,34 @@
               "@type": "Offer",
               "@id": "https://webbspinnervisions.net/#offer-starter-video",
               "name": "Starter Video Package",
-              "description": "Full project setup, custom logo animation, and one polished 30-second video for social media and web use. Additional 30-second videos available at a quoted rate.",
+              "description": "Full project setup, custom logo animation, and one polished 30-second video for social media and web use.",
               "price": "200.00",
               "priceCurrency": "USD",
               "availability": "https://schema.org/InStock",
               "url": "https://webbspinnervisions.net/#contact",
-              "seller": { "@id": "https://webbspinnervisions.net/#business" },
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Starter Video Package",
-                "serviceType": "Video Production"
-              }
+              "seller": { "@id": "https://webbspinnervisions.net/#business" }
             },
             {
               "@type": "Offer",
               "@id": "https://webbspinnervisions.net/#offer-starter-website",
               "name": "Starter Website Package",
-              "description": "Professional single-page website design and build with contact form, featured video section, mobile-responsive layout, domain and email setup guidance, social links, and full ownership of code and assets.",
+              "description": "Professional single-page website design and build with contact form, featured video section, mobile-responsive layout, and full ownership of code and assets.",
               "price": "800.00",
               "priceCurrency": "USD",
               "availability": "https://schema.org/InStock",
               "url": "https://webbspinnervisions.net/#packages",
-              "seller": { "@id": "https://webbspinnervisions.net/#business" },
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Starter Website Package",
-                "serviceType": "Website Design"
-              }
+              "seller": { "@id": "https://webbspinnervisions.net/#business" }
             },
             {
               "@type": "Offer",
               "@id": "https://webbspinnervisions.net/#offer-cinematic",
               "name": "Cinematic Website Package",
-              "description": "Everything in the Starter Website Package plus custom logo design and cinematic logo animation, three polished 30-second videos, homepage hero video, social-ready clips, priority turnaround, and full ownership of all assets.",
+              "description": "Everything in the Starter Website Package plus custom logo design and cinematic logo animation, three polished 30-second videos, homepage hero video, and full ownership of all assets.",
               "price": "1000.00",
               "priceCurrency": "USD",
               "availability": "https://schema.org/InStock",
               "url": "https://webbspinnervisions.net/#packages",
-              "seller": { "@id": "https://webbspinnervisions.net/#business" },
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Cinematic Website Package",
-                "serviceType": "Website Design and Video Production"
-              }
+              "seller": { "@id": "https://webbspinnervisions.net/#business" }
             }
           ]
         }
@@ -170,6 +151,7 @@
   <div id="nav-placeholder"></div>
 
   <main id="main">
+    <!-- HERO -->
     <section class="hero-landing" aria-labelledby="hero-heading">
       <div class="hero-landing-stage hero-landing-stage--youtube film-grain" id="hero-video-fullscreen-target">
         <div class="hero-youtube-facade" id="hero-youtube-facade">
@@ -197,7 +179,7 @@
         </button>
       </div>
 
-      <div class="hero-landing-copy cinematic-panel industrial-overlay">
+      <div class="hero-landing-copy cinematic-panel industrial-overlay glass-hero-copy">
         <div class="hero-landing-inner">
           <p class="hero-landing-eyebrow metallic-text">WEBSITES + VIDEO + MARKETING</p>
 
@@ -216,12 +198,22 @@
               <span>Contact Us</span>
               <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
-            <p class="hero-landing-skip"><a href="#packages">View packages &amp; pricing</a></p>
+            <p class="hero-landing-skip">
+              <a href="#packages">Packages</a>
+              <span aria-hidden="true"> · </span>
+              <a href="samples.html">Sample designs</a>
+            </p>
+          </div>
+
+          <div class="scroll-indicator" aria-hidden="true">
+            <span>Scroll</span>
+            <i class="fa-solid fa-chevron-down"></i>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- PACKAGES -->
     <section id="packages" class="section packages-section packages-section--cinematic industrial-section" aria-labelledby="packages-heading">
       <div class="section-inner">
         <header class="section-header section-header--packages">
@@ -230,20 +222,18 @@
           <p class="section-lead">Clear pricing. Honest scope. You own 100% of everything we deliver.</p>
         </header>
 
-        <div class="trust-badges reveal" aria-label="What you can count on">
+        <div class="trust-badges glass-badges reveal" aria-label="What you can count on">
           <span class="trust-badge"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> You Own 100% of Assets</span>
           <span class="trust-badge"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Clear Quotes, Fast Response</span>
           <span class="trust-badge"><i class="fa-solid fa-check-double" aria-hidden="true"></i> Revisions Until You&rsquo;re Thrilled</span>
         </div>
 
         <div class="packages-grid packages-grid--three">
-          <article class="package-card package-card--spaced reveal" itemscope itemtype="https://schema.org/Offer">
-            <meta itemprop="priceCurrency" content="USD">
-            <meta itemprop="price" content="200.00">
+          <article class="package-card package-card--spaced glass-card reveal">
             <div class="package-card-header">
-              <h3 class="package-card-title">Starter Video <span class="package-card-dash">&mdash;</span> <span class="package-card-price-inline" itemprop="price">$200</span></h3>
+              <h3 class="package-card-title">Starter Video <span class="package-card-dash">&mdash;</span> <span class="package-card-price-inline">$200</span></h3>
             </div>
-            <p class="package-card-lead" itemprop="description">Full setup, custom logo animation, and one polished 30-second video for social and web.</p>
+            <p class="package-card-lead">Full setup, custom logo animation, and one polished 30-second video for social and web.</p>
             <div class="package-card-block">
               <h4 class="package-card-label">What&rsquo;s included</h4>
               <ul class="package-list">
@@ -255,16 +245,14 @@
               </ul>
             </div>
             <p class="package-best-for"><strong>Best for:</strong> Owners who need a strong first video without a full website build.</p>
-            <a href="#contact" class="btn btn-secondary package-cta package-cta--strong" data-package="starter-video" itemprop="url">Get Started &mdash; $200</a>
+            <a href="#contact" class="btn btn-secondary package-cta" data-package="starter-video">Select package</a>
           </article>
 
-          <article class="package-card package-card--spaced reveal" itemscope itemtype="https://schema.org/Offer">
-            <meta itemprop="priceCurrency" content="USD">
-            <meta itemprop="price" content="800.00">
+          <article class="package-card package-card--spaced glass-card reveal">
             <div class="package-card-header">
               <h3 class="package-card-title">Starter Website <span class="package-card-dash">&mdash;</span> <span class="package-card-price-inline">$800</span></h3>
             </div>
-            <p class="package-card-lead" itemprop="description">A clean, professional single-page website designed to look established and convert visitors.</p>
+            <p class="package-card-lead">A clean, professional single-page website designed to look established and convert visitors.</p>
             <div class="package-card-block">
               <h4 class="package-card-label">What&rsquo;s included</h4>
               <ul class="package-list">
@@ -279,17 +267,15 @@
               </ul>
             </div>
             <p class="package-best-for"><strong>Best for:</strong> New and local businesses that need a credible online presence fast.</p>
-            <a href="#contact" class="btn btn-secondary package-cta package-cta--strong" data-package="starter" itemprop="url">Get Started &mdash; $800</a>
+            <a href="#contact" class="btn btn-secondary package-cta" data-package="starter">Select package</a>
           </article>
 
-          <article class="package-card package-card--featured package-card--spaced reveal" itemscope itemtype="https://schema.org/Offer">
-            <meta itemprop="priceCurrency" content="USD">
-            <meta itemprop="price" content="1000.00">
+          <article class="package-card package-card--featured package-card--spaced glass-card reveal">
             <span class="package-badge">Best Value</span>
             <div class="package-card-header">
               <h3 class="package-card-title">Cinematic Package <span class="package-card-dash">&mdash;</span> <span class="package-card-price-inline">$1,000</span></h3>
             </div>
-            <p class="package-card-lead" itemprop="description">Starter website + custom logo animation + three polished 30-second videos for a site that stops the scroll.</p>
+            <p class="package-card-lead">Starter website + custom logo animation + three polished 30-second videos for a site that stops the scroll.</p>
             <div class="package-card-block">
               <h4 class="package-card-label">What&rsquo;s included</h4>
               <ul class="package-list">
@@ -304,297 +290,138 @@
               </ul>
             </div>
             <p class="package-best-for"><strong>Best for:</strong> Growth-minded owners who want website <em>and</em> video that drive results.</p>
-            <a href="#contact" class="btn btn-contact package-cta package-cta--featured metallic-shine" data-package="cinematic" itemprop="url">Contact Us</a>
+            <a href="#contact" class="btn btn-secondary package-cta package-cta--featured" data-package="cinematic">Select package</a>
           </article>
         </div>
 
-        <div class="packages-cta-band reveal">
-          <p>Not sure which package fits? Tell us about your business — we&rsquo;ll recommend a clear path with no pressure.</p>
-          <a href="#contact" class="btn btn-contact metallic-shine">
-            <span>Contact Us</span>
-            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </a>
-        </div>
+        <p class="packages-note text-muted reveal">Not sure which fits? Use the contact form — we&rsquo;ll recommend a clear path.</p>
       </div>
     </section>
 
-    <section id="sample-designs" class="section sample-designs-section industrial-section" aria-labelledby="sample-designs-heading">
+    <!-- SAMPLE TEASERS → samples.html -->
+    <section id="sample-designs" class="section sample-teaser-section industrial-section" aria-labelledby="sample-teaser-heading">
       <div class="section-inner">
         <header class="section-header">
           <span class="section-eyebrow">Design Inspiration</span>
-          <h2 id="sample-designs-heading" class="section-title">Sample One-Page Website Designs</h2>
-          <p class="section-lead">Realistic mock front pages by industry. Your site is fully custom — these show the structure, energy, and conversion path we build.</p>
+          <h2 id="sample-teaser-heading" class="section-title">Sample one-page designs</h2>
+          <p class="section-lead">Four industry mock front pages. Open the gallery for full browser previews.</p>
         </header>
 
-        <div class="sample-designs-grid sample-designs-grid--mockups">
-
-          <!-- Restaurant mock homepage -->
-          <article class="sample-card sample-card--glow sample-card--mockup reveal">
-            <div class="mock-browser mock-browser--restaurant" aria-hidden="true">
-              <div class="mock-browser-chrome">
-                <span class="mock-dot mock-dot--r"></span>
-                <span class="mock-dot mock-dot--y"></span>
-                <span class="mock-dot mock-dot--g"></span>
-                <span class="mock-browser-url">yourrestaurant.com</span>
-              </div>
-              <div class="mock-site">
-                <header class="mock-site-header">
-                  <span class="mock-logo"><i class="fa-solid fa-utensils"></i> Forge &amp; Flame</span>
-                  <nav class="mock-nav">
-                    <span>Menu</span>
-                    <span>Events</span>
-                    <span>Reserve</span>
-                  </nav>
-                </header>
-                <div class="mock-site-hero">
-                  <p class="mock-kicker">Downtown Nashville · Open nightly</p>
-                  <p class="mock-hero-title">Tables fill when the story looks this good.</p>
-                  <p class="mock-hero-sub">Tonight&rsquo;s specials. Live atmosphere. Book in one tap.</p>
-                  <span class="mock-hero-btn">Reserve a Table</span>
-                </div>
-                <div class="mock-site-body">
-                  <div class="mock-tiles mock-tiles--3">
-                    <span>Chef&rsquo;s Cut</span>
-                    <span>Craft Cocktails</span>
-                    <span>Private Dining</span>
-                  </div>
-                  <ul class="mock-features">
-                    <li>Featured dishes &amp; hours</li>
-                    <li>Map &amp; contact form</li>
-                    <li>Social + video embeds</li>
-                  </ul>
-                </div>
-                <div class="mock-site-bar">Open daily · 5PM–11PM · Book online</div>
-              </div>
+        <div class="sample-teaser-grid">
+          <a href="samples.html#restaurant" class="sample-teaser glass-card reveal">
+            <div class="sample-teaser-swatch sample-teaser-swatch--restaurant" aria-hidden="true">
+              <span class="sample-teaser-mini-chrome"></span>
+              <span class="sample-teaser-mini-hero"></span>
             </div>
-            <div class="sample-card-footer">
+            <div class="sample-teaser-body">
               <span class="badge">RESTAURANT</span>
               <h3>Restaurant &amp; Hospitality</h3>
-              <p>Menu highlights, atmosphere, and reservation-ready conversion.</p>
-              <a
-                class="btn btn-sample metallic-shine"
-                href="mailto:webbspinnervisions@gmail.com?subject=Build%20Mine%20Like%20This%20%E2%80%94%20Restaurant%20%26%20Hospitality&amp;body=Hi%20Webb%20Spinner%20Visions%2C%0A%0AI%27d%20like%20a%20one-page%20website%20like%20the%20Restaurant%20%26%20Hospitality%20sample.%0A%0ABusiness%20name%3A%20%0ACity%3A%20%0AGoals%3A%20"
-              >Build Mine Like This</a>
+              <p>Menu, atmosphere, reservations</p>
+              <span class="sample-teaser-link">View mock <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
             </div>
-          </article>
+          </a>
 
-          <!-- Home Services mock homepage -->
-          <article class="sample-card sample-card--glow sample-card--mockup reveal">
-            <div class="mock-browser mock-browser--home" aria-hidden="true">
-              <div class="mock-browser-chrome">
-                <span class="mock-dot mock-dot--r"></span>
-                <span class="mock-dot mock-dot--y"></span>
-                <span class="mock-dot mock-dot--g"></span>
-                <span class="mock-browser-url">yourhomeservices.com</span>
-              </div>
-              <div class="mock-site">
-                <header class="mock-site-header">
-                  <span class="mock-logo"><i class="fa-solid fa-house-chimney"></i> Apex Pros</span>
-                  <nav class="mock-nav">
-                    <span>Services</span>
-                    <span>Projects</span>
-                    <span>Call Now</span>
-                  </nav>
-                </header>
-                <div class="mock-site-hero">
-                  <p class="mock-kicker">Licensed · Insured · Local crews</p>
-                  <p class="mock-hero-title">Trusted work. Clear pricing. Fast response.</p>
-                  <p class="mock-hero-sub">From estimate to finished job — proof that wins the next call.</p>
-                  <span class="mock-hero-btn">Get a Free Quote</span>
-                </div>
-                <div class="mock-site-body">
-                  <div class="mock-tiles mock-tiles--2">
-                    <span>Before / After</span>
-                    <span>Service Areas</span>
-                  </div>
-                  <ul class="mock-features">
-                    <li>Service list &amp; pricing cues</li>
-                    <li>Before/after gallery</li>
-                    <li>Click-to-call CTA</li>
-                  </ul>
-                </div>
-                <div class="mock-site-bar">Same-day estimates · 5-star local reviews</div>
-              </div>
+          <a href="samples.html#home-services" class="sample-teaser glass-card reveal">
+            <div class="sample-teaser-swatch sample-teaser-swatch--home" aria-hidden="true">
+              <span class="sample-teaser-mini-chrome"></span>
+              <span class="sample-teaser-mini-hero"></span>
             </div>
-            <div class="sample-card-footer">
+            <div class="sample-teaser-body">
               <span class="badge">HOME SERVICES</span>
               <h3>Home Services</h3>
-              <p>Trust-first layout for trades with phone-ready conversion.</p>
-              <a
-                class="btn btn-sample metallic-shine"
-                href="mailto:webbspinnervisions@gmail.com?subject=Build%20Mine%20Like%20This%20%E2%80%94%20Home%20Services&amp;body=Hi%20Webb%20Spinner%20Visions%2C%0A%0AI%27d%20like%20a%20one-page%20website%20like%20the%20Home%20Services%20sample.%0A%0ABusiness%20name%3A%20%0ACity%3A%20%0AGoals%3A%20"
-              >Build Mine Like This</a>
+              <p>Proof, services, click-to-call</p>
+              <span class="sample-teaser-link">View mock <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
             </div>
-          </article>
+          </a>
 
-          <!-- Wellness mock homepage -->
-          <article class="sample-card sample-card--glow sample-card--mockup reveal">
-            <div class="mock-browser mock-browser--wellness" aria-hidden="true">
-              <div class="mock-browser-chrome">
-                <span class="mock-dot mock-dot--r"></span>
-                <span class="mock-dot mock-dot--y"></span>
-                <span class="mock-dot mock-dot--g"></span>
-                <span class="mock-browser-url">yourstudio.com</span>
-              </div>
-              <div class="mock-site">
-                <header class="mock-site-header">
-                  <span class="mock-logo"><i class="fa-solid fa-spa"></i> Lumen Studio</span>
-                  <nav class="mock-nav">
-                    <span>Sessions</span>
-                    <span>About</span>
-                    <span>Book</span>
-                  </nav>
-                </header>
-                <div class="mock-site-hero">
-                  <p class="mock-kicker">Wellness · Coaching · Recovery</p>
-                  <p class="mock-hero-title">Calm space. Clear offers. Easy booking.</p>
-                  <p class="mock-hero-sub">Premium branding that feels personal — and converts inquiries.</p>
-                  <span class="mock-hero-btn">Book a Session</span>
-                </div>
-                <div class="mock-site-body">
-                  <div class="mock-tiles mock-tiles--3">
-                    <span>Private</span>
-                    <span>Group</span>
-                    <span>Packages</span>
-                  </div>
-                  <ul class="mock-features">
-                    <li>Services &amp; packages</li>
-                    <li>About the practitioner</li>
-                    <li>Booking inquiry form</li>
-                  </ul>
-                </div>
-                <div class="mock-site-bar">New client special · Inquire today</div>
-              </div>
+          <a href="samples.html#wellness" class="sample-teaser glass-card reveal">
+            <div class="sample-teaser-swatch sample-teaser-swatch--wellness" aria-hidden="true">
+              <span class="sample-teaser-mini-chrome"></span>
+              <span class="sample-teaser-mini-hero"></span>
             </div>
-            <div class="sample-card-footer">
+            <div class="sample-teaser-body">
               <span class="badge">WELLNESS</span>
               <h3>Wellness &amp; Studio</h3>
-              <p>Soft, polished branding for coaches, salons, and studios.</p>
-              <a
-                class="btn btn-sample metallic-shine"
-                href="mailto:webbspinnervisions@gmail.com?subject=Build%20Mine%20Like%20This%20%E2%80%94%20Wellness%20%26%20Studio&amp;body=Hi%20Webb%20Spinner%20Visions%2C%0A%0AI%27d%20like%20a%20one-page%20website%20like%20the%20Wellness%20%26%20Studio%20sample.%0A%0ABusiness%20name%3A%20%0ACity%3A%20%0AGoals%3A%20"
-              >Build Mine Like This</a>
+              <p>Sessions, packages, booking</p>
+              <span class="sample-teaser-link">View mock <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
             </div>
-          </article>
+          </a>
 
-          <!-- Retail mock homepage -->
-          <article class="sample-card sample-card--glow sample-card--mockup reveal">
-            <div class="mock-browser mock-browser--retail" aria-hidden="true">
-              <div class="mock-browser-chrome">
-                <span class="mock-dot mock-dot--r"></span>
-                <span class="mock-dot mock-dot--y"></span>
-                <span class="mock-dot mock-dot--g"></span>
-                <span class="mock-browser-url">yourlocalshop.com</span>
-              </div>
-              <div class="mock-site">
-                <header class="mock-site-header">
-                  <span class="mock-logo"><i class="fa-solid fa-bag-shopping"></i> North &amp; Main</span>
-                  <nav class="mock-nav">
-                    <span>Shop</span>
-                    <span>Story</span>
-                    <span>Visit</span>
-                  </nav>
-                </header>
-                <div class="mock-site-hero">
-                  <p class="mock-kicker">Local makers · Curated goods</p>
-                  <p class="mock-hero-title">New drops. Real story. Come in or shop online.</p>
-                  <p class="mock-hero-sub">Product spotlights that stop the scroll and drive foot traffic.</p>
-                  <span class="mock-hero-btn">Shop New Arrivals</span>
-                </div>
-                <div class="mock-site-body">
-                  <div class="mock-tiles mock-tiles--4">
-                    <span>A</span><span>B</span><span>C</span><span>D</span>
-                  </div>
-                  <ul class="mock-features">
-                    <li>Featured products</li>
-                    <li>Store info &amp; map</li>
-                    <li>Social shop links</li>
-                  </ul>
-                </div>
-                <div class="mock-site-bar">Open Tue–Sat · Free local pickup</div>
-              </div>
+          <a href="samples.html#retail" class="sample-teaser glass-card reveal">
+            <div class="sample-teaser-swatch sample-teaser-swatch--retail" aria-hidden="true">
+              <span class="sample-teaser-mini-chrome"></span>
+              <span class="sample-teaser-mini-hero"></span>
             </div>
-            <div class="sample-card-footer">
+            <div class="sample-teaser-body">
               <span class="badge">RETAIL</span>
               <h3>Retail &amp; Local Shop</h3>
-              <p>Product grids, store hours, and brand story that convert.</p>
-              <a
-                class="btn btn-sample metallic-shine"
-                href="mailto:webbspinnervisions@gmail.com?subject=Build%20Mine%20Like%20This%20%E2%80%94%20Retail%20%26%20Local%20Shop&amp;body=Hi%20Webb%20Spinner%20Visions%2C%0A%0AI%27d%20like%20a%20one-page%20website%20like%20the%20Retail%20%26%20Local%20Shop%20sample.%0A%0ABusiness%20name%3A%20%0ACity%3A%20%0AGoals%3A%20"
-              >Build Mine Like This</a>
+              <p>Products, hours, brand story</p>
+              <span class="sample-teaser-link">View mock <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
             </div>
-          </article>
-
+          </a>
         </div>
+
+        <p class="section-cta-center" style="margin-top:1.5rem;">
+          <a href="samples.html" class="btn btn-ghost">Browse all sample designs <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </p>
       </div>
     </section>
 
+    <!-- MARKETING CAPABILITIES (compact) -->
     <section id="marketing-capabilities" class="section marketing-capabilities-section section-panel industrial-section" aria-labelledby="marketing-heading">
       <div class="section-inner">
         <header class="section-header">
           <span class="section-eyebrow">Beyond the Build</span>
-          <h2 id="marketing-heading" class="section-title">Marketing Capabilities</h2>
-          <p class="section-lead">A great website and video are only half the story. We help you put them to work.</p>
+          <h2 id="marketing-heading" class="section-title">Marketing capabilities</h2>
+          <p class="section-lead">Strategy and content so your site and video keep working after launch.</p>
         </header>
 
-        <div class="marketing-grid">
-          <article class="marketing-card card-hover reveal">
+        <div class="marketing-grid marketing-grid--compact">
+          <article class="marketing-card glass-card card-hover reveal">
             <div class="marketing-card-icon" aria-hidden="true"><i class="fa-solid fa-share-nodes"></i></div>
-            <h3>Social Media Strategy</h3>
-            <p>Platform-specific guidance for Facebook, Instagram, TikTok, LinkedIn, X, and YouTube.</p>
+            <h3>Social Strategy</h3>
+            <p>What to post and pin across the platforms your customers use.</p>
           </article>
-          <article class="marketing-card card-hover reveal">
+          <article class="marketing-card glass-card card-hover reveal">
             <div class="marketing-card-icon" aria-hidden="true"><i class="fa-solid fa-clapperboard"></i></div>
             <h3>Content Production</h3>
-            <p>Logo animations, 15–30 second promos, brand stories, and social-ready crops.</p>
+            <p>Logo motion, promos, and social-ready crops from one project.</p>
           </article>
-          <article class="marketing-card card-hover reveal">
+          <article class="marketing-card glass-card card-hover reveal">
             <div class="marketing-card-icon" aria-hidden="true"><i class="fa-solid fa-bullseye"></i></div>
-            <h3>Lead Generation Focus</h3>
-            <p>Clear CTAs and forms that turn views into calls, emails, and appointments.</p>
+            <h3>Lead Focus</h3>
+            <p>Forms and CTAs that turn attention into real inquiries.</p>
           </article>
-          <article class="marketing-card card-hover reveal">
+          <article class="marketing-card glass-card card-hover reveal">
             <div class="marketing-card-icon" aria-hidden="true"><i class="fa-solid fa-map-location-dot"></i></div>
             <h3>Local Presence</h3>
-            <p>Service-area messaging and local SEO basics so nearby customers can find you.</p>
-          </article>
-          <article class="marketing-card card-hover reveal">
-            <div class="marketing-card-icon" aria-hidden="true"><i class="fa-solid fa-calendar-days"></i></div>
-            <h3>Content Rotation</h3>
-            <p>Keep your brand active by rotating videos and photos without a full rebuild.</p>
-          </article>
-          <article class="marketing-card card-hover reveal">
-            <div class="marketing-card-icon" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></div>
-            <h3>Performance Mindset</h3>
-            <p>Executive sales &amp; marketing perspective: every asset is built to sell.</p>
+            <p>Service-area messaging so nearby customers can find you.</p>
           </article>
         </div>
 
-        <div class="section-cta-center reveal">
-          <a href="marketing.html" class="btn btn-secondary">Explore Marketing Strategy</a>
-          <a href="#contact" class="btn btn-contact metallic-shine">Contact Us</a>
-        </div>
+        <p class="text-center" style="text-align:center;margin-top:1.5rem;">
+          <a href="marketing.html" class="landing-bridge-link">Explore marketing strategy <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </p>
       </div>
     </section>
 
-    <section id="why-video" class="landing-bridge section-support industrial-section" aria-label="How we work and why video matters">
-      <div class="section-inner landing-bridge-inner">
+    <!-- PROCESS BRIDGE -->
+    <section id="why-video" class="landing-bridge section-support industrial-section" aria-label="How we work">
+      <div class="section-inner landing-bridge-inner glass-panel">
         <p class="landing-bridge-copy">
-          <strong>Video builds trust and stops the scroll</strong> — built into our Cinematic Package and available as standalone projects.
+          <strong>Video builds trust and stops the scroll</strong> — included in the Cinematic Package and available standalone.
           <a href="why-video.html" class="landing-bridge-link">Why video works <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </p>
         <ol class="landing-process-strip" id="process" aria-label="How we work">
-          <li><span class="landing-process-num">01</span> Contact Us</li>
-          <li><span class="landing-process-num">02</span> Creative Direction</li>
-          <li><span class="landing-process-num">03</span> Production + AI</li>
+          <li><span class="landing-process-num">01</span> Contact</li>
+          <li><span class="landing-process-num">02</span> Direction</li>
+          <li><span class="landing-process-num">03</span> Production</li>
           <li><span class="landing-process-num">04</span> Delivery</li>
         </ol>
-        <p class="landing-bridge-cta">
-          <a href="#contact" class="btn btn-contact metallic-shine">Contact Us</a>
-        </p>
       </div>
     </section>
 
+    <!-- CONTACT (single form destination) -->
     <section id="contact" class="section industrial-section" aria-labelledby="contact-heading">
       <div class="section-inner" style="max-width:42rem;">
         <header class="section-header section-header--contact">
@@ -602,7 +429,7 @@
           <p class="section-lead">Tell us about your business. We reply with a clear quote. You own 100% of everything we build.</p>
         </header>
 
-        <div class="cta-band contact-form-panel">
+        <div class="cta-band contact-form-panel glass-panel">
           <form id="contact-form" action="https://formsubmit.co/webbspinnervisions@gmail.com" method="POST" style="text-align:left;">
             <input type="hidden" name="_subject" value="New WSV Project Inquiry">
             <input type="hidden" name="_captcha" value="false">
