@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Portfolio | Demos &amp; Showreels — Webb Spinner Visions</title>
+  <title>Video Portfolio | Demos & Showreels — Webb Spinner Visions</title>
   <meta name="description" content="Watch Webb Spinner Visions portfolio: commercial showcases, brand stories, transformations, restaurant promos, and custom specialty videos for small business.">
   <meta name="keywords" content="video demos, small business video portfolio, brand story video, restaurant promo, social media video, logo animation showcase">
   <meta name="robots" content="index, follow">
@@ -112,13 +112,58 @@
             { "@type": "ListItem", "position": 2, "name": "Lifestyle Brand Video", "url": "https://www.youtube.com/watch?v=YuyJKJcaPGY" },
             { "@type": "ListItem", "position": 3, "name": "Before & After Showcase", "url": "https://www.youtube.com/watch?v=lxCcSFwQG7E" },
             { "@type": "ListItem", "position": 4, "name": "Restaurant Video", "url": "https://www.youtube.com/watch?v=Ga7R0sbnzpc" },
-            { "@type": "ListItem", "position": 5, "name": "Custom Vehicle Video", "url": "https://www.youtube.com/watch?v=7nM4UF3J6TQ" }
+            { "@type": "ListItem", "position": 5, "name": "Custom Vehicle Video", "url": "https://www.youtube.com/watch?v=7nM4UF3J6TQ" },
+            { "@type": "ListItem", "position": 6, "name": "Interactive Kaleidoscope", "url": "https://kaleidoscope.webbspinnervisions.net" }
           ]
         }
       }
     ]
   }
   </script>
+  <style>
+    .interactive-demo-band {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem 1.5rem;
+      margin: 0 0 2.25rem;
+      padding: 1.35rem 1.5rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background:
+        radial-gradient(ellipse 80% 120% at 0% 50%, rgba(180, 190, 210, 0.12), transparent 55%),
+        rgba(255, 255, 255, 0.04);
+    }
+    .interactive-demo-band h2 {
+      margin: 0.25rem 0 0.4rem;
+      font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .interactive-demo-band p {
+      margin: 0;
+      max-width: 42ch;
+      color: var(--muted, #a1a1aa);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .interactive-demo-band .btn {
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    @media (max-width: 640px) {
+      .interactive-demo-band {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .interactive-demo-band .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -127,10 +172,14 @@
   <main id="main">
     <header class="page-hero industrial-section">
       <span class="section-eyebrow metallic-text">Portfolio</span>
-      <h1 class="section-title metallic-shine-text">Video demos &amp; showreels</h1>
+      <h1 class="section-title metallic-shine-text">Video demos & showreels</h1>
       <p class="section-lead">Click any project to watch in our cinematic player. Thumbnails load fast — full video plays on demand.</p>
       <div class="page-hero-ctas">
-        <a href="index.html#contact" class="btn btn-contact metallic-shine">Contact Us</a>
+        <a href="https://kaleidoscope.webbspinnervisions.net" class="btn btn-contact metallic-shine" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+          Try Kaleidoscope
+        </a>
+        <a href="index.html#contact" class="btn btn-ghost">Contact Us</a>
         <a href="https://www.youtube.com/@WebbSpinnerVisions/videos" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
           <i class="fa-brands fa-youtube" aria-hidden="true"></i> YouTube Channel
         </a>
@@ -139,6 +188,19 @@
 
     <section class="section industrial-section">
       <div class="section-inner">
+
+        <aside class="interactive-demo-band" aria-label="Interactive demo">
+          <div>
+            <span class="section-eyebrow metallic-text" style="display:inline-block;margin-bottom:0.15rem;">Interactive</span>
+            <h2>Kaleidoscope</h2>
+            <p>Paint with your pointer — strokes mirror into symmetric, colorful patterns. Adjust segments, color modes, freeze, and export.</p>
+          </div>
+          <a href="https://kaleidoscope.webbspinnervisions.net" class="btn btn-contact metallic-shine" target="_blank" rel="noopener noreferrer">
+            Open Kaleidoscope
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true" style="margin-left:0.4rem;"></i>
+          </a>
+        </aside>
+
         <div class="video-gallery video-gallery-focus">
 
           <button type="button" class="video-card card-hover" data-youtube-id="TqUbd7HyNUo" data-video-title="Commercial Brand Video">
@@ -165,14 +227,14 @@
             </div>
           </button>
 
-          <button type="button" class="video-card card-hover" data-youtube-id="lxCcSFwQG7E" data-video-title="Before &amp; After Showcase">
+          <button type="button" class="video-card card-hover" data-youtube-id="lxCcSFwQG7E" data-video-title="Before & After Showcase">
             <div class="video-card-thumb">
               <img src="https://img.youtube.com/vi/lxCcSFwQG7E/hqdefault.jpg" alt="Before and After Showcase thumbnail" width="480" height="270" loading="lazy" decoding="async">
               <span class="video-card-play" aria-hidden="true"><span><i class="fa-solid fa-play"></i></span></span>
             </div>
             <div class="video-card-body">
               <span class="badge">TRANSFORM</span>
-              <h2>Before &amp; After Showcase</h2>
+              <h2>Before & After Showcase</h2>
               <p>Powerful before-and-after transformation film for service businesses and local brands.</p>
             </div>
           </button>
