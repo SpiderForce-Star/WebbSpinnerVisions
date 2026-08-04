@@ -1,15 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
   const packageMap = {
-    'starter-video': 'Starter Video Package ($200)',
-    starter: 'Starter Website Package ($800)',
-    cinematic: 'Cinematic Website Package ($1,000)',
-    video: 'Video / Logo Animation only',
+    launch: 'Launch Site — One-page ($600)',
+    grow: 'Grow Site — Multi-page (from $1,000)',
+    promo: 'Promo video add-on ($150 with website)',
+    software: 'Software / App development',
+    ai: 'AI Solutions',
     marketing: 'Marketing support',
     restaurant: 'Custom one-page site (Restaurant)',
     home: 'Custom one-page site (Home Services)',
     wellness: 'Custom one-page site (Wellness)',
-    retail: 'Custom one-page site (Retail)'
+    retail: 'Custom one-page site (Retail)',
+    // legacy query params → new options
+    starter: 'Launch Site — One-page ($600)',
+    cinematic: 'Grow Site — Multi-page (from $1,000)',
+    'starter-video': 'Promo video add-on ($150 with website)',
+    video: 'Promo video add-on ($150 with website)'
   };
 
   if (params.get('sent') === 'true') {
