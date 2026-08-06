@@ -3,33 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Webb Spinner Visions | Website Builds, Software &amp; AI for Small Business</title>
+  <title>Webb Spinner Visions | Website Builds, Software & AI for Small Business</title>
   <meta name="description" content="Professional websites you own and host yourself. Launch one-page $600 (hero video included). Multi-page from $1,000. Software, apps, and AI solutions. Nashville-based, nationwide.">
   <meta name="keywords" content="website design Nashville, small business website, affordable website build, self host website, software development, AI solutions small business">
   <meta name="author" content="Webb Spinner Visions">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://webbspinnervisions.net/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Webb Spinner Visions — Websites, Software &amp; AI">
+  <meta property="og:title" content="Webb Spinner Visions — Websites, Software & AI">
   <meta property="og:description" content="Professional websites you own outright — with hero video, social links, and self-hosting setup. Software, apps, and AI solutions for small business.">
   <meta property="og:image" content="https://webbspinnervisions.net/Shield-logo.png">
   <meta property="og:url" content="https://webbspinnervisions.net/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@Webb__X">
   <link rel="icon" href="Shield-logo.png" type="image/png">
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link rel="preconnect" href="https://img.youtube.com">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="css/polish.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"></noscript>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[{"@type":["Organization","LocalBusiness","ProfessionalService"],"@id":"https://webbspinnervisions.net/#business","name":"Webb Spinner Visions","url":"https://webbspinnervisions.net","logo":"https://webbspinnervisions.net/Shield-logo.png","email":"webbspinnervisions@gmail.com","description":"Nashville-based studio building professional websites, software, apps, and AI solutions for small businesses.","address":{"@type":"PostalAddress","addressLocality":"Nashville","addressRegion":"TN","addressCountry":"US"},"serviceType":["Website Design","Website Development","Software Development","App Development","AI Solutions"]}]}  </script>
+  {"@context":"https://schema.org","@graph":[{"@type":["Organization","LocalBusiness","ProfessionalService"],"@id":"https://webbspinnervisions.net/#business","name":"Webb Spinner Visions","url":"https://webbspinnervisions.net","logo":"https://webbspinnervisions.net/Shield-logo.png","email":"webbspinnervisions@gmail.com","description":"Nashville-based studio building professional websites, software, apps, and AI solutions for small businesses.","address":{"@type":"PostalAddress","addressLocality":"Nashville","addressRegion":"TN","addressCountry":"US"},"sameAs":["https://x.com/Webb__X","https://www.youtube.com/@WebbSpinnerVideos","https://www.youtube.com/@WebbSpinnerVisions"],"serviceType":["Website Design","Website Development","Software Development","App Development","AI Solutions"]},{"@type":"VideoObject","name":"Hero HomePage","description":"Webb Spinner Visions cinematic homepage hero video","thumbnailUrl":"https://img.youtube.com/vi/8nsN5ESSrY0/maxresdefault.jpg","uploadDate":"2026-07-01","embedUrl":"https://www.youtube-nocookie.com/embed/8nsN5ESSrY0","contentUrl":"https://www.youtube.com/watch?v=8nsN5ESSrY0"}]}
+  </script>
 </head>
 <body class="landing-page">
   <a href="#main" class="skip-link">Skip to main content</a>
   <div id="nav-placeholder"></div>
   <main id="main">
     <section class="hero-landing" aria-labelledby="hero-heading">
+      <!-- Cinematic YouTube hero (Hero HomePage — @WebbSpinnerVideos) -->
+      <div
+        class="hero-landing-stage hero-landing-stage--youtube"
+        id="hero-video-fullscreen-target"
+      >
+        <div id="hero-youtube-facade" class="hero-youtube-facade">
+          <img
+            class="hero-youtube-poster"
+            src="https://img.youtube.com/vi/8nsN5ESSrY0/maxresdefault.jpg"
+            alt="Webb Spinner Visions hero video poster"
+            width="1280"
+            height="720"
+            decoding="async"
+            fetchpriority="high"
+          >
+          <button
+            type="button"
+            id="hero-play-btn"
+            class="hero-youtube-play"
+            aria-label="Play Hero HomePage video"
+          >
+            <span class="hero-youtube-play__ring" aria-hidden="true"></span>
+            <span class="hero-youtube-play__icon" aria-hidden="true">
+              <i class="fa-solid fa-play"></i>
+            </span>
+          </button>
+        </div>
+        <div id="hero-video-fallback" class="hero-video-fallback" hidden></div>
+        <button
+          type="button"
+          id="hero-mute-btn"
+          class="hero-landing-unmute"
+          hidden
+          aria-label="Unmute video"
+          aria-pressed="true"
+        >
+          <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
+        </button>
+        <div class="hero-landing-stage-fade" aria-hidden="true"></div>
+        <p class="hero-landing-caption">
+          <img src="Shield-logo.png" alt="" width="18" height="18" decoding="async">
+          Hero HomePage ·
+          <a
+            href="https://www.youtube.com/watch?v=8nsN5ESSrY0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >YouTube</a>
+        </p>
+      </div>
+
       <div class="hero-landing-copy cinematic-panel industrial-overlay glass-hero-copy">
         <div class="hero-landing-inner">
           <p class="hero-landing-eyebrow metallic-text">WEBSITES · SOFTWARE · AI</p>
@@ -37,14 +90,21 @@
           <p class="hero-landing-sub">Professional website builds for small business — one-page from <strong>$600</strong>, multi-page from <strong>$1,000</strong>. Hero video with your animated logo included. Social links, contact form to your inbox, and setup so you host on your own account.</p>
           <div class="hero-landing-action">
             <a href="#contact" class="btn btn-contact metallic-shine"><span>Contact Us</span></a>
-            <p class="hero-landing-skip"><a href="#packages">Packages</a> · <a href="website.html">How hosting works</a> · <a href="ai-solutions.html">AI Solutions</a></p>
+            <p class="hero-landing-skip">
+              <a href="#packages">Packages</a> ·
+              <a href="website.html">How hosting works</a> ·
+              <a href="ai-solutions.html">AI Solutions</a> ·
+              <a href="demos.html">Portfolio</a> ·
+              <a href="https://www.youtube.com/@WebbSpinnerVideos" target="_blank" rel="noopener noreferrer">YouTube</a>
+            </p>
           </div>
         </div>
       </div>
     </section>
+
     <section id="packages" class="section packages-section industrial-section">
       <div class="section-inner">
-        <header class="section-header"><span class="section-eyebrow">Packages &amp; Pricing</span><h2 class="section-title">Website builds built for owners</h2></header>
+        <header class="section-header"><span class="section-eyebrow">Packages & Pricing</span><h2 class="section-title">Website builds built for owners</h2></header>
         <div class="packages-grid packages-grid--three">
           <article class="package-card package-card--featured glass-card"><span class="package-badge">Most Popular</span><h3 class="package-card-title">Launch Site — $600</h3><p class="package-card-lead">One-page site with hero video, social links, contact form, self-host setup. Deposit $150.</p><a href="#contact" class="btn btn-secondary package-cta" data-package="launch">Select Launch Site</a></article>
           <article class="package-card glass-card"><h3 class="package-card-title">Grow Site — from $1,000</h3><p class="package-card-lead">Multi-page for products and services. Deposit $300.</p><a href="#contact" class="btn btn-secondary package-cta" data-package="grow">Select Grow Site</a></article>
@@ -52,17 +112,19 @@
         </div>
       </div>
     </section>
+
     <section id="capabilities" class="section industrial-section">
       <div class="section-inner">
         <header class="section-header"><h2 class="section-title">Websites, software, and AI</h2></header>
         <div class="marketing-grid">
           <article class="marketing-card glass-card"><h3>Website Development</h3><p>One-page and multi-page sites you own.</p></article>
           <article class="marketing-card glass-card"><h3>Self-Hosting Setup</h3><p>Domain and free/low-cost hosting on your accounts.</p></article>
-          <article class="marketing-card glass-card"><h3>Software &amp; Apps</h3><p>Custom tools you host and license yourself.</p></article>
+          <article class="marketing-card glass-card"><h3>Software & Apps</h3><p>Custom tools you host and license yourself.</p></article>
           <article class="marketing-card glass-card"><h3>AI Solutions</h3><p>Practical AI for small business — assistants, intake bots, and automation. We use multiple AI platforms and pick the best fit. Contact for cost.</p><p><a href="ai-solutions.html">AI Solutions</a></p></article>
         </div>
       </div>
     </section>
+
     <section id="contact" class="section industrial-section">
       <div class="section-inner" style="max-width:42rem;">
         <header class="section-header"><h2 class="section-title">Contact Us</h2><p class="section-lead">Tell us about your business. You own 100% of everything we build.</p></header>
@@ -93,5 +155,6 @@
   <div id="footer-placeholder"></div>
   <script src="js/shared.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/hero-video.js"></script>
 </body>
 </html>
