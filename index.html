@@ -1,286 +1,413 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Webb Spinner Visions | Website Builds, Software & AI for Small Business</title>
-  <meta name="description" content="Professional websites you own and host yourself. Launch one-page $600 (hero video included). Multi-page from $1,000. Software, apps, and AI solutions. Nashville-based, nationwide.">
-  <meta name="keywords" content="website design Nashville, small business website, affordable website build, self host website, software development, AI solutions small business">
-  <meta name="author" content="Webb Spinner Visions">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Webb Spinner Visions | Websites you own. Built to convert.</title>
+  <meta name="description" content="Nashville studio. Websites you own from $600 with hero video included. Multi-page from $1,000. Software, practical AI, and cinematic brand film. You host it.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://webbspinnervisions.net/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Webb Spinner Visions — Websites, Software & AI">
-  <meta property="og:description" content="Professional websites you own outright — with hero video, social links, and self-hosting setup. Software, apps, and AI solutions for small business.">
-  <meta property="og:image" content="https://webbspinnervisions.net/Shield-logo.png">
+  <meta property="og:title" content="Webb Spinner Visions | Websites you own. Built to convert.">
+  <meta property="og:description" content="Nashville studio. Websites you own from $600 with hero video included. Multi-page from $1,000. Software, practical AI, and cinematic brand film. You host it.">
   <meta property="og:url" content="https://webbspinnervisions.net/">
+  <meta property="og:image" content="https://webbspinnervisions.net/assets/hero-poster.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@Webb__X">
-  <link rel="icon" href="Shield-logo.png" type="image/png">
-  <link rel="preconnect" href="https://www.youtube-nocookie.com">
-  <link rel="preconnect" href="https://img.youtube.com">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="css/polish.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"></noscript>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/brand/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/site.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[{"@type":["Organization","LocalBusiness","ProfessionalService"],"@id":"https://webbspinnervisions.net/#business","name":"Webb Spinner Visions","url":"https://webbspinnervisions.net","logo":"https://webbspinnervisions.net/Shield-logo.png","email":"webbspinnervisions@gmail.com","description":"Nashville-based studio building professional websites, software, apps, and AI solutions for small businesses.","address":{"@type":"PostalAddress","addressLocality":"Nashville","addressRegion":"TN","addressCountry":"US"},"sameAs":["https://x.com/Webb__X","https://www.youtube.com/@WebbSpinnerVideos","https://www.youtube.com/@WebbSpinnerVisions"],"serviceType":["Website Design","Website Development","Software Development","App Development","AI Solutions"]},{"@type":"VideoObject","name":"Hero HomePage","description":"Webb Spinner Visions cinematic homepage hero video","thumbnailUrl":"https://img.youtube.com/vi/8nsN5ESSrY0/maxresdefault.jpg","uploadDate":"2026-07-01","embedUrl":"https://www.youtube-nocookie.com/embed/8nsN5ESSrY0","contentUrl":"https://www.youtube.com/watch?v=8nsN5ESSrY0"}]}
-  </script>
+{"@context":"https://schema.org","@graph":[
+  {"@type":["Organization","LocalBusiness","ProfessionalService"],
+   "@id":"https://webbspinnervisions.net/#business",
+   "name":"Webb Spinner Visions",
+   "url":"https://webbspinnervisions.net",
+   "logo":"https://webbspinnervisions.net/assets/brand/shield-mark.png",
+   "email":"webbspinnervisions@gmail.com",
+   "description":"Nashville studio building websites you own, custom software you host yourself, practical AI, and cinematic brand video. Nationwide.",
+   "address":{"@type":"PostalAddress","addressLocality":"Nashville","addressRegion":"TN","addressCountry":"US"},
+   "areaServed":{"@type":"Country","name":"United States"},
+   "sameAs":["https://x.com/Webb__X","https://www.youtube.com/@WebbSpinnerVideos","https://www.facebook.com/profile.php?id=61572155061749","https://www.instagram.com/webbspinnervisions"],
+   "priceRange":"$600+",
+   "hasOfferCatalog":{"@type":"OfferCatalog","name":"Website packages","itemListElement":[
+     {"@type":"Offer","name":"Launch Site","price":"600.00","priceCurrency":"USD"},
+     {"@type":"Offer","name":"Grow Site","price":"1000.00","priceCurrency":"USD"},
+     {"@type":"Offer","name":"Promo add-on","price":"150.00","priceCurrency":"USD"}
+   ]}
+  }
+]}
+</script>
 </head>
-<body class="landing-page">
-  <a href="#main" class="skip-link">Skip to main content</a>
-  <div id="nav-placeholder"></div>
-  <main id="main">
-    <section class="hero-landing" aria-labelledby="hero-heading">
-      <!-- Cinematic YouTube hero (Hero HomePage — @WebbSpinnerVideos) -->
-      <div
-        class="hero-landing-stage hero-landing-stage--youtube"
-        id="hero-video-fullscreen-target"
-      >
-        <div id="hero-youtube-facade" class="hero-youtube-facade">
-          <img
-            class="hero-youtube-poster"
-            src="https://img.youtube.com/vi/8nsN5ESSrY0/maxresdefault.jpg"
-            alt="Webb Spinner Visions hero video poster"
-            width="1280"
-            height="720"
-            decoding="async"
-            fetchpriority="high"
-          >
-          <button
-            type="button"
-            id="hero-play-btn"
-            class="hero-youtube-play"
-            aria-label="Play Hero HomePage video"
-          >
-            <span class="hero-youtube-play__ring" aria-hidden="true"></span>
-            <span class="hero-youtube-play__icon" aria-hidden="true">
-              <i class="fa-solid fa-play"></i>
-            </span>
-          </button>
-        </div>
-        <div id="hero-video-fallback" class="hero-video-fallback" hidden></div>
-        <button
-          type="button"
-          id="hero-mute-btn"
-          class="hero-landing-unmute"
-          hidden
-          aria-label="Unmute video"
-          aria-pressed="true"
-        >
-          <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
-        </button>
-        <div class="hero-landing-stage-fade" aria-hidden="true"></div>
-        <p class="hero-landing-caption">
-          <img src="Shield-logo.png" alt="" width="18" height="18" decoding="async">
-          Hero HomePage ·
-          <a
-            href="https://www.youtube.com/watch?v=8nsN5ESSrY0"
-            target="_blank"
-            rel="noopener noreferrer"
-          >YouTube</a>
-        </p>
-      </div>
-
-      <div class="hero-landing-copy cinematic-panel industrial-overlay glass-hero-copy">
-        <div class="hero-landing-inner">
-          <p class="hero-landing-eyebrow metallic-text">WEBSITES · SOFTWARE · AI</p>
-          <h1 id="hero-heading" class="hero-landing-title metallic-shine-text">WEBSITES YOU OWN.<br><span class="text-glow">BUILT TO CONVERT. HOSTED BY YOU.</span></h1>
-          <p class="hero-landing-sub">Professional website builds for small business — one-page from <strong>$600</strong>, multi-page from <strong>$1,000</strong>. Hero video with your animated logo included. Social links, contact form to your inbox, and setup so you host on your own account.</p>
-          <div class="hero-landing-action">
-            <a href="#contact" class="btn btn-contact metallic-shine"><span>Contact Us</span></a>
-            <p class="hero-landing-skip">
-              <a href="#packages">Packages</a> ·
-              <a href="website.html">How hosting works</a> ·
-              <a href="ai-solutions.html">AI Solutions</a> ·
-              <a href="#demos">Demo Videos</a> ·
-              <a href="demos.html">Portfolio</a> ·
-              <a href="https://www.youtube.com/@WebbSpinnerVideos" target="_blank" rel="noopener noreferrer">YouTube</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="packages" class="section packages-section industrial-section">
-      <div class="section-inner">
-        <header class="section-header"><span class="section-eyebrow">Packages & Pricing</span><h2 class="section-title">Website builds built for owners</h2></header>
-        <div class="packages-grid packages-grid--three">
-          <article class="package-card package-card--featured glass-card"><span class="package-badge">Most Popular</span><h3 class="package-card-title">Launch Site — $600</h3><p class="package-card-lead">One-page site with hero video, social links, contact form, self-host setup. Deposit $150.</p><a href="#contact" class="btn btn-secondary package-cta" data-package="launch">Select Launch Site</a></article>
-          <article class="package-card glass-card"><h3 class="package-card-title">Grow Site — from $1,000</h3><p class="package-card-lead">Multi-page for products and services. Deposit $300.</p><a href="#contact" class="btn btn-secondary package-cta" data-package="grow">Select Grow Site</a></article>
-          <article class="package-card glass-card"><h3 class="package-card-title">Promo Add-on — $150</h3><p class="package-card-lead">30-second promo with a website purchase only.</p><a href="#contact" class="btn btn-secondary package-cta" data-package="promo">Add promo with site</a></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="capabilities" class="section industrial-section">
-      <div class="section-inner">
-        <header class="section-header"><h2 class="section-title">Websites, software, and AI</h2></header>
-        <div class="marketing-grid">
-          <article class="marketing-card glass-card"><h3>Website Development</h3><p>One-page and multi-page sites you own.</p></article>
-          <article class="marketing-card glass-card"><h3>Self-Hosting Setup</h3><p>Domain and free/low-cost hosting on your accounts.</p></article>
-          <article class="marketing-card glass-card"><h3>Software & Apps</h3><p>Custom tools you host and license yourself.</p></article>
-          <article class="marketing-card glass-card"><h3>AI Solutions</h3><p>Practical AI for small business — assistants, intake bots, and automation. We use multiple AI platforms and pick the best fit. Contact for cost.</p><p><a href="ai-solutions.html">AI Solutions</a></p></article>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="demos" class="section industrial-section" aria-labelledby="demos-heading">
-      <div class="section-inner">
-        <header class="section-header">
-          <span class="section-eyebrow metallic-text">Demo Videos</span>
-          <h2 id="demos-heading" class="section-title metallic-shine-text">Watch the work</h2>
-          <p class="section-lead">Brand films and heroes from our <a href="https://www.youtube.com/@WebbSpinnerVideos" target="_blank" rel="noopener noreferrer">YouTube channel</a>. Click any card to play — every website package includes a hero video.</p>
-        </header>
-
-        <div class="video-gallery video-gallery-focus">
-
-          <button type="button" class="video-card card-hover" data-youtube-id="8nsN5ESSrY0" data-video-title="Hero HomePage">
-            <div class="video-card-thumb">
-              <img src="https://img.youtube.com/vi/8nsN5ESSrY0/hqdefault.jpg" alt="Hero HomePage thumbnail" width="480" height="270" loading="lazy" decoding="async">
-              <span class="video-card-play" aria-hidden="true"><span><i class="fa-solid fa-play"></i></span></span>
-            </div>
-            <div class="video-card-body">
-              <span class="badge">HERO</span>
-              <h2>Hero HomePage</h2>
-              <p>The cinematic entrance film powering this site’s hero — animated brand energy that converts.</p>
-            </div>
-          </button>
-
-          <button type="button" class="video-card card-hover" data-youtube-id="TqUbd7HyNUo" data-video-title="Commercial Brand Video">
-            <div class="video-card-thumb">
-              <img src="https://img.youtube.com/vi/TqUbd7HyNUo/hqdefault.jpg" alt="Commercial Brand Video thumbnail" width="480" height="270" loading="lazy" decoding="async">
-              <span class="video-card-play" aria-hidden="true"><span><i class="fa-solid fa-play"></i></span></span>
-            </div>
-            <div class="video-card-body">
-              <span class="badge">COMMERCIAL</span>
-              <h2>Commercial Brand Video</h2>
-              <p>High-impact commercial showcase built to win attention and drive leads.</p>
-            </div>
-          </button>
-
-          <button type="button" class="video-card card-hover" data-youtube-id="YuyJKJcaPGY" data-video-title="Lifestyle Brand Video">
-            <div class="video-card-thumb">
-              <img src="https://img.youtube.com/vi/YuyJKJcaPGY/hqdefault.jpg" alt="Lifestyle Brand Video thumbnail" width="480" height="270" loading="lazy" decoding="async">
-              <span class="video-card-play" aria-hidden="true"><span><i class="fa-solid fa-play"></i></span></span>
-            </div>
-            <div class="video-card-body">
-              <span class="badge">LIFESTYLE</span>
-              <h2>Lifestyle Brand Video</h2>
-              <p>Premium craftsmanship and lifestyle storytelling that sells the dream.</p>
-            </div>
-          </button>
-
-          <button type="button" class="video-card card-hover" data-youtube-id="lxCcSFwQG7E" data-video-title="Before & After Showcase">
-            <div class="video-card-thumb">
-              <img src="https://img.youtube.com/vi/lxCcSFwQG7E/hqdefault.jpg" alt="Before and After Showcase thumbnail" width="480" height="270" loading="lazy" decoding="async">
-              <span class="video-card-play" aria-hidden="true"><span><i class="fa-solid fa-play"></i></span></span>
-            </div>
-            <div class="video-card-body">
-              <span class="badge">TRANSFORM</span>
-              <h2>Before & After Showcase</h2>
-              <p>Powerful before-and-after transformation film for service businesses and local brands.</p>
-            </div>
-          </button>
-
-          <button type="button" class="video-card card-hover" data-youtube-id="Ga7R0sbnzpc" data-video-title="Restaurant Video">
-            <div class="video-card-thumb">
-              <img src="https://img.youtube.com/vi/Ga7R0sbnzpc/hqdefault.jpg" alt="Restaurant Video thumbnail" width="480" height="270" loading="lazy" decoding="async">
-              <span class="video-card-play" aria-hidden="true"><span><i class="fa-solid fa-play"></i></span></span>
-            </div>
-            <div class="video-card-body">
-              <span class="badge">HOSPITALITY</span>
-              <h2>Restaurant Video</h2>
-              <p>Food, atmosphere, and brand energy — built to stop the scroll and fill tables.</p>
-            </div>
-          </button>
-
-          <button type="button" class="video-card card-hover" data-youtube-id="7nM4UF3J6TQ" data-video-title="Custom Vehicle Video">
-            <div class="video-card-thumb">
-              <img src="https://img.youtube.com/vi/7nM4UF3J6TQ/hqdefault.jpg" alt="Custom Vehicle Video thumbnail" width="480" height="270" loading="lazy" decoding="async">
-              <span class="video-card-play" aria-hidden="true"><span><i class="fa-solid fa-play"></i></span></span>
-            </div>
-            <div class="video-card-body">
-              <span class="badge">CUSTOM</span>
-              <h2>Custom Vehicle Video</h2>
-              <p>Cinematic reveal and detail film for custom builds and specialty shops.</p>
-            </div>
-          </button>
-
-          <button type="button" class="video-card card-hover" data-youtube-id="_mEvE69qwjY" data-video-title="WSV Animation">
-            <div class="video-card-thumb">
-              <img src="https://img.youtube.com/vi/_mEvE69qwjY/hqdefault.jpg" alt="WSV Animation thumbnail" width="480" height="270" loading="lazy" decoding="async">
-              <span class="video-card-play" aria-hidden="true"><span><i class="fa-solid fa-play"></i></span></span>
-            </div>
-            <div class="video-card-body">
-              <span class="badge">BRAND</span>
-              <h2>WSV Animation</h2>
-              <p>Animated logo motion for website heroes and social pins.</p>
-            </div>
-          </button>
-
-        </div>
-
-        <div class="cta-band" style="margin-top:2.5rem;text-align:center;">
-          <p class="text-muted" style="margin-bottom:1rem;">More on our channel — and full portfolio page.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;">
-            <a href="https://www.youtube.com/@WebbSpinnerVideos/videos" class="btn btn-contact metallic-shine" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-youtube" aria-hidden="true"></i> YouTube Channel
-            </a>
-            <a href="demos.html" class="btn btn-ghost">Full Portfolio</a>
-            <a href="#contact" class="btn btn-ghost">Get hero video on your site</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section industrial-section">
-      <div class="section-inner" style="max-width:42rem;">
-        <header class="section-header"><h2 class="section-title">Contact Us</h2><p class="section-lead">Tell us about your business. You own 100% of everything we build.</p></header>
-        <div class="cta-band contact-form-panel glass-panel">
-          <form id="contact-form" action="https://formsubmit.co/webbspinnervisions@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="New WSV Project Inquiry">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://webbspinnervisions.net/?sent=true#contact">
-            <input type="text" name="name" required class="form-input" placeholder="Full name" style="margin-bottom:0.75rem;">
-            <input type="email" name="email" required class="form-input" placeholder="Email address" style="margin-bottom:0.75rem;">
-            <select id="project_type" name="project_type" class="form-input" style="margin-bottom:0.75rem;">
-              <option value="">Select your interest...</option>
-              <option value="Launch Site — One-page ($600)">Launch Site — One-page ($600)</option>
-              <option value="Grow Site — Multi-page (from $1,000)">Grow Site — Multi-page (from $1,000)</option>
-              <option value="Promo video add-on ($150 with website)">Promo video add-on ($150 with website)</option>
-              <option value="Software / App development">Software / App development</option>
-              <option value="AI Solutions">AI Solutions</option>
-              <option value="Not sure yet">Not sure yet — help me choose</option>
-            </select>
-            <textarea name="message" rows="5" required class="form-input" placeholder="Goals, social links, timeline..." style="margin-bottom:0.75rem;"></textarea>
-            <button type="submit" class="btn btn-contact metallic-shine" style="width:100%;">Send Message</button>
-          </form>
-        </div>
-        <p class="text-subtle" style="text-align:center;margin-top:1.5rem;font-size:0.8rem;">Prefer email? <a href="mailto:webbspinnervisions@gmail.com">webbspinnervisions@gmail.com</a></p>
-      </div>
-    </section>
-  </main>
-  <div id="footer-placeholder"></div>
-
-  <div id="video-lightbox" class="video-lightbox hidden" role="dialog" aria-modal="true" aria-label="Video player">
-    <div class="video-lightbox-panel">
-      <button type="button" id="video-lightbox-close" class="video-lightbox-close" aria-label="Close video">
-        <i class="fa-solid fa-times" aria-hidden="true"></i>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  
+  <header class="site-header">
+    <div class="nav">
+      <a class="brand" href="index.html" aria-label="Webb Spinner Visions home">
+        <img src="assets/brand/shield-mark.png" width="40" height="40" alt="" decoding="async">
+        <span class="brand-text"><strong>WEBB SPINNER</strong><span>Visions</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+          <a href="index.html" class="is-active">Home</a>
+          <a href="play.html">Play</a>
+          <a href="work.html">Work</a>
+          <a href="websites.html">Websites</a>
+          <a href="services.html">Services</a>
+          <a href="ai.html">AI</a>
+          <a href="films.html">Films</a>
+          <a href="marketing.html">Marketing</a>
+          <a href="about.html">About</a>
+          <a class="btn btn-primary nav-cta" href="contact.html">Contact Us</a>
+      </nav>
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
-      <div class="video-lightbox-frame">
-        <iframe id="video-lightbox-iframe" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </header>
+  <nav class="drawer" id="drawer" hidden aria-label="Mobile">
+        <a href="index.html" class="is-active">Home</a>
+        <a href="play.html">Play</a>
+        <a href="work.html">Work</a>
+        <a href="websites.html">Websites</a>
+        <a href="services.html">Services</a>
+        <a href="ai.html">AI</a>
+        <a href="films.html">Films</a>
+        <a href="marketing.html">Marketing</a>
+        <a href="about.html">About</a>
+        <a class="btn btn-primary" href="contact.html">Contact Us</a>
+  </nav>
+  <main id="main">
+    
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-media">
+        <img class="hero-poster" src="assets/hero-poster.jpg" alt="" width="1104" height="816" decoding="async" fetchpriority="high">
+        <video id="hero-video" autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-label="Webb Spinner Visions cinematic brand film">
+          <source src="videos/wsv-top-entrance.mp4" type="video/mp4">
+        </video>
       </div>
-      <p id="video-lightbox-title" class="video-lightbox-title"></p>
-      <a id="video-lightbox-yt" class="video-lightbox-yt" href="#" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <button class="mute-btn" id="mute-btn" type="button" aria-label="Unmute film" aria-pressed="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3 3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4 9.91 6.09 12 8.18V4z"/></svg>
+        </button>
+      <div class="hero-copy">
+        <p class="eyebrow">Websites · Software · AI · Film</p>
+        <h1 id="hero-heading" class="display metal">Websites you own.<br>Built to convert.<br>Hosted by you.</h1>
+        <p class="lede">Nashville studio. Nationwide. One-page from <strong>$600</strong>. Multi-page from <strong>$1,000</strong>. Every site includes an animated-logo hero that also works on social. You keep the code, the film, the domain, and hosting on your accounts.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="contact.html">Contact Us</a>
+          <a class="btn btn-ghost" href="work.html">See live work</a>
+        </div>
+        <p class="hero-note">Not a $25–$150/month hostage host. Native hero film — no YouTube chrome.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="work-heading">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Live work</p>
+          <h2 id="work-heading">Sites in the wild. Not mocks.</h2>
+          <p class="lede">Click through. These are products we shipped — industrial, venue, and restaurant — owned by the client.</p>
+        </header>
+        <div class="work-grid">
+          
+        <a class="work-card" href="https://stampssteel.com" target="_blank" rel="noopener noreferrer">
+          <div class="browser">
+            <div class="browser-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser-url">stampssteel.com</span></div>
+            <img src="assets/work/stampssteel-home.jpg" alt="Stamps Steel Buildings homepage — quality steel frame buildings with quote and 3D designer" width="1440" height="900" loading="lazy" decoding="async">
+          </div>
+          <div class="work-body">
+            <span class="kicker">Industrial · quote path</span>
+            <h3>Stamps Steel Buildings</h3>
+            <p>Pre-engineered metal buildings with a live 3D designer and a clear path to quote.</p>
+            <span class="go">Visit live site →</span>
+          </div>
+        </a>
+        <a class="work-card" href="https://bottomviewfarmtn.com" target="_blank" rel="noopener noreferrer">
+          <div class="browser">
+            <div class="browser-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser-url">bottomviewfarmtn.com</span></div>
+            <img src="assets/work/bottomview-home.jpg" alt="Bottom View Farm homepage — Portland Tennessee weddings, festivals, and events" width="1440" height="900" loading="lazy" decoding="async">
+          </div>
+          <div class="work-body">
+            <span class="kicker">Venue · Portland, TN</span>
+            <h3>Bottom View Farm</h3>
+            <p>Weddings, festivals, and a working calendar for a family-owned Tennessee venue.</p>
+            <span class="go">Visit live site →</span>
+          </div>
+        </a>
+        <a class="work-card" href="https://spiderforce-star.github.io/Roux-s/preview/" target="_blank" rel="noopener noreferrer">
+          <div class="browser">
+            <div class="browser-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser-url">Roux's Creole Cafe</span></div>
+            <img src="assets/work/rouxs-home.jpg" alt="Roux's Creole Cafe homepage — Gallatin restaurant, menu, hours, and food truck" width="1440" height="900" loading="lazy" decoding="async">
+          </div>
+          <div class="work-body">
+            <span class="kicker">Restaurant · Gallatin, TN</span>
+            <h3>Roux's Creole Cafe</h3>
+            <p>Menu-first hospitality site — hours, food truck, and a path to order.</p>
+            <span class="go">Visit live site →</span>
+          </div>
+        </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="hairline wrap">
+
+    <section class="section" id="packages" aria-labelledby="pkg-heading">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Packages</p>
+          <h2 id="pkg-heading">Hard prices. Clear scope.</h2>
+          <p class="lede">Hero video is included with every website. Software and AI are scoped after discovery — never invented as menu prices.</p>
+        </header>
+        <div class="pkg-grid">
+          <article class="pkg pkg-featured">
+            <span class="badge">Most chosen</span>
+            <h3>Launch Site</h3>
+            <p class="price">$600 <span>deposit $150</span></p>
+            <p>One-page site built to convert. Two revision rounds.</p>
+            <ul>
+              <li>Animated-logo hero video (social-ready)</li>
+              <li>Up to 12 photos from your socials</li>
+              <li>Contact form to your email</li>
+              <li>Self-host setup on your accounts</li>
+            </ul>
+            <a class="btn btn-primary" href="contact.html?package=launch" data-package="launch">Select Launch</a>
+          </article>
+          <article class="pkg">
+            <h3>Grow Site</h3>
+            <p class="price">from $1,000 <span>deposit $300</span></p>
+            <p>Multi-page for products and services.</p>
+            <ul>
+              <li>Everything in Launch</li>
+              <li>Up to 5 pages at the base rate</li>
+              <li>Custom scope above that</li>
+              <li>Self-host on your accounts</li>
+            </ul>
+            <a class="btn btn-steel" href="contact.html?package=grow" data-package="grow">Select Grow</a>
+          </article>
+          <article class="pkg pkg-addon">
+            <h3>Promo add-on</h3>
+            <p class="price">$150 <span>with a website</span></p>
+            <p>30-second promo from your photos and logo. Website purchase only — not sold standalone.</p>
+            <ul>
+              <li>Cut from your assets</li>
+              <li>Social-ready export</li>
+              <li>Not a separate product</li>
+            </ul>
+            <a class="btn btn-ghost" href="contact.html?package=promo" data-package="promo">Add promo</a>
+          </article>
+        </div>
+        <p class="note">Software / apps and AI solutions are quoted after discovery. You host and license them yourself. Special rates for veterans, charitable, and faith-based organizations.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cap-heading">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Capabilities</p>
+          <h2 id="cap-heading">A studio that ships systems.</h2>
+        </header>
+        <div class="cap-grid">
+          <article class="card">
+            <h3>Websites you own</h3>
+            <p>Launch and Grow builds with hero video, contact to your inbox, and hosting on GitHub Pages, Netlify, Cloudflare Pages, or similar — in your name.</p>
+          </article>
+          <article class="card">
+            <h3>Software &amp; apps you host</h3>
+            <p>Custom tools for the way you actually sell and operate. You host them. You license them. No platform hostage situation.</p>
+          </article>
+          <article class="card">
+            <h3>Practical AI</h3>
+            <p>Site assistants, intake, automation, branded tools. Multi-platform. No vendor lock-in. Contact for cost.</p>
+          </article>
+          <article class="card">
+            <h3>Cinematic brand video</h3>
+            <p>We started in film. Every website still includes a hero. Promo add-on is $150 with a site.</p>
+          </article>
+          <article class="card">
+            <h3>Owner in control</h3>
+            <p>Code, video, domain, hosting accounts. We build with Grok and keep you in the chair — at a fraction of agency cost.</p>
+          </article>
+          <article class="card">
+            <h3>Built to close</h3>
+            <p>The site has one honest path: Contact Us. Forms post to your email. The work has to close.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="process-heading">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Process</p>
+          <h2 id="process-heading">Five moves. Then you own it.</h2>
+        </header>
+        <div class="step-grid">
+          <article class="step"><div class="step-num">01</div><h3>Contact</h3><p>Name, email, business, socials, and what you need to convert.</p></article>
+          <article class="step"><div class="step-num">02</div><h3>Package</h3><p>Launch, Grow, or a scoped software / AI build. Deposit to start.</p></article>
+          <article class="step"><div class="step-num">03</div><h3>Build</h3><p>Layout from a site you like. Two revision rounds on Launch.</p></article>
+          <article class="step"><div class="step-num">04</div><h3>Host</h3><p>Domain, email, and hosting on your accounts — not ours.</p></article>
+          <article class="step"><div class="step-num">05</div><h3>Launch</h3><p>Site live. Hero pinned on social. You keep every file.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="films-heading">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Films</p>
+          <h2 id="films-heading">Motion is part of the product.</h2>
+          <p class="lede">Every website package includes a hero video. Gallery films open here. The homepage hero never uses YouTube.</p>
+        </header>
+        <div class="film-grid">
+        <button class="film-card" type="button" data-youtube="8nsN5ESSrY0" data-title="Hero HomePage">
+          <span class="film-thumb">
+            <img src="https://img.youtube.com/vi/8nsN5ESSrY0/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
+            <span class="play-mark" aria-hidden="true"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
+          </span>
+          <span class="film-body">
+            <span class="kicker">HERO</span>
+            <h3>Hero HomePage</h3>
+            <p>The entrance film. Animated brand energy built to live on a site and on social.</p>
+          </span>
+        </button>
+        <button class="film-card" type="button" data-youtube="TqUbd7HyNUo" data-title="Commercial Brand Video">
+          <span class="film-thumb">
+            <img src="https://img.youtube.com/vi/TqUbd7HyNUo/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
+            <span class="play-mark" aria-hidden="true"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
+          </span>
+          <span class="film-body">
+            <span class="kicker">COMMERCIAL</span>
+            <h3>Commercial Brand Video</h3>
+            <p>High-impact commercial work made to win attention and drive leads.</p>
+          </span>
+        </button>
+        <button class="film-card" type="button" data-youtube="YuyJKJcaPGY" data-title="Lifestyle Brand Video">
+          <span class="film-thumb">
+            <img src="https://img.youtube.com/vi/YuyJKJcaPGY/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
+            <span class="play-mark" aria-hidden="true"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
+          </span>
+          <span class="film-body">
+            <span class="kicker">LIFESTYLE</span>
+            <h3>Lifestyle Brand Video</h3>
+            <p>Craft and atmosphere that sell the outcome, not just the product.</p>
+          </span>
+        </button></div>
+        <p class="center" style="margin-top:1.5rem"><a class="btn btn-ghost" href="films.html">Full film gallery</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+      <div class="wrap-narrow">
+        <header class="section-head center">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-heading">One honest path.</h2>
+          <p class="lede">Tell us the business. We will tell you the package. Prefer email? <a href="mailto:webbspinnervisions@gmail.com">webbspinnervisions@gmail.com</a></p>
+        </header>
+        
+        <form id="contact-form" class="form" action="https://formsubmit.co/webbspinnervisions@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="WSV inquiry — Home">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://webbspinnervisions.net/index.html?sent=true#contact">
+          <input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
+          <label>Name
+            <input type="text" name="name" required autocomplete="name" placeholder="Your name">
+          </label>
+          <label>Email
+            <input type="email" name="email" required autocomplete="email" placeholder="you@company.com">
+          </label>
+          <label>Business
+            <input type="text" name="business" autocomplete="organization" placeholder="Business name">
+          </label>
+          <label>Website or socials
+            <input type="text" name="website_or_socials" placeholder="Site, Facebook, Instagram, X…">
+          </label>
+          <label>Package interest
+            <select id="package" name="package">
+              <option value="">Select interest…</option>
+              <option value="Launch">Launch — one-page ($600)</option>
+              <option value="Grow">Grow — multi-page (from $1,000)</option>
+              <option value="Promo">Promo add-on ($150 with a website)</option>
+              <option value="Software">Software / apps</option>
+              <option value="AI">AI solutions</option>
+              <option value="Not sure">Not sure</option>
+            </select>
+          </label>
+          <label>Message
+            <textarea name="message" required rows="5" placeholder="What needs to close?"></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+        <div id="form-success" class="form-success" role="status">
+          <h3>Message sent.</h3>
+          <p>We will reply from webbspinnervisions@gmail.com. You own everything we build.</p>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="footer-brand" href="index.html">
+          <img src="assets/brand/shield-mark.png" width="44" height="44" alt="" decoding="async">
+          <div>
+            <strong>Webb Spinner Visions</strong>
+            <p>Nashville studio. Serving nationwide.</p>
+          </div>
+        </a>
+        <div class="socials">
+          <a href="https://x.com/Webb__X" target="_blank" rel="noopener noreferrer" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.5l-5.1-7.5L5.7 22H2.6l7.3-8.3L1 2h6.7l4.6 6.8L18.9 2zm-1.1 18h1.8L6.3 3.9H4.4L17.8 20z"/></svg></a>
+          <a href="https://www.youtube.com/@WebbSpinnerVideos" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.8 15.6V8.4L15.8 12l-6 3.6z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61572155061749" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h2.6l.4-3H13v-2c0-.6.4-1 1-1z"/></svg></a>
+          <a href="https://www.instagram.com/webbspinnervisions" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 1.6A2.2 2.2 0 1 0 14.2 12 2.2 2.2 0 0 0 12 9.8zM17.4 6.6a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Studio</h3>
+          <a href="index.html">Home</a>
+          <a href="play.html">Play</a>
+          <a href="work.html">Work</a>
+          <a href="websites.html">Websites</a>
+          <a href="services.html">Services</a>
+      </div>
+      <div class="footer-col">
+        <h3>More</h3>
+          <a href="ai.html">AI</a>
+          <a href="films.html">Films</a>
+          <a href="marketing.html">Marketing</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        <a href="mailto:webbspinnervisions@gmail.com">webbspinnervisions@gmail.com</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <p>Websites you own. Built to convert. Hosted by you.</p>
+      <p>&copy; <span data-year>2026</span> Webb Spinner Visions. All rights reserved.</p>
+    </div>
+  </footer>
+  <a class="btn btn-primary sticky-contact" href="contact.html">Contact Us</a>
+  
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lightbox-title">
+    <div class="lightbox-panel">
+      <div class="lightbox-frame" id="lightbox-frame"></div>
+      <div class="lightbox-bar">
+        <p id="lightbox-title"></p>
+        <div>
+          <a id="lightbox-yt" href="#" target="_blank" rel="noopener noreferrer" hidden>YouTube</a>
+          <button class="icon-btn" id="lightbox-close" type="button" aria-label="Close">✕</button>
+        </div>
+      </div>
     </div>
   </div>
-
-  <script src="js/shared.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/hero-video.js"></script>
-  <script src="js/video-gallery.js"></script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>
