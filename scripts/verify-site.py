@@ -99,6 +99,13 @@ def main():
         for f in fields:
             if d.locator(f"[name='{f}']").count() == 0:
                 ISSUES.append(f"missing form field {f}")
+        opts = d.locator("#package option").all_text_contents()
+        joined = " | ".join(opts)
+        for need in ("Heavy Site", "Visual sales", "$1,750", "$1,000"):
+            if need not in joined:
+                ISSUES.append(f"interest dropdown missing {need!r}")
+        if "Promo" in joined or "from $1,000" in joined:
+            ISSUES.append(f"stale package option: {joined}")
 
         desk.close()
 

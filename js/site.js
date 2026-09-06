@@ -8,7 +8,9 @@
   const PACKAGE_MAP = {
     launch: "Launch",
     grow: "Grow",
-    promo: "Promo",
+    heavy: "Heavy",
+    visual: "Visual sales",
+    promo: "Visual sales",
     software: "Software",
     ai: "AI",
     other: "Not sure",

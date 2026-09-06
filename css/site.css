@@ -503,7 +503,7 @@ body.menu-lock { overflow: hidden; }
   gap: 1rem;
 }
 @media (min-width: 860px) {
-  .pkg-grid { grid-template-columns: 1.08fr 1fr 0.92fr; align-items: stretch; }
+  .pkg-grid { grid-template-columns: 1.06fr 1fr 1fr; align-items: stretch; }
 }
 
 .pkg {
@@ -584,8 +584,13 @@ body.menu-lock { overflow: hidden; }
 @media (min-width: 960px) {
   .three-grid,
   .cap-grid { grid-template-columns: repeat(3, 1fr); }
+  .cap-grid-4 { grid-template-columns: repeat(4, 1fr); }
   .step-grid { grid-template-columns: repeat(5, 1fr); }
   .film-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 700px) and (max-width: 959px) {
+  .cap-grid-4 { grid-template-columns: 1fr 1fr; }
 }
 
 .card {
@@ -1034,6 +1039,73 @@ body.menu-lock { overflow: hidden; }
   color: var(--faint);
   margin: 1rem 0 0;
 }
+
+.own-list {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.65rem;
+}
+.own-list li {
+  padding: 0.7rem 0 0.7rem 1.15rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.92rem;
+  position: relative;
+}
+.own-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.05rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 1px;
+  background: var(--brass);
+  transform: rotate(45deg);
+}
+.own-list strong { color: var(--ink); }
+
+.not-box {
+  margin-top: 1.5rem;
+  padding: 1.2rem 1.2rem 1.1rem;
+  border: 1px solid rgba(201, 162, 39, 0.35);
+  border-radius: var(--radius);
+  background: var(--bg-3);
+}
+.not-box h3 { margin-bottom: 0.45rem; }
+.not-box p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+
+.bd-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: bd;
+  display: grid;
+  gap: 0.9rem;
+}
+.bd-list li {
+  counter-increment: bd;
+  padding: 1.05rem 1.1rem 1.05rem 4.2rem;
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-3);
+}
+.bd-list li::before {
+  content: counter(bd, decimal-leading-zero);
+  position: absolute;
+  left: 1rem;
+  top: 1.1rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  color: var(--brass);
+}
+.bd-list h3 { margin-bottom: 0.3rem; font-size: 1.02rem; }
+.bd-list p { margin: 0; color: var(--muted); font-size: 0.9rem; }
 
 .pkg-addon {
   opacity: 0.98;
