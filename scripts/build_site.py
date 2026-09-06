@@ -619,7 +619,7 @@ def play() -> None:
       <div class="wrap">
         <p class="eyebrow">Play · Origin first</p>
         <h1 class="display metal">Spider-Force 5</h1>
-        <p class="lede">Original WSV work, built with Grok, from a love of two games that never left: Asteroids and Star Wars. Origin, then hangar, then the cockpit. Not a screenshot.</p>
+        <p class="lede">Original WSV work, built with a few different AI systems, from a love of two games that never left: Asteroids and Star Wars. Origin, then hangar, then the cockpit. Not a screenshot.</p>
       </div>
     </header>
 
@@ -628,7 +628,7 @@ def play() -> None:
         <div class="prose">
           <h2 id="origin-heading">How it was made</h2>
           <p>Spider-Force 5 started as a question: could a studio that ships client sites also ship an original game with AI in the loop — and keep the craft honest?</p>
-          <p>We built it with Grok. Original ships. Original systems. The brief was not “remake a classic.” It was: take the feelings that never left, and make something that is ours.</p>
+          <p>We built it with a few different AI systems. Original ships. Original systems. The brief was not “remake a classic.” It was: take the feelings that never left, and make something that is ours.</p>
           <p><strong>Asteroids</strong> never left — thrust, drift, inertia, rocks that split when you hit them. You are flying a mass, not a cursor.</p>
           <p><strong>Star Wars</strong> never left — the cockpit, the trench, the targeting. Pressure in a corridor. Not a license. A memory of how it felt to sit in the seat.</p>
           <p>That is the origin. The hangar is next. Then you fly.</p>
@@ -677,7 +677,7 @@ def play() -> None:
     page(
         filename="play.html",
         title="Play Spider-Force 5 | Origin, hangar, live game — WSV",
-        description="Spider-Force 5 is original Webb Spinner Visions work built with Grok. Origin story first, hangar handshake, then the live game. Not affiliated with Lucasfilm, Disney, or Atari.",
+        description="Spider-Force 5 is original Webb Spinner Visions work, built with a few different AI systems. Origin story first, hangar handshake, then the live game. Not affiliated with Lucasfilm, Disney, or Atari.",
         active="play.html",
         body=body,
         og_image=f"{SITE}/SpiderVenom.jpg",
@@ -919,7 +919,7 @@ def ai() -> None:
         <div class="prose">
           <p class="eyebrow">Proof of craft</p>
           <h2>Spider-Force 5 is not a gimmick.</h2>
-          <p>It is original software we shipped with Grok — playable, cockpit-first, built from arcade physics and targeting pressure. If we can take AI from a brief to a game you can fly, we can take it to the assistant on your site.</p>
+          <p>It is original software we shipped with a few different AI systems — playable, cockpit-first, built from arcade physics and targeting pressure. If we can take AI from a brief to a game you can fly, we can take it to the assistant on your site.</p>
           <p><a class="btn btn-ghost" href="play.html">Origin, hangar, play →</a></p>
         </div>
         <img class="venom" src="SpiderVenom.jpg" alt="Webb Spinner Visions metallic spider" width="1200" height="800" loading="lazy" decoding="async">
@@ -1056,7 +1056,7 @@ def about() -> None:
     <section class="section">
       <div class="wrap split">
         <div class="prose">
-          <p>We started in video. We moved into websites. We now ship the storefront and the sales tools around it — at a fraction of agency cost because we build with Grok and keep the owner in control.</p>
+          <p>We started in video. We moved into websites. We now ship the storefront and the sales tools around it — at a fraction of agency cost because we use a few different AI systems and keep the owner in control.</p>
           <p>Launch $600 is a professional one-page with a photo hero. Grow $1,000 and Heavy $1,750 include an animated hero. Owners get the code, the photos we place, any video we make, the domain, and hosting on their accounts. We are not a $25–$150/month hostage host.</p>
           <p>Background that still shows up in the work: decades in structural steel estimating, value engineering, and design-build sales. That is why the craft is about closing, not decorating. Pretty that does not produce a call is wasted money.</p>
           <p>Special rates for veterans, charitable, and faith-based organizations. Deposits start the work.</p>
