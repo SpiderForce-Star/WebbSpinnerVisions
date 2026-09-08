@@ -205,7 +205,7 @@ def packages_html() -> str:
 
 
 DISCOUNT_LINE = (
-    "Discounts for Sumner, Robertson, Macon, Wilson, and Trousdale counties. "
+    "Discounts for Tennessee residents in Sumner, Robertson, Macon, Wilson, and Trousdale counties. "
     "Also for veteran's, charitable, and positive religious based associations."
 )
 

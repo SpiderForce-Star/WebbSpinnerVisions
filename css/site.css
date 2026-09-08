@@ -567,8 +567,9 @@ body.menu-lock { overflow: hidden; }
 }
 .pkg .btn { width: 100%; margin-top: auto; }
 
-/* Discount marquee — under package cards */
+/* Discount marquee — under package cards. Orange field #FF6A00, black type. */
 .discount-marquee {
+  position: relative;
   margin-top: 1.15rem;
   background: #FF6A00;
   color: #000;
@@ -579,12 +580,25 @@ body.menu-lock { overflow: hidden; }
   contain: paint;
   border-radius: var(--radius);
 }
+.discount-marquee::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #FF6A00;
+  pointer-events: none;
+  z-index: 0;
+  animation: discount-marquee-flash 1.8s ease-in-out infinite;
+}
 .discount-marquee-track {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   width: max-content;
   animation: discount-marquee-scroll 40s linear infinite;
 }
+.discount-marquee:hover::before,
+.discount-marquee:focus-within::before,
 .discount-marquee:hover .discount-marquee-track,
 .discount-marquee:focus-within .discount-marquee-track {
   animation-play-state: paused;
@@ -612,11 +626,18 @@ body.menu-lock { overflow: hidden; }
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+@keyframes discount-marquee-flash {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.18); }
+}
 @media (prefers-reduced-motion: reduce) {
+  .discount-marquee::before,
   .discount-marquee-track {
     animation: none;
+  }
+  .discount-marquee-track {
+    display: block;
     width: 100%;
-    flex-wrap: wrap;
     transform: none;
   }
   .discount-marquee-item {
