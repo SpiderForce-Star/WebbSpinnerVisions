@@ -101,10 +101,10 @@ def main():
                 ISSUES.append(f"missing form field {f}")
         opts = d.locator("#package option").all_text_contents()
         joined = " | ".join(opts)
-        for need in ("Heavy Site", "Visual sales", "$1,750", "$1,000"):
+        for need in ("Heavy Site", "Visual sales", "$2,000", "$1,250"):
             if need not in joined:
                 ISSUES.append(f"interest dropdown missing {need!r}")
-        if "Promo" in joined or "from $1,000" in joined:
+        if "Promo" in joined or "from $1,000" in joined or "$600" in joined or "$1,750" in joined:
             ISSUES.append(f"stale package option: {joined}")
 
         desk.close()

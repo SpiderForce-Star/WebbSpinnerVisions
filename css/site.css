@@ -567,6 +567,67 @@ body.menu-lock { overflow: hidden; }
 }
 .pkg .btn { width: 100%; margin-top: auto; }
 
+/* Discount marquee — under package cards */
+.discount-marquee {
+  margin-top: 1.15rem;
+  background: #FF6A00;
+  color: #000;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  contain: paint;
+  border-radius: var(--radius);
+}
+.discount-marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: discount-marquee-scroll 40s linear infinite;
+}
+.discount-marquee:hover .discount-marquee-track,
+.discount-marquee:focus-within .discount-marquee-track {
+  animation-play-state: paused;
+}
+.discount-marquee-item {
+  margin: 0;
+  padding: 0.75rem 0 0.75rem 1.2rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  color: #000;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+.discount-marquee-sep {
+  flex: 0 0 auto;
+  padding: 0 1.2rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #000;
+}
+@keyframes discount-marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .discount-marquee-track {
+    animation: none;
+    width: 100%;
+    flex-wrap: wrap;
+    transform: none;
+  }
+  .discount-marquee-item {
+    white-space: normal;
+    padding: 0.75rem 1.2rem;
+  }
+  .discount-marquee [aria-hidden="true"] {
+    display: none;
+  }
+}
+
 /* Capability / process */
 .cap-grid,
 .step-grid,

@@ -135,9 +135,9 @@ def form_html(next_path: str, subject: str) -> str:
           <label>Package interest
             <select id="package" name="package">
               <option value="">Select interest…</option>
-              <option value="Launch">Launch Site — One-page ($600)</option>
-              <option value="Grow">Grow Site — 2–3 pages, animated hero ($1,000)</option>
-              <option value="Heavy">Heavy Site — 5 pages, custom ($1,750)</option>
+              <option value="Launch">Launch Site — One-page ($700)</option>
+              <option value="Grow">Grow Site — 2–3 pages, animated hero ($1,250)</option>
+              <option value="Heavy">Heavy Site — 5 pages, custom ($2,000)</option>
               <option value="Visual sales">Visual sales — logo, animation, video, cards</option>
               <option value="Software">Software / App development</option>
               <option value="AI">AI Solutions</option>
@@ -161,7 +161,7 @@ def packages_html() -> str:
           <article class="pkg pkg-featured">
             <span class="badge">Most Popular</span>
             <h3>Launch Site</h3>
-            <p class="price">$600 <span>deposit $150</span></p>
+            <p class="price">$700 <span>deposit $150</span></p>
             <p>A simple professional one-page. Looks like a real business, not a template farm. Fast. Clean. Converts.</p>
             <ul>
               <li>Hero: professional still or slow-rotating social photos — no animated film at this tier</li>
@@ -175,7 +175,7 @@ def packages_html() -> str:
           </article>
           <article class="pkg">
             <h3>Grow Site</h3>
-            <p class="price">$1,000 <span>deposit $300</span></p>
+            <p class="price">$1,250 <span>deposit $300</span></p>
             <p>Moderate launch. 2–3 pages. More room to sell products, services, menus, venues, or a quote path.</p>
             <ul>
               <li>Everything in Launch</li>
@@ -189,7 +189,7 @@ def packages_html() -> str:
           </article>
           <article class="pkg">
             <h3>Heavy Site</h3>
-            <p class="price">$1,750 <span>deposit $500</span></p>
+            <p class="price">$2,000 <span>deposit $500</span></p>
             <p>Five pages. Heavier custom scope. The full storefront — still hosted on accounts you own.</p>
             <ul>
               <li>Everything in Grow</li>
@@ -204,13 +204,30 @@ def packages_html() -> str:
         </div>"""
 
 
+DISCOUNT_LINE = (
+    "Discounts for Sumner, Robertson, Macon, Wilson, and Trousdale counties. "
+    "Also for veteran's, charitable, and positive religious based associations."
+)
+
+
+def marquee_html() -> str:
+    return f"""
+        <div class="discount-marquee" role="region" aria-label="{DISCOUNT_LINE}">
+          <div class="discount-marquee-track">
+            <p class="discount-marquee-item">{DISCOUNT_LINE}</p>
+            <span class="discount-marquee-sep" aria-hidden="true">·</span>
+            <p class="discount-marquee-item" aria-hidden="true">{DISCOUNT_LINE}</p>
+            <span class="discount-marquee-sep" aria-hidden="true">·</span>
+          </div>
+        </div>"""
+
+
 def ownership_html() -> str:
     return """
         <ul class="own-list">
           <li><strong>You own 100%</strong> of the code, photos we place, and the video we make for you.</li>
           <li>The contact form lands in the <strong>inbox you already use</strong>.</li>
           <li>We set hosting on <strong>your accounts</strong>. We are not a $25–$150/month hostage host.</li>
-          <li>Special rates for veterans, charitable, and faith-based organizations.</li>
           <li><strong>Deposits start the work.</strong> We do not begin on a handshake.</li>
         </ul>"""
 
@@ -434,11 +451,11 @@ ORG_JSON = """<script type="application/ld+json">
    "address":{"@type":"PostalAddress","addressLocality":"Nashville","addressRegion":"TN","addressCountry":"US"},
    "areaServed":{"@type":"Country","name":"United States"},
    "sameAs":["https://x.com/Webb__X","https://www.youtube.com/@WebbSpinnerVideos","https://www.facebook.com/profile.php?id=61572155061749","https://www.instagram.com/webbspinnervisions"],
-   "priceRange":"$600–$1750",
+   "priceRange":"$700–$2000",
    "hasOfferCatalog":{"@type":"OfferCatalog","name":"Website packages","itemListElement":[
-     {"@type":"Offer","name":"Launch Site","price":"600.00","priceCurrency":"USD","description":"One-page professional site. Photo or rotating social-photo hero. Deposit $150."},
-     {"@type":"Offer","name":"Grow Site","price":"1000.00","priceCurrency":"USD","description":"2–3 pages with animated hero from social photos and logo. Deposit $300."},
-     {"@type":"Offer","name":"Heavy Site","price":"1750.00","priceCurrency":"USD","description":"Five pages, custom layout per page, animated hero. Deposit $500."}
+     {"@type":"Offer","name":"Launch Site","price":"700.00","priceCurrency":"USD","description":"One-page professional site. Photo or rotating social-photo hero. Deposit $150."},
+     {"@type":"Offer","name":"Grow Site","price":"1250.00","priceCurrency":"USD","description":"2–3 pages with animated hero from social photos and logo. Deposit $300."},
+     {"@type":"Offer","name":"Heavy Site","price":"2000.00","priceCurrency":"USD","description":"Five pages, custom layout per page, animated hero. Deposit $500."}
    ]}
   }
 ]}
@@ -493,7 +510,7 @@ def home() -> None:
       <div class="hero-copy">
         <p class="eyebrow">Websites · Visual sales · Software · AI</p>
         <h1 id="hero-heading" class="display metal">Websites you own.<br>Built to convert.<br>Hosted by you.</h1>
-        <p class="lede">Nashville studio. Nationwide. Launch <strong>$600</strong>. Grow <strong>$1,000</strong>. Heavy <strong>$1,750</strong>. You keep the code, the photos we place, and hosting on your accounts.</p>
+        <p class="lede">Nashville studio. Nationwide. Launch <strong>$700</strong>. Grow <strong>$1,250</strong>. Heavy <strong>$2,000</strong>. You keep the code, the photos we place, and hosting on your accounts.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="contact.html">Contact Us</a>
           <a class="btn btn-ghost" href="work.html">See live work</a>
@@ -507,7 +524,7 @@ def home() -> None:
         <header class="section-head">
           <p class="eyebrow">Live work</p>
           <h2 id="work-heading">Sites in the wild. Not mocks.</h2>
-          <p class="lede">Click through. Grow / custom work — industrial, venue, and restaurant — owned by the client. Not the $600 Launch tier.</p>
+          <p class="lede">Click through. Grow / custom work — industrial, venue, and restaurant — owned by the client. Not the $700 Launch tier.</p>
         </header>
         <div class="work-grid">
           {WORK_CARDS}
@@ -525,6 +542,7 @@ def home() -> None:
           <p class="lede">Launch is a photo hero. Grow and Heavy get the animated hero. Visual sales, software, and AI are quoted after we see the job.</p>
         </header>
         {packages_html()}
+        {marquee_html()}
         {ownership_html()}
       </div>
     </section>
@@ -538,7 +556,7 @@ def home() -> None:
         <div class="cap-grid cap-grid-4">
           <article class="card">
             <h3>Website builds</h3>
-            <p>Launch $600 · Grow $1,000 · Heavy $1,750. One honest scope instead of an open-ended redesign.</p>
+            <p>Launch $700 · Grow $1,250 · Heavy $2,000. One honest scope instead of an open-ended redesign.</p>
           </article>
           <article class="card">
             <h3>Visual sales</h3>
@@ -570,7 +588,7 @@ def home() -> None:
         </header>
         <div class="step-grid">
           <article class="step"><div class="step-num">01</div><h3>Contact</h3><p>Name, email, business, socials, and what you need to convert.</p></article>
-          <article class="step"><div class="step-num">02</div><h3>Package</h3><p>Launch $600, Grow $1,000, or Heavy $1,750. Deposit starts the work.</p></article>
+          <article class="step"><div class="step-num">02</div><h3>Package</h3><p>Launch $700, Grow $1,250, or Heavy $2,000. Deposit starts the work.</p></article>
           <article class="step"><div class="step-num">03</div><h3>Build</h3><p>Two revision rounds. Launch: photo hero. Grow and Heavy: animated hero.</p></article>
           <article class="step"><div class="step-num">04</div><h3>Host</h3><p>Domain, email, and hosting on your accounts — not ours.</p></article>
           <article class="step"><div class="step-num">05</div><h3>Own</h3><p>Code, photos we place, and any video we make stay with you.</p></article>
@@ -604,7 +622,7 @@ def home() -> None:
     page(
         filename="index.html",
         title="Webb Spinner Visions | Websites you own. Built to convert.",
-        description="Nashville studio. Launch $600, Grow $1,000, Heavy $1,750. Websites you own and host yourself. Visual sales, software, and practical AI. Nationwide.",
+        description="Nashville studio. Launch $700, Grow $1,250, Heavy $2,000. Websites you own and host yourself. Visual sales, software, and practical AI. Nationwide.",
         active="index.html",
         body=body,
         extra_head=ORG_JSON,
@@ -722,7 +740,7 @@ def work() -> None:
     </section>
     <section class="section">
       <div class="wrap cta-band">
-        <p>Need a storefront that works this hard? Launch $600, Grow $1,000, Heavy $1,750 — you own it. These live sites are Grow / custom work, not the $600 Launch tier.</p>
+        <p>Need a storefront that works this hard? Launch $700, Grow $1,250, Heavy $2,000 — you own it. These live sites are Grow / custom work, not the $700 Launch tier.</p>
         <a class="btn btn-primary" href="contact.html">Contact Us</a>
       </div>
     </section>
@@ -743,7 +761,7 @@ def websites() -> None:
       <div class="wrap">
         <p class="eyebrow">Websites</p>
         <h1 class="display metal">You own it. You host it.</h1>
-        <p class="lede">Launch $600 · Grow $1,000 · Heavy $1,750. Photo hero on Launch. Animated hero on Grow and Heavy. We are not a monthly hostage host.</p>
+        <p class="lede">Launch $700 · Grow $1,250 · Heavy $2,000. Photo hero on Launch. Animated hero on Grow and Heavy. We are not a monthly hostage host.</p>
         <div class="btn-row" style="margin-top:1.2rem">
           <a class="btn btn-primary" href="contact.html?package=launch" data-package="launch">Contact Us</a>
           <a class="btn btn-ghost" href="work.html">See live work</a>
@@ -753,6 +771,7 @@ def websites() -> None:
     <section class="section" id="packages">
       <div class="wrap">
         {packages_html()}
+        {marquee_html()}
         {ownership_html()}
         <div class="not-box">
           <h3>What Launch is not</h3>
@@ -812,8 +831,8 @@ def websites() -> None:
     """
     page(
         filename="websites.html",
-        title="Website Builds | Launch $600 · Grow $1,000 · Heavy $1,750",
-        description="Websites you own and host yourself. Launch one-page $600 with a photo hero. Grow $1,000 with animated hero, 2–3 pages. Heavy $1,750, five custom pages. Nashville studio.",
+        title="Website Builds | Launch $700 · Grow $1,250 · Heavy $2,000",
+        description="Websites you own and host yourself. Launch one-page $700 with a photo hero. Grow $1,250 with animated hero, 2–3 pages. Heavy $2,000, five custom pages. Nashville studio.",
         active="websites.html",
         body=body,
     )
@@ -832,7 +851,7 @@ def services() -> None:
       <div class="wrap three-grid">
         <article class="card">
           <h3>Website builds</h3>
-          <p><strong>$600</strong> Launch · <strong>$1,000</strong> Grow · <strong>$1,750</strong> Heavy. Photo hero on Launch. Animated hero on Grow and Heavy. You own the code.</p>
+          <p><strong>$700</strong> Launch · <strong>$1,250</strong> Grow · <strong>$2,000</strong> Heavy. Photo hero on Launch. Animated hero on Grow and Heavy. You own the code.</p>
           <p style="margin-top:0.9rem"><a href="websites.html">Website packages →</a></p>
         </article>
         <article class="card">
@@ -885,7 +904,7 @@ def services() -> None:
     page(
         filename="services.html",
         title="Services | Websites, visual sales, software you host — WSV",
-        description="Launch $600, Grow $1,000, Heavy $1,750. Visual sales quoted after a meeting. Custom software and practical AI you host yourself. Nashville studio, nationwide.",
+        description="Launch $700, Grow $1,250, Heavy $2,000. Visual sales quoted after a meeting. Custom software and practical AI you host yourself. Nashville studio, nationwide.",
         active="services.html",
         body=body,
     )
@@ -1033,7 +1052,7 @@ def marketing() -> None:
     page(
         filename="marketing.html",
         title="Marketing | Video, site, and X for local businesses — WSV",
-        description="How Webb Spinner Visions uses a site you own, visual sales, and X to get a local business found and contacted. Launch $600, Grow $1,000, Heavy $1,750.",
+        description="How Webb Spinner Visions uses a site you own, visual sales, and X to get a local business found and contacted. Launch $700, Grow $1,250, Heavy $2,000.",
         active="marketing.html",
         body=body,
     )
@@ -1057,7 +1076,7 @@ def about() -> None:
       <div class="wrap split">
         <div class="prose">
           <p>We started in video. We moved into websites. We now ship the storefront and the sales tools around it — at a fraction of agency cost because we use a few different AI systems and keep the owner in control.</p>
-          <p>Launch $600 is a professional one-page with a photo hero. Grow $1,000 and Heavy $1,750 include an animated hero. Owners get the code, the photos we place, any video we make, the domain, and hosting on their accounts. We are not a $25–$150/month hostage host.</p>
+          <p>Launch $700 is a professional one-page with a photo hero. Grow $1,250 and Heavy $2,000 include an animated hero. Owners get the code, the photos we place, any video we make, the domain, and hosting on their accounts. We are not a $25–$150/month hostage host.</p>
           <p>Background that still shows up in the work: decades in structural steel estimating, value engineering, and design-build sales. That is why the craft is about closing, not decorating. Pretty that does not produce a call is wasted money.</p>
           <p>Special rates for veterans, charitable, and faith-based organizations. Deposits start the work.</p>
         </div>
@@ -1109,7 +1128,7 @@ def contact() -> None:
     page(
         filename="contact.html",
         title="Contact Us | Webb Spinner Visions",
-        description="Contact Webb Spinner Visions about Launch $600, Grow $1,000, Heavy $1,750, visual sales, software, or AI. Nashville studio, nationwide. webbspinnervisions@gmail.com",
+        description="Contact Webb Spinner Visions about Launch $700, Grow $1,250, Heavy $2,000, visual sales, software, or AI. Nashville studio, nationwide. webbspinnervisions@gmail.com",
         active="contact.html",
         body=body,
     )
