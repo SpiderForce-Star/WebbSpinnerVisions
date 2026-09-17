@@ -119,6 +119,11 @@
       form.classList.add("is-hidden");
       $("#form-success")?.classList.add("is-visible");
     }
+    form.addEventListener("submit", () => {
+      const email = form.querySelector('input[name="email"]');
+      const replyto = form.querySelector('input[name="_replyto"]');
+      if (email && replyto) replyto.value = email.value.trim();
+    });
   }
 
   function initLightbox() {
