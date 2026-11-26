@@ -37,7 +37,7 @@ FILMS = [
 
 
 def esc(s: str) -> str:
-    return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+    return s.replace("&", "&").replace("<", "<").replace(">", ">").replace('"', """)
 
 
 def nav_html(active: str) -> str:
@@ -417,7 +417,7 @@ def page(
   <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="css/site.css">
   __EXTRA_HEAD__
 </head>
@@ -539,11 +539,11 @@ def home() -> None:
       <div class="hero-media">
         <img class="hero-poster" src="assets/hero-poster.jpg" alt="" width="1104" height="816" decoding="async" fetchpriority="high">
         <video id="hero-video" autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-label="Webb Spinner Visions cinematic brand film">
-          <source src="videos/wsv-world-video.mp4?v=20260926" type="video/mp4">
+          <source src="videos/wsv-world-video.mp4?v=20261126" type="video/mp4">
         </video>
       </div>
       <div class="hero-scrim" aria-hidden="true"></div>
-      <button class="mute-btn" id="mute-btn" type="button" hidden style="display:none" aria-hidden="true" tabindex="-1" aria-label="Unmute film" aria-pressed="true">
+      <button class="mute-btn" id="mute-btn" type="button" aria-label="Unmute film" aria-pressed="true">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3 3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4 9.91 6.09 12 8.18V4z"/></svg>
         </button>
       <div class="hero-copy">
@@ -602,7 +602,7 @@ def home() -> None:
             <p>Logo, motion, film, cards. Priced after a short meeting. Quoted to the job, not a menu guess.</p>
           </article>
           <article class="card">
-            <h3>Software &amp; AI</h3>
+            <h3>Software & AI</h3>
             <p>Intake, assistants, internal tools you host and license yourself. Scoped after discovery.</p>
           </article>
           <article class="card">
@@ -894,7 +894,7 @@ def services() -> None:
           <p style="margin-top:0.9rem"><a href="websites.html">Website packages →</a></p>
         </article>
         <article class="card">
-          <h3>Software &amp; apps you host</h3>
+          <h3>Software & apps you host</h3>
           <p>Custom tools for your business. You host them and license them for your own use. Scoped after discovery. Contact for cost.</p>
           <p style="margin-top:0.9rem"><a href="contact.html?package=software" data-package="software">Request a software quote →</a></p>
         </article>
@@ -992,7 +992,7 @@ def ai() -> None:
           <li><h3>Contact with the problem</h3><p>Not the tech you think you need. The outcome.</p></li>
           <li><h3>Discovery</h3><p>Goals, data you already have, what “done” looks like.</p></li>
           <li><h3>Quote</h3><p>Fixed or phased after scope is clear. No surprise subscription traps from us.</p></li>
-          <li><h3>Build &amp; review</h3><p>Working demos early so you can steer.</p></li>
+          <li><h3>Build & review</h3><p>Working demos early so you can steer.</p></li>
           <li><h3>Deploy on your side</h3><p>You host and control access when the job allows it.</p></li>
         </ol>
         <div class="card" style="margin-top:1.5rem">
