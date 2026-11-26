@@ -111,14 +111,27 @@ def footer_html() -> str:
   <a class="btn btn-primary sticky-contact" href="contact.html">Contact Us</a>"""
 
 
-def form_html(next_path: str, subject: str) -> str:
+def form_html(
+    next_path: str,
+    subject: str,
+    *,
+    action: str | None = None,
+    track_reply: bool = False,
+) -> str:
     nxt = f"{SITE}/{next_path}?sent=true#contact"
+    endpoint = action or "https://formsubmit.co/webbspinnervisions@gmail.com"
+    extra = ""
+    if track_reply:
+        # Contact page only: FormSubmit hash, page URL, and reply-to filled from the email field on submit.
+        extra = f"""
+          <input type="hidden" name="_url" value="{SITE}/{next_path}">
+          <input type="hidden" name="_replyto" value="">"""
     return f"""
-        <form id="contact-form" class="form" action="https://formsubmit.co/webbspinnervisions@gmail.com" method="POST">
+        <form id="contact-form" class="form" action="{endpoint}" method="POST">
           <input type="hidden" name="_subject" value="{esc(subject)}">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="{nxt}">
+          <input type="hidden" name="_next" value="{nxt}">{extra}
           <input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
           <label>Name
             <input type="text" name="name" required autocomplete="name" placeholder="Your name">
@@ -206,7 +219,7 @@ def packages_html() -> str:
 
 DISCOUNT_LINE = (
     "Discounts for Tennessee residents in Sumner, Robertson, Macon, Wilson, and Trousdale counties. "
-    "Also for veteran's, charitable, and positive religious based associations."
+    "Also for veterans, charitable, and faith-based organizations."
 )
 
 
@@ -307,18 +320,32 @@ def business_dev_html() -> str:
         </ol>"""
 
 
-def work_card(url: str, domain: str, img: str, alt: str, kicker: str, title: str, text: str) -> str:
+def work_card(
+    url: str,
+    domain: str,
+    img: str,
+    alt: str,
+    kicker: str,
+    title: str,
+    text: str,
+    *,
+    preview: bool = False,
+) -> str:
+    go = "View preview →" if preview else "Visit live site →"
+    shot = f'<img src="{img}" alt="{esc(alt)}" width="1440" height="900" loading="lazy" decoding="async">'
+    if preview:
+        shot = f'<div class="browser-shot"><span class="preview-flag">Preview</span>{shot}</div>'
     return f"""
         <a class="work-card" href="{url}" target="_blank" rel="noopener noreferrer">
           <div class="browser">
             <div class="browser-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser-url">{esc(domain)}</span></div>
-            <img src="{img}" alt="{esc(alt)}" width="1440" height="900" loading="lazy" decoding="async">
+            {shot}
           </div>
           <div class="work-body">
             <span class="kicker">{esc(kicker)}</span>
             <h3>{esc(title)}</h3>
             <p>{esc(text)}</p>
-            <span class="go">Visit live site →</span>
+            <span class="go">{esc(go)}</span>
           </div>
         </a>"""
 
@@ -383,6 +410,8 @@ def page(
   <meta property="og:image" content="__OG__">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@Webb__X">
+  <meta name="twitter:title" content="__TITLE__">
+  <meta name="twitter:description" content="__DESC__">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="assets/brand/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
@@ -451,7 +480,7 @@ ORG_JSON = """<script type="application/ld+json">
    "address":{"@type":"PostalAddress","addressLocality":"Nashville","addressRegion":"TN","addressCountry":"US"},
    "areaServed":{"@type":"Country","name":"United States"},
    "sameAs":["https://x.com/Webb__X","https://www.youtube.com/@WebbSpinnerVideos","https://www.facebook.com/profile.php?id=61572155061749","https://www.instagram.com/webbspinnervisions"],
-   "priceRange":"$700–$2000",
+   "priceRange":"$700–$2,000",
    "hasOfferCatalog":{"@type":"OfferCatalog","name":"Website packages","itemListElement":[
      {"@type":"Offer","name":"Launch Site","price":"700.00","priceCurrency":"USD","description":"One-page professional site. Photo or rotating social-photo hero. Deposit $150."},
      {"@type":"Offer","name":"Grow Site","price":"1250.00","priceCurrency":"USD","description":"2–3 pages with animated hero from social photos and logo. Deposit $300."},
@@ -464,13 +493,22 @@ ORG_JSON = """<script type="application/ld+json">
 
 WORK_CARDS = (
     work_card(
-        "https://stampssteel.com",
-        "stampssteel.com",
-        "assets/work/stampssteel-home.jpg",
-        "Stamps Steel Buildings homepage — quality steel frame buildings with quote and 3D designer",
+        "https://oneworldsteel.com",
+        "oneworldsteel.com",
+        "assets/work/oneworldsteel-home.jpg",
+        "One World Steel homepage — pre-engineered metal buildings with a live 3D designer and a path to quote",
         "Grow / custom · quote path",
-        "Stamps Steel Buildings",
+        "One World Steel",
         "Pre-engineered metal buildings with a live 3D designer and a clear path to quote.",
+    )
+    + work_card(
+        "https://barn-central.vercel.app",
+        "barn-central.vercel.app",
+        "assets/work/barncentral-home.jpg",
+        "Barn Central homepage — Middle Tennessee barns, shops, and barndos",
+        "Grow / custom · Middle Tennessee",
+        "Barn Central",
+        "Middle Tennessee barns, shops, and barndos — designed, supplied, and built on your site.",
     )
     + work_card(
         "https://bottomviewfarmtn.com",
@@ -486,9 +524,10 @@ WORK_CARDS = (
         "Roux's Creole Cafe",
         "assets/work/rouxs-home.jpg",
         "Roux's Creole Cafe homepage — Gallatin restaurant, menu, hours, and food truck",
-        "Grow / custom · Gallatin, TN",
+        "Preview · Gallatin, TN",
         "Roux's Creole Cafe",
         "Menu-first hospitality site — hours, food truck, and a path to order.",
+        preview=True,
     )
 )
 
@@ -500,11 +539,11 @@ def home() -> None:
       <div class="hero-media">
         <img class="hero-poster" src="assets/hero-poster.jpg" alt="" width="1104" height="816" decoding="async" fetchpriority="high">
         <video id="hero-video" autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-label="Webb Spinner Visions cinematic brand film">
-          <source src="videos/wsv-top-entrance.mp4" type="video/mp4">
+          <source src="videos/wsv-world-video.mp4?v=20260926" type="video/mp4">
         </video>
       </div>
       <div class="hero-scrim" aria-hidden="true"></div>
-      <button class="mute-btn" id="mute-btn" type="button" aria-label="Unmute film" aria-pressed="true">
+      <button class="mute-btn" id="mute-btn" type="button" hidden style="display:none" aria-hidden="true" tabindex="-1" aria-label="Unmute film" aria-pressed="true">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3 3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4 9.91 6.09 12 8.18V4z"/></svg>
         </button>
       <div class="hero-copy">
@@ -524,7 +563,7 @@ def home() -> None:
         <header class="section-head">
           <p class="eyebrow">Live work</p>
           <h2 id="work-heading">Sites in the wild. Not mocks.</h2>
-          <p class="lede">Click through. Grow / custom work — industrial, venue, and restaurant — owned by the client. Not the $700 Launch tier.</p>
+          <p class="lede">Click through. Grow / custom work — industrial, barns, venue, and restaurant — owned by the client. Not the $700 Launch tier.</p>
         </header>
         <div class="work-grid">
           {WORK_CARDS}
@@ -708,7 +747,7 @@ def work() -> None:
       <div class="wrap">
         <p class="eyebrow">Work</p>
         <h1 class="display metal">Live sites. Real owners.</h1>
-        <p class="lede">Three products in the wild. Screenshots of the live pages — not gray boxes, not concept art. Click any card.</p>
+        <p class="lede">Four sites in the wild. Screenshots of the live pages — not gray boxes, not concept art. Click any card.</p>
       </div>
     </header>
     <section class="section">
@@ -719,15 +758,15 @@ def work() -> None:
     <section class="section">
       <div class="wrap split">
         <div>
-          <p class="eyebrow">Stamps Steel · 3D designer</p>
+          <p class="eyebrow">One World Steel · 3D designer</p>
           <h2>Industrial software on a brochure site.</h2>
           <p class="lede">The homepage sells the building. The designer lets a buyer set size, doors, and color, then send it for a quote. That is a close path — not a gallery.</p>
-          <p><a class="btn btn-ghost" href="https://stampssteel.com/designer.html" target="_blank" rel="noopener noreferrer">Open the 3D designer</a></p>
+          <p><a class="btn btn-ghost" href="https://oneworldsteel.com/designer.html" target="_blank" rel="noopener noreferrer">Open the 3D designer</a></p>
         </div>
-        <a class="work-card" href="https://stampssteel.com/designer.html" target="_blank" rel="noopener noreferrer">
+        <a class="work-card" href="https://oneworldsteel.com/designer.html" target="_blank" rel="noopener noreferrer">
           <div class="browser">
-            <div class="browser-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser-url">stampssteel.com/designer.html</span></div>
-            <img src="assets/work/stampssteel-designer.jpg" alt="Stamps Steel 3D designer page" width="1440" height="900" loading="lazy" decoding="async">
+            <div class="browser-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser-url">oneworldsteel.com/designer.html</span></div>
+            <img src="assets/work/oneworldsteel-designer.jpg" alt="One World Steel 3D designer page" width="1440" height="900" loading="lazy" decoding="async">
           </div>
           <div class="work-body">
             <span class="kicker">Interactive</span>
@@ -748,10 +787,10 @@ def work() -> None:
     page(
         filename="work.html",
         title="Work | Live sites by Webb Spinner Visions",
-        description="Live client work: Stamps Steel Buildings, Bottom View Farm, and Roux's Creole Cafe. Real screenshots of live pages, not mocks.",
+        description="Live client work: One World Steel, Barn Central, Bottom View Farm, and Roux's Creole Cafe (preview). Real screenshots of live pages, not mocks.",
         active="work.html",
         body=body,
-        og_image=f"{SITE}/assets/work/stampssteel-home.jpg",
+        og_image=f"{SITE}/assets/work/oneworldsteel-home.jpg",
     )
 
 
@@ -1121,7 +1160,12 @@ def contact() -> None:
     </header>
     <section class="section" id="contact">
       <div class="wrap-narrow">
-        {form_html("contact.html", "WSV inquiry — Contact")}
+        {form_html(
+            "contact.html",
+            "WSV inquiry — Contact",
+            action="https://formsubmit.co/a454c72d8f07cdcf68b533da31b30ddb",
+            track_reply=True,
+        )}
       </div>
     </section>
     """
@@ -1214,7 +1258,7 @@ def main() -> None:
 
 Studio site for [webbspinnervisions.net](https://webbspinnervisions.net) — GitHub Pages, `CNAME` preserved.
 
-Static HTML/CSS/JS. Native MP4 homepage hero (no YouTube chrome). Live work cards for Stamps Steel, Bottom View Farm, and Roux's.
+Static HTML/CSS/JS. Native MP4 homepage hero (no YouTube chrome). Live work cards for One World Steel, Barn Central, Bottom View Farm, and Roux's Creole Cafe (preview).
 
 ```
 python scripts/build_site.py
