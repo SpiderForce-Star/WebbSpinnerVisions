@@ -37,7 +37,7 @@ FILMS = [
 
 
 def esc(s: str) -> str:
-    return s.replace("&", "&").replace("<", "<").replace(">", ">").replace('"', """)
+    return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
 
 def nav_html(active: str) -> str:
@@ -417,7 +417,7 @@ def page(
   <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
   <link rel="stylesheet" href="css/site.css">
   __EXTRA_HEAD__
 </head>
@@ -602,7 +602,7 @@ def home() -> None:
             <p>Logo, motion, film, cards. Priced after a short meeting. Quoted to the job, not a menu guess.</p>
           </article>
           <article class="card">
-            <h3>Software & AI</h3>
+            <h3>Software &amp; AI</h3>
             <p>Intake, assistants, internal tools you host and license yourself. Scoped after discovery.</p>
           </article>
           <article class="card">
@@ -894,7 +894,7 @@ def services() -> None:
           <p style="margin-top:0.9rem"><a href="websites.html">Website packages →</a></p>
         </article>
         <article class="card">
-          <h3>Software & apps you host</h3>
+          <h3>Software &amp; apps you host</h3>
           <p>Custom tools for your business. You host them and license them for your own use. Scoped after discovery. Contact for cost.</p>
           <p style="margin-top:0.9rem"><a href="contact.html?package=software" data-package="software">Request a software quote →</a></p>
         </article>
@@ -992,7 +992,7 @@ def ai() -> None:
           <li><h3>Contact with the problem</h3><p>Not the tech you think you need. The outcome.</p></li>
           <li><h3>Discovery</h3><p>Goals, data you already have, what “done” looks like.</p></li>
           <li><h3>Quote</h3><p>Fixed or phased after scope is clear. No surprise subscription traps from us.</p></li>
-          <li><h3>Build & review</h3><p>Working demos early so you can steer.</p></li>
+          <li><h3>Build &amp; review</h3><p>Working demos early so you can steer.</p></li>
           <li><h3>Deploy on your side</h3><p>You host and control access when the job allows it.</p></li>
         </ol>
         <div class="card" style="margin-top:1.5rem">
