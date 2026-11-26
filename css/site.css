@@ -444,7 +444,7 @@ body.menu-lock { overflow: hidden; }
   gap: 1.25rem;
 }
 @media (min-width: 860px) {
-  .work-grid { grid-template-columns: repeat(3, 1fr); gap: 1.35rem; }
+  .work-grid { grid-template-columns: repeat(2, 1fr); gap: 1.35rem; }
 }
 
 .work-card {
@@ -502,6 +502,22 @@ body.menu-lock { overflow: hidden; }
   object-fit: cover;
   object-position: top center;
   background: #111;
+}
+.browser-shot { position: relative; }
+.preview-flag {
+  position: absolute;
+  z-index: 1;
+  top: 0.55rem;
+  right: 0.55rem;
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brass-ink);
+  background: var(--brass);
+  padding: 0.24rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 700;
 }
 
 .work-body { padding: 1.05rem 1.1rem 1.2rem; display: flex; flex-direction: column; gap: 0.45rem; flex: 1; }

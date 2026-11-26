@@ -44,7 +44,7 @@ def check_page(page, label, expect_video=False, mobile=False):
                   loop: v.loop,
                   playsInline: v.playsInline,
                   autoplay: v.autoplay,
-                  hasSource: !!v.querySelector('source[src*="wsv-top-entrance"]')
+                  hasSource: !!v.querySelector('source[src*="wsv-world-video"]')
                 })"""
             )
             if not tag["muted"] or not tag["loop"] or not tag["playsInline"] or not tag["hasSource"]:

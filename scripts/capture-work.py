@@ -6,8 +6,9 @@ OUT = Path(__file__).resolve().parent.parent / "assets" / "work"
 OUT.mkdir(parents=True, exist_ok=True)
 
 JOBS = [
-    ("https://stampssteel.com/", "stampssteel-home.png"),
-    ("https://stampssteel.com/designer.html", "stampssteel-designer.png"),
+    ("https://oneworldsteel.com/", "oneworldsteel-home.png"),
+    ("https://oneworldsteel.com/designer.html", "oneworldsteel-designer.png"),
+    ("https://barn-central.vercel.app/", "barncentral-home.png"),
     ("https://bottomviewfarmtn.com/", "bottomview-home.png"),
     ("https://spiderforce-star.github.io/Roux-s/preview/", "rouxs-home.png"),
 ]
@@ -41,6 +42,18 @@ def main():
                   });
                 }"""
             )
+            # Barn Central's first screen is a letterboxed hero video (a Facebook
+            # photo viewer baked into the file). The card still is the live page
+            # just under that video, where the homepage copy and building sit.
+            if "barn-central.vercel.app" in url:
+                page.evaluate(
+                    """() => {
+                      const v = document.querySelector('video');
+                      if (!v) return;
+                      window.scrollTo(0, v.getBoundingClientRect().height + 2);
+                    }"""
+                )
+                page.wait_for_timeout(400)
             page.screenshot(path=str(dest), full_page=False)
             print(f"  wrote {dest.stat().st_size} bytes")
         browser.close()
